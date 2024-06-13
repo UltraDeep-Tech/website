@@ -83,7 +83,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
@@ -663,7 +663,7 @@ section,
 .hero:before {
   position: absolute;
   content: "";
-  background: color-mix(in srgb, #000000, transparent 90%);
+  background: color-mix(in srgb, #000000, transparent 60%);
   inset: 0;
   z-index: 2;
 }
