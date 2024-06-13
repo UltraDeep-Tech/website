@@ -1,1 +1,2 @@
 hero-bg.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/img/hero-bg.mp4 filter=lfs diff=lfs merge=lfs -text
