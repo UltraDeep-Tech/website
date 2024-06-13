@@ -755,7 +755,7 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us{
-  background-image:url(/assets/img/hombre\ pc.jpg) ;
+  background-color: gainsboro;
   background-size: cover;
 }
 
