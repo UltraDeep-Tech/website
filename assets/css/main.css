@@ -29,6 +29,26 @@
   scroll-behavior: smooth;
 }
 
+    /* Estilos adicionales para los logos */
+    .clients-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .clients {
+      max-width: 150px;
+      max-height: 100px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .clients:hover {
+      filter: grayscale(0%);
+    }
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -331,7 +351,6 @@ h6 {
     display: block;
   }
 }
-
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
