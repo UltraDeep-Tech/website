@@ -40,7 +40,19 @@
       flex-wrap: wrap;
       gap: 40px;
       padding: 20px;
+      font-family: var(--default-font);
     }
+
+
+.brands {
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 
     .clients {
       max-width: 150px;
@@ -51,6 +63,9 @@
 
     .clients:hover {
       filter: grayscale(0%);
+      transition: 1s;
+      transform:scale(120%);
+
     }
 /*--------------------------------------------------------------
 # General
