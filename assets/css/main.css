@@ -1,7 +1,7 @@
 
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Montserrat",  sans-serif;
   --heading-font: "Montserrat",  sans-serif;
   --nav-font: "Raleway",  sans-serif;
 }
@@ -18,16 +18,17 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: rgba(255, 255, 255, 0.918);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #2b5e96; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #242f8f; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #fff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
+
 
 
 
@@ -95,6 +96,40 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+#typewriter-title {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 769px) {
+  #typewriter-title {
+      font-size: 3em;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (max-width: 768px) {
+  #typewriter-title {
+      font-size: 2.5em;
+  }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 480px) {
+  #typewriter-title {
+      font-size: 2em;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(22, 131, 194); }
 }
 
 /*--------------------------------------------------------------
@@ -216,12 +251,15 @@ h6 {
 
   .navmenu .dropdown ul a i {
     font-size: 12px;
+    
   }
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
+    background: #2b5e96;
+
   }
 
   .navmenu .dropdown:hover>ul {
