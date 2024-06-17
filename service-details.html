@@ -96,7 +96,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg.jpg);">
+    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg.jpeg);">
       <div class="container">
         <h1>Service Details</h1>
         <nav class="breadcrumbs">
@@ -133,7 +133,7 @@
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img" id="service-img">
+            <img src="assets/img/services-page-title-bg.jpeg" alt="" class="img-fluid services-img" id="service-img">
             <div id="service-content">
               <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
               <p>
@@ -215,6 +215,14 @@
     </div>
   </footer>
 
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="#">Cookie Policy</a>. You can adjust your browser settings to manage or disable cookies.</p>
+    <button id="accept-cookies">Accept</button>
+</div>
+
+
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -232,13 +240,14 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/cookies.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Información de los servicios
       const services = {
         "service-1": {
-          "img": "assets/img/service1.jpg",
+          "img": "assets/img/services-page-title-bg.jpeg",
           "title": "AI and Data Engineering Consulting",
           "content": `
             <p>Ofrecemos consultoría en ingeniería de datos y IA para ayudar a las empresas a transformar sus datos en información valiosa y tomar decisiones basadas en datos.</p>

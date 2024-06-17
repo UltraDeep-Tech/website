@@ -336,7 +336,7 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   }
 
   .navmenu a i:hover,
@@ -348,8 +348,11 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    background-color: #2b5e96;
+    color: #ffffff;
   }
+
+
 
   .navmenu .active i,
   .navmenu .active:focus i {
@@ -982,6 +985,236 @@ section,
   color: var(--accent-color);
 }
 
+
+/*--------------------------------------------------------------
+# Product Section
+--------------------------------------------------------------*/
+.product{
+  background: #fff;
+}
+
+.product .product-item {
+  position: relative;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+
+.product .product-item .icon {
+  margin-right: 20px;
+}
+
+.product .product-item .icon i {
+  color: var(--accent-color);
+  font-size: 40px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.product .product-item:hover .icon i {
+  color: var(--accent-color);
+}
+
+.product .product-item .title {
+  color: var(--heading-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.product .product-item .description {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 10px;
+}
+
+.product .product-item .readmore {
+  display: flex;
+  align-items: center;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  transition: 0.3s;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.product .product-item .readmore i {
+  margin-left: 8px;
+}
+
+.product .product-item:hover .title,
+.product .product-item:hover .readmore,
+.product .product-item:hover .icon i {
+  color: var(--accent-color);
+}
+
+/*---------------------------------------------------------------*/
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2em;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner button {
+  background-color: #2b5e96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cookie-banner button:hover {
+  background-color: #ffffff;
+  color: #2b5e96;
+
+}
+
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+.product-details .service-box {
+  padding: 20px;
+  box-shadow: 0px 2px 20px color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+.product-details .product-box+.product-box {
+  margin-top: 30px;
+}
+
+.product-details .product-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.product-details .product-list a {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.product-details .product-list a:first-child {
+  margin-top: 0;
+}
+
+.product-details .product-list a i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+.product-details .product-list a.active {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+}
+
+.product-details .product-list a.active i {
+  color: var(--contrast-color);
+}
+
+.product-details .product-list a:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  color: var(--accent-color);
+}
+
+.product-details .download-catalog a {
+  color: var(--default-color);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  transition: 0.3s;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.product-details .download-catalog a:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.product-details .download-catalog a:last-child {
+  padding-bottom: 0;
+}
+
+.product-details .download-catalog a i {
+  font-size: 24px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+.product-details .download-catalog a:hover {
+  color: var(--accent-color);
+}
+
+.product-details .help-box {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  margin-top: 30px;
+  padding: 30px 15px;
+}
+
+.product-details .help-box .help-icon {
+  font-size: 48px;
+}
+
+.product-details .help-box h4,
+.product-details .help-box a {
+  color: var(--contrast-color);
+}
+
+.product-details .product-img {
+  margin-bottom: 20px;
+}
+
+.product-details h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.product-details p {
+  font-size: 15px;
+}
+
+.product-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.product-details ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.product-details ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -1045,6 +1278,8 @@ section,
 .call-to-action .cta-btn:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
 }
+
+
 
 /*--------------------------------------------------------------
 # Features Section
