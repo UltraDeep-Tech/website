@@ -116,14 +116,14 @@ h6 {
 /* Estilos para pantallas medianas */
 @media (max-width: 768px) {
   #typewriter-title {
-      font-size: 2.5em;
+      font-size: 2em;
   }
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 480px) {
   #typewriter-title {
-      font-size: 2em;
+      font-size: 1.5em;
   }
 }
 
