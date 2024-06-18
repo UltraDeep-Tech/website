@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const titles = ["AI Development Company", "Innovative AI Solutions", "AI Technology Experts"];
+    const titles = ["AI Development Company", "Innovative AI Solutions", "AI Technology Experts","AI Safety & Security"];
     let titleIndex = 0;
     let charIndex = 0;
     const speed = 80;  // Velocidad de la escritura (ms)
