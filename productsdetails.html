@@ -35,7 +35,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
   
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/favicon.png" alt="">
         <h1 class="sitename">Ultra Deep Tech</h1>
       </a>
   
@@ -44,26 +44,26 @@
           <li class="dropdown"><a href="about.html"><span>About Us</span>
             <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="about.html">Company History</a></li>
-              <li><a href="about.html">Leadership Team</a></li>
-              <li><a href="about.html">Values and Ethics</a></li>
-              <li><a href="about.html">Corporate Social Responsibility (CSR)</a></li>
+              <li><a href="about.html#company-history">Company History</a></li>
+              <li><a href="about.html#team">Leadership Team</a></li>
+              <li><a href="about.html#values-ethics">Values and Ethics</a></li>
+              <li><a href="about.html#csr">Corporate Social Responsibility (CSR)</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="productsdetails.html"><span>Products & Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="productsdetails.html">Interpretability</a></li>
-              <li><a href="productsdetails.html">Anonymization</a></li>
-              <li><a href="productsdetails.html">Compression</a></li>
-              <li><a href="productsdetails.html">Benchmarking</a></li>
-              <li><a href="productsdetails.html">GenAI Safety</a></li>
-              <li><a href="productsdetails.html">Evolving Threat Management</a></li>
+              <li><a href="productsdetails.html#product-1">Interpretability</a></li>
+              <li><a href="productsdetails.html#product-2">Anonymization</a></li>
+              <li><a href="productsdetails.html#product-3">Compression</a></li>
+              <li><a href="productsdetails.html#product-4">Benchmarking</a></li>
+              <li><a href="productsdetails.html#product-5">GenAI Safety</a></li>
+              <li><a href="productsdetails.html#product-6">Evolving Threat Management</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="service-details.html">AI and Data Engineering Consulting</a></li>
-              <li><a href="service-details.html">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
+              <li><a href="service-details.html#service-1">AI and Data Engineering Consulting</a></li>
+              <li><a href="service-details.html#service-2">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
               <li><a href="service-details.html">Case Studies and Client Testimonials</a></li>
               <li><a href="service-details.html">Service Packages and Pricing</a></li>
             </ul>
@@ -120,12 +120,12 @@
             <div class="product-box">
               <h4>Products List</h4>
               <div class="product-list">
-                <a href="#" id="product-1" class="active"><i class="bi bi-arrow-right-circle"></i> Interpretability<span></span></a>
-                <a href="#" id="product-2"><i class="bi bi-arrow-right-circle"></i> Anonymization<span></span></a>
-                <a href="#" id="product-3"><i class="bi bi-arrow-right-circle"></i> Compression<span></span></a>
-                <a href="#" id="product-4"><i class="bi bi-arrow-right-circle"></i> Benchmarking<span></span></a>
-                <a href="#" id="product-5"><i class="bi bi-arrow-right-circle"></i> GenAI Safety<span></span></a>
-                <a href="#" id="product-6"><i class="bi bi-arrow-right-circle"></i> Evolving Threat Management<span></span></a>
+                <a href="#product-1" id="product-1-link"><i class="bi bi-arrow-right-circle"></i> Interpretability<span></span></a>
+                <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> Anonymization<span></span></a>
+                <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> Compression<span></span></a>
+                <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> Benchmarking<span></span></a>
+                <a href="#product-5" id="product-5-link"><i class="bi bi-arrow-right-circle"></i> GenAI Safety<span></span></a>
+                <a href="#product-6" id="product-6-link"><i class="bi bi-arrow-right-circle"></i> Evolving Threat Management<span></span></a>
               </div>
             </div><!-- End Products List -->
 
@@ -154,6 +154,8 @@
     </section><!-- /Product Details Section -->
   </main>
 
+
+  
   <footer id="footer" class="footer">
 
     <div class="footer-top">
@@ -300,26 +302,40 @@
                     </ul>`
         },
       };
-
+    
       const productLinks = document.querySelectorAll('.product-list a');
       const productContent = document.getElementById('product-content');
       const productImg = document.getElementById('product-img');
-
+    
+      // Function to update product details
+      function updateProductDetails(productId) {
+        const product = products[productId];
+        productContent.innerHTML = `<h3>${product.title}</h3>${product.content}`;
+        productImg.src = `assets/img/${productId}.jpeg`; // Assuming each product has an image with the id as filename
+        productLinks.forEach(link => link.classList.remove('active'));
+        document.getElementById(productId + '-link').classList.add('active');
+      }
+    
+      // Handle product link clicks
       productLinks.forEach(link => {
         link.addEventListener('click', function (e) {
           e.preventDefault();
-
-          productLinks.forEach(link => link.classList.remove('active'));
-          this.classList.add('active');
-
-          const productId = this.id;
-          const product = products[productId];
-          productContent.innerHTML = `<h3>${product.title}</h3>${product.content}`;
-          productImg.src = `assets/img/${productId}.jpeg`; // Assuming each product has an image with the id as filename
+          const productId = this.id.replace('-link', '');
+          updateProductDetails(productId);
+          window.location.hash = productId;
         });
       });
+    
+      // Load product from URL hash
+      if (window.location.hash) {
+        const productId = window.location.hash.substring(1);
+        if (products[productId]) {
+          updateProductDetails(productId);
+        }
+      }
     });
-  </script>
+    </script>
+    
 
 </body>
 

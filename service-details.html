@@ -25,51 +25,51 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="./assets/css/main.css" rel="stylesheet">
 
 </head>
 
-<body class="service-details-page">
+<body class="product-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/favicon.png" alt="">
         <h1 class="sitename">Ultra Deep Tech</h1>
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
         <ul>
           <li class="dropdown"><a href="about.html"><span>About Us</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Company History</a></li>
-              <li><a href="#">Leadership Team</a></li>
-              <li><a href="#">Values and Ethics</a></li>
-              <li><a href="#">Corporate Social Responsibility (CSR)</a></li>
+              <li><a href="about.html#company-history">Company History</a></li>
+              <li><a href="about.html#team">Leadership Team</a></li>
+              <li><a href="about.html#values-ethics">Values and Ethics</a></li>
+              <li><a href="about.html#csr">Corporate Social Responsibility (CSR)</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="productsdetails.html"><span>Products & Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Interpretability</a></li>
-              <li><a href="#">Anonymization</a></li>
-              <li><a href="#">Compression</a></li>
-              <li><a href="#">Benchmarking</a></li>
-              <li><a href="#">GenAI Safety</a></li>
-              <li><a href="#">Evolving Threat Management</a></li>
+              <li><a href="productsdetails.html#product-1">Interpretability</a></li>
+              <li><a href="productsdetails.html#product-2">Anonymization</a></li>
+              <li><a href="productsdetails.html#product-3">Compression</a></li>
+              <li><a href="productsdetails.html#product-4">Benchmarking</a></li>
+              <li><a href="productsdetails.html#product-5">GenAI Safety</a></li>
+              <li><a href="productsdetails.html#product-6">Evolving Threat Management</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">AI and Data Engineering Consulting</a></li>
-              <li><a href="#">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
-              <li><a href="#">Case Studies and Client Testimonials</a></li>
-              <li><a href="#">Service Packages and Pricing</a></li>
+              <li><a href="service-details.html#service-1">AI and Data Engineering Consulting</a></li>
+              <li><a href="service-details.html#service-2">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
+              <li><a href="service-details.html">Case Studies and Client Testimonials</a></li>
+              <li><a href="service-details.html">Service Packages and Pricing</a></li>
             </ul>
           </li>
-
-          <li class="dropdown"><a href="services.html"><span>Career</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+  
+          <li class="dropdown"><a href=""><span>Career</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Current Job Openings</a></li>
               <li><a href="#">Life at Ultra Deep Tech </a></li>
@@ -78,51 +78,52 @@
               <li><a href="#">Employee Testimonials</a></li>
             </ul>
           </li>
-
+  
           <li class="dropdown"><a href="contact.html"><span>Contact Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Office Locations</a></li>
-              <li><a href="#">Support and Inquiries</a></li>
-              <li><a href="#">Chat with Us</a></li>
+              <li><a href="contact.html">Office Locations</a></li>
+              <li><a href="contact.html">Support and Inquiries</a></li>
+              <li><a href="contact.html">Chat with Us</a></li>
             </ul>
           </li>
         </ul>
       </nav>
-
+  
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
     </div>
   </header>
 
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/services-page-title-bg.jpeg);">
+    <div class="page-title" data-aos="fade" style="background-image: url(assets/img/ai\ consulting.png);">
       <div class="container">
-        <h1>Service Details</h1>
+        <h1>Services Details</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
+            <li class="current">Services Details</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <!-- Product Details Section -->
+    <section id="product-details" class="product-details section">
 
       <div class="container">
 
         <div class="row gy-5">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box">
+            <div class="product-box">
               <h4>Services List</h4>
-              <div class="services-list">
-                <a href="#" id="service-1" class="active"><i class="bi bi-arrow-right-circle"></i> AI and Data Engineering Consulting<span></span></a>
-                <a href="#" id="service-2"><i class="bi bi-arrow-right-circle"></i> Personalized Solutions for Medium, Big Companies, and Fortune 500<span></span></a>
+              <div class="product-list">
+                <a href="#service-1" id="service-1-link"><i class="bi bi-arrow-right-circle"></i> AI and Data Engineering Consulting<span></span></a>
+                <a href="#service-2" id="service-2-link"><i class="bi bi-arrow-right-circle"></i> Personalized Solutions for Medium, Big Companies, and Fortune 500<span></span></a>
               </div>
-            </div><!-- End Services List -->
+            </div><!-- End Products List -->
 
             <div class="help-box d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-headset help-icon"></i>
@@ -133,26 +134,23 @@
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services-page-title-bg.jpeg" alt="" class="img-fluid services-img" id="service-img">
-            <div id="service-content">
-              <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-              <p>
-                Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-              </p>
+            <img src="assets/img/products-page-title-bg.jpeg" alt="" class="img-fluid product-img" id="product-img">
+            <div id="product-content" class="service-box">
+              <h3>Interpretability</h3>
+              <p>Our interpretability solutions help you understand how your AI models make decisions, providing transparency and trust in AI-driven outcomes.</p>
               <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Explainable AI models.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Insight into model behavior.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Improved decision-making.</span></li>
               </ul>
-              <p>
-                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-              </p>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Service Details Section -->
+    </section><!-- /Product Details Section -->
   </main>
+
+
   
   <footer id="footer" class="footer">
 
@@ -216,7 +214,6 @@
 
   </footer>
 
-
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="#">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
     <button id="accept-cookies">Accept</button>
@@ -225,20 +222,19 @@
 
 
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -246,57 +242,63 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Información de los servicios
-      const services = {
-        "service-1": {
-          "img": "assets/img/services-page-title-bg.jpeg",
-          "title": "AI and Data Engineering Consulting",
-          "content": `
-            <p>Ofrecemos consultoría en ingeniería de datos y IA para ayudar a las empresas a transformar sus datos en información valiosa y tomar decisiones basadas en datos.</p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Desarrollo de modelos predictivos y de aprendizaje automático.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Optimización de procesos de datos.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Implementación de soluciones de inteligencia artificial.</span></li>
-            </ul>
-          `
+      const products = {
+        'service-1': {
+          title: 'Interpretability',
+          content: `<p>Our interpretability solutions help you understand how your AI models make decisions, providing transparency and trust in AI-driven outcomes.</p>
+                    <ul>
+                      <li><i class="bi bi-check-circle"></i> Explainable AI models.</li>
+                      <li><i class="bi bi-check-circle"></i> Insight into model behavior.</li>
+                      <li><i class="bi bi-check-circle"></i> Improved decision-making.</li>
+                    </ul>`
         },
-        "service-2": {
-          "img": "assets/img/service2.jpg",
-          "title": "Personalized Solutions for Medium, Big Companies, and Fortune 500",
-          "content": `
-            <p>Nuestras soluciones personalizadas están diseñadas para satisfacer las necesidades específicas de empresas medianas, grandes y Fortune 500, brindando resultados excepcionales.</p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Desarrollo de estrategias personalizadas de transformación digital.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Integración de tecnologías avanzadas para optimizar operaciones.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Soporte continuo y mantenimiento de soluciones.</span></li>
-            </ul>
-          `
-        }
+        'service-2': {
+          title: 'Anonymization',
+          content: `<p>Protect sensitive information with our anonymization solutions, ensuring data privacy and compliance with regulations.</p>
+                    <ul>
+                      <li><i class="bi bi-check-circle"></i> Secure data anonymization.</li>
+                      <li><i class="bi bi-check-circle"></i> Compliance with privacy laws.</li>
+                      <li><i class="bi bi-check-circle"></i> Maintain data utility.</li>
+                    </ul>`
+        },
+        
       };
-
-      // Función para actualizar el contenido del servicio
-      function updateServiceContent(serviceId) {
-        const service = services[serviceId];
-        document.getElementById('service-img').src = service.img;
-        document.getElementById('service-content').innerHTML = `
-          <h3>${service.title}</h3>
-          ${service.content}
-        `;
+    
+      const productLinks = document.querySelectorAll('.product-list a');
+      const productContent = document.getElementById('product-content');
+      const productImg = document.getElementById('product-img');
+    
+      // Function to update product details
+      function updateProductDetails(productId) {
+        const product = products[productId];
+        productContent.innerHTML = `<h3>${product.title}</h3>${product.content}`;
+        productImg.src = `assets/img/${productId}.jpeg`; // Assuming each product has an image with the id as filename
+        productLinks.forEach(link => link.classList.remove('active'));
+        document.getElementById(productId + '-link').classList.add('active');
       }
-
-      // Evento click para los enlaces de los servicios
-      document.querySelectorAll('.services-list a').forEach(a => {
-        a.addEventListener('click', function (event) {
-          event.preventDefault();
-          document.querySelectorAll('.services-list a').forEach(el => el.classList.remove('active'));
-          this.classList.add('active');
-          updateServiceContent(this.id);
+    
+      // Handle product link clicks
+      productLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const productId = this.id.replace('-link', '');
+          updateProductDetails(productId);
+          window.location.hash = productId;
         });
       });
-
-      // Inicializar con el primer servicio
-      updateServiceContent('service-1');
+    
+      // Load product from URL hash
+      if (window.location.hash) {
+        const productId = window.location.hash.substring(1);
+        if (products[productId]) {
+          updateProductDetails(productId);
+        }
+      }
     });
-  </script>
+    </script>
+    
+
 </body>
+
 </html>
+
