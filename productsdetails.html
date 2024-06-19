@@ -53,7 +53,7 @@
           <li class="dropdown"><a href="productsdetails.html"><span>Products & Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="productsdetails.html#product-1">Interpretability</a></li>
-              <li><a href="productsdetails.html#product-2">Anonymization</a></li>
+              <li><a href="productsdetails.html#product-2k">Anonymization</a></li>
               <li><a href="productsdetails.html#product-3">Compression</a></li>
               <li><a href="productsdetails.html#product-4">Benchmarking</a></li>
               <li><a href="productsdetails.html#product-5">GenAI Safety</a></li>
@@ -120,7 +120,7 @@
             <div class="product-box">
               <h4>Products List</h4>
               <div class="product-list">
-                <a href="#product-1" id="product-1-link"><i class="bi bi-arrow-right-circle"></i> Interpretability<span></span></a>
+                <a href="#product-1" id="product-1-link" data-aos="product-1-link"><i class="bi bi-arrow-right-circle"></i> Interpretability<span></span></a>
                 <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> Anonymization<span></span></a>
                 <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> Compression<span></span></a>
                 <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> Benchmarking<span></span></a>
@@ -130,7 +130,7 @@
               </div>
             </div><!-- End Products List -->
 
-            <div class="help-box d-flex flex-column justify-content-center align-items-center">
+            <div class="help-box d-flex flex-column justify-content-center align-items-center hide">
               <i class="bi bi-headset help-icon"></i>
               <h4>Have a Question?</h4>
               <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+54 9 11 5992 9083</span></p>
@@ -138,17 +138,24 @@
             </div>
           </div>
 
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/products-page-title-bg.jpeg" alt="" class="img-fluid product-img" id="product-img">
+          <div class="col-lg-8 ps-lg-5 text-center" data-aos="fade-up" data-aos-delay="200">
             <div id="product-content" class="service-box">
-              <h3>Interpretability</h3>
-              <p>Our interpretability solutions help you understand how your AI models make decisions, providing transparency and trust in AI-driven outcomes.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Explainable AI models.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Insight into model behavior.</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Improved decision-making.</span></li>
-              </ul>
+              <h3>Unlock the Power of AI with Our Comprehensive Solutions Suite </h3><br><br>
+              <p>Explore our cutting-edge suite of AI solutions, meticulously designed to enhance model interpretability, ensure data privacy, optimize performance, and safeguard against evolving threats. Our offerings empower your organization to harness the full potential of AI with confidence and efficiency.<br><br>
+
+                Gain unparalleled transparency into your AI models, enabling you to understand and explain every decision your AI makes. This fosters trust and enables informed decision-making across your organization. Protect sensitive information with our advanced anonymization techniques, ensuring data privacy and compliance with all regulations while preserving the utility and value of your data.<br><br>
+                
+                Optimize your data storage and transmission with our state-of-the-art compression algorithms, reducing storage costs and enhancing data transfer speeds without compromising quality. Benchmark your AI models against industry standards to ensure top-tier performance and reliability, providing detailed insights and metrics to help you achieve and maintain excellence.<br><br>
+                
+                Ensure the safe and ethical deployment of generative AI technologies with our GenAI safety solutions. Focus on ethical practices, risk mitigation, and secure deployment strategies, enabling responsible and robust innovation. Stay ahead of emerging threats with our proactive threat management solutions, identifying and neutralizing potential threats to your AI systems and data, establishing a secure and resilient digital environment.<br><br>
+                
+                Defend your AI algorithms from evolving threats with our advanced protection solutions. Our proactive threat detection and robust security protocols ensure the integrity and reliability of your algorithms at all times.<br><br>
+                
+                With our comprehensive suite of AI solutions, you're not just investing in technology; you're investing in a future where transparency, security, and efficiency are paramount. Partner with us to drive your digital transformation and stay ahead in the ever-evolving landscape of artificial intelligence.</p>
+             
             </div>
+            <img src="" alt="" class="img-fluid product-img" id="product-img">
+
           </div>
         </div>
       </div>
@@ -248,104 +255,91 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const products = {
-        'product-1': {
-          title: 'Interpretability',
-          content: `<p>Our interpretability solutions help you understand how your AI models make decisions, providing transparency and trust in AI-driven outcomes.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Explainable AI models.</li>
-                      <li><i class="bi bi-check-circle"></i> Insight into model behavior.</li>
-                      <li><i class="bi bi-check-circle"></i> Improved decision-making.</li>
-                    </ul>`
-        },
-        'product-2': {
-          title: 'Anonymization',
-          content: `<p>Protect sensitive information with our anonymization solutions, ensuring data privacy and compliance with regulations.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Secure data anonymization.</li>
-                      <li><i class="bi bi-check-circle"></i> Compliance with privacy laws.</li>
-                      <li><i class="bi bi-check-circle"></i> Maintain data utility.</li>
-                    </ul>`
-        },
-        'product-3': {
-          title: 'Compression',
-          content: `<p>Optimize data storage and transmission with our advanced compression techniques, reducing costs and enhancing efficiency.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> High-efficiency compression algorithms.</li>
-                      <li><i class="bi bi-check-circle"></i> Reduced storage costs.</li>
-                      <li><i class="bi bi-check-circle"></i> Faster data transmission.</li>
-                    </ul>`
-        },
-        'product-4': {
-          title: 'Benchmarking',
-          content: `<p>Benchmark your AI models and solutions against industry standards to ensure top performance and reliability.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Comprehensive benchmarking tools.</li>
-                      <li><i class="bi bi-check-circle"></i> Industry-standard metrics.</li>
-                      <li><i class="bi bi-check-circle"></i> Performance optimization insights.</li>
-                    </ul>`
-        },
-        'product-5': {
-          title: 'GenAI Safety',
-          content: `<p>Ensure the safety and ethical use of generative AI technologies with our GenAI safety solutions.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Ethical AI practices.</li>
-                      <li><i class="bi bi-check-circle"></i> Safe deployment strategies.</li>
-                      <li><i class="bi bi-check-circle"></i> Risk mitigation.</li>
-                    </ul>`
-        },
-        'product-6': {
-          title: 'Evolving Threat Management',
-          content: `<p>Stay ahead of evolving threats with our proactive threat management solutions, safeguarding your AI systems and data.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Proactive threat detection.</li>
-                      <li><i class="bi bi-check-circle"></i> Comprehensive threat management.</li>
-                      <li><i class="bi bi-check-circle"></i> Robust security protocols.</li>
-                    </ul>`
-        },
-        'product-7': {
-          title: 'Algorithmic Protection',
-          content: `<p>Stay ahead of evolving threats with our proactive threat management solutions, safeguarding your AI systems and data.</p>
-                    <ul>
-                      <li><i class="bi bi-check-circle"></i> Proactive threat detection.</li>
-                      <li><i class="bi bi-check-circle"></i> Comprehensive threat management.</li>
-                      <li><i class="bi bi-check-circle"></i> Robust security protocols.</li>
-                    </ul>`
-        },
-      };
-    
       const productLinks = document.querySelectorAll('.product-list a');
       const productContent = document.getElementById('product-content');
       const productImg = document.getElementById('product-img');
-    
-      // Function to update product details
-      function updateProductDetails(productId) {
-        const product = products[productId];
-        productContent.innerHTML = `<h3>${product.title}</h3>${product.content}`;
-        productImg.src = `assets/img/${productId}.jpeg`; // Assuming each product has an image with the id as filename
-        productLinks.forEach(link => link.classList.remove('active'));
-        document.getElementById(productId + '-link').classList.add('active');
-      }
-    
-      // Handle product link clicks
+
       productLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const productId = this.id.replace('-link', '');
-          updateProductDetails(productId);
-          window.location.hash = productId;
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          const productId = this.getAttribute('id').replace('-link', '');
+
+          if (productId === 'product-1') {
+            productContent.innerHTML = `
+              <h3>Interpretability</h3>
+              <p> Discover our advanced interpretability solutions designed to provide you with complete transparency on how your AI models make decisions. Imagine being able to explain every prediction and action of your AI with clarity. This not only builds trust in AI-driven outcomes but also enhances informed decision-making, ensuring every step is justified and understandable to all stakeholders.
+</p>`;
+            productImg.src = 'assets/img/interpretability.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-2') {
+            productContent.innerHTML = `
+              <h3>Anonymization</h3>
+              <p>Protect your sensitive information with our cutting-edge anonymization solutions. We ensure your data privacy, complying with all data protection regulations while maintaining the utility of the information. With our technologies, you can transform your data into secure, anonymous assets without compromising its value, ensuring your operations are both secure and efficient.
+
+</p>
+              `;
+            productImg.src = 'assets/img/anonymization.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-3') {
+            productContent.innerHTML = `
+              <h3>Compression</h3>
+              <p>Optimize your data storage and transmission with our state-of-the-art compression algorithms. Reduce storage costs and enhance data transfer speeds without compromising quality, driving operational efficiency and cost savings.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Lossless data compression</li>
+                <li><i class="bi bi-check-circle"></i> Faster data transfer</li>
+                <li><i class="bi bi-check-circle"></i> Reduced storage costs</li>
+                <li><i class="bi bi-check-circle"></i> High compression ratios</li>
+              </ul>`;
+            productImg.src = 'assets/img/compression.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-4') {
+            productContent.innerHTML = `
+              <h3>Benchmarking</h3>
+              <p>Benchmark your AI models against industry standards to ensure top-tier performance and reliability. Our comprehensive benchmarking tools provide detailed insights and metrics, helping you achieve and maintain excellence.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Comprehensive performance metrics</li>
+                <li><i class="bi bi-check-circle"></i> Industry-standard benchmarks</li>
+                <li><i class="bi bi-check-circle"></i> Detailed performance reports</li>
+                <li><i class="bi bi-check-circle"></i> Actionable insights for improvement</li>
+              </ul>`;
+            productImg.src = 'assets/img/benchmarking.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-5') {
+            productContent.innerHTML = `
+              <h3>GenAI Safety</h3>
+              <p>Ensure the safe and ethical deployment of generative AI technologies. Our GenAI safety solutions focus on ethical practices, risk mitigation, and secure deployment strategies, enabling responsible and robust innovation.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Ethical AI usage guidelines</li>
+                <li><i class="bi bi-check-circle"></i> Risk assessment and mitigation</li>
+                <li><i class="bi bi-check-circle"></i> Continuous monitoring and auditing</li>
+                <li><i class="bi bi-check-circle"></i> Compliance with ethical standards</li>
+              </ul>`;
+            productImg.src = 'assets/img/GenAI Safety.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-6') {
+            productContent.innerHTML = `
+              <h3>Evolving Threat Management</h3>
+              <p>Stay ahead of emerging threats with our proactive threat management solutions. We identify and neutralize potential threats to your AI systems and data, establishing a secure and resilient digital environment.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Proactive threat detection</li>
+                <li><i class="bi bi-check-circle"></i> Real-time threat response</li>
+                <li><i class="bi bi-check-circle"></i> Adaptive security measures</li>
+                <li><i class="bi bi-check-circle"></i> Comprehensive threat intelligence</li>
+              </ul>`;
+            productImg.src = 'assets/img/threat-management.jpg'; // Cambiar al URL de la imagen correspondiente
+          } else if (productId === 'product-7') {
+            productContent.innerHTML = `
+              <h3>Algorithmic Protection</h3>
+              <p>Defend your AI algorithms from evolving threats with our advanced protection solutions. Our proactive threat detection and robust security protocols ensure the integrity and reliability of your algorithms at all times.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Robust defense mechanisms</li>
+                <li><i class="bi bi-check-circle"></i> Continuous model monitoring</li>
+                <li><i class="bi bi-check-circle"></i> Regular security audits</li>
+                <li><i class="bi bi-check-circle"></i> Incident response and recovery</li>
+              </ul>`;
+            productImg.src = 'assets/img/algorithmic-protection.png'; // Cambiar al URL de la imagen correspondiente
+          }
         });
       });
-    
-      // Load product from URL hash
-      if (window.location.hash) {
-        const productId = window.location.hash.substring(1);
-        if (products[productId]) {
-          updateProductDetails(productId);
-        }
-      }
     });
-    </script>
+  </script>
+
     
 
 </body>
