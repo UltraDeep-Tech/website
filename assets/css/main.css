@@ -1013,30 +1013,36 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services{
-  background: #fff;
-}
-
 .services .service-item {
   position: relative;
   height: 100%;
-  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  transition: background-color 10s, color 1s, transform 1s; /* Transiciones suaves para background-color, color y transform */
 }
 
+.services .service-item:hover {
+  background-color: #2b5e96;
+  color: #fff;
+  transform: translateY(-5px); /* Movimiento hacia arriba al hacer hover */
+}
 
-.services .service-item .icon {
-  margin-right: 20px;
+.services .service-item:hover h4,
+.services .service-item:hover p,
+.services .service-item:hover a {
+  color: #fff;
 }
 
 .services .service-item .icon i {
-  color: var(--accent-color);
+  color: #2b5e96;
   font-size: 40px;
+  padding-right: 20px;
   line-height: 0;
-  transition: 0.3s;
+  transition: color 0.3s; /* Transición para el color del ícono */
 }
 
 .services .service-item:hover .icon i {
-  color: var(--accent-color);
+  color: #fff !important;
 }
 
 .services .service-item .title {
@@ -1044,33 +1050,39 @@ section,
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 20px;
-  transition: 0.3s;
+  transition: color 0.3s; /* Transición para el color del título */
+}
+
+.services .service-item:hover .title {
+  color: #fff;
 }
 
 .services .service-item .description {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-bottom: 10px;
+  transition: color 0.3s; /* Transición para el color de la descripción */
+}
+
+.services .service-item:hover .description {
+  color: #fff;
 }
 
 .services .service-item .readmore {
   display: flex;
   align-items: center;
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  transition: 0.3s;
   font-weight: 700;
   font-size: 14px;
+  transition: color 0.3s; /* Transición para el color del enlace "Learn More" */
 }
 
-.services .service-item .readmore i {
-  margin-left: 8px;
+.services .service-item:hover .readmore {
+  color: #fff;
 }
 
-.services .service-item:hover .title,
-.services .service-item:hover .readmore,
-.services .service-item:hover .icon i {
-  color: var(--accent-color);
-}
+
+
 
 
 /*--------------------------------------------------------------
