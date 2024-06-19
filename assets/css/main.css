@@ -130,6 +130,94 @@ h6 {
   50% { border-color: rgb(22, 131, 194); }
 }
 
+
+.imagenlogo {
+  position: relative;
+  display: inline-block;
+}
+
+.imagenlogo-img {
+  display: block;
+  position: relative;
+  transition: filter 0.3s ease-in-out;
+}
+
+.imagenlogo-img:hover {
+  filter: brightness(1.5);
+}
+
+.imagenlogo-img::before,
+.imagenlogo-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  opacity: 0.8;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.imagenlogo-img:hover::before {
+  animation: glitch 0.3s infinite;
+}
+
+.imagenlogo-img:hover::after {
+  animation: glitch 0.3s infinite;
+  animation-delay: 0.15s;
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(10px, 9999px, 10px, 0);
+    transform: skew(0.5deg);
+  }
+  10% {
+    clip: rect(20px, 9999px, 80px, 0);
+    transform: skew(0.5deg);
+  }
+  20% {
+    clip: rect(30px, 9999px, 85px, 0);
+    transform: skew(0.5deg);
+  }
+  30% {
+    clip: rect(40px, 9999px, 90px, 0);
+    transform: skew(0.5deg);
+  }
+  40% {
+    clip: rect(50px, 9999px, 95px, 0);
+    transform: skew(0.5deg);
+  }
+  50% {
+    clip: rect(60px, 9999px, 100px, 0);
+    transform: skew(0.5deg);
+  }
+  60% {
+    clip: rect(70px, 9999px, 105px, 0);
+    transform: skew(0.5deg);
+  }
+  70% {
+    clip: rect(80px, 9999px, 110px, 0);
+    transform: skew(0.5deg);
+  }
+  80% {
+    clip: rect(90px, 9999px, 115px, 0);
+    transform: skew(0.5deg);
+  }
+  90% {
+    clip: rect(100px, 9999px, 120px, 0);
+    transform: skew(0.5deg);
+  }
+  100% {
+    clip: rect(110px, 9999px, 125px, 0);
+    transform: skew(0.5deg);
+  }
+}
+
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -159,7 +247,6 @@ h6 {
   font-weight: 700;
   color: var(--heading-color);
 }
-
 
 .scrolled .header {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
