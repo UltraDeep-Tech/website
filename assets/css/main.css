@@ -10,8 +10,8 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #030100; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2b5e96; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #2b5e96; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #26498a; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #26498a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
 
@@ -20,7 +20,7 @@
   --nav-color: rgba(255, 255, 255, 0.918);  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #2b5e96; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #26498a; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #fff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -250,7 +250,7 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
-  background-color: rgb(38, 73, 138);
+  background-color: #26498a;
   text-decoration: #fff;
 }
 
@@ -343,7 +343,7 @@ h6 {
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
-    background: #2b5e96;
+    background: #26498a;
 
   }
 
@@ -435,7 +435,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    background-color: #2b5e96;
+    background-color: #26498a;
     color: #ffffff;
   }
 
@@ -1018,27 +1018,31 @@ section,
   height: 100%;
   padding: 20px;
   background-color: #fff;
-  transition: background-color 10s, color 1s, transform 1s; /* Transiciones suaves para background-color, color y transform */
+  transition-duration: 1s;
 }
 
 .services .service-item:hover {
-  background-color: #2b5e96;
+  background-color: #26498a;
   color: #fff;
   transform: translateY(-5px); /* Movimiento hacia arriba al hacer hover */
+  transition-duration: 1s;
+
 }
 
 .services .service-item:hover h4,
 .services .service-item:hover p,
 .services .service-item:hover a {
   color: #fff;
+  transition-duration: 1.0s;
+
 }
 
 .services .service-item .icon i {
-  color: #2b5e96;
+  color: #26498a;
   font-size: 40px;
   padding-right: 20px;
   line-height: 0;
-  transition: color 0.3s; /* Transición para el color del ícono */
+  transition-duration: 1.0s;
 }
 
 .services .service-item:hover .icon i {
@@ -1171,7 +1175,7 @@ section,
 }
 
 .cookie-banner button {
-  background-color: #2b5e96;
+  background-color: #26498a;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1183,7 +1187,7 @@ section,
 
 .cookie-banner button:hover {
   background-color: #ffffff;
-  color: #2b5e96;
+  color: #26498a;
 }
 
 @media (max-width: 600px) {
@@ -1401,6 +1405,12 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features-item:hover{
+background:#26498a ;
+transition-duration: 1.0s;
+
+}
+
 .features h3 {
   font-size: 32px;
   font-weight: 700;
@@ -1461,8 +1471,10 @@ font-size: 40px;
 
 .features .features-item:hover .title,
 .features .features-item:hover .readmore,
-.features .features-item:hover .icon i {
-  color: var(--accent-color);
+.features .features-item:hover .icon i,
+.features .features-item:hover p {
+  color: #fff !important;
+  transition-duration: 1s;
 }
 
 .features .services-wrap {
