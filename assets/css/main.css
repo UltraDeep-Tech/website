@@ -875,6 +875,7 @@ section,
   padding: 12px 30px;
   border-radius: 50px;
   transition: 0.5s;
+  z-index: 0;
 }
 
 .hero .btn-get-started:hover {
@@ -1247,20 +1248,27 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
+.product-details .product-list a:hover i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #fff !important;
+}
+
 
 .product-details .product-list a.active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: #fff;
+  background-color: #26498a !important;
 }
 
 .product-details .product-list a.active i {
-  color: var(--contrast-color);
+  color: #fff;
 }
 
 .product-details .product-list a:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
+  background-color: #26498a;
+  color: #fff;
 }
+
 
 .product-details .download-catalog a {
   color: var(--default-color);
