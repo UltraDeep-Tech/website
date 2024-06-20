@@ -69,9 +69,11 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
   font-family: var(--default-font);
 }
+
+
+  
 
 a {
   color: var(--accent-color);
@@ -864,6 +866,7 @@ section,
   margin: 40px 0;
 }
 
+
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -922,7 +925,7 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us{
-  background-color: gainsboro;
+  background-color: rgb(255, 255, 255);
   background-size: cover;
 }
 
@@ -947,33 +950,38 @@ section,
 }
 
 .why-us .slides {
-  background-color: #fff;
+  background-color: #26498a;
 }
 
 .why-us h3 {
+  color: #ffffff;
   font-size: 24px;
   font-weight: 700;
 }
 
 .why-us h4 {
+  color: #ffffff;
   font-size: 18px;
   font-weight: 300;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .why-us .swiper {
+  color: #ffffff !important;
   margin: 140px 140px 120px 140px;
   overflow: hidden;
 }
 
 .why-us .swiper-wrapper {
   height: auto;
+  color: #ffffff !important;
+
 }
 
 .why-us .swiper-button-prev:after,
 .why-us .swiper-button-next:after {
   font-size: 24px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: #ffffff !important;
 }
 
 .why-us .swiper-button-prev {
@@ -990,11 +998,11 @@ section,
 }
 
 .why-us .swiper-pagination .swiper-pagination-bullet {
-  background-color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: #ffffff !important;
 }
 
 .why-us .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  color: #ffffff !important;
 }
 
 @media (max-width: 1200px) {
