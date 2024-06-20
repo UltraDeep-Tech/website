@@ -34,10 +34,10 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
   
-      <a href="index.html" class="logo d-flex align-items-center imagenlogo">
-        <img src="assets/img/favicon.png" class="imagenlogo-img" alt="">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.png" alt="">
         <h1 class="sitename">Ultra Deep Tech</h1>
-    </a>
+      </a>
   
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -52,19 +52,19 @@
           </li>
           <li class="dropdown"><a href="productsdetails.html"><span>Products & Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="productsdetails.html#product-1">Interpretability</a></li>
-              <li><a href="productsdetails.html#product-2">Anonymization</a></li>
-              <li><a href="productsdetails.html#product-3">Compression</a></li>
-              <li><a href="productsdetails.html#product-4">Benchmarking</a></li>
-              <li><a href="productsdetails.html#product-5">GenAI Safety</a></li>
-              <li><a href="productsdetails.html#product-6">Evolving Threat Management</a></li>
-              <li><a href="productsdetails.html#product-7">Algorithmic Protection</a></li>
+              <li><a href="productsdetails.html?product=product-1">Interpretability</a></li>
+              <li><a href="productsdetails.html?product=product-2">Anonymization</a></li>
+              <li><a href="productsdetails.html?product=product-3">Compression</a></li>
+              <li><a href="productsdetails.html?product=product-4">Benchmarking</a></li>
+              <li><a href="productsdetails.html?product=product-5">GenAI Safety</a></li>
+              <li><a href="productsdetails.html?product=product-6">Evolving Threat Management</a></li>
+              <li><a href="productsdetails.html?product=product-7">Algorithmic Protection</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="service-details.html#service-1">AI and Data Engineering Consulting</a></li>
-              <li><a href="service-details.html#service-2">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
+              <li><a href="service-details.html?product=product-1">AI and Data Engineering Consulting</a></li>
+              <li><a href="service-details.html?product=product-2">Personalized Solutions for Medium, Big Companies, and Fortune 500</a></li>
               <li><a href="service-details.html">Case Studies and Client Testimonials</a></li>
               <li><a href="service-details.html">Service Packages and Pricing</a></li>
             </ul>
@@ -189,21 +189,21 @@
               <li><a href="about.html">About us</a></li>
               <li><a href="productsdetails.html">Products & Solutions</a></li>
               <li><a href="service-details.html">Services</a></li>
-              <li><a href="politics.html">Terms of service</a></li>
-              <li><a href="politics.html">Privacy policy</a></li>
+              <li><a href="politics.html#terms">Terms of service</a></li>
+              <li><a href="politics.html#Privacy">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
             <h4>Products & Solution</h4>
             <ul>
-              <li><a href="productsdetails.html#product-1">Interpretability</a></li>
-              <li><a href="productsdetails.html#product-2">Anonymization</a></li>
-              <li><a href="productsdetails.html#product-3">Compression</a></li>
-              <li><a href="productsdetails.html#product-4">Benchmarking</a></li>
-              <li><a href="productsdetails.html#product-5">GenAI Safety</a></li>
-              <li><a href="productsdetails.html#product-6">Evolving Threat Management</a></li>
-              <li><a href="productsdetails.html#product-7">Algorithmic Protection</a></li>
+              <li><a href="productsdetails.html?product=product-1">Interpretability</a></li>
+              <li><a href="productsdetails.html?product=product-2">Anonymization</a></li>
+              <li><a href="productsdetails.html?product=product-3">Compression</a></li>
+              <li><a href="productsdetails.html?product=product-4">Benchmarking</a></li>
+              <li><a href="productsdetails.html?product=product-5">GenAI Safety</a></li>
+              <li><a href="productsdetails.html?product=product-6">Evolving Threat Management</a></li>
+              <li><a href="productsdetails.html?product=product-7">Algorithmic Protection</a></li>
             </ul>
           </div>
 
@@ -221,7 +221,7 @@
     </div>
 
     <div class="container copyright text-center">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ultra Deep Tech</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename" style="color: #2b5e96;">Ultra Deep Tech</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
       </div>
@@ -230,7 +230,7 @@
   </footer>
 
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
-    <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
+    <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html#cookie">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
     <button id="accept-cookies">Accept</button>
     <button id="deny-cookies">Deny</button>
 </div>
@@ -260,82 +260,93 @@
       const productLinks = document.querySelectorAll('.product-list a');
       const productContent = document.getElementById('product-content');
       const productImg = document.getElementById('product-img');
-
+  
+      function loadProductContent(productId) {
+        if (productId === 'product-1') {
+          productContent.innerHTML = `
+            <h3>AI and Data Engieneering Consulting</h3>
+            <p>Unlock the full potential of your data with our AI and Data Engineering Consulting services. From robust data architecture implementations to customized machine learning solutions, we empower businesses to make informed decisions and achieve competitive advantage. Experience seamless digital transformation, continuous innovation, and enhanced operational efficiency with our expert solutions.</p>`;
+          productImg.src = 'assets/img/blog/blog-1.jpg';
+        } else if (productId === 'product-2') {
+          productContent.innerHTML = `
+            <h3>Personalized Solution for Medium, Big Companies, and Fortune 500</h3>
+            <p>Tailored to meet the unique needs of medium to Fortune 500 companies, our Personalized Solutions offer bespoke strategic consultancy and expert support. We collaborate closely with your team to develop customized strategies and solutions that not only solve current challenges but also pave the way for future growth. Benefit from our deep expertise in AI and Data Engineering across diverse industries, ensuring world-class support and strategic guidance throughout your journey.</p>`;
+          productImg.src = 'assets/img/blog/blog-3.jpg';
+        } else if (productId === 'product-3') {
+          productContent.innerHTML = `
+            <h3>Compression</h3>
+            <p>Optimize your data storage and transmission with our state-of-the-art compression algorithms. Reduce storage costs and enhance data transfer speeds without compromising quality, driving operational efficiency and cost savings.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Lossless data compression</li>
+              <li><i class="bi bi-check-circle"></i> Faster data transfer</li>
+              <li><i class="bi bi-check-circle"></i> Reduced storage costs</li>
+              <li><i class="bi bi-check-circle"></i> High compression ratios</li>
+            </ul>`;
+          productImg.src = 'assets/img/compression.jpg';
+        } else if (productId === 'product-4') {
+          productContent.innerHTML = `
+            <h3>Benchmarking</h3>
+            <p>Benchmark your AI models against industry standards to ensure top-tier performance and reliability. Our comprehensive benchmarking tools provide detailed insights and metrics, helping you achieve and maintain excellence.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Comprehensive performance metrics</li>
+              <li><i class="bi bi-check-circle"></i> Industry-standard benchmarks</li>
+              <li><i class="bi bi-check-circle"></i> Detailed performance reports</li>
+              <li><i class="bi bi-check-circle"></i> Actionable insights for improvement</li>
+            </ul>`;
+          productImg.src = 'assets/img/benchmarking.jpg';
+        } else if (productId === 'product-5') {
+          productContent.innerHTML = `
+            <h3>GenAI Safety</h3>
+            <p>Ensure the safe and ethical deployment of generative AI technologies. Our GenAI safety solutions focus on ethical practices, risk mitigation, and secure deployment strategies, enabling responsible and robust innovation.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Ethical AI usage guidelines</li>
+              <li><i class="bi bi-check-circle"></i> Risk assessment and mitigation</li>
+              <li><i class="bi bi-check-circle"></i> Continuous monitoring and auditing</li>
+              <li><i class="bi bi-check-circle"></i> Compliance with ethical standards</li>
+            </ul>`;
+          productImg.src = 'assets/img/GenAI Safety.jpg';
+        } else if (productId === 'product-6') {
+          productContent.innerHTML = `
+            <h3>Evolving Threat Management</h3>
+            <p>Stay ahead of emerging threats with our proactive threat management solutions. We identify and neutralize potential threats to your AI systems and data, establishing a secure and resilient digital environment.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Proactive threat detection</li>
+              <li><i class="bi bi-check-circle"></i> Real-time threat response</li>
+              <li><i class="bi bi-check-circle"></i> Adaptive security measures</li>
+              <li><i class="bi bi-check-circle"></i> Comprehensive threat intelligence</li>
+            </ul>`;
+          productImg.src = 'assets/img/threat-management.jpg';
+        } else if (productId === 'product-7') {
+          productContent.innerHTML = `
+            <h3>Algorithmic Protection</h3>
+            <p>Defend your AI algorithms from evolving threats with our advanced protection solutions. Our proactive threat detection and robust security protocols ensure the integrity and reliability of your algorithms at all times.</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Robust defense mechanisms</li>
+              <li><i class="bi bi-check-circle"></i> Continuous model monitoring</li>
+              <li><i class="bi bi-check-circle"></i> Regular security audits</li>
+              <li><i class="bi bi-check-circle"></i> Incident response and recovery</li>
+            </ul>`;
+          productImg.src = 'assets/img/algorithmic-protection.png';
+        }
+      }
+  
+      function checkUrlForProduct() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('product')) {
+          const productId = urlParams.get('product');
+          loadProductContent(productId);
+        }
+      }
+  
       productLinks.forEach(link => {
         link.addEventListener('click', function (event) {
           event.preventDefault();
-
           const productId = this.getAttribute('id').replace('-link', '');
-
-          if (productId === 'product-1') {
-            productContent.innerHTML = `
-              <h3>AI and Data Engieneering Consulting</h3>
-              <p> Unlock the full potential of your data with our AI and Data Engineering Consulting services. From robust data architecture implementations to customized machine learning solutions, we empower businesses to make informed decisions and achieve competitive advantage. Experience seamless digital transformation, continuous innovation, and enhanced operational efficiency with our expert solutions.</p>`;
-            productImg.src = 'assets/img/blog/blog-1.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-2') {
-            productContent.innerHTML = `
-              <h3>Personalized Solution for Medium, Big Companies, and Fortune 500</h3>
-              <p>Tailored to meet the unique needs of medium to Fortune 500 companies, our Personalized Solutions offer bespoke strategic consultancy and expert support. We collaborate closely with your team to develop customized strategies and solutions that not only solve current challenges but also pave the way for future growth. Benefit from our deep expertise in AI and Data Engineering across diverse industries, ensuring world-class support and strategic guidance throughout your journey.</p>
-              `;
-            productImg.src = 'assets/img/blog/blog-3.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-3') {
-            productContent.innerHTML = `
-              <h3>Compression</h3>
-              <p>Optimize your data storage and transmission with our state-of-the-art compression algorithms. Reduce storage costs and enhance data transfer speeds without compromising quality, driving operational efficiency and cost savings.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Lossless data compression</li>
-                <li><i class="bi bi-check-circle"></i> Faster data transfer</li>
-                <li><i class="bi bi-check-circle"></i> Reduced storage costs</li>
-                <li><i class="bi bi-check-circle"></i> High compression ratios</li>
-              </ul>`;
-            productImg.src = 'assets/img/compression.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-4') {
-            productContent.innerHTML = `
-              <h3>Benchmarking</h3>
-              <p>Benchmark your AI models against industry standards to ensure top-tier performance and reliability. Our comprehensive benchmarking tools provide detailed insights and metrics, helping you achieve and maintain excellence.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Comprehensive performance metrics</li>
-                <li><i class="bi bi-check-circle"></i> Industry-standard benchmarks</li>
-                <li><i class="bi bi-check-circle"></i> Detailed performance reports</li>
-                <li><i class="bi bi-check-circle"></i> Actionable insights for improvement</li>
-              </ul>`;
-            productImg.src = 'assets/img/benchmarking.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-5') {
-            productContent.innerHTML = `
-              <h3>GenAI Safety</h3>
-              <p>Ensure the safe and ethical deployment of generative AI technologies. Our GenAI safety solutions focus on ethical practices, risk mitigation, and secure deployment strategies, enabling responsible and robust innovation.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Ethical AI usage guidelines</li>
-                <li><i class="bi bi-check-circle"></i> Risk assessment and mitigation</li>
-                <li><i class="bi bi-check-circle"></i> Continuous monitoring and auditing</li>
-                <li><i class="bi bi-check-circle"></i> Compliance with ethical standards</li>
-              </ul>`;
-            productImg.src = 'assets/img/GenAI Safety.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-6') {
-            productContent.innerHTML = `
-              <h3>Evolving Threat Management</h3>
-              <p>Stay ahead of emerging threats with our proactive threat management solutions. We identify and neutralize potential threats to your AI systems and data, establishing a secure and resilient digital environment.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Proactive threat detection</li>
-                <li><i class="bi bi-check-circle"></i> Real-time threat response</li>
-                <li><i class="bi bi-check-circle"></i> Adaptive security measures</li>
-                <li><i class="bi bi-check-circle"></i> Comprehensive threat intelligence</li>
-              </ul>`;
-            productImg.src = 'assets/img/threat-management.jpg'; // Cambiar al URL de la imagen correspondiente
-          } else if (productId === 'product-7') {
-            productContent.innerHTML = `
-              <h3>Algorithmic Protection</h3>
-              <p>Defend your AI algorithms from evolving threats with our advanced protection solutions. Our proactive threat detection and robust security protocols ensure the integrity and reliability of your algorithms at all times.</p>
-              <ul>
-                <li><i class="bi bi-check-circle"></i> Robust defense mechanisms</li>
-                <li><i class="bi bi-check-circle"></i> Continuous model monitoring</li>
-                <li><i class="bi bi-check-circle"></i> Regular security audits</li>
-                <li><i class="bi bi-check-circle"></i> Incident response and recovery</li>
-              </ul>`;
-            productImg.src = 'assets/img/algorithmic-protection.png'; // Cambiar al URL de la imagen correspondiente
-          }
+          loadProductContent(productId);
         });
       });
+  
+      checkUrlForProduct();
     });
   </script>
 
