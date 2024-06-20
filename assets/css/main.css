@@ -833,92 +833,98 @@ section,
   content: "";
   background: color-mix(in srgb, #000000, transparent 60%);
   inset: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero video {
   position: absolute;
   inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+ 
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 0;
 }
 
 .hero .container,
 .hero .container-fluid {
-  z-index: 3;
-  position: relative;
+z-index: 4;
+position: relative;
 }
 
 .hero h1 {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: 700;
-  z-index: 1;
+margin: 0;
+font-size: 3rem;
+font-weight: 700;
+z-index: 1;
 }
 
 .hero blockquote {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  padding-left: 20px;
-  border-left: 2px solid var(--accent-color);
-  margin: 40px 0;
+color: color-mix(in srgb, var(--default-color), transparent 20%);
+padding-left: 20px;
+border-left: 2px solid var(--accent-color);
+margin: 40px 0;
 }
-
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  z-index: 0;
+color: var(--contrast-color);
+background: var(--accent-color);
+font-family: var(--heading-font);
+font-weight: 600;
+font-size: 14px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 12px 30px;
+border-radius: 50px;
+transition: 0.5s;
+z-index: 5;
+position: relative;
 }
 
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+.hero .btn-get-started
+{
+background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 .hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: var(--default-color);
-  font-weight: 600;
+font-size: 16px;
+transition: 0.5s;
+margin-left: 25px;
+color: var(--default-color);
+font-weight: 600;
+z-index: 5;
+position: relative;
 }
 
 .hero .btn-watch-video i {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
+color: color-mix(in srgb, var(--default-color), transparent 70%);
+font-size: 32px;
+transition: 0.3s;
+line-height: 0;
+margin-right: 8px;
 }
 
-.hero .btn-watch-video:hover {
-  color: var(--default-color);
+.hero .btn-watch-video
+{
+color: var(--default-color);
 }
 
-.hero .btn-watch-video:hover i {
-  color: var(--default-color);
+.hero .btn-watch-video
+i {
+color: var(--default-color);
 }
 
 @media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
+.hero h1 {
+font-size: 28px;
+line-height: 36px;
+}
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
-  }
+.hero .btn-get-started,
+.hero .btn-watch-video {
+font-size: 13px;
+}
 }
 
 /*--------------------------------------------------------------
@@ -2216,21 +2222,46 @@ font-size: 40px;
   right: 10px;
   background-color: #26498a;
   color: #FFF;
-  border-radius: 50px;
-  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px #999;
   z-index: 1000;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .whatsapp-float:hover {
-  background-color: #fff;
+  background-color: #ffffff;
+  color: #26498a; /* Cambiar el color del icono al fondo original */
   box-shadow: 4px 4px 6px #999;
+  transform: scale(1.1); /* Efecto de agrandamiento */
 }
 
 .whatsapp-float .whatsapp-icon {
-  margin-top: 15px;
+  font-size: 24px; /* Ajusta el tamaño del icono si es necesario */
+}
+
+/* Efecto tecnológico (brillo y animación) */
+@keyframes tech-glow {
+  0% {
+    box-shadow: 0 0 5px #26498a, 0 0 10px #26498a, 0 0 15px #26498a, 0 0 20px #26498a;
+  }
+  50% {
+    box-shadow: 0 0 10px #26498a, 0 0 20px #26498a, 0 0 30px #26498a, 0 0 40px #26498a;
+  }
+  100% {
+    box-shadow: 0 0 5px #26498a, 0 0 10px #26498a, 0 0 15px #26498a, 0 0 20px #26498a;
+  }
+}
+
+.whatsapp-float:hover {
+  background-color: #ffffff;
+  color: #26498a; /* Cambiar el color del icono al fondo original */
+  box-shadow: 4px 4px 6px #999;
+  transform: scale(1.1); /* Efecto de agrandamiento */
+  animation: tech-glow 1s infinite alternate; /* Añadir el efecto de brillo */
 }
 
 
