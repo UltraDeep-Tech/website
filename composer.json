@@ -1,0 +1,12 @@
+{
+    "name": "ultradeeptech/contact-form",
+    "description": "send mail",
+    "autoload": {
+        "psr-4": {
+            "Ultradeeptech\\ContactForm\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
