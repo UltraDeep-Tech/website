@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
     typeWriter();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const sitename = document.querySelector('.sitename');
+    const logoImg = document.querySelector('.logo-img');
+    
+    sitename.classList.add('glow');
+    logoImg.classList.add('glow');
+});
+
 
 
 
