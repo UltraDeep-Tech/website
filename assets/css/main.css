@@ -242,11 +242,11 @@ h6 {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: -180%;
+    width: 200%;
     height: 100%;
     background: linear-gradient(120deg, transparent, rgba(145, 186, 248, 0.171), transparent);
-    animation: shine 5s infinite;
+    animation: shine 4s infinite;
   }
 
 
