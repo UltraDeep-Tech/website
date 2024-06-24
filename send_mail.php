@@ -13,7 +13,7 @@ try {
     $mail->isSMTP();
     $mail->Host = 'mail.ultradeeptech.com';
     $mail->SMTPAuth = true;
-    $mail->Username = ' contact@ultradeeptech.com'; // Reemplaza con tu nombre de usuario SMTP
+    $mail->Username = 'contact@ultradeeptech.com'; // Reemplaza con tu nombre de usuario SMTP
     $mail->Password = 'M94YMNexLntRrft'; // Reemplaza con tu contraseña SMTP
     $mail->SMTPSecure = 'ssl'; // O 'tls' si es necesario
     $mail->Port = 465; // Puerto SMTP
