@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptButton = document.getElementById('accept-cookies');
-    const declineButton = document.getElementById('decline-cookies');
+    const denyButton = document.getElementById('deny-cookies');
 
     // Function to set a cookie
     function setCookie(name, value, days) {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to check if cookies are accepted
     function cookiesAccepted() {
-        return getCookie('cookiesAccepted') === 'true';
+        return getCookie('cookiesAccepted') !== null;
     }
 
     // Check if the user has already made a choice
@@ -39,11 +39,11 @@ document.addEventListener("DOMContentLoaded", function() {
         cookieBanner.style.display = 'none';
     });
 
-    // Handle decline button click
-    declineButton.addEventListener('click', function() {
+    // Handle deny button click
+    denyButton.addEventListener('click', function() {
+        setCookie('cookiesAccepted', 'false', 365);
         cookieBanner.style.display = 'none';
     });
 });
-
 
 
