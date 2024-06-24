@@ -1,45 +1,29 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
-
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $subject = strip_tags(trim($_POST["subject"]));
-    $message = trim($_POST["message"]);
+    // Recolectar los datos del formulario
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
-    if (empty($name) OR empty($subject) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        echo "Please fill out the form completely and correctly.";
-        exit;
-    }
-
-    $recipient = "maximilianoacri1@gmail.com"; // Reemplaza con tu correo electrónico real
-    $email_subject = "New contact from $name";
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Subject: $subject\n\n";
-    $email_content .= "Message:\n$message\n";
-
-    $email_headers = "From: $name <$email>";
-
-    if (mail($recipient, $email_subject, $email_content, $email_headers)) {
-        http_response_code(200);
-        echo "Thank You! Your message has been sent.";
+    // Validar los datos (puedes agregar más validaciones según sea necesario)
+    if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
+        // Dirección de correo a donde se enviará el mensaje
+        $to = "maximilianoacri1@gmail.com";
+        $headers = "From: $email" . "\r\n" .
+                   "Reply-To: $email" . "\r\n" .
+                   "X-Mailer: PHP/" . phpversion();
+        
+        // Enviar el correo
+        if (mail($to, $subject, $message, $headers)) {
+            echo "success";
+        } else {
+            echo "error";
+        }
     } else {
-        http_response_code(500);
-        echo "Oops! Something went wrong and we couldn't send your message.";
+        echo "validation error";
     }
 } else {
-    http_response_code(403);
-    echo "There was a problem with your submission, please try again.";
+    echo "invalid request";
 }
 ?>
-
