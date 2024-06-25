@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
           thisForm.querySelector('.sent-message').style.display = 'block';
           thisForm.reset();
         } else {
-          displayError(thisForm, data.message);
+          throw new Error(data.message);
         }
       })
       .catch((error) => {
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
 
 
 
