@@ -5,32 +5,49 @@ use PHPMailer\PHPMailer\Exception;
 // Cargar PHPMailer autoload
 require 'vendor/autoload.php';
 
+// Cargar variables de entorno (si usas dotenv)
+if (file_exists(__DIR__ . '/.env')) {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
+
 // Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
 
 try {
     // Configurar servidor SMTP
     $mail->isSMTP();
-    $mail->Host = 'mail.ultradeeptech.com';
+    $mail->Host = getenv('SMTP_HOST');
     $mail->SMTPAuth = true;
-    $mail->Username = 'contact@ultradeeptech.com'; // Reemplaza con tu nombre de usuario SMTP
-    $mail->Password = 'M94YMNexLntRrft'; // Reemplaza con tu contraseña SMTP
-    $mail->SMTPSecure = 'ssl'; // O 'tls' si es necesario
-    $mail->Port = 465; // Puerto SMTP
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');
+    $mail->SMTPSecure = getenv('SMTP_SECURE'); // 'ssl' o 'tls'
+    $mail->Port = getenv('SMTP_PORT'); // 465 para 'ssl' o 587 para 'tls'
+
+    // Validar y sanitizar entradas
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    if (!$email) {
+        throw new Exception('Email no válido');
+    }
 
     // Configurar remitente y destinatario
-    $mail->setFrom($_POST['email'], $_POST['name']);
-    $mail->addAddress('maximilianoacri@gmail.com', 'Nombre destinatario'); // Reemplaza con el correo y nombre del destinatario
+    $mail->setFrom($email, $name);
+    $mail->addAddress('maximilianoacri@gmail.com', 'Nombre destinatario');
 
     // Configurar el contenido del correo
     $mail->isHTML(true);
-    $mail->Subject = $_POST['subject'];
-    $mail->Body = "Nombre: {$_POST['name']} <br>Email: {$_POST['email']} <br>Asunto: {$_POST['subject']} <br>Mensaje: {$_POST['message']}";
+    $mail->Subject = $subject;
+    $mail->Body = "Nombre: {$name} <br>Email: {$email} <br>Asunto: {$subject} <br>Mensaje: {$message}";
 
     // Enviar el correo electrónico
     $mail->send();
     echo 'success'; // Envío exitoso
 
 } catch (Exception $e) {
-    echo "error: {$mail->ErrorInfo}"; // Error en el envío
+    echo "error: {$e->getMessage()}"; // Error en el envío
 }
+?>
