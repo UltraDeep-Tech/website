@@ -25,7 +25,8 @@ try {
     $mail->Port = getenv('SMTP_PORT'); // 465 para 'ssl' o 587 para 'tls'
 
     // Habilitar depuración
-    $mail->SMTPDebug = 2; // 2 para mensajes detallados de depuración
+    $mail->SMTPDebug = 3; // 3 para mensajes detallados de depuración
+    $mail->Debugoutput = function($str, $level) { echo "$str\n"; };
 
     // Validar y sanitizar entradas
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
