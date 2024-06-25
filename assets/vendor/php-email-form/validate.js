@@ -64,7 +64,8 @@
       })
       .then(data => {
         thisForm.querySelector('.loading').style.display = 'none';
-        if (data.trim() == 'OK') {
+        if (data.trim() === 'The email was sent.') {
+          thisForm.querySelector('.sent-message').innerHTML = 'The email was sent.';
           thisForm.querySelector('.sent-message').style.display = 'block';
           thisForm.reset();
         } else {
@@ -83,4 +84,5 @@
   }
 
 })();
+
 
