@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar los datos (puedes agregar más validaciones según sea necesario)
     if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
         // Dirección de correo a donde se enviará el mensaje
-        $to = "maximilianoacri1@gmail.com";
+        $to = "contact@ultradeeptech.com";
         $headers = "From: $email" . "\r\n" .
                    "Reply-To: $email" . "\r\n" .
                    "X-Mailer: PHP/" . phpversion();
