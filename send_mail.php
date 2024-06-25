@@ -24,9 +24,8 @@ try {
     $mail->SMTPSecure = $smtpSecure;
     $mail->Port = $smtpPort;
 
-    // Habilitar depuración si es necesario
-    $mail->SMTPDebug = 3; // Detallado para mensajes de depuración
-    $mail->Debugoutput = function($str, $level) { echo "$str\n"; };
+      // Deshabilitar depuración
+      $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
 
     // Validar y sanitizar entradas (ejemplo básico)
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
@@ -40,12 +39,12 @@ try {
 
     // Configurar remitente y destinatario
     $mail->setFrom($email, $name);
-    $mail->addAddress('contact@ultradeeptech.com', 'Nombre destinatario');
+    $mail->addAddress('contact@ultradeeptech.com', 'Ultra Deep Tech');
 
     // Configurar el contenido del correo
     $mail->isHTML(true);
     $mail->Subject = $subject;
-    $mail->Body = "Nombre: {$name} <br>Email: {$email} <br>Asunto: {$subject} <br>Mensaje: {$message}";
+    $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
 
     // Enviar el correo electrónico
     $mail->send();
