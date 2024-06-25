@@ -2,14 +2,14 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Cargar PHPMailer autoload
 require 'vendor/autoload.php';
 
-// Cargar variables de entorno (si usas dotenv)
-if (file_exists(__DIR__ . '/.env')) {
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
-}
+// Configuración SMTP
+$smtpHost = 'mail.ultradeeptech.com';
+$smtpUsername = 'contact@ultradeeptech.com';
+$smtpPassword = 'M94YMNexLntRrft';
+$smtpPort = 465;
+$smtpSecure = 'ssl'; // 'ssl' o 'tls'
 
 // Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
@@ -17,18 +17,18 @@ $mail = new PHPMailer(true);
 try {
     // Configurar servidor SMTP
     $mail->isSMTP();
-    $mail->Host = getenv('SMTP_HOST');
+    $mail->Host = $smtpHost;
     $mail->SMTPAuth = true;
-    $mail->Username = getenv('SMTP_USERNAME');
-    $mail->Password = getenv('SMTP_PASSWORD');
-    $mail->SMTPSecure = getenv('SMTP_SECURE'); // 'ssl' o 'tls'
-    $mail->Port = getenv('SMTP_PORT'); // 465 para 'ssl' o 587 para 'tls'
+    $mail->Username = $smtpUsername;
+    $mail->Password = $smtpPassword;
+    $mail->SMTPSecure = $smtpSecure;
+    $mail->Port = $smtpPort;
 
-    // Habilitar depuración
-    $mail->SMTPDebug = 3; // 3 para mensajes detallados de depuración
+    // Habilitar depuración si es necesario
+    $mail->SMTPDebug = 3; // Detallado para mensajes de depuración
     $mail->Debugoutput = function($str, $level) { echo "$str\n"; };
 
-    // Validar y sanitizar entradas
+    // Validar y sanitizar entradas (ejemplo básico)
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
