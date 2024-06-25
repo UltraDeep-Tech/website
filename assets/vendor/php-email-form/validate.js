@@ -54,9 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         thisForm.querySelector('.loading').style.display = 'none';
         if (data.status === 'success') {
-          thisForm.querySelector('.sent-message').innerHTML = data.message;
-          thisForm.querySelector('.sent-message').style.display = 'block';
-          thisForm.reset();
+          showSuccessMessage(thisForm, data.message);
         } else {
           throw new Error(data.message);
         }
@@ -66,10 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
+  function showSuccessMessage(thisForm, message) {
+    let sentMessage = thisForm.querySelector('.sent-message');
+    sentMessage.innerHTML = message;
+    sentMessage.style.display = 'block';
+    thisForm.reset();
+  }
+
   function displayError(thisForm, errorMessage) {
+    let errorMessageElement = thisForm.querySelector('.error-message');
+    errorMessageElement.innerHTML = errorMessage;
+    errorMessageElement.style.display = 'block';
     thisForm.querySelector('.loading').style.display = 'none';
-    thisForm.querySelector('.error-message').innerHTML = errorMessage;
-    thisForm.querySelector('.error-message').style.display = 'block';
   }
 
 });
