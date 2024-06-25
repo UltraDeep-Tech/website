@@ -11,8 +11,9 @@ $smtpPassword = 'M94YMNexLntRrft';
 $smtpPort = 465;
 $smtpSecure = 'ssl'; // 'ssl' o 'tls'
 
-// Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
+
+$response = [];
 
 try {
     // Configurar servidor SMTP
@@ -24,10 +25,10 @@ try {
     $mail->SMTPSecure = $smtpSecure;
     $mail->Port = $smtpPort;
 
-      // Deshabilitar depuración
-      $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
+    // Deshabilitar depuración
+    $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
 
-    // Validar y sanitizar entradas (ejemplo básico)
+    // Validar y sanitizar entradas
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
@@ -48,9 +49,13 @@ try {
 
     // Enviar el correo electrónico
     $mail->send();
-    echo 'success'; // Envío exitoso
+    $response = ['status' => 'success', 'message' => 'The email was sent.'];
 
 } catch (Exception $e) {
-    echo "error: {$e->getMessage()}"; // Error en el envío
+    $response = ['status' => 'error', 'message' => "Error: {$e->getMessage()}"];
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
+

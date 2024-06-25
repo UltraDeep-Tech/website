@@ -13,6 +13,8 @@ $smtpSecure = 'ssl'; // 'ssl' o 'tls'
 
 $mail = new PHPMailer(true);
 
+$response = [];
+
 try {
     // Configurar servidor SMTP
     $mail->isSMTP();
@@ -47,10 +49,13 @@ try {
 
     // Enviar el correo electrónico
     $mail->send();
-    echo 'The email was sent.'; // Envío exitoso
+    $response = ['status' => 'success', 'message' => 'The email was sent.'];
 
 } catch (Exception $e) {
-    echo "error: {$e->getMessage()}"; // Error en el envío
+    $response = ['status' => 'error', 'message' => "Error: {$e->getMessage()}"];
 }
+
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
 

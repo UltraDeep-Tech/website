@@ -50,25 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
       body: formData,
       headers: { 'X-Requested-With': 'XMLHttpRequest' }
     })
-      .then(response => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error(`${response.status} ${response.statusText} ${response.url}`);
-        }
-      })
+      .then(response => response.json())
       .then(data => {
         thisForm.querySelector('.loading').style.display = 'none';
-        if (data.trim() === 'The email was sent.') {
-          thisForm.querySelector('.sent-message').innerHTML = 'Your message has been sent. Thank you!';
+        if (data.status === 'success') {
+          thisForm.querySelector('.sent-message').innerHTML = data.message;
           thisForm.querySelector('.sent-message').style.display = 'block';
           thisForm.reset();
         } else {
-          throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action);
+          throw new Error(data.message);
         }
       })
       .catch((error) => {
-        displayError(thisForm, 'Error: ' + error.message);
+        displayError(thisForm, error.message);
       });
   }
 
@@ -79,4 +73,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
 
