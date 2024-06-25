@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   php_email_form_submit(thisForm, action, formData);
                 });
             } catch (error) {
-              displayError(thisForm, error);
+              displayError(thisForm, error.message);
             }
           });
         } else {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
           thisForm.querySelector('.sent-message').style.display = 'block';
           thisForm.reset();
         } else {
-          throw new Error(data.message);
+          displayError(thisForm, data.message);
         }
       })
       .catch((error) => {
@@ -73,5 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
 
 
