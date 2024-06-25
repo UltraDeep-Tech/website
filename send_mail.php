@@ -40,7 +40,7 @@ try {
 
     // Configurar remitente y destinatario
     $mail->setFrom($email, $name);
-    $mail->addAddress('maximilianoacri@gmail.com', 'Nombre destinatario');
+    $mail->addAddress('contact@ultradeeptech.com', 'Nombre destinatario');
 
     // Configurar el contenido del correo
     $mail->isHTML(true);
