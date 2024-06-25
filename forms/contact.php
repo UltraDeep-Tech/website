@@ -47,12 +47,16 @@ try {
     $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
 
     // Enviar el correo electrónico
-    $mail->send();
-    echo json_encode(['status' => 'success', 'message' => 'The email was sent.']); // Envío exitoso
+    if ($mail->send()) {
+        echo json_encode(array('status' => 'success', 'message' => 'The email was sent.'));
+    } else {
+        echo json_encode(array('status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo));
+    }
 
 } catch (Exception $e) {
-    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]); // Error en el envío
+    echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
 }
 ?>
+
 
 

@@ -50,7 +50,7 @@ try {
     if ($mail->send()) {
         echo json_encode(array('status' => 'success', 'message' => 'The email was sent.'));
     } else {
-        throw new Exception('Mailer Error: ' . $mail->ErrorInfo);
+        echo json_encode(array('status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo));
     }
 
 } catch (Exception $e) {
