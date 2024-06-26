@@ -30,20 +30,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Check if the user has already made a choice
     if (!cookiesAccepted()) {
-        cookieBanner.style.display = 'block';
+        setTimeout(() => {
+            cookieBanner.classList.add('show');
+        }, 2000); // Delay showing the cookie banner to ensure other content is loaded first
     }
 
     // Handle accept button click
     acceptButton.addEventListener('click', function() {
         setCookie('cookiesAccepted', 'true', 365);
-        cookieBanner.style.display = 'none';
+        cookieBanner.classList.remove('show');
     });
 
     // Handle deny button click
     denyButton.addEventListener('click', function() {
         setCookie('cookiesAccepted', 'false', 365);
-        cookieBanner.style.display = 'none';
+        cookieBanner.classList.remove('show');
     });
 });
-
 
