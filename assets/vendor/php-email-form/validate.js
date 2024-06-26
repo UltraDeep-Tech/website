@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function displayError(thisForm, errorMessage) {
-    thisForm.querySelector('.loading').style.display = 'none';
-    thisForm.querySelector('.error-message').innerHTML = errorMessage;
-    thisForm.querySelector('.error-message').style.display = 'block';
+    // No mostrar errores
+    console.log(errorMessage); // Puedes registrar el error en la consola para fines de depuración
   }
 
 });
+
 
 
 
