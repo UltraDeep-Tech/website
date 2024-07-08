@@ -1,22 +1,13 @@
 {
-  "name": "ultradeeptech",
+  "name": "website",
   "version": "1.0.0",
-  "description": "package.json",
+  "description": "My website project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "build": "echo 'No build script defined'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UltraDeep-Tech/website.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/UltraDeep-Tech/website/issues"
-  },
-  "homepage": "https://github.com/UltraDeep-Tech/website#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.17.1"
   }
 }

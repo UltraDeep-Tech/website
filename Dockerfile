@@ -13,9 +13,6 @@ RUN npm install
 # Copia el resto del código de la aplicación.
 COPY . .
 
-# Construye la aplicación.
-RUN npm run build
-
 # Expone el puerto en el que correrá la aplicación.
 EXPOSE 8080
 
