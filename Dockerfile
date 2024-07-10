@@ -1,5 +1,5 @@
-# Usa una imagen base oficial de Node.js.
-FROM node:14
+# Usa una imagen base oficial de Node.js 20.
+FROM node:20
 
 # Establece el directorio de trabajo.
 WORKDIR /app
@@ -18,3 +18,4 @@ EXPOSE 8080
 
 # Comando para ejecutar la aplicación.
 CMD ["npm", "start"]
+
