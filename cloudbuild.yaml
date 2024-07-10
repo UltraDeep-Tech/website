@@ -1,9 +1,11 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+  logsBucket: 'gs://mywebsite-bucket'
+
 steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
 - name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-    npm install
-    npm run build
-    gcloud app deploy
+  args: ['app', 'deploy']
