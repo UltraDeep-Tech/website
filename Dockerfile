@@ -7,8 +7,11 @@ WORKDIR /app
 # Copia el archivo package.json y package-lock.json.
 COPY package*.json ./
 
-# Instala las dependencias.
-RUN npm install
+# Configura el límite de memoria para Node.js.
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+# Instala las dependencias utilizando npm ci.
+RUN npm ci
 
 # Copia el resto del código de la aplicación.
 COPY . .
