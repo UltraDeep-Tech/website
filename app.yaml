@@ -1,9 +1,11 @@
-runtime: nodejs16
+runtime: php74
 
 handlers:
-  - url: /
-    static_files: index.html
-    upload: index.html
+- url: /css
+  static_dir: assets/css
 
-  - url: /
-    static_dir: public
+- url: /js
+  static_dir: assets/js
+
+- url: /.*
+  script: auto
