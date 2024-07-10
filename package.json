@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "install": "npm install",
+    "build": "echo 'No build step defined'"
   },
   "dependencies": {
     "express": "^4.17.1"
   }
 }
+
