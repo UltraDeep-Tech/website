@@ -1,8 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['install', '--max-old-space-size=4096']
+  args: ['cache', 'clean', '--force']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install', '--max-old-space-size=8192']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy']
+- name: 'ubuntu'
+  args: ['cat', '/builder/home/.npm/_logs/*-debug-0.log']
 
 options:
   logging: CLOUD_LOGGING_ONLY
