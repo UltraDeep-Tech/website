@@ -8,5 +8,11 @@
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "^20.15.1",
+    "npm": ">=10.8.2"
   }
 }
+
+
