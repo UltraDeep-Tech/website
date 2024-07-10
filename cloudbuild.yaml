@@ -7,6 +7,3 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
   machineType: 'E2_HIGHCPU_8'
-  logsBucket: 'gs://mywebsite-bucket'
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
-  
