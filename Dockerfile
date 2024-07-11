@@ -10,6 +10,9 @@ COPY package*.json ./
 # Configura el límite de memoria para Node.js.
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
+# Actualiza npm a la versión requerida.
+RUN npm install -g npm@10.8.2
+
 # Instala las dependencias utilizando npm ci.
 RUN npm ci
 
