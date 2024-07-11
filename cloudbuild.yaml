@@ -3,8 +3,6 @@ steps:
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app-image', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['run', '-d', '-p', '8080:8080', 'gcr.io/$PROJECT_ID/my-app-image']
-  env:
-    - 'NODE_OPTIONS=--max-old-space-size=4096'
-    - 'NPM_CONFIG_LOGLEVEL=info'
 images:
 - 'gcr.io/$PROJECT_ID/my-app-image'
+logsBucket: 'gs://mi-nuevo-bucket-de-logs'
