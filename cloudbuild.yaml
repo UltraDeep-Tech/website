@@ -1,8 +1,20 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app-image', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['run', '-d', '-p', '8080:8080', 'gcr.io/$PROJECT_ID/my-app-image']
+  # Paso 1: Construir la imagen Docker
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app-image', '.']
+
+  # Paso 2: Ejecutar la imagen Docker para probar que todo esté correcto (opcional)
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['run', '-d', '-p', '8080:8080', 'gcr.io/$PROJECT_ID/my-app-image']
+
+# Lista de imágenes que se deben subir al registro de contenedores
 images:
-- 'gcr.io/$PROJECT_ID/my-app-image'
+  - 'gcr.io/$PROJECT_ID/my-app-image'
+
+# Especificar el bucket de Google Cloud Storage para los logs
 logsBucket: 'gs://mi-nuevo-bucket-de-logs'
+
+# Opcional: Configurar notificaciones para el activador
+notifications:
+  - topic: 'projects/$PROJECT_ID/topics/activador-paginaweb'
+    filter: 'status!="SUCCESS"'
