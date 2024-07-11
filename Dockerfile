@@ -1,15 +1,14 @@
-FROM node:18.17.0
+# Usa una imagen base de Nginx en Alpine
+FROM nginx:alpine
 
-WORKDIR /app
+# Copia los archivos de tu proyecto al directorio de trabajo del contenedor
+COPY . /usr/share/nginx/html
 
-COPY package*.json ./
+# Exponer el puerto 80
+EXPOSE 80
 
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+# Cambiar el puerto de NGINX a 8080 para Cloud Run
+RUN sed -i 's/80/8080/' /etc/nginx/conf.d/default.conf
 
-RUN npm install -g npm@10.8.2
-RUN npm install
-
-COPY . .
-
-CMD ["node", "your-start-script.js"]
-
+# Comando de inicio de NGINX
+CMD ["nginx", "-g", "daemon off;"]
