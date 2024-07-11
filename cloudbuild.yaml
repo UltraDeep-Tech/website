@@ -14,7 +14,4 @@ images:
 # Especificar el bucket de Google Cloud Storage para los logs
 logsBucket: 'gs://mi-nuevo-bucket-de-logs'
 
-# Opcional: Configurar notificaciones para el activador
-notifications:
-  - topic: 'projects/$PROJECT_ID/topics/activador-paginaweb'
-    filter: 'status!="SUCCESS"'
+
