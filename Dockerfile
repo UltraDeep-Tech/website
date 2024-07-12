@@ -1,23 +1,14 @@
-# Usa una imagen base de PHP con FPM
-FROM php:7.4-fpm-alpine
-
-# Instala Nginx y otras dependencias necesarias
-RUN apk --no-cache add nginx supervisor
+# Usa una imagen base de Nginx en Alpine
+FROM nginx:alpine
 
 # Copia los archivos de tu proyecto al directorio de trabajo del contenedor
 COPY . /usr/share/nginx/html
 
-# Copia el archivo de configuración de Nginx
-COPY nginx.conf /etc/nginx/nginx.conf
+# Exponer el puerto 80
+EXPOSE 80
 
-# Copia el archivo de configuración de supervisord
-COPY supervisord.conf /etc/supervisord.conf
+# Cambiar el puerto de Nginx a 8080 para Cloud Run
+RUN sed -i 's/80/8080/' /etc/nginx/conf.d/default.conf
 
-# Establecer permisos adecuados para send_mail.php
-RUN chmod 644 /usr/share/nginx/html/send_mail.php
-
-# Exponer el puerto 8080
-EXPOSE 8080
-
-# Iniciar Nginx y PHP-FPM
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+# Comando de inicio de Nginx
+CMD ["nginx", "-g", "daemon off;"]
