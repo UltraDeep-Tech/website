@@ -4,15 +4,19 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+// Cargar variables de entorno desde el archivo .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Establecer el encabezado de respuesta a JSON
 header('Content-Type: application/json');
 
 // Obtener la configuración SMTP de las variables de entorno
-$smtpHost = getenv('SMTP_HOST');
-$smtpUsername = getenv('SMTP_USERNAME');
-$smtpPassword = getenv('SMTP_PASSWORD');
-$smtpPort = getenv('SMTP_PORT');
-$smtpSecure = getenv('SMTP_SECURE'); // 'ssl' o 'tls'
+$smtpHost = $_ENV['SMTP_HOST'];
+$smtpUsername = $_ENV['SMTP_USERNAME'];
+$smtpPassword = $_ENV['SMTP_PASSWORD'];
+$smtpPort = $_ENV['SMTP_PORT'];
+$smtpSecure = $_ENV['SMTP_SECURE']; // 'ssl' o 'tls'
 
 // Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
@@ -46,7 +50,7 @@ try {
     $mail->Port = $smtpPort;
 
     // Deshabilitar depuración
-    $mail->SMTPDebug = 2; // Mostrar mensajes de depuración detallados
+    $mail->SMTPDebug = 0; // Cambiar a 0 para deshabilitar la depuración
     $mail->Timeout = 30; // Tiempo de espera en segundos
     $mail->SMTPOptions = array(
         'ssl' => array(
@@ -57,7 +61,7 @@ try {
     );
 
     // Configurar remitente y destinatario
-    $mail->setFrom($email, $name);
+    $mail->setFrom($smtpUsername, 'Ultra Deep Tech');
     $mail->addAddress('contact@ultradeeptech.com', 'Ultra Deep Tech');
 
     // Configurar el contenido del correo
