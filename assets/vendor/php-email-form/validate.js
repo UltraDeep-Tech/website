@@ -61,16 +61,16 @@ document.addEventListener('DOMContentLoaded', function () {
           throw new Error(data.message);
         }
       })
-      .catch((error) => {
+      .catch(error => {
+        thisForm.querySelector('.loading').style.display = 'none';
         displayError(thisForm, error.message);
       });
   }
 
-  function displayError(thisForm, errorMessage) {
-    // No mostrar errores
-    console.log(errorMessage); // Puedes registrar el error en la consola para fines de depuración
+  function displayError(thisForm, error) {
+    thisForm.querySelector('.error-message').innerHTML = error;
+    thisForm.querySelector('.error-message').style.display = 'block';
   }
-
 });
 
 
