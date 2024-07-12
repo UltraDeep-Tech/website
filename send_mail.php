@@ -4,6 +4,9 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+// Establecer el encabezado de respuesta a JSON
+header('Content-Type: application/json');
+
 // Obtener la configuración SMTP de las variables de entorno
 $smtpHost = getenv('SMTP_HOST');
 $smtpUsername = getenv('SMTP_USERNAME');
@@ -36,6 +39,10 @@ try {
     );
 
     // Validar y sanitizar entradas (ejemplo básico)
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
+        throw new Exception('All fields are required.');
+    }
+
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
@@ -65,4 +72,3 @@ try {
     echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
 }
 ?>
-

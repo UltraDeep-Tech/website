@@ -50,9 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
       body: formData,
       headers: { 'X-Requested-With': 'XMLHttpRequest' }
     })
-      .then(response => response.json())
-      .then(data => {
+      .then(response => {
         thisForm.querySelector('.loading').style.display = 'none';
+        if (!response.ok) {
+          return response.text().then(text => { throw new Error(text) });
+        }
+        return response.json();
+      })
+      .then(data => {
         if (data.status === 'success') {
           thisForm.querySelector('.sent-message').innerHTML = data.message;
           thisForm.querySelector('.sent-message').style.display = 'block';
@@ -72,9 +77,4 @@ document.addEventListener('DOMContentLoaded', function () {
     thisForm.querySelector('.error-message').style.display = 'block';
   }
 });
-
-
-
-
-
 
