@@ -1,21 +1,44 @@
-# Usa una imagen base de PHP con Nginx en Alpine
-FROM php:8.0-fpm-alpine
+# syntax=docker/dockerfile:1.4
 
-# Instala Nginx
-RUN apk --no-cache add nginx
+# Use an official PHP image as the base image
+FROM php:7.4-fpm
 
-# Copia los archivos de configuración de PHP-FPM
-COPY ./php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
+# Set working directory
+WORKDIR /var/www
 
-# Copia el archivo de configuración de Nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    zip \
+    jpegoptim optipng pngquant gifsicle \
+    vim \
+    unzip \
+    git \
+    curl \
+    nginx
 
-# Copia los archivos de tu proyecto al directorio de trabajo del contenedor
-COPY . /usr/share/nginx/html
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Exponer el puerto 8080
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+
+# Add user for laravel application
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
+# Copy existing application directory contents
+COPY . /var/www
+
+# Copy existing application directory permissions
+COPY --chown=www:www . /var/www
+
+# Change current user to www
+USER www
+
+# Expose port 8080 and start services
 EXPOSE 8080
 
-# Iniciar PHP-FPM y Nginx
-CMD ["sh", "-c", "php-fpm && nginx -g 'daemon off;'"]
-
+CMD ["nginx", "-g", "daemon off;"]
