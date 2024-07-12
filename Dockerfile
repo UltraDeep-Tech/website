@@ -1,14 +1,20 @@
-# Usa una imagen base de Nginx en Alpine
-FROM nginx:alpine
+# Usa una imagen base de PHP con Nginx en Alpine
+FROM php:8.0-fpm-alpine
+
+# Instala Nginx
+RUN apk --no-cache add nginx
+
+# Copia los archivos de configuración de PHP-FPM
+COPY ./php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
+
+# Copia el archivo de configuración de Nginx
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
 # Copia los archivos de tu proyecto al directorio de trabajo del contenedor
 COPY . /usr/share/nginx/html
 
-# Exponer el puerto 80
-EXPOSE 80
+# Exponer el puerto 8080
+EXPOSE 8080
 
-# Cambiar el puerto de Nginx a 8080 para Cloud Run
-RUN sed -i 's/80/8080/' /etc/nginx/conf.d/default.conf
-
-# Comando de inicio de Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Iniciar PHP-FPM y Nginx
+CMD ["sh", "-c", "php-fpm && nginx -g 'daemon off;'"]
