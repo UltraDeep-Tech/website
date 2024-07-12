@@ -7,6 +7,9 @@ RUN apk --no-cache add nginx supervisor
 # Copia los archivos del proyecto al contenedor
 COPY . /var/www/html
 
+# Crear el directorio del socket si no existe
+RUN mkdir -p /var/run/php
+
 # Copia y configura Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/default.conf
