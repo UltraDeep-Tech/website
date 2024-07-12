@@ -16,6 +16,6 @@ COPY supervisord.conf /etc/supervisord.conf
 # Exponer el puerto 8080
 EXPOSE 8080
 
-# Comando para iniciar supervisord que manejará Nginx y PHP-FPM
+# Iniciar Nginx y PHP-FPM
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
 
