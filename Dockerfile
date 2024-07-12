@@ -18,3 +18,4 @@ EXPOSE 8080
 
 # Iniciar PHP-FPM y Nginx
 CMD ["sh", "-c", "php-fpm && nginx -g 'daemon off;'"]
+
