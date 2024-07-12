@@ -18,6 +18,24 @@ $smtpSecure = getenv('SMTP_SECURE'); // 'ssl' o 'tls'
 $mail = new PHPMailer(true);
 
 try {
+    // Verificar que los datos del formulario están presentes
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
+        throw new Exception('All fields are required.');
+    }
+
+    // Imprimir los datos del formulario para depuración
+    error_log(print_r($_POST, true));
+
+    // Validar y sanitizar entradas (ejemplo básico)
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+    if (!$email) {
+        throw new Exception('Email no válido');
+    }
+
     // Configurar servidor SMTP
     $mail->isSMTP();
     $mail->Host = $smtpHost;
@@ -37,20 +55,6 @@ try {
             'allow_self_signed' => true
         )
     );
-
-    // Validar y sanitizar entradas (ejemplo básico)
-    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
-        throw new Exception('All fields are required.');
-    }
-
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-
-    if (!$email) {
-        throw new Exception('Email no válido');
-    }
 
     // Configurar remitente y destinatario
     $mail->setFrom($email, $name);
