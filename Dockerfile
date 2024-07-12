@@ -1,28 +1,25 @@
-# Usa una imagen base de PHP-FPM y Nginx en Alpine
+# Usa una imagen base de PHP-FPM en Alpine
 FROM php:7.4-fpm-alpine
 
 # Instala dependencias adicionales
-RUN apk --no-cache add nginx supervisor
+RUN apk --no-cache add supervisor
 
-# Copia los archivos del proyecto al contenedor
+# Crear el directorio del socket y log si no existen
+RUN mkdir -p /var/run/php /var/log/php7
+
+# Copiar los archivos del proyecto al contenedor
 COPY . /var/www/html
 
-# Crear el directorio del socket si no existe
-RUN mkdir -p /var/run/php
-
-# Copia y configura Nginx
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY default.conf /etc/nginx/conf.d/default.conf
+# Copiar archivos de configuración
+COPY php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Instala Composer y las dependencias de PHP
 RUN curl -sS -k https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install --working-dir=/var/www/html
 
-# Exponer el puerto 8080
-EXPOSE 8080
-
-# Copia el archivo de configuración de Supervisor
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# Exponer el puerto 9000 (puerto por defecto para PHP-FPM)
+EXPOSE 9000
 
 # Comando de inicio de Supervisor
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

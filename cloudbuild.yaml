@@ -1,27 +1,22 @@
 steps:
-  # Paso 1: Construir la imagen Docker
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app-image', '.']
 
-  # Paso 2: Subir la imagen Docker al registro de contenedores
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/my-app-image']
 
-  # Paso 3: Desplegar la imagen en Cloud Run
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: gcloud
     args: [
       'run', 'deploy', 'my-app-service',
       '--image', 'gcr.io/$PROJECT_ID/my-app-image',
       '--platform', 'managed',
       '--region', 'us-central1',
-      '--allow-unauthenticated'
+      '--allow-unauthenticated',
+      '--port', '9000'
     ]
 
-# Lista de imágenes que se deben subir al registro de contenedores
 images:
   - 'gcr.io/$PROJECT_ID/my-app-image'
 
-# Especificar el bucket de Google Cloud Storage para los logs
 logsBucket: 'gs://mi-nuevo-bucket-de-logs'
-
