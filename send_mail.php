@@ -25,7 +25,15 @@ try {
     $mail->Port = $smtpPort;
 
     // Deshabilitar depuración
-    $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
+    $mail->SMTPDebug = 2; // Mostrar mensajes de depuración detallados
+    $mail->Timeout = 30; // Tiempo de espera en segundos
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );
 
     // Validar y sanitizar entradas (ejemplo básico)
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
@@ -57,4 +65,3 @@ try {
     echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
 }
 ?>
-
