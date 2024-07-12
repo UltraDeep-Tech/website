@@ -13,9 +13,11 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # Copia el archivo de configuración de supervisord
 COPY supervisord.conf /etc/supervisord.conf
 
+# Establecer permisos adecuados para send_mail.php
+RUN chmod 644 /usr/share/nginx/html/send_mail.php
+
 # Exponer el puerto 8080
 EXPOSE 8080
 
 # Iniciar Nginx y PHP-FPM
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
-
