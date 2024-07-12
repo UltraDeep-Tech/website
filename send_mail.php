@@ -4,12 +4,12 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-// Configuración SMTP
-$smtpHost = 'mail.ultradeeptech.com';
-$smtpUsername = 'contact@ultradeeptech.com';
-$smtpPassword = 'M94YMNexLntRrft';
-$smtpPort = 465;
-$smtpSecure = 'ssl'; // 'ssl' o 'tls'
+// Obtener la configuración SMTP de las variables de entorno
+$smtpHost = getenv('SMTP_HOST');
+$smtpUsername = getenv('SMTP_USERNAME');
+$smtpPassword = getenv('SMTP_PASSWORD');
+$smtpPort = getenv('SMTP_PORT');
+$smtpSecure = getenv('SMTP_SECURE'); // 'ssl' o 'tls'
 
 // Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
@@ -57,5 +57,4 @@ try {
     echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
 }
 ?>
-
 
