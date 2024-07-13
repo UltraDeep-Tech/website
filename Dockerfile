@@ -15,12 +15,12 @@ WORKDIR /var/www/html
 # Install PHP dependencies
 RUN composer install
 
-# Update Apache configuration to listen on port 9000
-RUN sed -i 's/Listen 80/Listen 9000/' /etc/apache2/ports.conf
-RUN sed -i 's/:80/:9000/' /etc/apache2/sites-available/000-default.conf
+# Update Apache configuration to listen on port 8080
+RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf
+RUN sed -i 's/:80/:8080/' /etc/apache2/sites-available/000-default.conf
 
-# Expose port 9000
-EXPOSE 9000
+# Expose port 8080
+EXPOSE 8080
 
 # Start Apache in the foreground
 CMD ["apache2-foreground"]
