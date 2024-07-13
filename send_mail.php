@@ -4,6 +4,10 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
+header('Content-Type: application/json');
+
+$response = [];
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $from_email = $_POST['email'];
@@ -33,11 +37,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->AltBody = strip_tags($message);
 
         $mail->send();
-        echo 'Your message has been sent. Thank you!';
+        $response['status'] = 'success';
+        $response['message'] = 'Your message has been sent. Thank you!';
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        $response['status'] = 'error';
+        $response['message'] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 } else {
-    echo 'Invalid request method';
+    $response['status'] = 'error';
+    $response['message'] = 'Invalid request method';
 }
+
+echo json_encode($response);
 ?>
