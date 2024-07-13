@@ -8,7 +8,7 @@ $mail = new PHPMailer(true);
 
 try {
     // Server settings
-    $mail->SMTPDebug = 3;                      // Habilitar salida de depuración detallada
+    $mail->SMTPDebug = 1;                      // Habilitar salida de depuración detallada
     $mail->isSMTP();                           // Usar SMTP
     $mail->Host       = 'mail.ultradeeptech.com';  // Servidor SMTP
     $mail->SMTPAuth   = true;                  // Habilitar autenticación SMTP
