@@ -537,7 +537,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .footer-top {
   padding-top: 50px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
+  color: #fff;
 }
 
 .footer .footer-about .logo {
@@ -551,14 +552,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: #fff;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
+
+}
+.footer .footer-about .logo span:hover {
+  animation: textGlow 2s infinite;
 }
 
 .footer .footer-about p {
+  color: #fff;
   font-size: 14px;
   font-family: var(--heading-font);
 }
@@ -583,13 +589,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer h4 {
+  color: #fff !important;
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 12px;
 }
 
+.footer  .copyright span {
+  color: rgb(8, 8, 8) !important;
+}
+
 .footer .footer-links {
   margin-bottom: 30px;
+  
 }
 
 .footer .footer-links ul {
@@ -605,6 +617,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .footer-links ul li {
+  
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -612,18 +625,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .footer-links ul li:first-child {
   padding-top: 0;
+  
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #a0a3a3 !important;
+  ;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: #fff !important;
 }
 
 .footer .footer-contact p {
-  margin-bottom: 5px;
+  color: #a0a3a3;
+}
+.footer .footer-contact a {
+  color: #a0a3a3;
+}
+.footer .footer-contact p:hover {
+  color: #fff;
+}
+.footer .footer-contact a:hover {
+  color: #fff;
+}
+.footer .footer-contact strong {
+  color: #fff;
 }
 
 .footer .copyright {
@@ -680,7 +707,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -693,7 +720,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: #fff;
 }
 
 .scroll-top.active {
@@ -2141,7 +2168,7 @@ section,
   height: 50px;
   bottom: 60px;
   right: 10px;
-  background-color: #26498a;
+  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
   color: #fff;
   border-radius: 50%;
   display: flex;
