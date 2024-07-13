@@ -18,8 +18,8 @@
 :root {
   --nav-color: rgba(255, 255, 255, 0.918);
   --nav-hover-color: #ffffff;
-  --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #26498a;
+  --nav-dropdown-background-color: #1d1c1c;
+  --nav-dropdown-color: #ffff;
   --nav-dropdown-hover-color: #ffffff;
 }
 
@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
-    background: #26498a;
+    background: #124fc273;
   }
 
   .navmenu .dropdown:hover>ul {
