@@ -4,32 +4,40 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-$mail = new PHPMailer(true);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $from_email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-try {
-    // Server settings
-    $mail->SMTPDebug = 1;                      // Habilitar salida de depuración detallada
-    $mail->isSMTP();                           // Usar SMTP
-    $mail->Host       = 'mail.ultradeeptech.com';  // Servidor SMTP
-    $mail->SMTPAuth   = true;                  // Habilitar autenticación SMTP
-    $mail->Username   = 'contact@ultradeeptech.com'; // Usuario SMTP
-    $mail->Password   = 'M94YMNexLntRrft';      // Contraseña SMTP
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Habilitar encriptación SSL/TLS
-    $mail->Port       = 465;                   // Puerto TCP para conexión SMTP
+    $mail = new PHPMailer(true);
 
-    // Recipients
-    $mail->setFrom('contact@ultradeeptech.com', 'Mailer');
-    $mail->addAddress('contact@ultradeeptech.com', 'Avi'); // Agregar un destinatario
+    try {
+        // Configuración del servidor SMTP
+        $mail->isSMTP();
+        $mail->Host       = 'mail.ultradeeptech.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'contact@ultradeeptech.com';
+        $mail->Password   = 'M94YMNexLntRrft';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
-    // Content
-    $mail->isHTML(true);                       // Establecer formato de email a HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        // Destinatarios
+        $mail->setFrom($from_email, $name);
+        $mail->addAddress('contact@ultradeeptech.com', 'Avi');
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        // Contenido
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $message;
+        $mail->AltBody = strip_tags($message);
+
+        $mail->send();
+        echo 'Your message has been sent. Thank you!';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+} else {
+    echo 'Invalid request method';
 }
 ?>
