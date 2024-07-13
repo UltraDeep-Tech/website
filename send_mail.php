@@ -4,79 +4,32 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-// Cargar variables de entorno desde el archivo .env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-// Establecer el encabezado de respuesta a JSON
-header('Content-Type: application/json');
-
-// Obtener la configuración SMTP de las variables de entorno
-$smtpHost = $_ENV['SMTP_HOST'];
-$smtpUsername = $_ENV['SMTP_USERNAME'];
-$smtpPassword = $_ENV['SMTP_PASSWORD'];
-$smtpPort = $_ENV['SMTP_PORT'];
-$smtpSecure = $_ENV['SMTP_SECURE']; // 'ssl' o 'tls'
-
-// Configurar instancia de PHPMailer
 $mail = new PHPMailer(true);
 
 try {
-    // Verificar que los datos del formulario están presentes
-    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message'])) {
-        throw new Exception('All fields are required.');
-    }
+    //Server settings
+    $mail->SMTPDebug = 0;                      // Disable verbose debug output
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'mail.ultradeeptech.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'contact@ultradeeptech.com';                     // SMTP username
+    $mail->Password   = 'M94YMNexLntRrft';                               // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 465;                                    // TCP port to connect to
 
-    // Imprimir los datos del formulario para depuración
-    error_log(print_r($_POST, true));
+    //Recipients
+    $mail->setFrom('contact@ultradeeptech.com', 'Mailer');
+    $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 
-    // Validar y sanitizar entradas (ejemplo básico)
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    if (!$email) {
-        throw new Exception('Email no válido');
-    }
-
-    // Configurar servidor SMTP
-    $mail->isSMTP();
-    $mail->Host = $smtpHost;
-    $mail->SMTPAuth = true;
-    $mail->Username = $smtpUsername;
-    $mail->Password = $smtpPassword;
-    $mail->SMTPSecure = $smtpSecure;
-    $mail->Port = $smtpPort;
-
-    // Deshabilitar depuración
-    $mail->SMTPDebug = 0; // Cambiar a 0 para deshabilitar la depuración
-    $mail->Timeout = 30; // Tiempo de espera en segundos
-    $mail->SMTPOptions = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-        )
-    );
-
-    // Configurar remitente y destinatario
-    $mail->setFrom($smtpUsername, 'Ultra Deep Tech');
-    $mail->addAddress('contact@ultradeeptech.com', 'Ultra Deep Tech');
-
-    // Configurar el contenido del correo
-    $mail->isHTML(true);
-    $mail->Subject = $subject;
-    $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
-
-    // Enviar el correo electrónico
-    if ($mail->send()) {
-        echo json_encode(array('status' => 'success', 'message' => 'The email was sent.'));
-    } else {
-        echo json_encode(array('status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo));
-    }
-
+    $mail->send();
+    echo 'Message has been sent';
 } catch (Exception $e) {
-    echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 ?>
