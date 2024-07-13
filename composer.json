@@ -2,7 +2,7 @@
     "name": "ultradeeptech/contact-form",
     "description": "send mail",
     "autoload": {
-        "psr-4": {
+    "psr-4": {
             "Ultradeeptech\\ContactForm\\": "src/"
         }
     },
