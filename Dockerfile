@@ -1,25 +1,22 @@
-# Usa una imagen base de PHP-FPM en Alpine
-FROM php:7.4-fpm-alpine
+FROM php:7.4-apache
 
-# Instala dependencias adicionales
-RUN apk --no-cache add supervisor
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
 
-# Crear el directorio del socket y log si no existen
-RUN mkdir -p /var/run/php /var/log/php7
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Copiar los archivos del proyecto al contenedor
-COPY . /var/www/html
+# Copy your PHP files into the container
+COPY . /var/www/html/
 
-# Copiar archivos de configuración
-COPY php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# Set the working directory
+WORKDIR /var/www/html
 
-# Instala Composer y las dependencias de PHP
-RUN curl -sS -k https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install --working-dir=/var/www/html
+# Install PHP dependencies
+RUN composer install
 
-# Exponer el puerto 9000 (puerto por defecto para PHP-FPM)
-EXPOSE 9000
+# Expose port 80
+EXPOSE 80
 
-# Comando de inicio de Supervisor
-CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# Start Apache in the foreground
+CMD ["apache2-foreground"]
