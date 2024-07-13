@@ -8,7 +8,7 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: gcloud
     args: [
-      'run', 'deploy', 'my-app-service',
+      'run', 'deploy', 'website',
       '--image', 'gcr.io/$PROJECT_ID/my-app-image',
       '--platform', 'managed',
       '--region', 'us-central1',
