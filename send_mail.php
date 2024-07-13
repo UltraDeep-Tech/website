@@ -19,7 +19,7 @@ try {
 
     // Recipients
     $mail->setFrom('contact@ultradeeptech.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User'); // Agregar un destinatario
+    $mail->addAddress('contact@ultradeeptech.com', 'Avi'); // Agregar un destinatario
 
     // Content
     $mail->isHTML(true);                       // Establecer formato de email a HTML
