@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 try {
-    //Server settings
+    // Server settings
     $mail->SMTPDebug = 3;                      // Habilitar salida de depuración detallada
     $mail->isSMTP();                           // Usar SMTP
     $mail->Host       = 'mail.ultradeeptech.com';  // Servidor SMTP
@@ -17,11 +17,11 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Habilitar encriptación SSL/TLS
     $mail->Port       = 465;                   // Puerto TCP para conexión SMTP
 
-    // Destinatarios
+    // Recipients
     $mail->setFrom('contact@ultradeeptech.com', 'Mailer');
     $mail->addAddress('joe@example.net', 'Joe User'); // Agregar un destinatario
 
-    // Contenido
+    // Content
     $mail->isHTML(true);                       // Establecer formato de email a HTML
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
