@@ -1,20 +1,4 @@
 <?php
-// Permitir acceso desde cualquier origen
-header("Access-Control-Allow-Origin: *");
-
-// Permitir los métodos que necesites (GET, POST, OPTIONS)
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
-
-// Permitir encabezados específicos (esto puede variar según tus necesidades)
-header("Access-Control-Allow-Headers: Content-Type, Authorization");
-
-// Manejo de las solicitudes OPTIONS (preflight request)
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    // Responder OK
-    http_response_code(200);
-    exit();
-}
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -73,6 +57,3 @@ try {
     echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
 }
 ?>
-
-
-
