@@ -4,49 +4,59 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-header('Content-Type: application/json');
+// Configuración SMTP
+$smtpHost = 'mail.ultradeeptech.com';
+$smtpUsername = 'contact@ultradeeptech.com';
+$smtpPassword = 'M94YMNexLntRrft';
+$smtpPort = 465;
+$smtpSecure = 'ssl'; // 'ssl' o 'tls'
 
-$response = [];
+// Configurar instancia de PHPMailer
+$mail = new PHPMailer(true);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    $from_email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+try {
+    // Configurar servidor SMTP
+    $mail->isSMTP();
+    $mail->Host = $smtpHost;
+    $mail->SMTPAuth = true;
+    $mail->Username = $smtpUsername;
+    $mail->Password = $smtpPassword;
+    $mail->SMTPSecure = $smtpSecure;
+    $mail->Port = $smtpPort;
 
-    $mail = new PHPMailer(true);
+    // Deshabilitar depuración
+    $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
 
-    try {
-        // Configuración del servidor SMTP
-        $mail->isSMTP();
-        $mail->Host       = 'mail.ultradeeptech.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'contact@ultradeeptech.com';
-        $mail->Password   = 'M94YMNexLntRrft';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+    // Validar y sanitizar entradas (ejemplo básico)
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
-        // Destinatarios
-        $mail->setFrom($from_email, $name);
-        $mail->addAddress('contact@ultradeeptech.com', 'Avi');
-
-        // Contenido
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body    = $message;
-        $mail->AltBody = strip_tags($message);
-
-        $mail->send();
-        $response['status'] = 'success';
-        $response['message'] = 'Your message has been sent. Thank you!';
-    } catch (Exception $e) {
-        $response['status'] = 'error';
-        $response['message'] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    if (!$email) {
+        throw new Exception('Email no válido');
     }
-} else {
-    $response['status'] = 'error';
-    $response['message'] = 'Invalid request method';
-}
 
-echo json_encode($response);
+    // Configurar remitente y destinatario
+    $mail->setFrom($email, $name);
+    $mail->addAddress('contact@ultradeeptech.com', 'Ultra Deep Tech');
+
+    // Configurar el contenido del correo
+    $mail->isHTML(true);
+    $mail->Subject = $subject;
+    $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
+
+    // Enviar el correo electrónico
+    if ($mail->send()) {
+        echo json_encode(array('status' => 'success', 'message' => 'The email was sent.'));
+    } else {
+        echo json_encode(array('status' => 'error', 'message' => 'Mailer Error: ' . $mail->ErrorInfo));
+    }
+
+} catch (Exception $e) {
+    echo json_encode(array('status' => 'error', 'message' => $e->getMessage()));
+}
 ?>
+
+
+
