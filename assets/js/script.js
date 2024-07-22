@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const titles = ["GenAI Red Teaming", "RAG systems Cybersecurity", "AI Observability & Traceability", "AI Governance, Risk & Compliance", "Innovative AI Solutions"];
+    const titles = ["AI Observability & Traceability", "AI Governance, Risk & Compliance", "Innovative AI Solutions", "Generative AI Red Teaming", "RAG systems Cybersecurity"];
     let titleIndex = 0;
     let charIndex = 0;
     const speed = 80;  // Velocidad de la escritura (ms)
