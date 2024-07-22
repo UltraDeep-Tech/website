@@ -87,24 +87,27 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid rgb(22, 131, 194);
+  display: inline-block; /* Asegura que el ancho se ajuste al contenido */
   animation: blink-caret 0.75s step-end infinite;
+  transition: max-width 0.5s, font-size 0.5s; /* Transición suave para cambios en el ancho y el tamaño de la fuente */
+  font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
 }
 
 @media (min-width: 769px) {
   #typewriter-title {
-    font-size: 3em;
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
   }
 }
 
 @media (max-width: 768px) {
   #typewriter-title {
-    font-size: 2em;
+    font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
   }
 }
 
 @media (max-width: 480px) {
   #typewriter-title {
-    font-size: 1.7em;
+    font-size: 6vw; /* Tamaño de fuente relativo al ancho de la pantalla */
     font-weight: bold;
   }
 }
@@ -113,6 +116,8 @@ h1, h2, h3, h4, h5, h6 {
   from, to { border-color: transparent; }
   50% { border-color: rgb(22, 131, 194); }
 }
+
+
 
 .imagenlogo {
   position: relative;
