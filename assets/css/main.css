@@ -103,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   #typewriter-title {
     font-size: 4vw;
+    white-space: normal; /* Permite el ajuste de línea */
+    overflow-wrap:break-word; /* Permite que las palabras se rompan para ajustar el contenido */
+    
   }
 }
 
