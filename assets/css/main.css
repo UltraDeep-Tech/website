@@ -84,31 +84,34 @@ h1, h2, h3, h4, h5, h6 {
 #typewriter-title {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 900;
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: pre; /* Permite el ajuste de línea */
+  overflow-wrap:break-word; /* Permite que las palabras se rompan para ajustar el contenido */
   border-right: 0.15em solid rgb(22, 131, 194);
-  display: inline-block; /* Asegura que el ancho se ajuste al contenido */
+  display: inline-block;
   animation: blink-caret 0.75s step-end infinite;
-  transition: max-width 0.5s, font-size 0.5s; /* Transición suave para cambios en el ancho y el tamaño de la fuente */
+  transition: max-width 0.5s, font-size 0.5s;
   font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  max-width: auto; /* Asegura que el contenedor no se salga del área visible */
 }
 
 @media (min-width: 769px) {
   #typewriter-title {
-    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    font-size: 3vw;
   }
 }
 
 @media (max-width: 768px) {
   #typewriter-title {
-    font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    font-size: 4vw;
   }
 }
 
 @media (max-width: 480px) {
   #typewriter-title {
-    font-size: 6vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    font-size: 6vw;
     font-weight: bold;
+    white-space: normal; /* Permite el ajuste de línea */
+  overflow-wrap:break-word; /* Permite que las palabras se rompan para ajustar el contenido */
   }
 }
 
