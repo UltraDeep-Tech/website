@@ -19,11 +19,11 @@ WORKDIR /var/www/html
 # Instala las dependencias de PHP
 RUN composer install
 
-# Configura PHP-FPM para escuchar en el puerto 8080, utilizando la variable de entorno PORT
-RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:${PORT}/' /usr/local/etc/php-fpm.d/zz-docker.conf
+# Configura PHP-FPM para escuchar en el puerto 8080 directamente
+RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:8080/' /usr/local/etc/php-fpm.d/zz-docker.conf
 
 # Exponer el puerto
 EXPOSE 8080
 
 # Comando por defecto para iniciar PHP-FPM
-CMD ["php-fpm"]
+CMD ["php-fpm", "-F"]
