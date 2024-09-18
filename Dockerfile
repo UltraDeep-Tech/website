@@ -1,29 +1,26 @@
-# Usa una imagen base de PHP con FPM
+# Usa una imagen base de PHP con FPM y Nginx
 FROM php:7.4-fpm
 
 # Instala extensiones necesarias
 RUN docker-php-ext-install mysqli
 
-# Instala git
-RUN apt-get update && apt-get install -y git
+# Instala Nginx
+RUN apt-get update && apt-get install -y nginx
 
-# Instala Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Copia tus archivos PHP al contenedor
+# Copia tus archivos PHP y HTML al contenedor
 COPY . /var/www/html/
+
+# Copiar el archivo de configuración de Nginx
+COPY default.conf /etc/nginx/sites-available/default
 
 # Configura el directorio de trabajo
 WORKDIR /var/www/html
 
-# Instala las dependencias de PHP
-RUN composer install
+# Da los permisos correctos
+RUN chmod -R 755 /var/www/html
 
-# Copia php-fpm.conf desde el directorio raíz al directorio de configuración de PHP-FPM
-COPY php-fpm.conf /usr/local/etc/php-fpm.conf
-
-# Exponer el puerto 8080
+# Exponer el puerto 8080 para Nginx
 EXPOSE 8080
 
-# Comando por defecto para iniciar PHP-FPM
-CMD ["php-fpm", "-F"]
+# Iniciar PHP-FPM y Nginx
+CMD service nginx start && php-fpm -F
