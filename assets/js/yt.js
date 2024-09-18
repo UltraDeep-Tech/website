@@ -2,7 +2,7 @@ const API_KEY = 'AIzaSyCYoJ0hGQLahZkYGaJsbk9N2wyj14K80Jw'; // Reemplaza con tu c
 const CHANNEL_ID = 'UCivpA1Q4U8Y09Kvp1_j5QRg'; // Reemplaza con el ID de tu canal
 
 // URL para obtener los videos del canal
-const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${AIzaSyCYoJ0hGQLahZkYGaJsbk9N2wyj14K80Jw}&channelId=${UCivpA1Q4U8Y09Kvp1_j5QRg}&part=snippet,id&order=date&maxResults=5`;
+const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
 
 fetch(API_URL)
   .then(response => response.json())
