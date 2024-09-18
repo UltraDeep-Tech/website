@@ -19,8 +19,8 @@ WORKDIR /var/www/html
 # Instala las dependencias de PHP
 RUN composer install
 
-# Configura PHP-FPM para escuchar en el puerto 8080
-RUN sed -i 's/listen = 0.0.0.0:9000/listen = 0.0.0.0:8080/' /usr/local/etc/php-fpm.conf
+# Copia php-fpm.conf desde el directorio raíz al directorio de configuración de PHP-FPM
+COPY php-fpm.conf /usr/local/etc/php-fpm.conf
 
 # Exponer el puerto 8080
 EXPOSE 8080
