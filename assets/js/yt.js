@@ -7,16 +7,15 @@ const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&cha
 fetch(API_URL)
   .then(response => response.json())
   .then(data => {
+    console.log(data);  // Agrega esta línea para ver la respuesta de la API
     const videos = data.items;
     let videoContainer = document.getElementById('video-container');
 
     videos.forEach(video => {
-      // Verifica si el resultado es un video (y no una lista de reproducción, etc.)
       if (video.id.kind === 'youtube#video') {
         let videoId = video.id.videoId;
         let videoTitle = video.snippet.title;
 
-        // Crear un elemento para incrustar el video
         let videoElement = document.createElement('div');
         videoElement.classList.add('col-lg-6');
         videoElement.innerHTML = `
@@ -29,3 +28,4 @@ fetch(API_URL)
     });
   })
   .catch(error => console.log('Error fetching YouTube videos:', error));
+
