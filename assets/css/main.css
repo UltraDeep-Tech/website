@@ -18,7 +18,7 @@
 :root {
   --nav-color: rgba(255, 255, 255, 0.918);
   --nav-hover-color: #ffffff;
-  --nav-dropdown-background-color: #1d1c1c;
+  --nav-dropdown-background-color: #10213d;
   --nav-dropdown-color: #ffff;
   --nav-dropdown-hover-color: #ffffff;
 }
@@ -28,31 +28,44 @@
   scroll-behavior: smooth;
 }
 
-/* Estilos adicionales para los logos */
+/* Contenedor general de los logos */
 .clients-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
+  overflow: hidden; /* Oculta el contenido que sale del contenedor */
   padding: 20px;
+  width: 100%; /* Asegura que no haya desbordamiento lateral */
   font-family: var(--default-font);
 }
 
-.brands {
-  font-family: var(--heading-font);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
+.clients-wrapper {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite; /* Aumentar la duración de la animación */
+  width: calc(150px * 12); /* Ajustar el tamaño de acuerdo al número de logos duplicados */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Comienza desde el inicio */
+  }
+  100% {
+    transform: translateX(-50%); /* Desplaza hasta la mitad del contenedor */
+  }
+}
+
+.clients-wrapper:hover {
+  animation-play-state: paused; /* Pausa la animación al pasar el mouse */
 }
 
 .clients {
-  max-width: 150px;
-  max-height: 100px;
+  width: 150px;
+  height: 100px;
+  object-fit: contain; /* Mantiene la proporción de los logos */
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  flex-shrink: 0; /* Evita que los logos se encojan */
 }
 
 .clients:hover {
@@ -367,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.3s, top 0.3s;
     z-index: 99;
     box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
-    animation: tech-glow 1s infinite alternate;
+    animation: tech-glow 5s infinite alternate;
   }
 
   .navmenu .dropdown ul li {
@@ -540,16 +553,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Global Footer */
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #fff; /* Cambiado a blanco */
+  background-color: #0d1b30; /* Fondo oscuro */
   font-size: 14px;
   position: relative;
 }
 
 .footer .footer-top {
   padding-top: 50px;
-  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
-  color: #fff;
+  background:  #f1f7ff; /* Fondo degradado claro */
+  color: #0d1b30; /* Texto oscuro */
 }
 
 .footer .footer-about .logo {
@@ -563,26 +576,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .footer-about .logo span {
-  color: #fff;
+  color: #043e94; /* Cambiado a negro */
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
+  text-shadow: 0 0 1px #000;
+}
 
-}
-.footer .footer-about .logo span:hover {
-  animation: textGlow 2s infinite;
-}
+
 
 .footer .footer-about p {
-  color: #fff;
+  color: #043e94; /* Texto oscuro */
   font-size: 14px;
   font-family: var(--heading-font);
 }
 
 .footer .social-links a {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: #fff; /* Color claro para íconos */
+  background-color: #043e94; /* Fondo oscuro */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -595,24 +607,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: #fff; /* Color oscuro al pasar el cursor */
+  background-color: #0d1b30;
 }
 
 .footer h4 {
-  color: #fff !important;
+  color: #043e94 !important; /* Cambiado a negro */
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 12px;
 }
 
-.footer  .copyright span {
-  color: rgb(8, 8, 8) !important;
+.footer .copyright span {
+  color: #fff !important; /* Cambiado a blanco */
 }
 
 .footer .footer-links {
   margin-bottom: 30px;
-  
 }
 
 .footer .footer-links ul {
@@ -628,7 +639,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer .footer-links ul li {
-  
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -636,32 +646,34 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .footer-links ul li:first-child {
   padding-top: 0;
-  
 }
 
 .footer .footer-links ul a {
-  color: #a0a3a3 !important;
-  ;
+  color: #0d1b30 !important; /* Cambiado a blanco */
 }
 
 .footer .footer-links ul a:hover {
-  color: #fff !important;
+  color: #043e94 !important; /* Cambiado a negro */
 }
 
 .footer .footer-contact p {
-  color: #a0a3a3;
+  color: #0d1b30; /* Cambiado a blanco */
 }
+
 .footer .footer-contact a {
-  color: #a0a3a3;
+  color: #043e94; /* Cambiado a blanco */
 }
+
 .footer .footer-contact p:hover {
-  color: #fff;
+  color: #043e94; /* Cambiado a negro */
 }
+
 .footer .footer-contact a:hover {
-  color: #fff;
+  color: #043e94; /* Cambiado a negro */
 }
+
 .footer .footer-contact strong {
-  color: #fff;
+  color: #043e94; /* Cambiado a negro */
 }
 
 .footer .copyright {
@@ -678,6 +690,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
 }
 
+
 /* Preloader */
 #preloader {
   position: fixed;
@@ -686,29 +699,33 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
   transition: all 0.6s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #fff;
-  border-top-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+/* Animación de cargando usando el logo de la empresa */
+#preloader img {
+  width: 300px; /* Ajusta el tamaño según tu logo */
+  height: auto;
+  animation: logo-pulse 1.5s infinite ease-in-out; /* Animación de pulsación */
 }
 
-@keyframes animate-preloader {
+@keyframes logo-pulse {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 0.8;
   }
 }
+
 
 /* Scroll Top Button */
 .scroll-top {
@@ -718,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
+  background: rgb(12, 47, 88);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -732,6 +749,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .scroll-top:hover {
   background-color: #fff;
+  box-shadow: 0 0 5px #000;
+  color: #0d1b30;
+}
+.scroll-top:hover i{
+  color: #0d1b30;
 }
 
 .scroll-top.active {
@@ -982,7 +1004,7 @@ section,
 }
 
 .why-us .slides {
-  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
+  background: #163768;
 }
 
 .why-us h3 {
@@ -2179,7 +2201,7 @@ section,
   height: 50px;
   bottom: 60px;
   right: 10px;
-  background: linear-gradient(135deg, #0d1b30 25%, #043e94 100%);
+  background: rgb(12, 47, 88);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -2193,7 +2215,7 @@ section,
 .whatsapp-float:hover {
   background-color: #fff;
   color: #26498a;
-  box-shadow: 4px 4px 6px #999;
+  box-shadow: 0px 0px 6px #999;
   transform: scale(1.1);
 }
 
@@ -2201,13 +2223,39 @@ section,
   font-size: 24px;
 }
 
+.tooltip-text {
+  visibility: hidden;
+  background-color: #043e94;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: calc(-100% - 20px); /* Aparecerá a la izquierda */
+  transform: translateY(-200%); /* Centrado verticalmente */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.3s ease;
+  white-space: nowrap; /* Mantener el texto en una línea */
+  font-size: 12px;
+}
+
+.whatsapp-float:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  left: calc(-280% - 15px); /* Desplazar ligeramente el tooltip cuando esté visible */
+}
+
+
+
 /* Efecto tecnológico (brillo y animación) */
 @keyframes tech-glow {
   0% {
-    box-shadow: 0 0 5px #26498a, 0 0 10px #26498a, 0 0 15px #26498a, 0 0 20px #26498a;
+    box-shadow: 0 0 5px #26498a, 0 0 10px #26498a, 0 0 12px #26498a, 0 0 15px #26498a;
   }
   50% {
-    box-shadow: 0 0 10px #26498a, 0 0 20px #26498a, 0 0 30px #26498a, 0 0 40px #26498a;
+    box-shadow: 0 0 10px #26498a, 0 0 15px #26498a, 0 0 20px #26498a, 0 0 20px #26498a;
   }
   100% {
     box-shadow: 0 0 5px #26498a, 0 0 10px #26498a, 0 0 15px #26498a, 0 0 20px #26498a;
@@ -2419,30 +2467,71 @@ section,
   font-size: 1.1rem;
 }
 
-.youtube-videos .swiper-container {
+/* Ajustar el contenedor de videos para bordes redondeados */
+.youtube-videos iframe {
   width: 100%;
-  padding: 20px 0;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  border: none;
 }
 
+/* Swiper container */
+.youtube-videos .swiper-container {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+}
+
+/* Swiper slide */
 .youtube-videos .swiper-slide {
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#000;
 }
 
-.youtube-videos .swiper-slide .video-thumbnail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .youtube-videos iframe {
+    max-width: 700px;
+    height: 394px; /* Mantener la relación 16:9 */
+  }
 }
 
-.youtube-videos .swiper-slide iframe {
-  border-radius: 10px;
+@media (max-width: 992px) {
+  .youtube-videos iframe {
+    max-width: 600px;
+    height: 338px; /* Mantener la relación 16:9 */
+  }
 }
 
-.youtube-videos .swiper-slide p {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
+@media (max-width: 768px) {
+  .youtube-videos iframe {
+    max-width: 500px;
+    height: 281px; /* Mantener la relación 16:9 */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .youtube-videos iframe {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    height: auto; /* Altura proporcional */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+  }
 }
