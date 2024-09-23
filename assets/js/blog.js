@@ -46,14 +46,50 @@ document.addEventListener('DOMContentLoaded', function() {
   
         // Función para crear el iframe de LinkedIn
         function createLinkedInIframe(link) {
+          const postId = extractLinkedInPostId(link);
           const iframe = document.createElement('iframe');
-          iframe.src = link;
+          iframe.src = `https://www.linkedin.com/embed/feed/update/${postId}`;
           iframe.height = "580";
           iframe.width = "504";
           iframe.frameBorder = "0";
           iframe.allowFullscreen = true;
           iframe.title = "Embedded post";
+  
+          // Agregar manejador de errores
+          iframe.onerror = function() {
+            console.error('Error al cargar el post de LinkedIn');
+            feedContainer.innerHTML = '<p>Error al cargar el post de LinkedIn. Por favor, verifica el enlace e intenta de nuevo.</p>';
+          };
+  
           return iframe;
+        }
+  
+        // Función para extraer el ID del post de LinkedIn de la URL
+        function extractLinkedInPostId(url) {
+          // Intentar extraer el ID de diferentes formatos de URL
+          const patterns = [
+            /activity-(\d+)/,
+            /linkedin\.com\/posts\/.*-(\d+)/,
+            /linkedin\.com\/feed\/update\/urn:li:activity:(\d+)/
+          ];
+  
+          for (let pattern of patterns) {
+            const match = url.match(pattern);
+            if (match && match[1]) {
+              return `urn:li:activity:${match[1]}`;
+            }
+          }
+  
+          // Si no se encuentra ningún patrón conocido, intentar extraer el último segmento de la URL
+          const urlParts = url.split(/[?#]/)[0].split('/');
+          const lastPart = urlParts[urlParts.length - 1];
+          
+          if (lastPart && lastPart !== '') {
+            return `urn:li:activity:${lastPart}`;
+          }
+  
+          console.error('No se pudo extraer el ID del post de LinkedIn');
+          return null;
         }
   
         // Mostrar el primer post por defecto
