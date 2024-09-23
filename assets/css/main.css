@@ -2644,3 +2644,15 @@ padding: 20px;
 .navmenu .nav-link span {
   flex: 1;
 }
+
+
+.instagram-feed {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+

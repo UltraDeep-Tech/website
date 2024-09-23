@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const linkedInPosts = rows.slice(1).map(row => ({
           title: row.c[0].v,
-          iframe: row.c[1].v
+          link: row.c[1].v
         }));
   
         // Crear menú
@@ -32,13 +32,28 @@ document.addEventListener('DOMContentLoaded', function() {
   
         // Función para mostrar un post específico
         function showPost(index) {
-          feedContainer.innerHTML = linkedInPosts[index].iframe;
+          const post = linkedInPosts[index];
+          const iframe = createLinkedInIframe(post.link);
+          feedContainer.innerHTML = '';
+          feedContainer.appendChild(iframe);
   
           // Actualizar clases activas en el menú
           const menuItems = menuContainer.getElementsByClassName('linkedin-post-title');
           Array.from(menuItems).forEach((item, i) => {
             item.classList.toggle('active', i === index);
           });
+        }
+  
+        // Función para crear el iframe de LinkedIn
+        function createLinkedInIframe(link) {
+          const iframe = document.createElement('iframe');
+          iframe.src = link;
+          iframe.height = "580";
+          iframe.width = "504";
+          iframe.frameBorder = "0";
+          iframe.allowFullscreen = true;
+          iframe.title = "Embedded post";
+          return iframe;
         }
   
         // Mostrar el primer post por defecto
@@ -51,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
         feedContainer.innerHTML = '<p>Error loading LinkedIn posts. Please try again later.</p>';
       });
   });
-
+  
+  // Mantener el código existente para videojs si es necesario
   var oldAddRemoteTextTrack = videojs.Player.prototype.addRemoteTextTrack;
-videojs.Player.prototype.addRemoteTextTrack = function(options, manualCleanup) {
-  console.trace("addRemoteTextTrack called");
-  return oldAddRemoteTextTrack.call(this, options, true);
-};
-
+  videojs.Player.prototype.addRemoteTextTrack = function(options, manualCleanup) {
+    console.trace("addRemoteTextTrack called");
+    return oldAddRemoteTextTrack.call(this, options, true);
+  };

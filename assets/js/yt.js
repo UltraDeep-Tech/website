@@ -1,10 +1,10 @@
 // YouTube API configuration
 const API_KEY = 'AIzaSyCYoJ0hGQLahZkYGaJsbk9N2wyj14K80Jw';
 const CHANNEL_ID = 'UCivpA1Q4U8Y09Kvp1_j5QRg';
-const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`;
+const API_URL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=5&type=video&videoDefinition=any`;
 
 const CACHE_KEY = 'youtube_videos_cache';
-const CACHE_DURATION = 60 * 60 * 1000; // 1 hora en milisegundos
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 
 // Fetch and display YouTube videos
 function getCachedVideos() {
@@ -12,7 +12,7 @@ function getCachedVideos() {
   if (cachedData) {
     const { timestamp, data } = JSON.parse(cachedData);
     const now = new Date().getTime();
-    // Si los datos son recientes (dentro de 1 hora)
+    // If the data is recent (within 1 hour)
     if (now - timestamp < CACHE_DURATION) {
       return data;
     }
@@ -33,7 +33,7 @@ function fetchVideos() {
   let videoContainer = document.getElementById('video-container');
 
   if (cachedVideos) {
-    console.log('Usando datos en caché');
+    console.log('Using cached data');
     displayVideos(cachedVideos);
     return;
   }
@@ -49,7 +49,7 @@ function fetchVideos() {
       console.log(data);
       const videos = data.items;
       if (videos && videos.length > 0) {
-        saveVideosToCache(videos); // Guardar en caché
+        saveVideosToCache(videos); // Save to cache
         displayVideos(videos);
       } else {
         console.error("No videos found");
@@ -64,7 +64,7 @@ function fetchVideos() {
 
 function displayVideos(videos) {
   let videoContainer = document.getElementById('video-container');
-  videoContainer.innerHTML = ''; // Limpiar contenedor antes de agregar videos
+  videoContainer.innerHTML = ''; // Clear container before adding videos
 
   videos.forEach((video, index) => {
     if (video.id.kind === 'youtube#video') {
@@ -96,5 +96,5 @@ function displayVideos(videos) {
   document.head.appendChild(style);
 }
 
-// Inicializar el proceso de obtención de videos
+// Initialize the video fetching process
 fetchVideos();
