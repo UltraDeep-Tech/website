@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 200%;
   height: 100%;
   background: linear-gradient(120deg, transparent, rgba(145, 186, 248, 0.171), transparent);
-  animation: shine 4s infinite;
+  animation: shine 4s infinite alternate;
 }
 
 .header .logo {
@@ -1454,8 +1454,13 @@ section,
 }
 
 /* Features Section */
+.features-item {
+padding: 20px;
+}
+/* Features Section */
 .features-item:hover {
   background: #26498a;
+  color: #fff;
   transition-duration: 1.0s;
 }
 
@@ -1468,6 +1473,12 @@ section,
 .features .icon {
   margin-right: 30px;
   font-size: 40px;
+}
+
+.features .icon:hover {
+  margin-right: 30px;
+  font-size: 40px;
+  color: #fff;
 }
 
 .features .features-item .icon i {
@@ -2466,72 +2477,170 @@ section,
   color: #f0f0f0;
   font-size: 1.1rem;
 }
+#youtube-videos {
+  background-color: #10213d;
+  padding: 60px 0;
+}
 
-/* Ajustar el contenedor de videos para bordes redondeados */
-.youtube-videos iframe {
-  width: 100%;
+#youtube-videos .section-title h2 {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+#youtube-videos .section-title p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-inner {
   max-width: 800px;
-  height: 450px;
-  border-radius: 15px; /* Bordes redondeados */
+  margin: 0 auto;
+  width: 90%;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* Swiper container */
-.youtube-videos .swiper-container {
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  padding: 40px 0;
+  height: 100%;
+  border-radius: 10px;
 }
 
-/* Swiper slide */
-.youtube-videos .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:#000;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
 }
 
-
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  .youtube-videos iframe {
-    max-width: 700px;
-    height: 394px; /* Mantener la relación 16:9 */
-  }
-}
-
-@media (max-width: 992px) {
-  .youtube-videos iframe {
-    max-width: 600px;
-    height: 338px; /* Mantener la relación 16:9 */
-  }
+.carousel-item {
+  transition: transform 1.5s ease-in-out !important;
 }
 
 @media (max-width: 768px) {
-  .youtube-videos iframe {
-    max-width: 500px;
-    height: 281px; /* Mantener la relación 16:9 */
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 30px;
-    height: 30px;
+  .carousel-inner {
+    width: 95%;
   }
 }
 
-@media (max-width: 576px) {
-  .youtube-videos iframe {
-    max-width: 100%; /* Ocupa todo el ancho disponible */
-    height: auto; /* Altura proporcional */
+@media (max-width: 480px) {
+  .carousel-inner {
+    width: 100%;
   }
+  
+  .video-wrapper,
+  .video-wrapper iframe {
+    border-radius: 0;
+  }
+}
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 25px;
-    height: 25px;
+/* Asegurar que el submenu de "Contact Us" aparezca más a la izquierda */
+.navmenu .dropdown:hover > ul {
+  left: -20px; /* Ajusta este valor según lo que necesites */
+}
+
+
+.linkedin-posts {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.linkedin-posts-menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.linkedin-post-title {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.linkedin-post-title:hover {
+  background-color: #e9ecef;
+}
+
+.linkedin-post-title.active {
+  background-color: #163768;
+  color: #ffffff;
+}
+
+#linkedin-feed {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  min-height: 600px; /* Adjust as needed */
+}
+
+#linkedin-feed iframe {
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 992px) {
+  .linkedin-posts-menu {
+    margin-bottom: 20px;
   }
+}
+
+.vermaslinked {
+  background-color: #163768 !important;
+  border: none;
+}
+
+
+.blog-cta {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.blog-cta h3 {
+  color: #2b5e96;
+  margin-bottom: 15px;
+}
+
+.blog-cta p {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.blog-cta .btn-primary {
+  background-color: #2b5e96;
+  border-color: #2b5e96;
+  padding: 10px 25px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.blog-cta .btn-primary:hover {
+  background-color: #1e4b7a;
+  border-color: #1e4b7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navmenu .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.navmenu .nav-link i {
+  margin-right: 8px;
+}
+
+.navmenu .nav-link span {
+  flex: 1;
 }
