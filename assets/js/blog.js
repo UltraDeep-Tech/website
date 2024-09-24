@@ -103,9 +103,103 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
   
-  // Mantener el código existente para videojs si es necesario
-  var oldAddRemoteTextTrack = videojs.Player.prototype.addRemoteTextTrack;
-  videojs.Player.prototype.addRemoteTextTrack = function(options, manualCleanup) {
-    console.trace("addRemoteTextTrack called");
-    return oldAddRemoteTextTrack.call(this, options, true);
-  };
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const instagramFeedContainer = document.getElementById('instagram-feed-content');
+
+    // ID de tu hoja de Google y configuración
+    const sheetID = '10e-1fLzNWcySdZYXyJnlpb-29Dx_HtfeC0_aid17PQ4';
+    const socialMediaSheetName = 'SocialMedia';
+    const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${socialMediaSheetName}`;
+
+    fetch(url)
+      .then(response => response.text())
+      .then(data => {
+        const jsonData = JSON.parse(data.substring(47).slice(0, -2));
+        if (!jsonData.table || !jsonData.table.rows) throw new Error('Invalid data structure');
+
+        const socialMediaPosts = jsonData.table.rows.slice(1)
+          .map(row => row.c && row.c.length >= 3 ? {
+            platform: row.c[0]?.v || '',
+            title: row.c[1]?.v || '',
+            link: row.c[2]?.v || ''
+          } : null)
+          .filter(post => post !== null);
+
+        if (socialMediaPosts.length === 0) throw new Error('No valid posts found');
+
+        const instagramPosts = socialMediaPosts.filter(post => post.platform.toLowerCase() === 'instagram');
+
+        instagramPosts.forEach(post => {
+          instagramFeedContainer.innerHTML += createInstagramEmbed(post.link);
+        });
+        if (instagramPosts.length > 0) loadInstagramScript();
+      })
+      .catch(error => {
+        console.error('Error loading social media posts:', error);
+        instagramFeedContainer.innerHTML = '<p>Error loading Instagram posts.</p>';
+      });
+
+    function createInstagramEmbed(link) {
+      const postId = extractInstagramPostId(link);
+      return `<div class="instagram-embed-container">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/${postId}/" data-instgrm-version="14" style="width: 100%; max-width: 540px; margin: 1px;" data-instgrm-captioned data-instgrm-autoplay-disabled>
+                  <a href="https://www.instagram.com/p/${postId}/" target="_blank" rel="noopener noreferrer">View this post on Instagram</a>
+                </blockquote>
+              </div>`;
+    }
+
+    function extractInstagramPostId(url) {
+      const match = url.match(/instagram\.com\/p\/([^/?]+)/);
+      return match ? match[1] : '';
+    }
+
+    function loadInstagramScript() {
+      if (!window.instgrm) {
+        const script = document.createElement('script');
+        script.src = 'https://www.instagram.com/embed.js';
+        script.async = true;
+        script.defer = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+          if (window.instgrm) {
+            window.instgrm.Embeds.process();
+            enforceInstagramPause();
+          }
+        };
+      } else {
+        window.instgrm.Embeds.process();
+        enforceInstagramPause();
+      }
+    }
+
+    function enforceInstagramPause() {
+      const instagramIframes = document.querySelectorAll('iframe[src*="instagram.com"]');
+      instagramIframes.forEach(iframe => {
+        iframe.contentWindow.postMessage('{"method":"pause"}', '*');
+      });
+    }
+
+    // Observador para detectar cuando se cargan nuevos embeds
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          const addedNodes = mutation.addedNodes;
+          for (let i = 0; i < addedNodes.length; i++) {
+            const node = addedNodes[i];
+            if (node.tagName === 'IFRAME' && node.src.includes('instagram.com')) {
+              enforceInstagramPause();
+            }
+          }
+        }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Mantener los videos pausados incluso durante el scroll
+    window.addEventListener('scroll', () => {
+      enforceInstagramPause();
+    });
+});
