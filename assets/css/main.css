@@ -1672,7 +1672,7 @@ padding: 20px;
 
 .about .content p {
   margin: 30px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: #000000;
 }
 
 .about .content ul {
