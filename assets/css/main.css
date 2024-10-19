@@ -1412,7 +1412,7 @@ section,
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
   inset: 0;
   position: absolute;
   z-index: 2;
@@ -2699,6 +2699,7 @@ padding: 20px;
   box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
