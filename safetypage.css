@@ -25,136 +25,142 @@ section,
 # Hero Section 
 --------------------------------------------------------------*/
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    padding: 120px 0 60px 0;
-    display: flex;
-    align-items: center;
-    background: url(../img/hero-bg.png) no-repeat center center;
-    background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 40px 0;
+  display: flex;
+  align-items: center;
+  background: url(../img/hero-bg.png) no-repeat center center;
+  background-size: cover;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 15px 0 30px 0;
+  font-size: clamp(14px, 2.5vw, 20px);
+  font-weight: 400;
+}
+
+.hero .download-btn {
+  color: var(--contrast-default);
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  transition: 0.5s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.hero .download-btn + .download-btn {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.hero .download-btn:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.hero .download-btn i {
+  font-size: 16px;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .hero-img {
+  position: relative;
+  margin-top: 40px;
+}
+
+.hero .hero-img .phone-1 {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos para móviles */
+@media screen and (max-width: 767px) {
+  .hero {
+    padding: 60px 0 30px 0;
+    text-align: center;
   }
-  
-  .hero .container {
-    position: relative;
-    z-index: 3;
-  }
-  
+
   .hero h2 {
-    margin: 0;
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: clamp(22px, 6vw, 32px);
   }
-  
+
   .hero p {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin: 15px 0 30px 0;
-    font-size: clamp(15px, 2.5vw, 20px);
-    font-weight: 400;
+    font-size: clamp(13px, 3vw, 16px);
   }
-  
+
   .hero .download-btn {
-    color: var(--contrast-default);
-    background: color-mix(in srgb, var(--default-color), transparent 90%);
-    font-family: var(--heading-font);
-    font-weight: 500;
-    font-size: clamp(14px, 2vw, 15px);
-    padding: 12px 30px;
-    border-radius: 3px;
-    transition: 0.5s;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 15px;
   }
-  
-  .hero .download-btn + .download-btn {
-    margin-left: 20px;
-  }
-  
-  .hero .download-btn:hover {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-  }
-  
-  .hero .download-btn i {
-    font-size: 16px;
-    line-height: 0;
-    margin-right: 8px;
-  }
-  
+
   .hero .hero-img {
-    position: relative;
-    min-height: 300px;
-    max-height: 600px;
+    margin-top: 30px;
   }
-  
+
+  .hero .hero-img .phone-1 {
+    max-width: 80%;
+  }
+}
+
+/* Ajustes para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 100px 0 60px 0;
+  }
+
+  .hero .download-btn {
+    width: auto;
+    margin-right: 15px;
+  }
+
+  .hero .download-btn + .download-btn {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .hero .hero-img .phone-1 {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .hero .hero-img .phone-1 {
     position: absolute;
     left: 0;
     top: 30px;
-    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
+    max-width: none;
     width: 100%;
-    max-width: 180vh;
-    object-fit: contain;
   }
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 1200px) {
-    .hero {
-      padding: 100px 0 50px 0;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .hero {
-      padding: 80px 0 40px 0;
-    }
-  
-    .hero .hero-img {
-      text-align: center;
-      margin-top: 40px;
-    }
-  
-    .hero .hero-img .phone-1 {
-      position: static;
-      display: inline-block;
-      margin: 10px;
-      width: 90%;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .hero .download-btn {
-      padding: 10px 20px;
-    }
-  
-    .hero .download-btn + .download-btn {
-      margin-left: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 576px) {
-    .hero {
-      padding: 60px 0 30px 0;
-    }
-  
-    .hero .download-btn {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .hero .download-btn + .download-btn {
-      margin-left: 0;
-    }
-  
-    .hero .hero-img .phone-1 {
-      width: 100%;
-    }
-  }
+}
 
 /*--------------------------------------------------------------
 # About Section
