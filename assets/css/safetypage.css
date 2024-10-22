@@ -191,7 +191,7 @@ section,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('ruta/a/tu/favicon - copia.png');
+  background-image: url('/assets/img/favicon_copia.png');
   background-size: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -891,4 +891,119 @@ transition-duration: 100ms;
       flex: 100%;
       margin-right: 0;
     }
+  }
+
+
+  .cta-features-section {
+    padding: 60px 0;
+    background: url(/assets/img/hero-bg.png);
+    background-size: cover;
+  }
+  
+  .cta-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .cta-text {
+    flex: 1;
+  }
+  
+  .cta-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .cta-text p {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    flex-shrink: 0;
+  }
+  
+  .cta-demo-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .cta-demo-btn:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    color: white;
+  }
+  
+  .cta-demo-btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .cta-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .cta-text h2 {
+      font-size: 1.8rem;
+    }
+  
+    .cta-text p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .notification.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .notification.success {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  }
+  
+  .notification.error {
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
   }

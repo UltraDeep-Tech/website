@@ -27,11 +27,31 @@ try {
     // Deshabilitar depuración
     $mail->SMTPDebug = 0; // No mostrar mensajes de depuración
 
-    // Validar y sanitizar entradas (ejemplo básico)
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-    $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+    // Determinar si es un formulario de demo o el formulario de contacto original
+    if (isset($_POST['form_type']) && $_POST['form_type'] === 'demo') {
+        // Procesar formulario de demo
+        $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        $subject = "New Demo Request - Safety Shield Ultra";
+        $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+        // Formato especial para el email de demo
+        $mail->Body = "
+            <h2>Nueva Solicitud de Demo</h2>
+            <div style='margin-bottom: 20px;'>
+                {$message}
+            </div>
+        ";
+    } else {
+        // Código original para el formulario de contacto
+        $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+        $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+
+        // Formato original para el email de contacto
+        $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
+    }
 
     if (!$email) {
         throw new Exception('Email no válido');
@@ -44,7 +64,6 @@ try {
     // Configurar el contenido del correo
     $mail->isHTML(true);
     $mail->Subject = $subject;
-    $mail->Body = "Name: {$name} <br>Email: {$email} <br>Subject: {$subject} <br>Message: {$message}";
 
     // Enviar el correo electrónico
     if ($mail->send()) {
