@@ -161,6 +161,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Demo modal elements
   var demoModal = document.getElementById("demoModal");
   var demoBtn = document.getElementById("requestDemoBtn");
+  var aboutDemoBtn = document.getElementById("aboutRequestDemoBtn");
+  var ctaDemoBtn = document.getElementById("ctaRequestDemo"); // Updated ID
   var demoSpan = demoModal ? demoModal.querySelector(".close") : null;
   var form = document.getElementById("demoForm");
 
@@ -201,12 +203,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Demo modal event listeners
-  if (demoBtn) {
-    demoBtn.onclick = function(e) {
-      e.preventDefault();
-      openModal(demoModal);
-    }
+  function handleDemoButtonClick(e) {
+    e.preventDefault();
+    openModal(demoModal);
   }
+
+  // Add click handlers to all demo buttons
+  [demoBtn, aboutDemoBtn, ctaDemoBtn].forEach(btn => {
+    if (btn) {
+      btn.onclick = handleDemoButtonClick;
+    }
+  });
 
   if (demoSpan) {
     demoSpan.onclick = function() {
