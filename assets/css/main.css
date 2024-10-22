@@ -1412,7 +1412,7 @@ section,
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--background-color), transparent 90%);
   inset: 0;
   position: absolute;
   z-index: 2;
@@ -2692,13 +2692,29 @@ padding: 20px;
 }
 
 
+/* Estilos base para móvil (menos de 768px) */
+@media screen and (max-width: 767px) {
+  .call-to-action .phone-1 {
+    position: relative;
+    inset: auto;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 100% !important;
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Tus estilos existentes para PC */
 .call-to-action .phone-1 {
-  margin-top: 60px;
+  inset: 0;
   position: relative;
-  left: 0;
   box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  width: 100%;
+  top: -50px;
+  width: 50% ;
   height: auto;
 }
 
@@ -2715,7 +2731,6 @@ padding: 20px;
     transform: none;
   }
 }
-
 
 .modal {
   display: none;
