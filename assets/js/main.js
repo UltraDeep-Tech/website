@@ -161,8 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Demo modal elements
   var demoModal = document.getElementById("demoModal");
   var demoBtn = document.getElementById("requestDemoBtn");
-  var aboutDemoBtn = document.getElementById("aboutRequestDemoBtn");
-  var ctaDemoBtn = document.getElementById("ctaRequestDemo");
   var demoSpan = demoModal ? demoModal.querySelector(".close") : null;
   var form = document.getElementById("demoForm");
 
@@ -187,24 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  function showNotification(message, type) {
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-      notification.classList.add('show');
-    }, 100);
-
-    setTimeout(() => {
-      notification.classList.remove('show');
-      setTimeout(() => {
-        notification.remove();
-      }, 300);
-    }, 3000);
-  }
-
   // Video modal event listeners
   if (videoBtn) {
     videoBtn.onclick = function(e) {
@@ -221,17 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Demo modal event listeners
-  function handleDemoButtonClick(e) {
-    e.preventDefault();
-    openModal(demoModal);
-  }
-
-  // Add click handlers to all demo buttons
-  [demoBtn, aboutDemoBtn, ctaDemoBtn].forEach(btn => {
-    if (btn) {
-      btn.onclick = handleDemoButtonClick;
+  if (demoBtn) {
+    demoBtn.onclick = function(e) {
+      e.preventDefault();
+      openModal(demoModal);
     }
-  });
+  }
 
   if (demoSpan) {
     demoSpan.onclick = function() {
@@ -256,167 +231,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Form submission
-  document.addEventListener('DOMContentLoaded', function() {
-    // Video modal elements
-    var videoModal = document.getElementById("videoModal");
-    var videoBtn = document.getElementById("seeInActionBtn");
-    var videoSpan = videoModal ? videoModal.querySelector(".close") : null;
-    var video = document.getElementById("videoPlayer");
-  
-    // Demo modal elements
-    var demoModal = document.getElementById("demoModal");
-    var demoBtn = document.getElementById("requestDemoBtn");
-    var aboutDemoBtn = document.getElementById("aboutRequestDemoBtn");
-    var ctaDemoBtn = document.getElementById("ctaRequestDemo");
-    var demoSpan = demoModal ? demoModal.querySelector(".close") : null;
-    var form = document.getElementById("demoForm");
-  
-    function openModal(modal) {
-      if (modal) {
-        modal.style.display = "block";
-        setTimeout(() => {
-          modal.classList.add('show');
-        }, 10);
-      }
-    }
-  
-    function closeModal(modal) {
-      if (modal) {
-        modal.classList.remove('show');
-        setTimeout(() => {
-          modal.style.display = "none";
-          if (modal === videoModal && video) {
-            video.pause();
-          }
-        }, 300);
-      }
-    }
-  
-    function showNotification(message, type) {
-      const notification = document.createElement('div');
-      notification.className = `notification ${type}`;
-      notification.textContent = message;
-      document.body.appendChild(notification);
-  
-      setTimeout(() => {
-        notification.classList.add('show');
-      }, 100);
-  
-      setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-          notification.remove();
-        }, 300);
-      }, 3000);
-    }
-  
-    // Video modal event listeners
-    if (videoBtn) {
-      videoBtn.onclick = function(e) {
-        e.preventDefault();
-        openModal(videoModal);
-        if (video) video.play();
-      }
-    }
-  
-    if (videoSpan) {
-      videoSpan.onclick = function() {
-        closeModal(videoModal);
-      }
-    }
-  
-    // Demo modal event listeners
-    function handleDemoButtonClick(e) {
+  // Form submission (unchanged)
+  if (form) {
+    form.onsubmit = function(e) {
       e.preventDefault();
-      openModal(demoModal);
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var position = document.getElementById("position").value;
+      var companyName = document.getElementById("companyName").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var availableDays = Array.from(document.querySelectorAll('input[name="availableDays"]:checked')).map(cb => cb.value);
+      var availableTimes = Array.from(document.querySelectorAll('input[name="availableTimes"]:checked')).map(cb => cb.value);
+
+      var message = `Hi my name is +
+                    ${firstName} ${lastName}%0A` +
+                    `, I work as ${position}%0A` +
+                    `at ${companyName}%0A` +
+                    `my email is ${email}%0A` +
+                    `and my phone  ${phone}%0A` +
+                    `I want to request a demo with you`;
+      
+      var whatsappUrl = `https://wa.me/1176455965?text=${message}`;
+      
+      window.open(whatsappUrl, '_blank');
+
+      closeModal(demoModal);
     }
-  
-    // Add click handlers to all demo buttons
-    [demoBtn, aboutDemoBtn, ctaDemoBtn].forEach(btn => {
-      if (btn) {
-        btn.onclick = handleDemoButtonClick;
-      }
-    });
-  
-    if (demoSpan) {
-      demoSpan.onclick = function() {
-        closeModal(demoModal);
-      }
-    }
-  
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      if (event.target === videoModal) {
-        closeModal(videoModal);
-      } else if (event.target === demoModal) {
-        closeModal(demoModal);
-      }
-    }
-  
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === "Escape") {
-        closeModal(videoModal);
-        closeModal(demoModal);
-      }
-    });
-  
-    // Form submission
-    if (form) {
-      form.onsubmit = function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData();
-        
-        // Prepare email content
-        const name = `${document.getElementById("firstName").value} ${document.getElementById("lastName").value}`;
-        const email = document.getElementById("email").value;
-        const subject = "New Demo Request - Safety Shield Ultra";
-        const message = `
-          Name: ${name}
-          Position: ${document.getElementById("position").value}
-          Company: ${document.getElementById("companyName").value}
-          Email: ${email}
-          Phone: ${document.getElementById("phone").value}
-        `;
-  
-        // Add to FormData
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('subject', subject);
-        formData.append('message', message);
-  
-        // Show loading state
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-  
-        // Send the email
-        fetch('../../send_mail.php', {
-          method: 'POST',
-          body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.status === 'success') {
-            showNotification('Your demo request has been sent successfully!', 'success');
-            form.reset();
-            closeModal(demoModal);
-          } else {
-            throw new Error(data.message || 'Something went wrong');
-          }
-        })
-        .catch(error => {
-          showNotification(error.message, 'error');
-        })
-        .finally(() => {
-          // Restore button state
-          submitButton.disabled = false;
-          submitButton.textContent = originalButtonText;
-        });
-      }
-    }
-  });
+  }
 });
