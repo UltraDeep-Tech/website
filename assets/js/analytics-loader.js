@@ -1,4 +1,3 @@
-// analytics-loader.js
 class AnalyticsLoader {
     static init() {
         // Solo carga analytics después de la primera interacción del usuario
