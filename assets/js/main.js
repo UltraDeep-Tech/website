@@ -63,7 +63,7 @@
     // Timeout de seguridad de 5 segundos
     setTimeout(() => {
       preloader.remove();
-    }, 5000);
+    }, 3000);
   
     window.addEventListener('load', () => {
       preloader.remove();
