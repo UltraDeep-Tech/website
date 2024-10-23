@@ -54,21 +54,7 @@
     });
   });
 
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
 
-  if (preloader) {
-    // Timeout de seguridad de 2 segundos
-    setTimeout(() => {
-      preloader.remove();
-    }, 3000);
-  
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
 
   /**
    * Scroll top button

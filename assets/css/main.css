@@ -601,43 +601,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #163768;
-  display: grid;
-  place-items: center;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease-out;
-}
-
-#preloader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-#preloader img {
-  width: 300px;
-  height: auto;
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* Prevenir scroll mientras el preloader está activo */
-body.preloader-active {
-  overflow: hidden;
-}
-
 
 /* Scroll Top Button */
 .scroll-top {
