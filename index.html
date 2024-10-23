@@ -15,27 +15,58 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" 
+        rel="stylesheet" 
+        media="print" 
+        onload="this.media='all'">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+class AnalyticsLoader {
+    static init() {
+        // Solo carga analytics después de la primera interacción del usuario
+        const loadAnalytics = () => {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS';
+            script.async = true;
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LD1QMH1MRS', {
+                'send_page_view': true,
+                'anonymize_ip': true,
+                'page_load_time': true
+            });
+        };
 
-  gtag('config', 'G-LD1QMH1MRS');
+        // Eventos que desencadenarán la carga de analytics
+        const events = ['scroll', 'click', 'touchstart'];
+        const loadHandler = () => {
+            loadAnalytics();
+            events.forEach(event => window.removeEventListener(event, loadHandler));
+        };
+
+        // Agregar listeners
+        events.forEach(event => window.addEventListener(event, loadHandler, { once: true }));
+
+        // Cargar después de 3 segundos si no hay interacción
+        setTimeout(loadHandler, 3000);
+    }
+}
 </script>
 
 </head>
@@ -47,7 +78,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
   
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/favicon.png" alt="" class="logo-img">
+        <img src="assets/img/favicon.png" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
         <h1 class="sitename">Ultra Deep Tech</h1>
       </a>
   
@@ -76,7 +107,7 @@
               <span>Products & Solutions</span>
             </a>
             <ul>
-              <li><a href="safetyshield.html" class="nav-link "><img src="/assets/img/favicon_copia.png" class="logo-header"></img><span>Safety Shield Ultra</span></a></li>
+              <li><a href="safetyshield.html" class="nav-link "><img src="/assets/img/favicon_copia.webp" class="logo-header"></img><span>Safety Shield Ultra</span></a></li>
               <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-bar-chart-fill"></i><span>Interpretability</span></a></li>
               <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-lock-fill"></i><span>Anonymization</span></a></li>
               <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-arrow-up-right-square-fill"></i><span>Compression</span></a></li>
@@ -134,14 +165,11 @@
   
 
 
-  
-  
-  
   <main class="main">
   
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <video autoplay loop muted playsinline>
+      <video autoplay loop muted playsinline preload="metadata" poster="./assets/img/hero-poster.jpg">
         <source src="./assets/img/brain-bg.mp4" type="video/mp4">
       </video>
       <div class="container">
@@ -168,7 +196,7 @@
         <div class="row g-0">
 
           <div class="col-xl-5 img-bg" data-aos="fade-up" data-aos-delay="100">
-            <img src="./assets/img/inteligencia call to action12.png" alt="">
+            <img src="./assets/img/inteligencia call to action12.webp" alt="">
           </div>
 
           <div class="col-xl-7 slides position-relative" data-aos="fade-up" data-aos-delay="200">
@@ -247,7 +275,7 @@
     </section><!-- /Why Us Section -->
 
     <section id="call-to-action" class="call-to-action section">
-      <img src="/assets/img/hero-bg.png" alt="Background image">
+      <img src="/assets/img/hero-bg.webp" alt="Background image" width="1920" height="1080" loading="lazy">
 
       <div class="container">
         <div class="row justify-content-left" data-aos="zoom-in" data-aos-delay="100">
@@ -370,7 +398,7 @@
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
 
-      <img src="./assets/img/inteligencia call to action.jpg" alt="">
+      <img src="./assets/img/inteligencia call to action.webp" alt="">
 
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
@@ -422,7 +450,8 @@
                 </div><!-- End Service Item -->
                       <div class="col-lg-4 position-relative" data-aos="zoom-out" data-aos-delay="200">
             <div class="services-wrap">
-              <img src="assets/img/services.png" alt="Image" class="img-fluid">
+              <img src="assets/img/services.webp" alt="Image" class="img-fluid" width="600" height="400" loading="lazy">
+
             </div>
           </div>
         </div>
@@ -443,33 +472,16 @@
 
     </section>
 
-<section id="youtube-videos" class="youtube-videos section">
-  <div class="section-title">
-    <h2 style="margin-bottom: 0px; padding-bottom: 0px; color: aliceblue;">Our Latest YouTube Videos</h2>
-    <h5 class="justify-content-center text-center" style="color: rgba(233, 233, 233, 0.4);">Discover the innovation driving tomorrow’s technology today</h5>
-  </div>
-
-  <div class="container">
-    <div id="videoCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" id="video-container">
-        <!-- YouTube videos will be dynamically loaded here -->
+    <section id="youtube-videos" class="youtube-videos section">
+      <div class="section-title">
+          <h2 style="margin-bottom: 0px; padding-bottom: 0px; color: aliceblue;">Our Latest YouTube Videos</h2>
+          <h5 class="justify-content-center text-center" style="color: rgba(233, 233, 233, 0.4);">Discover the innovation driving tomorrow's technology today</h5>
       </div>
-      
-      <!-- Carousel Controls -->
-      <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-
-
-</section>
+  
+      <div class="container">
+          <div id="youtube-container"></div>
+      </div>
+  </section>
 
 
 <div class="blog-cta text-center mt-4">
@@ -582,22 +594,30 @@
 
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Solo los scripts esenciales -->
+<script src="assets/js/performance-loader.js" defer></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/vendor/aos/aos.js" defer></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/image-loader.js" defer></script>
+  <script src="assets/js/youtube-lite.js" defer></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/analytics-loader.js" defer></script>
   <script src="assets/js/cookies.js" defer></script>
-  <script src="assets/js/yt.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('youtube-container');
+        const youtubeLite = new YoutubeLite(container, {
+            maxResults: 5
+        });
+        youtubeLite.init();
+    });
+</script>
 
   <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
     <i class="bi bi-whatsapp whatsapp-icon"></i>
@@ -615,6 +635,8 @@
     </video>
   </div>
 </div>
+
+
 
 </body>
 

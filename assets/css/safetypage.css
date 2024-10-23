@@ -31,7 +31,7 @@ section,
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) no-repeat center center;
+  background: url(../img/hero-bg.webp) no-repeat center center;
   background-size: cover;
 }
 
@@ -387,7 +387,7 @@ section,
 --------------------------------------------------------------*/
 
 #featured {
-  background: url(../img/hero-bg.png) no-repeat center center;
+  background: url(../img/hero-bg.webp) no-repeat center center;
   background-size: cover;
 height: auto;
 width: auto;
@@ -896,7 +896,7 @@ transition-duration: 100ms;
 
   .cta-features-section {
     padding: 60px 0;
-    background: url(/assets/img/hero-bg.png);
+    background: url(/assets/img/hero-bg.webp);
     background-size: cover;
   }
   
