@@ -9,18 +9,24 @@
   <meta content="advanced technology, technological solutions, technological innovation, software development, artificial intelligence, big data, data analysis, automation, digital transformation, technological services, technology consulting, Ultradeeptech, business technology, IT solutions, cybersecurity, IoT, Internet of Things, machine learning, cloud computing" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.webp" rel="icon">
+  <link href="assets/img/favicon.webp" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
+      <!-- Fallback for preload -->
+  <noscript>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </noscript>
   
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -78,7 +84,7 @@ class AnalyticsLoader {
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
   
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/favicon.png" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
         <h1 class="sitename">Ultra Deep Tech</h1>
       </a>
   
@@ -191,36 +197,43 @@ class AnalyticsLoader {
     <section id="why-us" class="why-us section">
 
       </div><!-- End Section Title -->
-
-
         <div class="row g-0">
-
           <div class="col-xl-5 img-bg" data-aos="fade-up" data-aos-delay="100">
             <img src="./assets/img/inteligencia call to action12.webp" alt="">
           </div>
 
           <div class="col-xl-7 slides position-relative" data-aos="fade-up" data-aos-delay="200">
-
             <div class="swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "centeredSlides": true,
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  },
-                  "navigation": {
-                    "nextEl": ".swiper-button-next",
-                    "prevEl": ".swiper-button-prev"
-                  }
-                }
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  new Swiper('.swiper', {
+                    loop: true,
+                    speed: 600,
+                    autoplay: {
+                      delay: 4000,
+                      disableOnInteraction: false
+                    },
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    pagination: {
+                      el: '.swiper-pagination',
+                      type: 'bullets',
+                      clickable: true
+                    },
+                    navigation: {
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev'
+                    },
+                    breakpoints: {
+                      320: {
+                        slidesPerView: 1
+                      },
+                      768: {
+                        slidesPerView: 1
+                      }
+                    }
+                  });
+                });
               </script>
               <div class="swiper-wrapper">
 
@@ -274,6 +287,9 @@ class AnalyticsLoader {
 
     </section><!-- /Why Us Section -->
 
+
+
+    
     <section id="call-to-action" class="call-to-action section">
       <img src="/assets/img/hero-bg.webp" alt="Background image" width="1920" height="1080" loading="lazy">
 
@@ -282,15 +298,17 @@ class AnalyticsLoader {
           <!-- Left Column -->
           <div class="col-xl-6">
             <div class="text-left">
-              <h3>Did you see our latest Product?</h3>
-              <h3>Discover the Power of <b>Safety Shield Ultra</b></h3>
+              <h3>Protect Your AI From Modern Threats</h3>
+              <h3>Discover  <b>Safety Shield Ultra</b></h3>
               <p>
-                Want to learn more about how Safety Shield Ultra can revolutionize your data security? 
+                Defend your conversational AI against prompt injection and data leaks.
                 <br> 
-                Visit our comprehensive product page to explore all features, benefits, and see how our AI-driven solution can safeguard your critical information.
+                See how Safety Shield Ultra keeps your AI interactions secure in real-time.
+
               </p>
-              <a class="cta-btn" href="safetyshield.html">Explore Safety Shield Ultra</a>
-              <a id="seeInActionBtn" class="cta-btn download-btn">
+              <a class="cta-btn" href="safetyshield.html">                <i class="bi bi-shield-check"></i> 
+                Secure Your AI</a>
+              <a id="seeInActionBtn" class="cta-btn download-btn" href="#">
                 <i class="bi bi-play-circle"></i> 
                 <span>See It in Action</span>
               </a>
@@ -599,6 +617,8 @@ class AnalyticsLoader {
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 <script src="assets/vendor/aos/aos.js" defer></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+
 
 
   <!-- Main JS File -->
@@ -630,7 +650,7 @@ class AnalyticsLoader {
   <div class="modal-content"> 
     <span class="close">&times; </span> 
     <video id="videoPlayer" width="100%" controls>
-      <source src="assets/video/demostracion español.mov" type="video/mp4">
+      <source src="assets/video/demostracion español.mp4" type="video/mp4">
       Tu navegador no soporta el tag de video.
     </video>
   </div>
