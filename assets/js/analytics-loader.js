@@ -1,6 +1,5 @@
 class AnalyticsLoader {
     static init() {
-        // Solo carga analytics después de la primera interacción del usuario
         const loadAnalytics = () => {
             const script = document.createElement('script');
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS';
