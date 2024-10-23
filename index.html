@@ -172,7 +172,7 @@ class AnalyticsLoader {
   
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <video autoplay loop muted playsinline >
+      <video autoplay loop muted playsinline preload="metadata" poster="./assets/img/algorithmic-protection.webp">
         <source src="./assets/img/brain-bg.mp4" type="video/mp4">
       </video>
       <div class="container">
@@ -602,7 +602,10 @@ class AnalyticsLoader {
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
+<!-- Preloader -->
+<div id="preloader">
+  <img src="assets/img/logo_udt_03-400h.png" alt="Ultra Deep Tech Logo"> <!-- Asegúrate de usar la ruta correcta del logo -->
+</div>
 
 
   <!-- Vendor JS Files -->
@@ -616,10 +619,10 @@ class AnalyticsLoader {
 
 
   <!-- Main JS File -->
-  <script src="assets/js/script.js"></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/image-loader.js" defer></script>
   <script src="assets/js/youtube-lite.js" defer></script>
+  <script src="assets/js/script.js"></script>
   <script src="assets/js/analytics-loader.js" defer></script>
   <script src="assets/js/cookies.js" defer></script>
 
