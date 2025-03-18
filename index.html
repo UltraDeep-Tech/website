@@ -18,60 +18,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"></noscript>
+  
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></noscript>
+  
+  <link rel="preload" href="assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="assets/css/main.css" rel="stylesheet"></noscript>
 
       <!-- Fallback for preload -->
-
-  
   <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
-  <link 
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" 
-        rel="stylesheet" 
-        media="print" 
-        onload="this.media='all'">
-
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS"></script>
-<script>
-class AnalyticsLoader {
-    static init() {
-        // Solo carga analytics después de la primera interacción del usuario
-        const loadAnalytics = () => {
-            const script = document.createElement('script');
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS';
-            script.async = true;
-            document.head.appendChild(script);
-            
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-            gtag('config', 'G-LD1QMH1MRS', {
-                'send_page_view': true,
-                'anonymize_ip': true,
-                'page_load_time': true
-            });
-        };
-
-        // Eventos que desencadenarán la carga de analytics
-        const events = ['scroll', 'click', 'touchstart'];
-        const loadHandler = () => {
-            loadAnalytics();
-            events.forEach(event => window.removeEventListener(event, loadHandler));
-        };
-
-        // Agregar listeners
-        events.forEach(event => window.addEventListener(event, loadHandler, { once: true }));
-
-        // Cargar después de 3 segundos si no hay interacción
-        setTimeout(loadHandler, 3000);
-    }
-}
-</script>
 
 </head>
 
@@ -111,7 +73,6 @@ class AnalyticsLoader {
             </a>
             <ul>
               <li><a href="safetyshield.html" class="nav-link "><img src="/assets/img/favicon_copia.webp" class="logo-header"></img><span>Safety Shield Ultra</span></a></li>
-              <li><a href="ccommerce.html" class="nav-link "><img src="/assets/img/faviconc.webp" class="logo-header2"></img><span>C-Commerce Ultra</span></a></li>
               <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-bar-chart-fill"></i><span>Interpretability</span></a></li>
               <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-lock-fill"></i><span>Anonymization</span></a></li>
               <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-arrow-up-right-square-fill"></i><span>Compression</span></a></li>
@@ -182,9 +143,8 @@ class AnalyticsLoader {
   
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <video autoplay loop muted playsinline preload="metadata" poster="./assets/img/asd.webp">
-        <source src="./assets/img/brain-bg.mp4" type="video/mp4">
-      </video>
+      <img src="/assets/img/fondo.webp">
+      </img>
       <div class="container">
         <div class="row">
           <div class="col-xl-7">
@@ -331,40 +291,6 @@ class AnalyticsLoader {
         </div>
       </div>
     </section><!-- /Call To Action Section -->
-<!-- C-Commerce Call To Action Section -->
-<section id="call-to-action-2" class="call-to-action section dark-background">
-  <img src="/assets/img/imgfondoccomerce.webp" alt="Background image" loading="lazy">
-
-  <div class="container">
-    <div class="row gy-4">
-      <!-- Left Column - Video -->
-      <div class="col-lg-6" data-aos="zoom-out">
-        <img src="assets/img/dashboardcommerce.webp" class="dashboardcommerce">
-        </div>
-
-      <!-- Right Column - Text -->
-      <div class="col-lg-6">
-        <div class="text-left" data-aos="fade-up">
-          <h3>Double Your Sales with AI Power</h3>
-          <h3>Discover <b>C-Commerce Ultra</b></h3>
-          <p>
-            Transform your business with AI-powered sales intelligence.
-            <br>
-            See how C-Commerce Ultra analyzes customer behavior and optimizes conversions.
-          </p>
-          <div class="d-flex mt-4 justify-content-start">
-            <a class="cta-btn" href="ccommerce.html">
-              <i class="bi bi-graph-up"></i>
-              <span>Boost Your Sales</span>
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
     <!-- Services Section -->
@@ -439,7 +365,7 @@ class AnalyticsLoader {
               <a href="productsdetails.html?product=product-6" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-12 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
             <div class="icon flex-shrink-0"><i class="bi bi-shield-check" style="color: #2b5e96;"></i></div>
             <div>
               <h4 class="title">Algorithmic Protection              </h4>
@@ -475,63 +401,51 @@ class AnalyticsLoader {
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="mb-0">Our Services for Your Company</h3>
-            <br><br>
-            <div class="container">
-
-              <div class="row gy-4">
-      
-                <div class="col-lg-4 col-md-6 features-item d-flex" data-aos="fade-up" data-aos-delay="100" >
-                  <a href="service-details.html?product=product-1"><div class="icon flex-shrink-0"><i class="bi bi-eye" style="color: #2b5e96;"></i></div>
-                  <div>
-                    <h4 class="title">AI and Data Engineering Consulting
-                    </h4>
-                    <p class="description">Consulting in AI and Data Engineering to optimize processes, improve decision-making, and enhance technological innovation for companies..</p>
-                    <a href="service-details.html?product=product-1" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-                <!-- End Service Item -->
-      
-                <div class="col-lg-4 col-md-6 features-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                  <a href="service-details.html?product=product-2"><div class="icon flex-shrink-0"><i class="bi bi-shield-lock" style="color: #2b5e96;"></i></div>
-                  <div>
-                    <h4 class="title">Personalized Solutions for Big Companies and Fortune 500
-                    </h4>
-                    <p class="description">Personalized solutions for big companies, and Fortune 500, tailored to their specific needs to achieve business success.
-                    </p>
-
-                    <a href="service-details.html?product=product-2" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div><!-- End Service Item -->
-                      <div class="col-lg-4 position-relative" data-aos="zoom-out" data-aos-delay="200">
-            <div class="services-wrap">
-              <img src="assets/img/services.webp" alt="Image" class="img-fluid" width="600" height="400" loading="lazy">
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="details">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <h4>Elevate Your Business with Expert Consulting and Tailored Solutions</h4>
-              <p>Transform your business with our expert AI and Data Engineering Consulting and personalized solutions. Contact us today to optimize processes, drive innovation, and achieve unparalleled success</p>
-              <a href="./contact.html#contact" class="btn-get-started">Contact Us</a>
-            </div>
-          </div>
+<section class="section ">
+  <div class="about-intro" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="intro-content">
+          <div class="section-badge">Our Services for Your Company</div>
+          <h3>Elevate Your Business with Expert Consulting and Tailored Solutions
+          </h3>
+          <p class="intro-lead">Transform your business with our expert AI and Data Engineering Consulting and personalized solutions. Contact us today to optimize processes, drive innovation, and achieve unparalleled success.</p>
         </div>
       </div>
 
-    </section>
+      <div class="col-lg-6">
+        <div class="value-cards">
+          <div class="value-card">
+            <i class="bi bi-eye"></i>
+            <div class="value-content">
+              <h4>AI and Data Engineering Consulting</h4>
+              <p>Consulting in AI and Data Engineering to optimize processes, improve decision-making, and enhance technological innovation for companies.</p>
+              <a href="service-details.html?product=product-1" class="readmore stretched-link">
+                <span>Learn More</span>
+            </div>
+          </div>
+          <div class="value-card">
+            <i class="bi bi-lightning-charge"></i>
+            <div class="value-content">
+              <h4>Personalized Solutions for Big Companies and Fortune 500</h4>
+              <p>                  Personalized solutions for big companies and Fortune 500, tailored to their specific needs to achieve business success.              </p>
+              <a href="service-details.html?product=product-2" class="readmore stretched-link">
+                <span>Learn More</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="blog-cta text-center mt-4">
+  <h3>Want to dive deeper into AI and tech insights?</h3>
+  <p>Explore our blog for in-depth articles, analysis, and the latest in AI innovation.</p>
+  <a href="blog.html" class="btn btn-primary btn-lg">Visit Our Blog</a>
+</div>
 
 <section id="youtube-videos" class="youtube-videos section">
   <div class="section-title">
@@ -541,24 +455,11 @@ class AnalyticsLoader {
 
   <div class="container">
           <div id="youtube-container"></div>
-      </div>
+  </div>
 </section>
 
 
-<div class="blog-cta text-center mt-4">
-  <h3>Want to dive deeper into AI and tech insights?</h3>
-  <p>Explore our blog for in-depth articles, analysis, and the latest in AI innovation.</p>
-  <a href="blog.html" class="btn btn-primary btn-lg">Visit Our Blog</a>
-</div>
-</div>
 
-    
-    
-  
-
-    
-    
-    
   </main>
 
   <footer id="footer" class="footer">
@@ -596,7 +497,6 @@ class AnalyticsLoader {
             <h4>Products & Solution</h4>
             <ul>
               <li><a href="safetyshield.html" class="nav-link "><span>Safety Shield Ultra</span></a></li>
-              <li><a href="ccommerce.html" class="nav-link "><span>C-Commerce Ultra</span></a></li>
               <li><a href="productsdetails.html?product=product-1">Interpretability</a></li>
               <li><a href="productsdetails.html?product=product-2">Anonymization</a></li>
               <li><a href="productsdetails.html?product=product-3">Compression</a></li>
@@ -629,13 +529,7 @@ class AnalyticsLoader {
 
   </footer>
 
-  <div id="cookie-banner" class="cookie-banner">
-    <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html#cookie">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
-    <div class="button-container">
-      <button id="accept-cookies">Accept</button>
-      <button id="deny-cookies">Deny</button>
-  </div>
-</div>
+
 
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
@@ -668,8 +562,7 @@ class AnalyticsLoader {
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/image-loader.js" defer></script>
   <script src="assets/js/youtube-lite.js" defer></script>
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/analytics-loader.js" defer></script>
+  <script src="assets/js/script.js" defer></script>
   <script src="assets/js/cookies.js" defer></script>
 
   <script>

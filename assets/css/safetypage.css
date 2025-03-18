@@ -468,8 +468,12 @@ width: auto;
 --------------------------------------------------------------*/
 
 .features-item {
-  
   border-radius: 10px;
+  box-shadow: 0 0px 2px #3333338c;
+}
+.features-item:hover {
+  border-radius: 10px;
+  background-color: #163768;
   box-shadow: 0 0px 2px #3333338c;
 }
 
@@ -484,15 +488,23 @@ width: auto;
 
 .features-item:hover  h3 {
   
-  color: #ffffff;
+  color: #fff;
   transition:calc(10);
 }
 .features-item:hover .icon-container  i  {
-  color: #ffffff;
+  color: #fff;
   transition:calc(10);
 }
 
 .features .features-item:hover ul i {
+  color: #fff;
+transition-duration: 100ms;
+}  
+.features .features-item:hover p {
+  color: #fff;
+transition-duration: 100ms;
+}  
+.features .features-item:hover span {
   color: #fff;
 transition-duration: 100ms;
 }  
@@ -559,6 +571,7 @@ transition-duration: 100ms;
     font-size: 4rem;
   }
 }
+
 
 
 /*--------------------------------------------------------------
