@@ -940,7 +940,6 @@ section .row {
 
 /* Services Section */
 .services .row {
-  margin: -20px;
 }
 .services .col-lg-4,
 .services .col-md-6 {
@@ -953,12 +952,13 @@ section .row {
   padding: 30px;
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(54, 70, 160, 0.171);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
   display: flex;
   flex-direction: column;
+
 }
 .services .service-item .icon {
   position: relative;

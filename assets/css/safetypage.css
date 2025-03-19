@@ -37,6 +37,7 @@ section,
 
 .hero .container {
   position: relative;
+  margin-left: 0px;
   z-index: 3;
 }
 
@@ -92,10 +93,10 @@ section,
 .hero .hero-img .phone-1 {
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 20px;
   box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.5);
   border-radius: 30px;
-  width: 180vh;
+  width: 170vh;
 }
 
 /* Responsive Styles */
@@ -214,7 +215,7 @@ section,
   text-align: start;
   border-radius: 5px;
   color: #fff;
-  max-width: 65%; 
+  max-width: 80%; 
 }
 
 .about .content h2 {
@@ -387,8 +388,8 @@ section,
 --------------------------------------------------------------*/
 
 #featured {
-  background: url(../img/hero-bg.webp) no-repeat center center;
-  background-size: cover;
+background: url(../img/hero-bg.webp) no-repeat center center;
+background-size: cover;
 height: auto;
 width: auto;
 }
@@ -475,6 +476,7 @@ width: auto;
   border-radius: 10px;
   background-color: #163768;
   box-shadow: 0 0px 2px #3333338c;
+  transition: 1s;
 }
 
 
