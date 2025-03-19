@@ -112,7 +112,6 @@
   });
 
 
-
   /**
    * Init isotope layout and filters
    */
