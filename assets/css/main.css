@@ -1294,7 +1294,7 @@ section .row {
 }
 .call-to-action .cta-btn {
   background: var(--contrast-color);
-  color:  var(--accent-color);
+  color: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -1307,8 +1307,41 @@ section .row {
 }
 .call-to-action .cta-btn:hover {
   background: var(--accent-color);
-  color: #26498a var(--contrast-color);
+  color: #26498a;
 }
+
+/* Media Queries para hacer la sección responsive */
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 100px 0; /* Se reduce el padding en pantallas medianas */
+  }
+  .call-to-action h3 {
+    font-size: 22px;
+  }
+  .call-to-action .cta-btn {
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-to-action {
+    padding: 80px 0; /* Padding aún menor para móviles */
+  }
+  .call-to-action h3 {
+    font-size: 18px;
+  }
+  .call-to-action p {
+    font-size: 14px; /* Opcional, si deseas ajustar el texto */
+  }
+  .call-to-action .cta-btn {
+    font-size: 12px;
+    padding: 8px 20px;
+    margin: 5px;
+  }
+}
+
 
 
 /* Intro Section */
