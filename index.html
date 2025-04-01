@@ -1,1181 +1,1234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultra Deep Tech</title>
     <meta name="description" content="Incorporating artificial intelligence and automated security solutions to help businesses increase ROI and reduce costs.">
     <meta name="keywords" content="advanced technology, technological solutions, technological innovation, software development, artificial intelligence, big data, data analysis, automation, digital transformation, technological services, technology consulting, Ultradeeptech, business technology, IT solutions, cybersecurity, IoT, Internet of Things, machine learning, cloud computing">
-  
+
     <!-- Favicons -->
     <link href="assets/img/favicon.webp" rel="icon">
     <link href="assets/img/favicon.webp" rel="apple-touch-icon">
-  
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <!-- Carga asíncrona de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-          rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </noscript>
-  
+
     <!-- Critical CSS inline (Ejemplo: estilos básicos del header, tipografía y layout principal) -->
     <style>
-/* Global Variables and Root Styles */
-:root {
-  --default-font: "Montserrat", sans-serif;
-  --heading-font: "Montserrat", sans-serif;
-  --nav-font: "Raleway", sans-serif;
-  
-  --background-color: #ffffff;
-  --default-color: #333;
-  --heading-color: #3f63af;
-  --accent-color: #3f63af;
-  --contrast-color: #ffffff;
-  
-  --nav-color: rgba(255, 255, 255, 0.918);
-  --nav-hover-color: #ffffff;
-  --nav-dropdown-background-color: #3f63af;
-  --nav-dropdown-color: #ffff;
-  --nav-dropdown-hover-color: #ffffff;
-  
-  scroll-behavior: smooth;
-}
-
-/* General Styles */
-body {
-  color: var(--default-color);
-  font-family: var(--default-font);
-}
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-h1, h2, h3, h4, h5, h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-}
-
-/* S Section */
-.hero {
-  --default-color: #ffffff;
-  --background-color: #1b2f4581;
-  --heading-color: #ffffff;
-  width: 100%;
-  min-height: 100vh;
-  padding: 120px 0 60px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Gradiente: de oscuro en la parte superior a transparente en la inferior */
-  background: linear-gradient(to bottom, #2f4eb3b3, rgba(218, 216, 216, 0));
-  z-index: 1;
-}
-
-.lazy {
-  opacity: 0;
-  transition: opacity 0.1s ease-in;
-}
-.lazy.loaded {
-  opacity: 1;
-}
-
-@media (min-width: 1200px) {
-  .hero:after {
-    content: "";
-    width: 44%;
-    position: absolute;
-    z-index: 3;
-  }
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hero .container,
-.hero .container-fluid {
-  position: relative;
-  z-index: 4;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: 700;
-  z-index: 1;
-}
-
-.hero blockquote {
-  text-shadow: 0 0 5px #00000093;
-  color: #fff;
-  font-size: clamp(20px, 8vw, 80px);
-  font-weight: 700;
-  line-height: 1; /* Puedes ajustar este valor */
-  padding-left: 10px;
-  width: auto;
-  border-left: 4px solid #fafafa;
-  margin: 10px 0;
-}
-
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
-  transition: background-color 0.5s;
-  z-index: 5;
-  position: relative;
-  margin-top: 15px;
-}
-.hero .btn-get-started:hover {
-  background: #fff;
-  color: #26498a;
-}
-
-.hero .btn-watch-video {
-  font-size: 16px;
-  transition: color 0.5s;
-  margin-left: 25px;
-  color: var(--default-color);
-  font-weight: 600;
-  z-index: 5;
-  position: relative;
-}
-.hero .btn-watch-video i {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-  font-size: 32px;
-  transition: color 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 1024px) {
-  .hero {
-    padding: 100px 0 50px;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  .hero blockquote {
-    font-size: clamp(18px, 7vw, 70px);
-  }
-  .hero .btn-get-started {
-    padding: 10px 25px;
-    font-size: 13px;
-  }
-  .hero .btn-watch-video {
-    font-size: 14px;
-    margin-left: 20px;
-  }
-  .hero .btn-watch-video i {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 80px 0 40px;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-  .hero blockquote {
-    font-size: clamp(16px, 6vw, 60px);
-    padding-left: 8px;
-    border-left: 3px solid #fafafa;
-    margin: 8px 0;
-  }
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 12px;
-    padding: 8px 20px;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 60px 0 30px;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.1;
-  }
-  .hero blockquote {
-    font-size: clamp(14px, 5vw, 50px);
-    padding-left: 6px;
-    border-left: 2px solid #fafafa;
-    margin: 6px 0;
-  }
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 11px;
-    padding: 6px 15px;
-    margin-top: 8px;
-  }
-}
-
-/* Para videos dentro de .hero, si los hubiera */
-@media (max-width: 768px) {
-  .hero video {
-    height: 100vh;
-  }
-}
-
-
-
-#typewriter-title {
-  font-family: 'Courier New', Courier, monospace;
-  text-shadow: 0 0 5px #333;
-  font-weight: 900;
-  white-space: pre;
-  overflow-wrap: break-word;
-  border-right: 0.15em solid rgb(180, 174, 255);
-  display: inline-block;
-  animation: blink-caret 0.75s step-end infinite;
-  transition: max-width 0.5s, font-size 0.5s;
-  font-size: 5vw;
-  max-width: auto;
-  line-height: 1; /* Agregado para eliminar el espacio entre líneas */
-
-}
-
-@media (min-width: 769px) {
-  #typewriter-title {
-    font-size: 2vw;
-  }
-}
-@media (max-width: 768px) {
-  #typewriter-title {
-    font-size: 4vw;
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-}
-@media (max-width: 480px) {
-  #typewriter-title {
-    font-size: 6vw;
-    font-weight: bold;
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { 
-    border-color: rgb(118, 126, 243);
-  }
-}
-
-.hide {
-  display: none !important;
-}
-
-
-/* Global Header */
-.header {
-  --background-color: rgba(255, 255, 255, 0);
-  --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 10px 0;
-  transition: all 0.5s;
-  z-index: 997;
-  text-shadow: 0 0 5px #333;
-}
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -180%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(145, 186, 248, 0.171), transparent);
-}
-.header .logo {
-  line-height: 1;
-}
-.header .logo h1 {
-  font-size: 25px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
-.scrolled .header {
-  box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
-  background: linear-gradient(145deg, #3f63af, #26498a);
-  text-decoration: #fff;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
-}
-.logo:hover {
-  transform: scale(1.05);
-}
-.sitename {
-  font-size: 2em;
-  margin-left: 10px;
-  position: relative;
-  overflow: visible;
-  white-space: nowrap;
-  color: #fff;
-}
-.sitename2 {
-
-  color: #fff !important;
-}
-.sitename3 {
-  color: #1e4b7a !important;
-}
-
-.sitename:hover {
-  animation: textGlow 2s infinite;
-}
-.logo-img {
-  width: 50px;
-  height: auto;
-  filter: brightness(1.5);
-  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
-}
-.logo-img:hover {
-  transform: rotate(5deg) scale(1.1);
-  filter: brightness(2);
-}
-
-/* Navigation Menu */
-@media (min-width: 1200px) {
-  .navmenu {
-    padding: 0;
-  }
-  .navmenu ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  .navmenu li {
-    position: relative;
-  }
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 16px;
-    font-family: var(--nav-font);
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: color 0.3s;
-  }
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: font-size 0.3s;
-  }
-  .navmenu li:last-child a {
-    padding-right: 0;
-  }
-  .navmenu li:hover > a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
-  }
-  .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
-    background: linear-gradient(145deg, #3f63af, #26498a);
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    left: 14px;
-    top: 130%;
-    opacity: 0;
-    transition: opacity 0.3s, top 0.3s;
-    z-index: 99;
-    box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
-    border-radius: 10px;
-  }
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
-  .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
-    text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
-  }
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover > a {
-    color: var(--nav-dropdown-hover-color);
-    background: #97add673;
-  }
-  .navmenu .dropdown:hover > ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-  .navmenu .dropdown .dropdown:hover > ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
-}
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-  .navmenu ul {
-    display: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-dropdown-background-color);
-    overflow-y: auto;
-    transition: opacity 0.3s;
-    z-index: 9998;
-    box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
-  }
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: color 0.3s;
-  }
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  }
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    background-color: #26498a;
-    color: #ffffff;
-  }
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
-  }
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-  .navmenu .dropdown > .dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-  .mobile-nav-active .navmenu > ul {
-    display: block;
-  }
-}
-    </style>
-    
-    <script>
-      window.addEventListener("load", function() {
-        const titles = [
-          "AI Observability & Traceability",
-          "RAG systems Cybersecurity",
-          "Automated Governance, Risk & Compliance",
-          "Generative AI Red Teaming",
-          "Innovative AI Solutions"
-        ];
-        // Empezamos con el segundo título (índice 1)
-        let titleIndex = 1;
-        let charIndex = 0;
-        const speed = 80;            // Velocidad de escritura (ms)
-        const delayBetweenTitles = 1500; // Retardo entre títulos (ms)
-        const typewriterTitle = document.getElementById("typewriter-title");
-    
-        // Muestra el primer título de forma estática para un buen LCP
-        typewriterTitle.innerText = titles[0];
-    
-        // Tras 1 segundo, inicia el efecto typewriter desde el segundo título
-        setTimeout(function() {
-          typewriterTitle.innerHTML = "";
-          charIndex = 0;
-          typeWriter();
-        }, 1000);
-    
-        function typeWriter() {
-          if (charIndex < titles[titleIndex].length) {
-            typewriterTitle.innerHTML += titles[titleIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(typeWriter, speed);
-          } else {
-            setTimeout(() => {
-              charIndex = 0;
-              // Incrementamos el índice; si supera el número de títulos, volvemos al segundo (índice 1)
-              titleIndex++;
-              if (titleIndex >= titles.length) {
-                titleIndex = 1;
-              }
-              typewriterTitle.innerHTML = "";
-              typeWriter();
-            }, delayBetweenTitles);
-          }
+        /* Global Variables and Root Styles */
+        
+         :root {
+            --default-font: "Montserrat", sans-serif;
+            --heading-font: "Montserrat", sans-serif;
+            --nav-font: "Raleway", sans-serif;
+            --background-color: #ffffff;
+            --default-color: #333;
+            --heading-color: #3f63af;
+            --accent-color: #3f63af;
+            --contrast-color: #ffffff;
+            --nav-color: rgba(255, 255, 255, 0.918);
+            --nav-hover-color: #ffffff;
+            --nav-dropdown-background-color: #3f63af;
+            --nav-dropdown-color: #ffff;
+            --nav-dropdown-hover-color: #ffffff;
+            scroll-behavior: smooth;
         }
-    
-        // Efectos adicionales para otros elementos
-        const sitename = document.querySelector('.sitename');
-        const logoImg = document.querySelector('.logo-img');
-        sitename.classList.add('glow');
-        logoImg.classList.add('glow');
-      });
+        /* General Styles */
+        
+        body {
+            color: var(--default-color);
+            font-family: var(--default-font);
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: color-mix(in srgb, var(--accent-color), transparent 25%);
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--heading-color);
+            font-family: var(--heading-font);
+        }
+        /* S Section */
+        
+        .hero {
+            --default-color: #ffffff;
+            --background-color: #1b2f4581;
+            --heading-color: #ffffff;
+            width: 100%;
+            min-height: 100vh;
+            padding: 120px 0 60px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Gradiente: de oscuro en la parte superior a transparente en la inferior */
+            background: linear-gradient(to bottom, #2f4eb3b3, rgba(218, 216, 216, 0));
+            z-index: 1;
+        }
+        
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.1s ease-in;
+        }
+        
+        .lazy.loaded {
+            opacity: 1;
+        }
+        
+        @media (min-width: 1200px) {
+            .hero:after {
+                content: "";
+                width: 44%;
+                position: absolute;
+                z-index: 3;
+            }
+        }
+        
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .hero .container,
+        .hero .container-fluid {
+            position: relative;
+            z-index: 4;
+        }
+        
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+        
+        .hero blockquote {
+            text-shadow: 0 0 5px #00000093;
+            color: #fff;
+            font-size: clamp(20px, 8vw, 80px);
+            font-weight: 700;
+            line-height: 1;
+            /* Puedes ajustar este valor */
+            padding-left: 10px;
+            width: auto;
+            border-left: 4px solid #fafafa;
+            margin: 10px 0;
+        }
+        
+        .hero .btn-get-started {
+            color: var(--contrast-color);
+            background: var(--accent-color);
+            font-family: var(--heading-font);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: background-color 0.5s;
+            z-index: 5;
+            position: relative;
+            margin-top: 15px;
+        }
+        
+        .hero .btn-get-started:hover {
+            background: #fff;
+            color: #26498a;
+        }
+        
+        .hero .btn-watch-video {
+            font-size: 16px;
+            transition: color 0.5s;
+            margin-left: 25px;
+            color: var(--default-color);
+            font-weight: 600;
+            z-index: 5;
+            position: relative;
+        }
+        
+        .hero .btn-watch-video i {
+            color: color-mix(in srgb, var(--default-color), transparent 70%);
+            font-size: 32px;
+            transition: color 0.3s;
+            line-height: 0;
+            margin-right: 8px;
+        }
+        /* Ajustes para pantallas pequeñas */
+        
+        @media (max-width: 1024px) {
+            .hero {
+                padding: 100px 0 50px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero blockquote {
+                font-size: clamp(18px, 7vw, 70px);
+            }
+            .hero .btn-get-started {
+                padding: 10px 25px;
+                font-size: 13px;
+            }
+            .hero .btn-watch-video {
+                font-size: 14px;
+                margin-left: 20px;
+            }
+            .hero .btn-watch-video i {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0 40px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+            .hero blockquote {
+                font-size: clamp(16px, 6vw, 60px);
+                padding-left: 8px;
+                border-left: 3px solid #fafafa;
+                margin: 8px 0;
+            }
+            .hero .btn-get-started,
+            .hero .btn-watch-video {
+                font-size: 12px;
+                padding: 8px 20px;
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+            .hero .btn-get-started,
+            .hero .btn-watch-video {
+                font-size: 13px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0 30px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.1;
+            }
+            .hero blockquote {
+                font-size: clamp(14px, 5vw, 50px);
+                padding-left: 6px;
+                border-left: 2px solid #fafafa;
+                margin: 6px 0;
+            }
+            .hero .btn-get-started,
+            .hero .btn-watch-video {
+                font-size: 11px;
+                padding: 6px 15px;
+                margin-top: 8px;
+            }
+        }
+        /* Para videos dentro de .hero, si los hubiera */
+        
+        @media (max-width: 768px) {
+            .hero video {
+                height: 100vh;
+            }
+        }
+        
+        #typewriter-title {
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 0 0 5px #333;
+            font-weight: 900;
+            white-space: pre;
+            overflow-wrap: break-word;
+            border-right: 0.15em solid rgb(180, 174, 255);
+            display: inline-block;
+            animation: blink-caret 0.75s step-end infinite;
+            transition: max-width 0.5s, font-size 0.5s;
+            font-size: 5vw;
+            max-width: auto;
+            line-height: 1;
+            /* Agregado para eliminar el espacio entre líneas */
+        }
+        
+        @media (min-width: 769px) {
+            #typewriter-title {
+                font-size: 2vw;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #typewriter-title {
+                font-size: 4vw;
+                white-space: normal;
+                overflow-wrap: break-word;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #typewriter-title {
+                font-size: 6vw;
+                font-weight: bold;
+                white-space: normal;
+                overflow-wrap: break-word;
+            }
+        }
+        
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: rgb(118, 126, 243);
+            }
+        }
+        
+        .hide {
+            display: none !important;
+        }
+        /* Global Header */
+        
+        .header {
+            --background-color: rgba(255, 255, 255, 0);
+            --heading-color: #ffffff;
+            color: var(--default-color);
+            background-color: var(--background-color);
+            padding: 10px 0;
+            transition: all 0.5s;
+            z-index: 997;
+            text-shadow: 0 0 5px #333;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -180%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(145, 186, 248, 0.171), transparent);
+        }
+        
+        .header .logo {
+            line-height: 1;
+        }
+        
+        .header .logo h1 {
+            font-size: 25px;
+            margin: 0;
+            font-weight: 700;
+            color: var(--heading-color);
+        }
+        
+        .scrolled .header {
+            box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
+            background: linear-gradient(145deg, #3f63af, #26498a);
+            text-decoration: #fff;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .sitename {
+            font-size: 2em;
+            margin-left: 10px;
+            position: relative;
+            overflow: visible;
+            white-space: nowrap;
+            color: #fff;
+        }
+        
+        .sitename2 {
+            color: #fff !important;
+        }
+        
+        .sitename3 {
+            color: #1e4b7a !important;
+        }
+        
+        .sitename:hover {
+            animation: textGlow 2s infinite;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: auto;
+            filter: brightness(1.5);
+            transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+        }
+        
+        .logo-img:hover {
+            transform: rotate(5deg) scale(1.1);
+            filter: brightness(2);
+        }
+        /* Navigation Menu */
+        
+        @media (min-width: 1200px) {
+            .navmenu {
+                padding: 0;
+            }
+            .navmenu ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                align-items: center;
+            }
+            .navmenu li {
+                position: relative;
+            }
+            .navmenu a,
+            .navmenu a:focus {
+                color: var(--nav-color);
+                padding: 18px 15px;
+                font-size: 16px;
+                font-family: var(--nav-font);
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                white-space: nowrap;
+                transition: color 0.3s;
+            }
+            .navmenu a i,
+            .navmenu a:focus i {
+                font-size: 12px;
+                line-height: 0;
+                margin-left: 5px;
+                transition: font-size 0.3s;
+            }
+            .navmenu li:last-child a {
+                padding-right: 0;
+            }
+            .navmenu li:hover>a,
+            .navmenu .active,
+            .navmenu .active:focus {
+                color: var(--nav-hover-color);
+            }
+            .navmenu .dropdown ul {
+                margin: 0;
+                padding: 10px 0;
+                background: linear-gradient(145deg, #3f63af, #26498a);
+                display: block;
+                position: absolute;
+                visibility: hidden;
+                left: 14px;
+                top: 130%;
+                opacity: 0;
+                transition: opacity 0.3s, top 0.3s;
+                z-index: 99;
+                box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+                border-radius: 10px;
+            }
+            .navmenu .dropdown ul li {
+                min-width: 200px;
+            }
+            .navmenu .dropdown ul a {
+                padding: 10px 20px;
+                font-size: 15px;
+                text-transform: none;
+                color: var(--nav-dropdown-color);
+            }
+            .navmenu .dropdown ul a i {
+                font-size: 12px;
+            }
+            .navmenu .dropdown ul a:hover,
+            .navmenu .dropdown ul .active:hover,
+            .navmenu .dropdown ul li:hover>a {
+                color: var(--nav-dropdown-hover-color);
+                background: #97add673;
+            }
+            .navmenu .dropdown:hover>ul {
+                opacity: 1;
+                top: 100%;
+                visibility: visible;
+            }
+            .navmenu .dropdown .dropdown ul {
+                top: 0;
+                left: -90%;
+                visibility: hidden;
+            }
+            .navmenu .dropdown .dropdown:hover>ul {
+                opacity: 1;
+                top: 0;
+                left: -100%;
+                visibility: visible;
+            }
+        }
+        
+        @media (max-width: 1199px) {
+            .mobile-nav-toggle {
+                color: var(--nav-color);
+                font-size: 28px;
+                line-height: 0;
+                margin-right: 10px;
+                cursor: pointer;
+                transition: color 0.3s;
+            }
+            .navmenu {
+                padding: 0;
+                z-index: 9997;
+            }
+            .navmenu ul {
+                display: none;
+                position: absolute;
+                inset: 60px 20px 20px 20px;
+                padding: 10px 0;
+                margin: 0;
+                border-radius: 6px;
+                background-color: var(--nav-dropdown-background-color);
+                overflow-y: auto;
+                transition: opacity 0.3s;
+                z-index: 9998;
+                box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+            }
+            .navmenu a,
+            .navmenu a:focus {
+                color: var(--nav-dropdown-color);
+                padding: 10px 20px;
+                font-family: var(--nav-font);
+                font-size: 17px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                white-space: nowrap;
+                transition: color 0.3s;
+            }
+            .navmenu a i,
+            .navmenu a:focus i {
+                font-size: 12px;
+                line-height: 0;
+                margin-left: 5px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: background-color 0.3s;
+                background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+            }
+            .navmenu a i:hover,
+            .navmenu a:focus i:hover {
+                background-color: var(--accent-color);
+                color: var(--contrast-color);
+            }
+            .navmenu a:hover,
+            .navmenu .active,
+            .navmenu .active:focus {
+                background-color: #26498a;
+                color: #ffffff;
+            }
+            .navmenu .active i,
+            .navmenu .active:focus i {
+                background-color: var(--accent-color);
+                color: var(--contrast-color);
+                transform: rotate(180deg);
+            }
+            .navmenu .dropdown ul {
+                position: static;
+                display: none;
+                z-index: 99;
+                padding: 10px 0;
+                margin: 10px 20px;
+                background-color: var(--nav-dropdown-background-color);
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+                box-shadow: none;
+                transition: all 0.5s ease-in-out;
+            }
+            .navmenu .dropdown ul ul {
+                background-color: rgba(33, 37, 41, 0.1);
+            }
+            .navmenu .dropdown>.dropdown-active {
+                display: block;
+                background-color: rgba(33, 37, 41, 0.03);
+            }
+            .mobile-nav-active {
+                overflow: hidden;
+            }
+            .mobile-nav-active .mobile-nav-toggle {
+                color: #fff;
+                position: absolute;
+                font-size: 32px;
+                top: 15px;
+                right: 15px;
+                margin-right: 0;
+                z-index: 9999;
+            }
+            .mobile-nav-active .navmenu {
+                position: fixed;
+                overflow: hidden;
+                inset: 0;
+                background: rgba(33, 37, 41, 0.8);
+                transition: 0.3s;
+            }
+            .mobile-nav-active .navmenu>ul {
+                display: block;
+            }
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", function() {
+            const titles = [
+                "We secure your AI",
+                "In The Cloud",
+                "On Your Premises",
+                "In Your Browser",
+                "In Your Network",
+                "For Your Employees",
+                "For Your Data",
+                "For Your Compliance",
+                "For Your Ethics",
+                "For Your Business",
+                "Everywhere",
+                "All The Time",
+                "24/7",
+                "365 Days",
+                "For You"
+            ];
+            // Empezamos con el segundo título (índice 1)
+            let titleIndex = 1;
+            let charIndex = 0;
+            const speed = 80; // Velocidad de escritura (ms)
+            const delayBetweenTitles = 1500; // Retardo entre títulos (ms)
+            const typewriterTitle = document.getElementById("typewriter-title");
+
+            // Muestra el primer título de forma estática para un buen LCP
+            typewriterTitle.innerText = titles[0];
+
+            // Tras 1 segundo, inicia el efecto typewriter desde el segundo título
+            setTimeout(function() {
+                typewriterTitle.innerHTML = "";
+                charIndex = 0;
+                typeWriter();
+            }, 1000);
+
+            function typeWriter() {
+                if (charIndex < titles[titleIndex].length) {
+                    typewriterTitle.innerHTML += titles[titleIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    setTimeout(() => {
+                        charIndex = 0;
+                        // Incrementamos el índice; si supera el número de títulos, volvemos al segundo (índice 1)
+                        titleIndex++;
+                        if (titleIndex >= titles.length) {
+                            titleIndex = 1;
+                        }
+                        typewriterTitle.innerHTML = "";
+                        typeWriter();
+                    }, delayBetweenTitles);
+                }
+            }
+
+            // Efectos adicionales para otros elementos
+            const sitename = document.querySelector('.sitename');
+            const logoImg = document.querySelector('.logo-img');
+            sitename.classList.add('glow');
+            logoImg.classList.add('glow');
+        });
     </script>
-    
-    
+
+
     <!-- Vendor CSS Files con carga asíncrona para los no críticos -->
-      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
       <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     </noscript>
-  
+
     <!-- Main CSS. Si parte de él es crítico, podrías inlinear lo esencial y cargar el resto asíncronamente -->
     <link href="assets/css/main.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
       <link href="assets/css/main.css" rel="stylesheet">
     </noscript>
-  
+
     <!-- Estilos adicionales -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
       <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     </noscript>
-  
+
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
       <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     </noscript>
-  
+
     <!-- Google Tag Manager (cargado de forma asíncrona) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD1QMH1MRS"></script>
 
 
-  </head>
+</head>
 
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-        <h1 class="sitename">Ultra Deep Tech</h1>
-      </a>
-  
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <!-- About Us Menu -->
-          <li class="dropdown">
-            <a href="about.html" class="nav-link">
-              <i class="bi bi-info-circle-fill"></i>
-              <span>About Us</span>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+                <h1 class="sitename">Ultra Deep Tech</h1>
             </a>
-            <ul>
-              <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-              <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-              <li><a href="about.html#values-ethics" class="nav-link"><i class="bi bi-heart-fill"></i><span>Values and Ethics</span></a></li>
-              <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-              <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog &amp; Social Media</span></a></li>
-            </ul>
-          </li>
-  
-          <!-- Products & Solutions Menu -->
-          <li class="dropdown">
-            <a href="productsdetails.html" class="nav-link">
-              <i class="bi bi-box-seam"></i>
-              <span>Products &amp; Solutions</span>
-            </a>
-            <ul>
-              <li>
-                <a href="safetyshield.html" class="nav-link">
-                  <img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra" class="logo-header">
-                  <span>Safety Shield Ultra</span>
-                </a>
-              </li>
-              <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-bar-chart-fill"></i><span>Interpretability</span></a></li>
-              <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-lock-fill"></i><span>Anonymization</span></a></li>
-              <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-arrow-up-right-square-fill"></i><span>Compression</span></a></li>
-              <li><a href="productsdetails.html?product=product-4" class="nav-link"><i class="bi bi-bar-chart-line-fill"></i><span>Benchmarking</span></a></li>
-              <li><a href="productsdetails.html?product=product-5" class="nav-link"><i class="bi bi-shield-fill"></i><span>GenAI Safety</span></a></li>
-              <li><a href="productsdetails.html?product=product-6" class="nav-link"><i class="bi bi-lock-fill"></i><span>Evolving Threat Management</span></a></li>
-              <li><a href="productsdetails.html?product=product-7" class="nav-link"><i class="bi bi-shield-check"></i><span>Algorithmic Protection</span></a></li>
-            </ul>
-          </li>
-  
-          <!-- Services Menu -->
-          <li class="dropdown">
-            <a href="service-details.html" class="nav-link">
-              <i class="bi bi-tools"></i>
-              <span>Services</span>
-            </a>
-            <ul>
-              <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI and Data Engineering Consulting</span></a></li>
-              <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Personalized Solutions</span></a></li>
-              <li><a href="service-details.html#case-studies" class="nav-link"><i class="bi bi-file-earmark-text-fill"></i><span>Case Studies</span></a></li>
-            </ul>
-          </li>
-  
-          <!-- Career Menu -->
-          <li class="dropdown">
-            <a href="career.html" class="nav-link">
-              <i class="bi bi-briefcase-fill"></i>
-              <span>Career</span>
-            </a>
-            <ul>
-              <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-              <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-            </ul>
-          </li>
-  
-          <!-- Contact Us Menu -->
-          <li class="dropdown">
-            <a href="contact.html" class="nav-link">
-              <i class="bi bi-envelope-fill"></i>
-              <span>Contact Us</span>
-            </a>
-            <ul>
-              <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-              <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-              <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-            </ul>
-          </li>
-  
-          <li>
-            <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-              <span class="book-call-content">
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <!-- About Us Menu -->
+                    <li class="dropdown">
+                        <a href="about.html" class="nav-link">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <span>About Us</span>
+                        </a>
+                        <ul>
+                            <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
+                            <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
+                            <li><a href="about.html#values-ethics" class="nav-link"><i class="bi bi-heart-fill"></i><span>Values and Ethics</span></a></li>
+                            <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
+                            <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog &amp; Social Media</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Products & Solutions Menu -->
+                    <li class="dropdown">
+                        <a href="productsdetails.html" class="nav-link">
+                            <i class="bi bi-box-seam"></i>
+                            <span>Products &amp; Solutions</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="safetyshield.html" class="nav-link">
+                                    <img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra" class="logo-header">
+                                    <span>Safety Shield Ultra</span>
+                                </a>
+                            </li>
+                            <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-bar-chart-fill"></i><span>Interpretability</span></a></li>
+                            <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-lock-fill"></i><span>Anonymization</span></a></li>
+                            <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-arrow-up-right-square-fill"></i><span>Compression</span></a></li>
+                            <li><a href="productsdetails.html?product=product-4" class="nav-link"><i class="bi bi-bar-chart-line-fill"></i><span>Benchmarking</span></a></li>
+                            <li><a href="productsdetails.html?product=product-5" class="nav-link"><i class="bi bi-shield-fill"></i><span>GenAI Safety</span></a></li>
+                            <li><a href="productsdetails.html?product=product-6" class="nav-link"><i class="bi bi-lock-fill"></i><span>Evolving Threat Management</span></a></li>
+                            <li><a href="productsdetails.html?product=product-7" class="nav-link"><i class="bi bi-shield-check"></i><span>Algorithmic Protection</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services Menu -->
+                    <li class="dropdown">
+                        <a href="service-details.html" class="nav-link">
+                            <i class="bi bi-tools"></i>
+                            <span>Services</span>
+                        </a>
+                        <ul>
+                            <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI and Data Engineering Consulting</span></a></li>
+                            <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Personalized Solutions</span></a></li>
+                            <li><a href="service-details.html#case-studies" class="nav-link"><i class="bi bi-file-earmark-text-fill"></i><span>Case Studies</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Career Menu -->
+                    <li class="dropdown">
+                        <a href="career.html" class="nav-link">
+                            <i class="bi bi-briefcase-fill"></i>
+                            <span>Career</span>
+                        </a>
+                        <ul>
+                            <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
+                            <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Contact Us Menu -->
+                    <li class="dropdown">
+                        <a href="contact.html" class="nav-link">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>Contact Us</span>
+                        </a>
+                        <ul>
+                            <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
+                            <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
+                            <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+                            <span class="book-call-content">
                 <span>Book a Call</span>
-              </span>
-              <span class="book-call-hover"></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-  
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </div>
-  </header>
-  
-  <main class="main">
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-      <img src="/assets/img/fondo.jpg" alt="Fondo de Ultra Deep Tech" loading="eager">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-7">
-            <blockquote >
-              <p id="typewriter-drescription">We do AI Security</p>
-            </blockquote>
-            <h1 id="typewriter-title"></h1>
+                            </span>
+                            <span class="book-call-hover"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-            <div class="d-flex" >
-              <a href="#why-us" class="btn-get-started">Get Started</a>
-            </div>
-          </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </div>
-      </div>
-    </section>
-    <!-- /Hero Section -->
+    </header>
 
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <img src="/assets/img/ChatGPT-Image-1-abr-2025_-02_35_59 (1).webp" alt="Fondo de Ultra Deep Tech" loading="eager">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9">
+                        <blockquote>
+                            <p id="typewriter-drescription">We secure your AI</p>
+                        </blockquote>
+                        <h1 data-aos="fade-up" id="typewriter-title"></h1>
 
+                        <div class="d-flex">
+                            <a href="#why-us" class="btn-get-started">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Hero Section -->
 
-    <!-- Call To Action Section -->
-    <section id="why-us"  class="call-to-action section">
-      <img src="/assets/img/Demostracion-_1_.webp" alt="Background image" width="1920" height="1080" loading="lazy">
-      <div class="container">
-        <div class="row justify-content-left" data-aos="zoom-in" data-aos-delay="100">
-          <!-- Left Column -->
-          <div class="col-xl-6">
-            <div class="text-left">
-              <h3>Protect Your AI From Modern Threats</h3>
-              <h3>Discover <b>Safety Shield Ultra</b></h3>
-              <p>
-                Defend your conversational AI against prompt injection and data leaks.
-                <br>
-                See how Safety Shield Ultra keeps your AI interactions secure in real-time.
-              </p>
-              <a class="cta-btn" href="safetyshield.html">
-                <i class="bi bi-shield-check"></i> Secure Your AI
-              </a>
-              <a id="seeInActionBtn" class="cta-btn download-btn" href="#">
-                <i class="bi bi-play-circle"></i> <span>See It in Action</span>
-              </a>
+        <div class="clients-container1">
+            <div class="clients-wrapper1">
+              <img src="assets/img/Piere.svg" alt="Piere" class="clients1">
+              <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients1">
+              <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients1">
+              <img src="assets/img/ailert.png" alt="Ailert" class="clients1">
+              <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients1">
+              <img src="assets/img/wakapi.png" alt="Wakapi" class="clients1">
+          
+              <!-- Duplicamos los logos para crear el efecto de carrusel continuo -->
+              <img src="assets/img/Piere.svg" alt="Piere" class="clients1">
+              <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients1">
+              <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients1">
+              <img src="assets/img/ailert.png" alt="Ailert" class="clients1">
+              <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients1">
+              <img src="assets/img/wakapi.png" alt="Wakapi" class="clients1">
             </div>
           </div>
-          <!-- Right Column -->
-          <div class="col-xl-6">
-            <video class="phone-1" autoplay loop muted playsinline>
+
+        <!-- Call To Action Section -->
+        <section id="why-us" class="call-to-action section">
+            <img src="/assets/img/Demostracion-_7_ (1).webp" alt="Background image" width="1920" height="1080" loading="lazy">
+            <div class="container">
+                <div class="row justify-content-left" data-aos="zoom-in" data-aos-delay="100">
+                    <!-- Left Column -->
+                    <div class="col-xl-6">
+                        <div class="text-left">
+                            <h3>Protect Your AI From Modern Threats</h3>
+                            <h3>Discover <b>Safety Shield Ultra</b></h3>
+                            <p>
+                                Defend your conversational AI against prompt injection and data leaks.
+                                <br> See how Safety Shield Ultra keeps your AI interactions secure in real-time.
+                            </p>
+                            <a class="cta-btn" href="safetyshield.html">
+                                <i class="bi bi-shield-check"></i> Secure Your AI
+                            </a>
+                            <a id="seeInActionBtn" class="cta-btn download-btn" href="#">
+                                <i class="bi bi-play-circle"></i> <span>See It in Action</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Right Column -->
+                    <div class="col-xl-6">
+                        <video class="phone-1" autoplay loop muted playsinline>
               <source src="./assets/img/demostracion.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Call To Action Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Products &amp; Solutions</h2>
-        <p>
-          Explore our comprehensive suite of AI solutions designed to enhance model interpretability, ensure data privacy, optimize performance, and safeguard against evolving threats. Our offerings include:
-        </p>
-      </div>
-      <!-- End Section Title -->
-    
-      <div class="container">
-        <div class="row gy-4 g-4">
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-eye" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Interpretability</h4>
-              <p class="description">
-                Simplify and understand your AI model with techniques for bias analysis, feature generation, and simple mathematical formulas.
-              </p>
-              <a href="productsdetails.html?product=product-1" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-shield-lock" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Anonymization</h4>
-              <p class="description">
-                Protect data and model privacy and security with homomorphic encryption, safeguarding user and company information.
-              </p>
-              <a href="productsdetails.html?product=product-2" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-arrows-collapse" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Compression</h4>
-              <p class="description">
-                Optimize model performance with advanced quantization and pruning techniques, reducing size and complexity without sacrificing accuracy.
-              </p>
-              <a href="productsdetails.html?product=product-3" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-bar-chart" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Benchmarking</h4>
-              <p class="description">
-                Evaluate and improve your AI system with specialized benchmarks, safety metrics, and performance evaluations under various conditions.
-              </p>
-              <a href="productsdetails.html?product=product-4" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-file-lock" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">GenAI Safety</h4>
-              <p class="description">
-                Maintain data and model security with updated repositories, data leak detection, and internal monitoring to prevent threats.
-              </p>
-              <a href="productsdetails.html?product=product-5" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-shield-slash" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Evolving Threat Management</h4>
-              <p class="description">
-                Manage emerging threats with a specialized team in AI and cybersecurity, ensuring continuous protection for your system.
-              </p>
-              <a href="productsdetails.html?product=product-6" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-    
-          <div class="col-lg-12 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0">
-              <i class="bi bi-shield-check" style="color: #2b5e96;"></i>
-            </div>
-            <div>
-              <h4 class="title">Algorithmic Protection</h4>
-              <p class="description">
-                Control and protect AI usage with rejection sampling, algorithmic moderation, and internal testing to meet regulatory standards.
-              </p>
-              <a href="productsdetails.html?product=product-7" class="readmore stretched-link">
-                <span>Learn More</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <!-- End Service Item -->
-        </div>
-      </div>
-    </section>
-    
-    <!-- /Services Section -->
-
-    <!-- Second Call To Action Section (ID modificado para evitar duplicidad) -->
-    <section id="call-to-action-2" class="call-to-action section">
-      <img src="./assets/img/Demostracion-_6_.webp" alt="Call to Action Image" loading="lazy">
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Ready to Transform Your AI Capabilities?</h3>
-              <p>Contact us today to learn more about how our advanced AI solutions can help your business achieve new heights of performance, security, and innovation. Don't miss out on the opportunity to stay ahead in the rapidly evolving world of AI.</p>
-              <a class="cta-btn" href="contact.html#contact">Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Second Call To Action Section -->
-
-    <!-- Our Services for Your Company Section -->
-    <section class="section">
-      <div class="about-intro" data-aos="fade-up">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="intro-content">
-              <div class="section-badge">Our Services for Your Company</div>
-              <h3>Elevate Your Business with Expert Consulting and Tailored Solutions</h3>
-              <p class="intro-lead">Transform your business with our expert AI and Data Engineering Consulting and personalized solutions. Contact us today to optimize processes, drive innovation, and achieve unparalleled success.</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="value-cards">
-              <div class="value-card">
-                <i class="bi bi-eye"></i>
-                <div class="value-content">
-                  <h4>AI and Data Engineering Consulting</h4>
-                  <p>Consulting in AI and Data Engineering to optimize processes, improve decision-making, and enhance technological innovation for companies.</p>
-                  <a href="service-details.html?product=product-1" class="readmore stretched-link">
-                    <span>Learn More</span>
-                  </a>
+                    </div>
                 </div>
-              </div>
-              <div class="value-card">
-                <i class="bi bi-lightning-charge"></i>
-                <div class="value-content">
-                  <h4>Personalized Solutions for Big Companies and Fortune 500</h4>
-                  <p>Personalized solutions for big companies and Fortune 500, tailored to their specific needs to achieve business success.</p>
-                  <a href="service-details.html?product=product-2" class="readmore stretched-link">
-                    <span>Learn More</span>
-                  </a>
+            </div>
+        </section>
+        <!-- /Call To Action Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Products &amp; Solutions</h2>
+                <p>
+                    Explore our comprehensive suite of AI solutions designed to enhance model interpretability, ensure data privacy, optimize performance, and safeguard against evolving threats. Our offerings include:
+                </p>
+            </div>
+            <!-- End Section Title -->
+
+            <div class="container">
+                <div class="row gy-4 g-4">
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-eye" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Interpretability</h4>
+                            <p class="description">
+                                Simplify and understand your AI model with techniques for bias analysis, feature generation, and simple mathematical formulas.
+                            </p>
+                            <a href="productsdetails.html?product=product-1" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-shield-lock" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Anonymization</h4>
+                            <p class="description">
+                                Protect data and model privacy and security with homomorphic encryption, safeguarding user and company information.
+                            </p>
+                            <a href="productsdetails.html?product=product-2" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-arrows-collapse" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Compression</h4>
+                            <p class="description">
+                                Optimize model performance with advanced quantization and pruning techniques, reducing size and complexity without sacrificing accuracy.
+                            </p>
+                            <a href="productsdetails.html?product=product-3" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-bar-chart" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Benchmarking</h4>
+                            <p class="description">
+                                Evaluate and improve your AI system with specialized benchmarks, safety metrics, and performance evaluations under various conditions.
+                            </p>
+                            <a href="productsdetails.html?product=product-4" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-file-lock" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">GenAI Safety</h4>
+                            <p class="description">
+                                Maintain data and model security with updated repositories, data leak detection, and internal monitoring to prevent threats.
+                            </p>
+                            <a href="productsdetails.html?product=product-5" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-shield-slash" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Evolving Threat Management</h4>
+                            <p class="description">
+                                Manage emerging threats with a specialized team in AI and cybersecurity, ensuring continuous protection for your system.
+                            </p>
+                            <a href="productsdetails.html?product=product-6" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-12 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon flex-shrink-0">
+                            <i class="bi bi-shield-check" style="color: #2b5e96;"></i>
+                        </div>
+                        <div>
+                            <h4 class="title">Algorithmic Protection</h4>
+                            <p class="description">
+                                Control and protect AI usage with rejection sampling, algorithmic moderation, and internal testing to meet regulatory standards.
+                            </p>
+                            <a href="productsdetails.html?product=product-7" class="readmore stretched-link">
+                                <span>Learn More</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
                 </div>
-              </div>
             </div>
-          </div>
+        </section>
+
+        <!-- /Services Section -->
+
+        <!-- Second Call To Action Section (ID modificado para evitar duplicidad) -->
+        <section id="call-to-action-2" class="call-to-action section">
+            <img src="./assets/img/Demostracion-_7_ (1).webp" alt="Call to Action Image" loading="lazy">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>Ready to Transform Your AI Capabilities?</h3>
+                            <p>Contact us today to learn more about how our advanced AI solutions can help your business achieve new heights of performance, security, and innovation. Don't miss out on the opportunity to stay ahead in the rapidly evolving
+                                world of AI.</p>
+                            <a class="cta-btn" href="contact.html#contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Second Call To Action Section -->
+
+        <!-- Our Services for Your Company Section -->
+        <section class="section">
+            <div class="about-intro" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="intro-content">
+                            <div class="section-badge">Our Services for Your Company</div>
+                            <h3>Elevate Your Business with Expert Consulting and Tailored Solutions</h3>
+                            <p class="intro-lead">Transform your business with our expert AI and Data Engineering Consulting and personalized solutions. Contact us today to optimize processes, drive innovation, and achieve unparalleled success.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="value-cards">
+                            <div class="value-card">
+                                <i class="bi bi-eye"></i>
+                                <div class="value-content">
+                                    <h4>AI and Data Engineering Consulting</h4>
+                                    <p>Consulting in AI and Data Engineering to optimize processes, improve decision-making, and enhance technological innovation for companies.</p>
+                                    <a href="service-details.html?product=product-1" class="readmore stretched-link">
+                                        <span>Learn More</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="value-card">
+                                <i class="bi bi-lightning-charge"></i>
+                                <div class="value-content">
+                                    <h4>Personalized Solutions for Big Companies and Fortune 500</h4>
+                                    <p>Personalized solutions for big companies and Fortune 500, tailored to their specific needs to achieve business success.</p>
+                                    <a href="service-details.html?product=product-2" class="readmore stretched-link">
+                                        <span>Learn More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="blog-cta text-center mt-4">
+            <h3>Want to dive deeper into AI and tech insights?</h3>
+            <p>Explore our blog for in-depth articles, analysis, and the latest in AI innovation.</p>
+            <a href="blog.html" class="btn btn-primary btn-lg">Visit Our Blog</a>
         </div>
-      </div>
-    </section>
 
-    <div class="blog-cta text-center mt-4">
-      <h3>Want to dive deeper into AI and tech insights?</h3>
-      <p>Explore our blog for in-depth articles, analysis, and the latest in AI innovation.</p>
-      <a href="blog.html" class="btn btn-primary btn-lg">Visit Our Blog</a>
-    </div>
-
-    <!-- YouTube Videos Section -->
-    <section id="youtube-videos" class="youtube-videos section">
-      <div class="section-title">
-        <h2 style="margin-bottom: 0; padding-bottom: 0; color: aliceblue;">Our Latest YouTube Videos</h2>
-        <h5 class="justify-content-center text-center" style="color: rgba(233, 233, 233, 0.4);">
-          Discover the innovation driving tomorrow's technology today
-        </h5>
-      </div>
-      <div class="container">
-        <div id="youtube-container"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename3">Ultra Deep Tech</span>
-            </a>
-            <p>At Ultra Deep Tech, we simply help your business work smarter with AI, especially with generative and conversational systems. We'll help you save money and grow your revenue. Every AI solution we provide is built with security at heart – keeping your business safe and compliant. We believe in keeping things practical and focused on real results.</p>
-            <div class="social-links d-flex mt-4">
-              <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
-              <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
+        <!-- YouTube Videos Section -->
+        <section id="youtube-videos" class="youtube-videos section">
+            <div class="section-title">
+                <h2 style="margin-bottom: 0; padding-bottom: 0; color: aliceblue;">Our Latest YouTube Videos</h2>
+                <h5 class="justify-content-center text-center" style="color: rgba(233, 233, 233, 0.4);">
+                    Discover the innovation driving tomorrow's technology today
+                </h5>
             </div>
-          </div>
+            <div class="container">
+                <div id="youtube-container"></div>
+            </div>
+        </section>
+    </main>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="productsdetails.html">Products &amp; Solutions</a></li>
-              <li><a href="service-details.html">Services</a></li>
-              <li><a href="politics.html#terms">Terms of service</a></li>
-              <li><a href="politics.html#Privacy">Privacy policy</a></li>
-              <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-              <li><a href="blog.html">Blog &amp; Social Media</a></li>
-            </ul>
-          </div>
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-5 col-md-12 footer-about">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span class="sitename3">Ultra Deep Tech</span>
+                        </a>
+                        <p>At Ultra Deep Tech, we simply help your business work smarter with AI, especially with generative and conversational systems. We'll help you save money and grow your revenue. Every AI solution we provide is built with security
+                            at heart – keeping your business safe and compliant. We believe in keeping things practical and focused on real results.</p>
+                        <div class="social-links d-flex mt-4">
+                            <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
+                            <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Products &amp; Solution</h4>
-            <ul>
-              <li><a href="safetyshield.html" class="nav-link"><span>Safety Shield Ultra</span></a></li>
-              <li><a href="productsdetails.html?product=product-1">Interpretability</a></li>
-              <li><a href="productsdetails.html?product=product-2">Anonymization</a></li>
-              <li><a href="productsdetails.html?product=product-3">Compression</a></li>
-              <li><a href="productsdetails.html?product=product-4">Benchmarking</a></li>
-              <li><a href="productsdetails.html?product=product-5">GenAI Safety</a></li>
-              <li><a href="productsdetails.html?product=product-6">Evolving Threat Management</a></li>
-              <li><a href="productsdetails.html?product=product-7">Algorithmic Protection</a></li>
-            </ul>
-          </div>
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="productsdetails.html">Products &amp; Solutions</a></li>
+                            <li><a href="service-details.html">Services</a></li>
+                            <li><a href="politics.html#terms">Terms of service</a></li>
+                            <li><a href="politics.html#Privacy">Privacy policy</a></li>
+                            <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
+                            <li><a href="blog.html">Blog &amp; Social Media</a></li>
+                        </ul>
+                    </div>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Products &amp; Solution</h4>
+                        <ul>
+                            <li><a href="safetyshield.html" class="nav-link"><span>Safety Shield Ultra</span></a></li>
+                            <li><a href="productsdetails.html?product=product-1">Interpretability</a></li>
+                            <li><a href="productsdetails.html?product=product-2">Anonymization</a></li>
+                            <li><a href="productsdetails.html?product=product-3">Compression</a></li>
+                            <li><a href="productsdetails.html?product=product-4">Benchmarking</a></li>
+                            <li><a href="productsdetails.html?product=product-5">GenAI Safety</a></li>
+                            <li><a href="productsdetails.html?product=product-6">Evolving Threat Management</a></li>
+                            <li><a href="productsdetails.html?product=product-7">Algorithmic Protection</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
                 Corrientes 800<br>
                 Ciudad Autónoma de Buenos Aires, CP1008<br>
                 Argentina
               </a>
-            </p>
-            <p class="mt-4"><strong>Phone:</strong>
-              <a href="https://wa.link/2ebre2" target="_blank">
-                <span>+54 (9) 11 76455965</span>
-              </a>
-            </p>
-            <p><strong>Email:</strong>
-              <a href="mailto:contact@ultradeeptech.com">
-                <span>contact@ultradeeptech.com</span>
-              </a>
-            </p>
-          </div>
+                        </p>
+                        <p class="mt-4"><strong>Phone:</strong>
+                            <a href="https://wa.link/2ebre2" target="_blank">
+                                <span>+54 (9) 11 76455965</span>
+                            </a>
+                        </p>
+                        <p><strong>Email:</strong>
+                            <a href="mailto:contact@ultradeeptech.com">
+                                <span>contact@ultradeeptech.com</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="container copyright text-center">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename2" style="color: #26498a;">Ultra Deep Tech</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
+        <button id="accept-cookies">Accept</button>
+        <button id="deny-cookies">Deny</button>
     </div>
 
-    <div class="container copyright text-center">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename2" style="color: #26498a;">Ultra Deep Tech</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
-      </div>
-    </div>
-  </footer>
-
-  <div id="cookie-banner" class="cookie-banner" style="display: none;">
-    <p>This website uses cookies to enhance your user experience. By continuing to browse, you agree to our <a href="politics.html">Cookie Policy</a>.<br> You can adjust your browser settings to manage or disable cookies.</p>
-    <button id="accept-cookies">Accept</button>
-    <button id="deny-cookies">Deny</button>
-  </div>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-  </a>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 
 
 
-  <!-- Vendor JS Files (Solo los scripts esenciales) -->
-  <script src="assets/js/performance-loader.js" defer></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+    <!-- Vendor JS Files (Solo los scripts esenciales) -->
+    <script src="assets/js/performance-loader.js" defer></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/vendor/aos/aos.js" defer></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
 
-  <!-- Main JS Files -->
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/youtube-lite.js" defer></script>
-  <script src="assets/js/script.js" defer></script>
-  <script src="assets/js/cookies.js" defer></script>
+    <!-- Main JS Files -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/youtube-lite.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/cookies.js" defer></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const container = document.getElementById('youtube-container');
-      const youtubeLite = new YoutubeLite(container, {
-        maxResults: 5
-      });
-      youtubeLite.init();
-    });
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('youtube-container');
+            const youtubeLite = new YoutubeLite(container, {
+                maxResults: 5
+            });
+            youtubeLite.init();
+        });
+    </script>
 
-  <div id="videoModal" class="modal">
-    <div class="modal-content"> 
-      <span class="close">&times;</span> 
-      <video id="videoPlayer" width="100%" controls>
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="videoPlayer" width="100%" controls>
         <source src="assets/video/demostracion español.mp4" type="video/mp4">
         Tu navegador no soporta el tag de video.
       </video>
+        </div>
     </div>
-  </div>
 
-  <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
-    <i class="bi bi-whatsapp whatsapp-icon"></i>
-    <span class="tooltip-text">Have a Question? Write Us</span>
-  </a>
+    <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
+        <i class="bi bi-whatsapp whatsapp-icon"></i>
+        <span class="tooltip-text">Have a Question? Write Us</span>
+    </a>
 </body>
+
 </html>
