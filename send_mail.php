@@ -37,7 +37,7 @@ try {
     }
 
     // Remitente y destinatario
-    $mail->setFrom($smtpUsername, 'Formulario Web');
+    $mail->setFrom($smtpUsername, 'Formulario Web - Contact Page');
     $mail->addReplyTo($email, $name);
     $mail->addAddress('contact@ultradeeptech.com', 'Ultra Deep Tech');
 
