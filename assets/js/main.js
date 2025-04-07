@@ -147,7 +147,7 @@
 
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Video modal elements
   var videoModal = document.getElementById("videoModal");
   var videoBtn = document.getElementById("seeInActionBtn");
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var demoModal = document.getElementById("demoModal");
   var demoBtn = document.getElementById("requestDemoBtn");
   var aboutDemoBtn = document.getElementById("aboutRequestDemoBtn");
-  var ctaDemoBtn = document.getElementById("ctaRequestDemo"); // Updated ID
+  var ctaDemoBtn = document.getElementById("ctaRequestDemo");
   var demoSpan = demoModal ? demoModal.querySelector(".close") : null;
   var form = document.getElementById("demoForm");
 
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Video modal event listeners
   if (videoBtn) {
-    videoBtn.onclick = function(e) {
+    videoBtn.onclick = function (e) {
       e.preventDefault();
       openModal(videoModal);
       if (video) video.play();
@@ -193,32 +193,31 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if (videoSpan) {
-    videoSpan.onclick = function() {
+    videoSpan.onclick = function () {
       closeModal(videoModal);
     }
   }
 
-  // Demo modal event listeners
+  // Demo modal open events
   function handleDemoButtonClick(e) {
     e.preventDefault();
     openModal(demoModal);
   }
 
-  // Add click handlers to all demo buttons
   [demoBtn, aboutDemoBtn, ctaDemoBtn].forEach(btn => {
     if (btn) {
-      btn.onclick = handleDemoButtonClick;
+      btn.addEventListener('click', handleDemoButtonClick);
     }
   });
 
   if (demoSpan) {
-    demoSpan.onclick = function() {
+    demoSpan.onclick = function () {
       closeModal(demoModal);
     }
   }
 
-  // Close modal when clicking outside
-  window.onclick = function(event) {
+  // Close modal on outside click
+  window.onclick = function (event) {
     if (event.target === videoModal) {
       closeModal(videoModal);
     } else if (event.target === demoModal) {
@@ -226,40 +225,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Close modal with Escape key
-  document.addEventListener('keydown', function(event) {
+  // Close modal on Escape key
+  document.addEventListener('keydown', function (event) {
     if (event.key === "Escape") {
       closeModal(videoModal);
       closeModal(demoModal);
     }
   });
 
-  // Form submission (unchanged)
+  // ✅ Form submission via fetch + alert
   if (form) {
-    form.onsubmit = function(e) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
-      var position = document.getElementById("position").value;
-      var companyName = document.getElementById("companyName").value;
-      var email = document.getElementById("email").value;
-      var phone = document.getElementById("phone").value;
-      var availableDays = Array.from(document.querySelectorAll('input[name="availableDays"]:checked')).map(cb => cb.value);
-      var availableTimes = Array.from(document.querySelectorAll('input[name="availableTimes"]:checked')).map(cb => cb.value);
 
-      var message = `Hi my name is +
-                    ${firstName} ${lastName}%0A` +
-                    `, I work as ${position}%0A` +
-                    `at ${companyName}%0A` +
-                    `my email is ${email}%0A` +
-                    `and my phone  ${phone}%0A` +
-                    `I want to request a demo with you`;
-      
-      var whatsappUrl = `https://wa.me/1176455965?text=${message}`;
-      
-      window.open(whatsappUrl, '_blank');
+      const formData = new FormData(form);
 
-      closeModal(demoModal);
-    }
+      fetch("send_demo.php", {
+        method: "POST",
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === "ok") {
+            alert("✅ Gracias por tu solicitud. Te contactaremos pronto.");
+            form.reset();
+            closeModal(demoModal);
+          } else {
+            alert("⚠️ Error al enviar: " + data.message);
+          }
+        })
+        .catch(error => {
+          alert("❌ Error inesperado: " + error.message);
+        });
+    });
   }
 });
+
