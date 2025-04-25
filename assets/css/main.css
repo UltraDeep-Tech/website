@@ -3142,3 +3142,23 @@ section .row {
   text-align: center;
   margin-bottom: 8px;
 }
+
+
+/* Language toggle button – minimal & subtle */
+#lang-toggle {
+  width:70px;
+  background: none;
+  border: none;
+  color: var(--nav-color);
+  font-family: var(--nav-font);
+  font-size: 0.9rem;
+  margin-left: 35px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#lang-toggle:hover,
+#lang-toggle:focus {
+  color: var(--accent-color);
+  outline: none;
+}

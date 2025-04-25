@@ -21,6 +21,13 @@
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </noscript>
+    <!-- Vendor CSS Files con carga asíncrona para los no críticos -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    </noscript>
 
     <!-- Critical CSS inline -->
     <style>
@@ -659,79 +666,29 @@
             filter: grayscale(0%);
             transform: scale(1.2);
         }
+
+        
+/* Language toggle button – minimal & subtle */
+#lang-toggle {
+  background: none;
+  border: none;
+  color: var(--nav-color);
+  font-family: var(--nav-font);
+  font-size: 0.9rem;
+  margin-left: 35px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#lang-toggle:hover,
+#lang-toggle:focus {
+  color: var(--accent-color);
+  outline: none;
+}
     </style>
-
-    <script>
-        window.addEventListener("load", function() {
-            const titles = [
-                "We secure your AI",
-                "In The Cloud",
-                "On Your Premises",
-                "In Your Browser",
-                "In Your Network",
-                "For Your Employees",
-                "For Your Data",
-                "For Your Compliance",
-                "For Your Ethics",
-                "For Your Business",
-                "Everywhere",
-                "All The Time",
-                "24/7",
-                "365 Days",
-                "For You"
-            ];
-            // Empezamos con el segundo título (índice 1)
-            let titleIndex = 1;
-            let charIndex = 0;
-            const speed = 80; // Velocidad de escritura (ms)
-            const delayBetweenTitles = 1500; // Retardo entre títulos (ms)
-            const typewriterTitle = document.getElementById("typewriter-title");
-
-            // Muestra el primer título de forma estática para un buen LCP
-            typewriterTitle.innerText = titles[0];
-
-            // Tras 1 segundo, inicia el efecto typewriter desde el segundo título
-            setTimeout(function() {
-                typewriterTitle.innerHTML = "";
-                charIndex = 0;
-                typeWriter();
-            }, 1000);
-
-            function typeWriter() {
-                if (charIndex < titles[titleIndex].length) {
-                    typewriterTitle.innerHTML += titles[titleIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeWriter, speed);
-                } else {
-                    setTimeout(() => {
-                        charIndex = 0;
-                        // Incrementamos el índice; si supera el número de títulos, volvemos al segundo (índice 1)
-                        titleIndex++;
-                        if (titleIndex >= titles.length) {
-                            titleIndex = 1;
-                        }
-                        typewriterTitle.innerHTML = "";
-                        typeWriter();
-                    }, delayBetweenTitles);
-                }
-            }
-
-            // Efectos adicionales para otros elementos
-            const sitename = document.querySelector('.sitename');
-            const logoImg = document.querySelector('.logo-img');
-            sitename.classList.add('glow');
-            logoImg.classList.add('glow');
-        });
-    </script>
-
-
-    <!-- Vendor CSS Files con carga asíncrona para los no críticos -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    </noscript>
+    
+    
 
     <!-- Main CSS. Si parte de él es crítico, podrías inlinear lo esencial y cargar el resto asíncronamente -->
     <link href="assets/css/main.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -761,119 +718,220 @@
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+            <h1 class="sitename">Ultra Deep Tech</h1>
+          </a>
+      
+          <!-- Menú -->
+          <nav id="navmenu" class="navmenu">
+            <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
+      
+              <!-- About Us -->
+              <li class="dropdown">
+                <a href="about.html" class="nav-link">
+                  <i class="bi bi-info-circle-fill"></i>
+                  <span data-i18n="about_us">About Us</span>
+                </a>
                 <ul>
-                    <!-- About Us -->
-                    <li class="dropdown">
-                        <a href="about.html" class="nav-link">
-                            <i class="bi bi-info-circle-fill"></i>
-                            <span>About Us</span>
-                        </a>
-                        <ul>
-                            <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                            <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                            <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                            <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Products & Solutions -->
-                    <li class="dropdown">
-                        <a href="productsdetails.html" class="nav-link">
-                            <i class="bi bi-box-seam"></i>
-                            <span>Products</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a>
-                            </li>
-                            <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                            <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                            <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Services -->
-                    <li class="dropdown">
-                        <a href="service-details.html" class="nav-link">
-                            <i class="bi bi-tools"></i>
-                            <span>Services</span>
-                        </a>
-                        <ul>
-                            <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                            <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                            <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Career -->
-                    <li class="dropdown">
-                        <a href="career.html" class="nav-link">
-                            <i class="bi bi-briefcase-fill"></i>
-                            <span>Career</span>
-                        </a>
-                        <ul>
-                            <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                            <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Contact -->
-                    <li class="dropdown">
-                        <a href="contact.html" class="nav-link">
-                            <i class="bi bi-envelope-fill"></i>
-                            <span>Contact Us</span>
-                        </a>
-                        <ul>
-                            <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                            <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                            <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Book a Call -->
-                    <li>
-                        <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                            <span class="book-call-content"><span>Book a Call</span></span>
-                            <span class="book-call-hover"></span>
-                        </a>
-                    </li>
+                  <li>
+                    <a href="about.html#company-history" class="nav-link">
+                      <i class="bi bi-clock-history"></i>
+                      <span data-i18n="company_history">Company History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="about.html#team" class="nav-link">
+                      <i class="bi bi-people-fill"></i>
+                      <span data-i18n="leadership_team">Leadership Team</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#youtube-videos" class="nav-link">
+                      <i class="bi bi-youtube"></i>
+                      <span data-i18n="youtube_channel">Youtube Channel</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/blog.html" class="nav-link">
+                      <i class="bi bi-pencil-fill"></i>
+                      <span data-i18n="blog_social">Blog &amp; Social Media</span>
+                    </a>
+                  </li>
                 </ul>
-            </nav>
-
-
-
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
+              </li>
+      
+              <!-- Products & Solutions -->
+              <li class="dropdown">
+                <a href="productsdetails.html" class="nav-link">
+                  <i class="bi bi-box-seam"></i>
+                  <span data-i18n="products">Products</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="safetyshield.html" class="nav-link">
+                      <i class="bi bi-shield-fill"></i>
+                      <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-1" class="nav-link">
+                      <i class="bi bi-cpu-fill"></i>
+                      <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-2" class="nav-link">
+                      <i class="bi bi-shield-check"></i>
+                      <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-3" class="nav-link">
+                      <i class="bi bi-graph-up-arrow"></i>
+                      <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Services -->
+              <li class="dropdown">
+                <a href="service-details.html" class="nav-link">
+                  <i class="bi bi-tools"></i>
+                  <span data-i18n="services">Services</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="service-details.html?product=product-1" class="nav-link">
+                      <i class="bi bi-gear-fill"></i>
+                      <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-2" class="nav-link">
+                      <i class="bi bi-diagram-3-fill"></i>
+                      <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-3" class="nav-link">
+                      <i class="bi bi-easel-fill"></i>
+                      <span data-i18n="training_education">Training &amp; Education</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Career -->
+              <li class="dropdown">
+                <a href="career.html" class="nav-link">
+                  <i class="bi bi-briefcase-fill"></i>
+                  <span data-i18n="career">Career</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="career.html#openings" class="nav-link">
+                      <i class="bi bi-person-fill"></i>
+                      <span data-i18n="current_job_openings">Current Job Openings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="career.html#" class="nav-link">
+                      <i class="bi bi-stars"></i>
+                      <span data-i18n="core_values">Core Values</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Contact -->
+              <li class="dropdown">
+                <a href="contact.html" class="nav-link">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span data-i18n="contact_us">Contact Us</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="contact.html#faqs" class="nav-link">
+                      <i class="bi bi-question-circle-fill"></i>
+                      <span data-i18n="faqs">FAQ's</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#mapa" class="nav-link">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span data-i18n="office_locations">Office Locations</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#contact" class="nav-link">
+                      <i class="bi bi-chat-dots-fill"></i>
+                      <span data-i18n="chat_with_us">Chat with Us</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Book a Call -->
+              <li>
+                <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+                  <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+                  <span class="book-call-hover"></span>
+                </a>
+              </li>
+              
+                    <!-- Toggle de idioma -->
+                    <li>
+                        <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                      </li>
+            </ul>
+          </nav>
+      
+          <!-- Toggle móvil -->
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      
         </div>
     </header>
 
+
     <main class="main">
         <!-- Hero Section -->
-        <section id="hero" class="hero section">
-            <img src="/assets/img/ChatGPT-Image-1-abr-2025_-02_35_59 (1).webp" alt="Fondo de Ultra Deep Tech" loading="eager">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-9">
-                        <blockquote>
-                            <p id="typewriter-drescription">We secure your AI</p>
-                        </blockquote>
-                        <h1 data-aos="fade-up" id="typewriter-title"></h1>
+<section id="hero" class="hero section">
+  <img src="/assets/img/ChatGPT-Image-1-abr-2025_-02_35_59 (1).webp"
+       alt="Fondo de Ultra Deep Tech"
+       loading="eager">
 
-                        <div class="d-flex">
-                            <a href="#why-us" class="btn-get-started">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Hero Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9">
+        <blockquote>
+          <!-- Título estático traducible -->
+          <p id="typewriter-drescription" data-i18n="hero_title">
+            We secure your AI
+          </p>
+        </blockquote>
+
+        <!-- El h1 lo llena tu script de typewriter -->
+        <h1 data-aos="fade-up"
+            id="typewriter-title"></h1>
+
+        <div class="d-flex">
+          <!-- Botón traducible -->
+          <a href="#why-us"
+             class="btn-get-started"
+             data-i18n="get_started">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <div class="clients-container1">
             <div class="clients-wrapper1">
@@ -896,297 +954,416 @@
 
         <section class="ai-banner-section position-relative overflow-hidden">
             <!-- Imagen de fondo -->
-            <img src="/assets/img/Demostracion-_7_ (1).webp" alt="Background" class="ai-banner-bg" loading="lazy">
-
+            <img src="/assets/img/Demostracion-_7_ (1).webp"
+                 alt="Background"
+                 class="ai-banner-bg"
+                 loading="lazy">
+          
             <div class="container position-relative z-2">
-                <div class="row align-items-center">
-                    <!-- Texto -->
-                    <div class="col-lg-6 text-white1">
-                        <h2 class="fw-bold text-white1">Protect Your AI<br>From Modern Threats</h2>
-                        <h3 class="fw-bold text-white1 ">Discover Safety Shield Ultra™</h3>
-                        <p class="lead">
-                            Defend your conversational AI against prompt injection and data leaks.<br> See how Safety Shield Ultra™ keeps your AI interactions secure in real-time.
-                        </p>
-                        <div class="btn-group mt-4">
-                            <a href="safetyshield.html" class="cta-btn">
-                                <i class="bi bi-shield-check"></i> Secure Your AI
-                            </a>
-                            <a href="#" id="seeInActionBtn" class="cta-btn alt">
-                                <i class="bi bi-play-circle"></i> See It in Action
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Video o GIF -->
-                    <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                        <video class="promo-video shadow-lg rounded-4" autoplay loop muted playsinline>
-                  <source src="/assets/img/demostracion.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                    </div>
+              <div class="row align-items-center">
+                <!-- Texto -->
+                <div class="col-lg-6 text-white1">
+                  <h2 class="fw-bold text-white1"
+                      data-i18n="hero_subtitle">
+                    Protect Your AI<br>From Modern Threats
+                  </h2>
+                  <h3 class="fw-bold text-white1"
+                      data-i18n="hero_tagline">
+                    Discover Safety Shield Ultra™
+                  </h3>
+                  <p class="lead"
+                     data-i18n="hero_description">
+                    Defend your conversational AI against prompt injection and data leaks.<br>
+                    See how Safety Shield Ultra™ keeps your AI interactions secure in real-time.
+                  </p>
+                  <div class="btn-group mt-4">
+                    <a href="safetyshield.html"
+                       class="cta-btn">
+                      <i class="bi bi-shield-check"></i>
+                      <span data-i18n="secure_your_ai">Secure Your AI</span>
+                    </a>
+                    <a href="#"
+                       id="seeInActionBtn"
+                       class="cta-btn alt">
+                      <i class="bi bi-play-circle"></i>
+                      <span data-i18n="see_it_in_action">See It in Action</span>
+                    </a>
+                  </div>
                 </div>
-            </div>
-        </section>
-
-
-
-
-        <!-- /Products Section -->
-        <section class="products-section container px-4 py-5">
-            <div class="section-title text-center ">
-                <h2 class="gradient-title">Products</h2>
-                <p class="subtitle">
-                    Discover enterprise-grade AI tools crafted for security, scalability, and performance.
-                </p>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <!-- Tarjeta -->
-                <div class="col h-100">
-                    <div class="service-item h-100">
-                        <div class="icon"><img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra™"></div>
-                        <div>
-                            <h4 class="title">Safety Shield Ultra™</h4>
-                            <p class="description">Real-time defense against prompt injection, leakage & model hijacking.</p>
-                            <a href="safetyshield.html" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
+          
+                <!-- Video o GIF -->
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                  <video class="promo-video shadow-lg rounded-4"
+                         autoplay
+                         loop
+                         muted
+                         playsinline>
+                    <source src="/assets/img/demostracion.mp4"
+                            type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
-
-                <!-- Tarjeta -->
-                <div class="col h-100">
-                    <div class="service-item h-100">
-                        <div class="icon"><i class="bi bi-cpu-fill"></i></div>
-                        <div>
-                            <h4 class="title">AI Model Protection Suite</h4>
-                            <p class="description">Prevent reverse engineering and misuse of your proprietary AI models.</p>
-                            <a href="productsdetails.html?product=product-2" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta -->
-                <div class="col h-100">
-                    <div class="service-item h-100">
-                        <div class="icon"><i class="bi bi-shield-check"></i></div>
-                        <div>
-                            <h4 class="title">Enterprise AI Security</h4>
-                            <p class="description">Comprehensive protection with encryption, access control, and audits.</p>
-                            <a href="productsdetails.html?product=product-3" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta -->
-                <div class="col h-100">
-                    <div class="service-item h-100">
-                        <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-                        <div>
-                            <h4 class="title">AI Performance Optimization</h4>
-                            <p class="description">Boost latency, accuracy & cost-efficiency with model optimization tools.</p>
-                            <a href="productsdetails.html?product=product-4" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <section class="cta-ai-upgrade-section position-relative overflow-hidden py-5">
-            <img src="./assets/img/Demostracion-_7_ (1).webp" alt="AI Capabilities Background" class="cta-ai-bg" loading="lazy">
-            <div class="container position-relative z-2">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 text-center">
-                        <h3 class="cta-ai-title fw-bold display-6 mb-3">Ready to Transform Your AI Capabilities?</h3>
-                        <p class="cta-ai-subtitle fs-5 mb-4">Don't miss AI Security Opportunities.</p>
-                        <a href="contact.html#contact" class="cta-ai-btn d-inline-block">
-                            <i class="bi bi-shield-lock me-2"></i> Contact Us
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
-
-        <section class="services-1-grid-section section py-5">
-            <div class="container">
-                <div class="section-title text-center">
-                    <!-- <div class="section-badge">Our Services</div> -->
-                    <h2 class="gradient-title">Services</h2>
-                    <p class="subtitle">Protect and optimize your AI infrastructure with our assessment, implementation and training services.</p>
-                </div>
-
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                    <!-- Cards -->
-                    <div class="col">
-                        <div class="services-1-card">
-                            <div class="icon"><i class="bi bi-gear-fill"></i></div>
-                            <div>
-                                <h4 class="title">AI Security Assessment & Strategy</h4>
-                                <p class="description">Security evaluation and strategic planning for AI systems. Our team conducts assessments and develops security strategies. </p>
-                                <a href="service-details.html?product=product-1" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="services-1-card">
-                            <div class="icon"><i class="bi bi-diagram-3-fill"></i></div>
-                            <div>
-                                <h4 class="title">Implementation & Architecture </h4>
-                                <p class="description">Design and implementation of secure AI architectures. We ensure your infrastructure is built and maintained securely.</p>
-                                <a href="service-details.html?product=product-2" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="services-1-card">
-                            <div class="icon"><i class="bi bi-shield-lock-fill"></i></div>
-                            <div>
-                                <h4 class="title">Training & Education </h4>
-                                <p class="description">Training programs to build your team's AI security expertise, from basics to advanced practices. </p>
-                                <a href="service-details.html?product=product-3" class="readmore">Learn more <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-        </section>
-
-
-
-
-        <section class="blog-videos-cta section py-5 position-relative overflow-hidden " id="youtube-videos">
-            <div class="container">
-                <div class="row align-items-center gy-5">
-
-                    <!-- Blog CTA -->
-                    <div class="col-lg-6 text-center text-lg-start">
-                        <div class="blog-cta-box px-4 py-5 rounded-4  h-100">
-                            <h3 class="fw-bold mb-3 display-5 text-white">Want to dive deeper into AI and tech insights?</h3>
-                            <p class="fs-5 mb-4 text-light">Explore our blog for in-depth articles, analysis, and the latest in AI innovation.</p>
-                            <div class="d-flex flex-column flex-md-row gap-3 justify-content-center justify-content-md-start">
-                                <a href="blog.html" class="book-call-btn2">
-                                    <div class="book-call-hover2"></div>
-                                    <div class="book-call-content2"><i class="bi bi-journal-text"></i> Visit Our Blog</div>
-                                </a>
-                                <a href="https://www.youtube.com/@UltraDeepTech" target="_blank" class="book-call-btn2">
-                                    <div class="book-call-hover2"></div>
-                                    <div class="book-call-content2"><i class="bi bi-youtube"></i> See All Videos</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- YouTube Preview -->
-                    <div class="col-lg-6">
-                        <div class="youtube-preview-wrapper rounded-4 shadow-lg overflow-hidden">
-                            <div id="youtube-container"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-    </main>
-    <footer id="footer" class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <!-- Se agrega justify-content-center a la fila -->
-          <div class="row gy-4 justify-content-center">
-            <!-- Company Info -->
-            <div class="col-lg-3 col-md-6 footer-about text-center">
-              <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
-                <span class="sitename3">Ultra Deep Tech</span>
-              </a>
-              <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-    
-              <!-- Book a Call Button -->
-              <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
-                <span class="book-call-content2">
-                  <span>Book a Call</span>
-                </span>
-                <span class="book-call-hover2"></span>
-              </a>
-            </div>
-    
-            <!-- Useful Links -->
-            <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="career.html">Careers</a></li>
-                <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                <li><a href="blog.html">Blog & Social Media</a></li>
-                <li><a href="politics.html#terms">Terms of Service</a></li>
-                <li><a href="politics.html#Privacy">Privacy Policy</a></li>
-              </ul>
-            </div>
-    
-            <!-- Products -->
-            <div class="col-lg-3 col-6 footer-links text-center">
-              <h4>Products</h4>
-              <ul>
-                <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
-              </ul>
-            </div>
-    
-            <!-- Services -->
-            <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Services</h4>
-              <ul>
-                <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
-              </ul>
-            </div>
-    
-            <!-- Contact Info -->
-            <div class="col-lg-2 col-md-6 footer-contact text-center">
-              <h4>Contact Us</h4>
-              <p>
-                Corrientes 800<br>
-                Ciudad Autónoma de Buenos Aires, CP1008<br>
-                Argentina<br>
-              </p>
-              <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-              <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-    
-              <!-- Redes Sociales -->
-              <div class="social-links d-flex justify-content-center mt-3">
-                <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
-                <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
               </div>
+            </div>
+          </section>
+          
+
+          <section class="products-section container px-4 py-5">
+            <div class="section-title text-center ">
+              <h2 class="gradient-title" data-i18n="products_section_title">Products</h2>
+              <p class="subtitle" data-i18n="products_section_sub">
+                Discover enterprise-grade AI tools crafted for security, scalability, and performance.
+              </p>
+            </div>
+          
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <!-- Tarjeta 1 -->
+              <div class="col h-100">
+                <div class="service-item h-100">
+                  <div class="icon"><img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra™"></div>
+                  <div>
+                    <h4 class="title" data-i18n="product1_title">Safety Shield Ultra™</h4>
+                    <p class="description" data-i18n="product1_desc">
+                      Real-time defense against prompt injection, leakage & model hijacking.
+                    </p>
+                    <a href="safetyshield.html" class="readmore">
+                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Tarjeta 2 -->
+              <div class="col h-100">
+                <div class="service-item h-100">
+                  <div class="icon"><i class="bi bi-cpu-fill"></i></div>
+                  <div>
+                    <h4 class="title" data-i18n="product2_title">AI Model Protection Suite</h4>
+                    <p class="description" data-i18n="product2_desc">
+                      Prevent reverse engineering and misuse of your proprietary AI models.
+                    </p>
+                    <a href="productsdetails.html?product=product-2" class="readmore">
+                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Tarjeta 3 -->
+              <div class="col h-100">
+                <div class="service-item h-100">
+                  <div class="icon"><i class="bi bi-shield-check"></i></div>
+                  <div>
+                    <h4 class="title" data-i18n="product3_title">Enterprise AI Security</h4>
+                    <p class="description" data-i18n="product3_desc">
+                      Comprehensive protection with encryption, access control, and audits.
+                    </p>
+                    <a href="productsdetails.html?product=product-3" class="readmore">
+                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Tarjeta 4 -->
+              <div class="col h-100">
+                <div class="service-item h-100">
+                  <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                  <div>
+                    <h4 class="title" data-i18n="product4_title">AI Performance Optimization</h4>
+                    <p class="description" data-i18n="product4_desc">
+                      Boost latency, accuracy & cost-efficiency with model optimization tools.
+                    </p>
+                    <a href="productsdetails.html?product=product-4" class="readmore">
+                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+
+
+
+
+
+<!-- CTA AI Upgrade Section -->
+<section class="cta-ai-upgrade-section position-relative overflow-hidden py-5">
+    <img src="./assets/img/Demostracion-_7_ (1).webp"
+         alt="AI Capabilities Background"
+         class="cta-ai-bg"
+         loading="lazy">
+  
+    <div class="container position-relative z-2">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h3 class="cta-ai-title fw-bold display-6 mb-3"
+              data-i18n="cta_upgrade_title">
+            Ready to Transform Your AI Capabilities?
+          </h3>
+          <p class="cta-ai-subtitle fs-5 mb-4"
+             data-i18n="cta_upgrade_sub">
+            Don't miss AI Security Opportunities.
+          </p>
+          <a href="contact.html#contact"
+             class="cta-ai-btn d-inline-block">
+            <i class="bi bi-shield-lock me-2"></i>
+            <span data-i18n="cta_upgrade_btn">Contact Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Grid Section -->
+  <section class="services-1-grid-section section py-5">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2 class="gradient-title"
+            data-i18n="services_section_title">
+          Services
+        </h2>
+        <p class="subtitle"
+           data-i18n="services_section_sub">
+          Protect and optimize your AI infrastructure with our assessment, implementation and training services.
+        </p>
+      </div>
+  
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="services-1-card">
+            <div class="icon"><i class="bi bi-gear-fill"></i></div>
+            <div>
+              <h4 class="title"
+                  data-i18n="ai_assessment">
+                AI Security Assessment &amp; Strategy
+              </h4>
+              <p class="description"
+                 data-i18n="ai_assessment_desc">
+                Security evaluation and strategic planning for AI systems. Our team conducts assessments and develops security strategies.
+              </p>
+              <a href="service-details.html?product=product-1"
+                 class="readmore">
+                <span data-i18n="learn_more">Learn more</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="services-1-card">
+            <div class="icon"><i class="bi bi-diagram-3-fill"></i></div>
+            <div>
+              <h4 class="title"
+                  data-i18n="implementation">
+                Implementation &amp; Architecture
+              </h4>
+              <p class="description"
+                 data-i18n="implementation_desc">
+                Design and implementation of secure AI architectures. We ensure your infrastructure is built and maintained securely.
+              </p>
+              <a href="service-details.html?product=product-2"
+                 class="readmore">
+                <span data-i18n="learn_more">Learn more</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="services-1-card">
+            <div class="icon"><i class="bi bi-shield-lock-fill"></i></div>
+            <div>
+              <h4 class="title"
+                  data-i18n="training_education">
+                Training &amp; Education
+              </h4>
+              <p class="description"
+                 data-i18n="training_education_desc">
+                Training programs to build your team's AI security expertise, from basics to advanced practices.
+              </p>
+              <a href="service-details.html?product=product-3"
+                 class="readmore">
+                <span data-i18n="learn_more">Learn more</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-          <span>All Rights Reserved</span>
-        </p>
-        <div class="credits">
-          Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+    </div>
+  </section>
+  
+
+
+  <section
+  class="blog-videos-cta section py-5 position-relative overflow-hidden"
+  id="youtube-videos"
+>
+  <div class="container">
+    <div class="row align-items-center gy-5">
+
+      <!-- Blog CTA -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <div class="blog-cta-box px-4 py-5 rounded-4 h-100">
+          <h3
+            class="fw-bold mb-3 display-5 text-white"
+            data-i18n="blog_videos_title"
+          >
+            Want to dive deeper into AI and tech insights?
+          </h3>
+          <p
+            class="fs-5 mb-4 text-light"
+            data-i18n="blog_videos_sub"
+          >
+            Explore our blog for in-depth articles, analysis, and the latest in AI innovation.
+          </p>
+          <div
+            class="d-flex flex-column flex-md-row gap-3 justify-content-center justify-content-md-start"
+          >
+            <a href="blog.html" class="book-call-btn2">
+              <div class="book-call-hover2"></div>
+              <div class="book-call-content2">
+                <i class="bi bi-journal-text"></i>
+                <span data-i18n="visit_our_blog">Visit Our Blog</span>
+              </div>
+            </a>
+            <a
+              href="https://www.youtube.com/@UltraDeepTech"
+              target="_blank"
+              class="book-call-btn2"
+            >
+              <div class="book-call-hover2"></div>
+              <div class="book-call-content2">
+                <i class="bi bi-youtube"></i>
+                <span data-i18n="see_all_videos">See All Videos</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
+
+      <!-- YouTube Preview -->
+      <div class="col-lg-6">
+        <div class="youtube-preview-wrapper rounded-4 shadow-lg overflow-hidden">
+          <div id="youtube-container"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="footer" class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4 justify-content-center">
+
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6 footer-about text-center">
+          <a
+            href="index.html"
+            class="logo d-flex align-items-center justify-content-center mb-3"
+          >
+            <span class="sitename3">Ultra Deep Tech</span>
+          </a>
+          <p data-i18n="footer_about_text">
+            Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+          </p>
+          <a
+            href="https://calendly.com/avipil/30-min"
+            target="_blank"
+            class="book-call-btn2 mt-3 d-inline-block"
+          >
+            <span class="book-call-content2">
+              <span data-i18n="book_a_call">Book a Call</span>
+            </span>
+            <span class="book-call-hover2"></span>
+          </a>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-6 footer-links text-center">
+          <h4 data-i18n="useful_links">Useful Links</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+            <li><a href="career.html" data-i18n="career">Careers</a></li>
+            <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+            <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+            <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+            <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="col-lg-3 col-6 footer-links text-center">
+          <h4 data-i18n="footer_products">Products</h4>
+          <ul>
+            <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+            <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+            <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+            <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-6 footer-links text-center">
+          <h4 data-i18n="footer_services">Services</h4>
+          <ul>
+            <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+            <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+            <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-2 col-md-6 footer-contact text-center">
+          <h4 data-i18n="footer_contact">Contact Us</h4>
+          <p>
+            Corrientes 800<br>
+            Ciudad Autónoma de Buenos Aires, CP1008<br>
+            Argentina<br>
+          </p>
+          <p>
+            <strong data-i18n="footer_phone">Phone:</strong>
+            <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+          </p>
+          <p>
+            <strong data-i18n="footer_email">Email:</strong>
+            <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+          </p>
+          <div class="social-links d-flex justify-content-center mt-3">
+            <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © <span data-i18n="copyright">All Rights Reserved</span>
+      <strong class="px-1 sitename2">Ultra Deep Tech</strong>
+    </p>
+    <div class="credits">
+      <span data-i18n="designed_by">Designed by</span>
+      <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+    </div>
+  </div>
+</footer>
+
     
 
 
@@ -1218,6 +1395,7 @@
     <script src="assets/js/youtube-lite.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/cookies.js" defer></script>
+    <script src="assets/js/lang.js" defer></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

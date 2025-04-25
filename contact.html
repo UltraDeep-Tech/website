@@ -50,377 +50,519 @@
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+            <h1 class="sitename">Ultra Deep Tech</h1>
+          </a>
+      
+          <!-- Menú -->
+          <nav id="navmenu" class="navmenu">
+            <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
+      
+              <!-- About Us -->
+              <li class="dropdown">
+                <a href="about.html" class="nav-link">
+                  <i class="bi bi-info-circle-fill"></i>
+                  <span data-i18n="about_us">About Us</span>
+                </a>
                 <ul>
-                  <!-- About Us -->
-                  <li class="dropdown">
-                    <a href="about.html" class="nav-link">
-                      <i class="bi bi-info-circle-fill"></i>
-                      <span>About Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                      <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                      <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                      <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Products & Solutions -->
-                  <li class="dropdown">
-                    <a href="productsdetails.html" class="nav-link">
-                      <i class="bi bi-box-seam"></i>
-                      <span>Products</span>
-                    </a>
-                    <ul>
-                      <li><a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a></li>
-                      <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                      <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                      <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Services -->
-                  <li class="dropdown">
-                    <a href="service-details.html" class="nav-link">
-                      <i class="bi bi-tools"></i>
-                      <span>Services</span>
-                    </a>
-                    <ul>
-                      <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                      <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                      <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Career -->
-                  <li class="dropdown">
-                    <a href="career.html" class="nav-link">
-                      <i class="bi bi-briefcase-fill"></i>
-                      <span>Career</span>
-                    </a>
-                    <ul>
-                      <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                      <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Contact -->
-                  <li class="dropdown">
-                    <a href="contact.html" class="nav-link">
-                      <i class="bi bi-envelope-fill"></i>
-                      <span>Contact Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                      <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                      <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Book a Call -->
                   <li>
-                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                      <span class="book-call-content"><span>Book a Call</span></span>
-                      <span class="book-call-hover"></span>
+                    <a href="about.html#company-history" class="nav-link">
+                      <i class="bi bi-clock-history"></i>
+                      <span data-i18n="company_history">Company History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="about.html#team" class="nav-link">
+                      <i class="bi bi-people-fill"></i>
+                      <span data-i18n="leadership_team">Leadership Team</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#youtube-videos" class="nav-link">
+                      <i class="bi bi-youtube"></i>
+                      <span data-i18n="youtube_channel">Youtube Channel</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/blog.html" class="nav-link">
+                      <i class="bi bi-pencil-fill"></i>
+                      <span data-i18n="blog_social">Blog &amp; Social Media</span>
                     </a>
                   </li>
                 </ul>
-              </nav>
+              </li>
+      
+              <!-- Products & Solutions -->
+              <li class="dropdown">
+                <a href="productsdetails.html" class="nav-link">
+                  <i class="bi bi-box-seam"></i>
+                  <span data-i18n="products">Products</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="safetyshield.html" class="nav-link">
+                      <i class="bi bi-shield-fill"></i>
+                      <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-1" class="nav-link">
+                      <i class="bi bi-cpu-fill"></i>
+                      <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-2" class="nav-link">
+                      <i class="bi bi-shield-check"></i>
+                      <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-3" class="nav-link">
+                      <i class="bi bi-graph-up-arrow"></i>
+                      <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Services -->
+              <li class="dropdown">
+                <a href="service-details.html" class="nav-link">
+                  <i class="bi bi-tools"></i>
+                  <span data-i18n="services">Services</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="service-details.html?product=product-1" class="nav-link">
+                      <i class="bi bi-gear-fill"></i>
+                      <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-2" class="nav-link">
+                      <i class="bi bi-diagram-3-fill"></i>
+                      <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-3" class="nav-link">
+                      <i class="bi bi-easel-fill"></i>
+                      <span data-i18n="training_education">Training &amp; Education</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Career -->
+              <li class="dropdown">
+                <a href="career.html" class="nav-link">
+                  <i class="bi bi-briefcase-fill"></i>
+                  <span data-i18n="career">Career</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="career.html#openings" class="nav-link">
+                      <i class="bi bi-person-fill"></i>
+                      <span data-i18n="current_job_openings">Current Job Openings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="career.html#" class="nav-link">
+                      <i class="bi bi-stars"></i>
+                      <span data-i18n="core_values">Core Values</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Contact -->
+              <li class="dropdown">
+                <a href="contact.html" class="nav-link">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span data-i18n="contact_us">Contact Us</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="contact.html#faqs" class="nav-link">
+                      <i class="bi bi-question-circle-fill"></i>
+                      <span data-i18n="faqs">FAQ's</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#mapa" class="nav-link">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span data-i18n="office_locations">Office Locations</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#contact" class="nav-link">
+                      <i class="bi bi-chat-dots-fill"></i>
+                      <span data-i18n="chat_with_us">Chat with Us</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Book a Call -->
+              <li>
+                <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+                  <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+                  <span class="book-call-hover"></span>
+                </a>
+              </li>
               
-              
-
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
+                    <!-- Toggle de idioma -->
+                    <li>
+                        <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                      </li>
+            </ul>
+          </nav>
+      
+          <!-- Toggle móvil -->
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      
         </div>
     </header>
+
     <main class="main">
 
         <!-- Page Title -->
         <div class="page-title" data-aos="fade" style="background-image: url(assets/img/contact-page-title-bg.jpg);">
-            <div class="container">
-                <h1>Contact</h1>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current">Contact</li>
-                    </ol>
-                </nav>
-            </div>
+          <div class="container">
+            <h1 data-i18n="contact_page_title">Contact</h1>
+            <nav class="breadcrumbs">
+              <ol>
+                <li><a href="index.html" data-i18n="breadcrumbs_home">Home</a></li>
+                <li class="current" data-i18n="breadcrumbs_current">Contact</li>
+              </ol>
+            </nav>
+          </div>
         </div>
         <!-- End Page Title -->
+      
         <!-- FAQ Section -->
         <section id="faq" class="faq section">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h1 class="section-title" id="faqs">FAQ's</h1>
-                </div>
-
-                <div class="accordion" id="faqAccordion">
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What is Ultra Deep Tech's core focus?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Ultra Deep Tech provides AI security solutions and services. Our platform, Safety Shield Ultra™™, delivers real-time protection for AI conversations, models, and infrastructure, ensuring your systems remain secure and compliant. We also offer AI consulting
-                                and implementation services to help businesses deploy secure AI solutions across all environments.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                What specific security services do you provide?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our security services cover the complete AI protection lifecycle:
-                                <ul>
-                                    <li>AI security monitoring and protection</li>
-                                    <li>Model security assessment</li>
-                                    <li>AI governance and compliance</li>
-                                    <li>Data protection</li>
-                                    <li>Infrastructure security</li>
-                                    <li>Security training</li>
-                                    <li>AI consulting and implementation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How does your security approach differ from traditional security providers?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our approach is specifically designed for AI systems:
-                                <ul>
-                                    <li>AI-first security architecture</li>
-                                    <li>Real-time AI monitoring</li>
-                                    <li>AI-specific threat protection</li>
-                                    <li>Automated security controls</li>
-                                    <li>Continuous AI threat adaptation</li>
-                                    <li>AI compliance coverage</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                What security standards and compliance do you support?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our solutions align with key security standards:
-                                <ul>
-                                    <li>ISO 27001 for information security</li>
-                                    <li>GDPR and data privacy regulations</li>
-                                    <li>NIST AI Risk Management Framework</li>
-                                    <li>Industry-specific compliance requirements</li>
-                                    <li>AI-specific security guidelines</li>
-                                    <li>Cloud security standards</li>
-                                </ul>
-                                We ensure your AI systems meet all relevant security and compliance requirements.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                How does Safety Shield Ultra™™ handle incidents?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Safety Shield Ultra™™ provides automated incident response:
-                                <ol>
-                                    <li>Continuous AI monitoring</li>
-                                    <li>Automated alerts</li>
-                                    <li>Real-time analysis</li>
-                                    <li>Automated containment</li>
-                                    <li>Incident logging</li>
-                                    <li>Security updates</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                What makes your solutions scalable?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Our architecture supports enterprise deployment:
-                                <ul>
-                                    <li>Cloud-native controls</li>
-                                    <li>Automated scaling</li>
-                                    <li>Centralized management</li>
-                                    <li>Multi-environment support</li>
-                                    <li>API integration</li>
-                                    <li>Flexible deployment</li>
-                                </ul>
-                                We ensure your security grows with your AI infrastructure.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSeven">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                How do you maintain security?
-                            </button>
-                        </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We maintain security through:
-                                <ul>
-                                    <li>Regular assessments</li>
-                                    <li>Threat updates</li>
-                                    <li>Patch management</li>
-                                    <li>Performance optimization</li>
-                                    <li>Security training updates</li>
-                                    <li>Compliance monitoring</li>
-                                </ul>
-                                Our security evolves with emerging threats and new AI technologies.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+          <div class="container" data-aos="fade-up">
+      
+            <div class="section-header">
+              <h1 class="section-title" id="faqs" data-i18n="faq_section_title">FAQ's</h1>
             </div>
+      
+            <div class="accordion" id="faqAccordion">
+      
+              <!-- FAQ 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                          aria-expanded="true" aria-controls="collapseOne">
+                    <span data-i18n="faq_q1">What is Ultra Deep Tech's core focus?</span>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show"
+                     aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a1">
+                      Ultra Deep Tech provides AI security solutions and services. Our platform, Safety Shield Ultra™, delivers real-time protection for AI conversations, models, and infrastructure, ensuring your systems remain secure and compliant. We also offer AI consulting and implementation services to help businesses deploy secure AI solutions across all environments.
+                    </p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                          aria-expanded="false" aria-controls="collapseTwo">
+                    <span data-i18n="faq_q2">What specific security services do you provide?</span>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse"
+                     aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a2_intro">
+                      Our security services cover the complete AI protection lifecycle:
+                    </p>
+                    <ul>
+                      <li data-i18n="faq_a2_li1">AI security monitoring and protection</li>
+                      <li data-i18n="faq_a2_li2">Model security assessment</li>
+                      <li data-i18n="faq_a2_li3">AI governance and compliance</li>
+                      <li data-i18n="faq_a2_li4">Data protection</li>
+                      <li data-i18n="faq_a2_li5">Infrastructure security</li>
+                      <li data-i18n="faq_a2_li6">Security training</li>
+                      <li data-i18n="faq_a2_li7">AI consulting and implementation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                          aria-expanded="false" aria-controls="collapseThree">
+                    <span data-i18n="faq_q3">How does your security approach differ from traditional security providers?</span>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse"
+                     aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a3_intro">
+                      Our approach is specifically designed for AI systems:
+                    </p>
+                    <ul>
+                      <li data-i18n="faq_a3_li1">AI-first security architecture</li>
+                      <li data-i18n="faq_a3_li2">Real-time AI monitoring</li>
+                      <li data-i18n="faq_a3_li3">AI-specific threat protection</li>
+                      <li data-i18n="faq_a3_li4">Automated security controls</li>
+                      <li data-i18n="faq_a3_li5">Continuous AI threat adaptation</li>
+                      <li data-i18n="faq_a3_li6">AI compliance coverage</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                          aria-expanded="false" aria-controls="collapseFour">
+                    <span data-i18n="faq_q4">What security standards and compliance do you support?</span>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse"
+                     aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a4_intro">
+                      Our solutions align with key security standards:
+                    </p>
+                    <ul>
+                      <li data-i18n="faq_a4_li1">ISO 27001 for information security</li>
+                      <li data-i18n="faq_a4_li2">GDPR and data privacy regulations</li>
+                      <li data-i18n="faq_a4_li3">NIST AI Risk Management Framework</li>
+                      <li data-i18n="faq_a4_li4">Industry-specific compliance requirements</li>
+                      <li data-i18n="faq_a4_li5">AI-specific security guidelines</li>
+                      <li data-i18n="faq_a4_li6">Cloud security standards</li>
+                    </ul>
+                    <p data-i18n="faq_a4_tail">
+                      We ensure your AI systems meet all relevant security and compliance requirements.
+                    </p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                          aria-expanded="false" aria-controls="collapseFive">
+                    <span data-i18n="faq_q5">How does Safety Shield Ultra™ handle incidents?</span>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse"
+                     aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a5_intro">
+                      Safety Shield Ultra™ provides automated incident response:
+                    </p>
+                    <ol>
+                      <li data-i18n="faq_a5_ol1">Continuous AI monitoring</li>
+                      <li data-i18n="faq_a5_ol2">Automated alerts</li>
+                      <li data-i18n="faq_a5_ol3">Real-time analysis</li>
+                      <li data-i18n="faq_a5_ol4">Automated containment</li>
+                      <li data-i18n="faq_a5_ol5">Incident logging</li>
+                      <li data-i18n="faq_a5_ol6">Security updates</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                          aria-expanded="false" aria-controls="collapseSix">
+                    <span data-i18n="faq_q6">What makes your solutions scalable?</span>
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse"
+                     aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a6_intro">
+                      Our architecture supports enterprise deployment:
+                    </p>
+                    <ul>
+                      <li data-i18n="faq_a6_li1">Cloud-native controls</li>
+                      <li data-i18n="faq_a6_li2">Automated scaling</li>
+                      <li data-i18n="faq_a6_li3">Centralized management</li>
+                      <li data-i18n="faq_a6_li4">Multi-environment support</li>
+                      <li data-i18n="faq_a6_li5">API integration</li>
+                      <li data-i18n="faq_a6_li6">Flexible deployment</li>
+                    </ul>
+                    <p data-i18n="faq_a6_tail">
+                      We ensure your security grows with your AI infrastructure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- FAQ 7 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                          aria-expanded="false" aria-controls="collapseSeven">
+                    <span data-i18n="faq_q7">How do you maintain security?</span>
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse"
+                     aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p data-i18n="faq_a7_intro">
+                      We maintain security through:
+                    </p>
+                    <ul>
+                      <li data-i18n="faq_a7_li1">Regular assessments</li>
+                      <li data-i18n="faq_a7_li2">Threat updates</li>
+                      <li data-i18n="faq_a7_li3">Patch management</li>
+                      <li data-i18n="faq_a7_li4">Performance optimization</li>
+                      <li data-i18n="faq_a7_li5">Security training updates</li>
+                      <li data-i18n="faq_a7_li6">Compliance monitoring</li>
+                    </ul>
+                    <p data-i18n="faq_a7_tail">
+                      Our security evolves with emerging threats and new AI technologies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+          </div>
         </section>
         <!-- End FAQ Section -->
-
+      
+        <!-- Map -->
         <div id="maa">
-            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0194292984957!2d-58.37789599999999!3d-34.603670199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace8409c981%3A0xb8cadd77ba71d9f3!2sAv.%20Corrientes%20800%2C%20C1008%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1718907700672!5m2!1ses-419!2sar"
-                width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            id="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0194292984957!2d-58.37789599999999!3d-34.603670199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccace8409c981%3A0xb8cadd77ba71d9f3!2sAv.%20Corrientes%20800%2C%20C1008%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1718907700672!5m2!1ses-419!2sar"
+            width="100%" height="200" style="border:0;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-
-
+      
         <!-- Contact Section -->
         <section id="contact" class="contact section">
-
-
-            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-5">
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-geo-alt flex-shrink-0"></i>
-                            <div>
-                                <h3>Address</h3>
-                                <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
-                                    <p>Corrientes 800, Ciudad Autonoma de Buenos Aires</p>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- End Info Item -->
-
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-telephone flex-shrink-0"></i>
-                            <div>
-                                <h3>Call or Text Us</h3>
-                                <p>
-                                    <a href="https://wa.link/2ebre2"></a>+54 (9) 11 7645 -5965</p>
-                            </div>
-                        </div>
-                        <!-- End Info Item -->
-
-                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                            <i class="bi bi-envelope flex-shrink-0"></i>
-                            <div>
-                                <h3>Email Us</h3>
-                                <p>contact@ultradeeptech.com</p>
-                            </div>
-                        </div>
-                        <!-- End Info Item -->
-
-                    </div>
-
-
-
-
-
-
-                    <div class="col-lg-7">
-                        <form id="contactForm" action="/send_mail.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <div class="loading" style="display: none;">Loading...</div>
-                                    <button type="submit">Send Message</button>
-                                    <div class="error-message mt-4" style="display: none;"></div>
-                                    <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-
-
+          <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+      
+              <div class="col-lg-5">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3 data-i18n="contact_address_title">Address</h3>
+                    <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
+                      <p data-i18n="contact_address_text">Corrientes 800, Ciudad Autonoma de Buenos Aires</p>
+                    </a>
+                  </div>
                 </div>
-
+      
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3 data-i18n="contact_call_title">Call or Text Us</h3>
+                    <p>
+                      <a href="https://wa.link/2ebre2">
+                        <span data-i18n="contact_call_number">+54 (9) 11 7645-5965</span>
+                      </a>
+                    </p>
+                  </div>
+                </div>
+      
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3 data-i18n="contact_email_title">Email Us</h3>
+                    <p><span data-i18n="contact_email">contact@ultradeeptech.com</span></p>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-lg-7">
+                <form id="contactForm" action="/send_mail.php" method="post" class="php-email-form"
+                      data-aos="fade-up" data-aos-delay="500">
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <input type="text" name="name" class="form-control"
+                             placeholder="" data-i18n-placeholder="form_name_placeholder" required>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" name="email" class="form-control"
+                             placeholder="" data-i18n-placeholder="form_email_placeholder" required>
+                    </div>
+                    <div class="col-md-12">
+                      <input type="text" name="subject" class="form-control"
+                             placeholder="" data-i18n-placeholder="form_subject_placeholder" required>
+                    </div>
+                    <div class="col-md-12">
+                      <textarea name="message" class="form-control" rows="6"
+                                placeholder="" data-i18n-placeholder="form_message_placeholder" required></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <div class="loading" style="display: none;" data-i18n="form_loading">Loading...</div>
+                      <button type="submit" data-i18n="form_send_button">Send Message</button>
+                      <div class="error-message mt-4" style="display: none;" data-i18n="form_error_message">
+                        There was an error sending your message.
+                      </div>
+                      <div class="sent-message" style="display: none;" data-i18n="form_sent_message">
+                        Your message has been sent. Thank you!
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+      
             </div>
-
-
+          </div>
         </section>
         <!-- /Contact Section -->
+      
+      </main>
+      
 
-
-    </main>
-
-    <footer id="footer" class="footer">
+      <footer id="footer" class="footer">
         <div class="footer-top">
           <div class="container">
-            <!-- Se agrega justify-content-center a la fila -->
             <div class="row gy-4 justify-content-center">
+      
               <!-- Company Info -->
               <div class="col-lg-3 col-md-6 footer-about text-center">
-                <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
+                <a
+                  href="index.html"
+                  class="logo d-flex align-items-center justify-content-center mb-3"
+                >
                   <span class="sitename3">Ultra Deep Tech</span>
                 </a>
-                <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-      
-                <!-- Book a Call Button -->
-                <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
+                <p data-i18n="footer_about_text">
+                  Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+                </p>
+                <a
+                  href="https://calendly.com/avipil/30-min"
+                  target="_blank"
+                  class="book-call-btn2 mt-3 d-inline-block"
+                >
                   <span class="book-call-content2">
-                    <span>Book a Call</span>
+                    <span data-i18n="book_a_call">Book a Call</span>
                   </span>
                   <span class="book-call-hover2"></span>
                 </a>
@@ -428,50 +570,54 @@
       
               <!-- Useful Links -->
               <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Useful Links</h4>
+                <h4 data-i18n="useful_links">Useful Links</h4>
                 <ul>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="career.html">Careers</a></li>
-                  <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                  <li><a href="blog.html">Blog & Social Media</a></li>
-                  <li><a href="politics.html#terms">Terms of Service</a></li>
-                  <li><a href="politics.html#Privacy">Privacy Policy</a></li>
+                  <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+                  <li><a href="career.html" data-i18n="career">Careers</a></li>
+                  <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+                  <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+                  <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+                  <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
                 </ul>
               </div>
       
               <!-- Products -->
               <div class="col-lg-3 col-6 footer-links text-center">
-                <h4>Products</h4>
+                <h4 data-i18n="footer_products">Products</h4>
                 <ul>
-                  <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                  <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                  <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                  <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
+                  <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+                  <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+                  <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+                  <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
                 </ul>
               </div>
       
               <!-- Services -->
               <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Services</h4>
+                <h4 data-i18n="footer_services">Services</h4>
                 <ul>
-                  <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                  <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                  <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
+                  <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+                  <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+                  <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
                 </ul>
               </div>
       
               <!-- Contact Info -->
               <div class="col-lg-2 col-md-6 footer-contact text-center">
-                <h4>Contact Us</h4>
+                <h4 data-i18n="footer_contact">Contact Us</h4>
                 <p>
                   Corrientes 800<br>
                   Ciudad Autónoma de Buenos Aires, CP1008<br>
                   Argentina<br>
                 </p>
-                <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-      
-                <!-- Redes Sociales -->
+                <p>
+                  <strong data-i18n="footer_phone">Phone:</strong>
+                  <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+                </p>
+                <p>
+                  <strong data-i18n="footer_email">Email:</strong>
+                  <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+                </p>
                 <div class="social-links d-flex justify-content-center mt-3">
                   <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
                   <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -485,11 +631,12 @@
       
         <div class="container copyright text-center mt-4">
           <p>
-            © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-            <span>All Rights Reserved</span>
+            © <span data-i18n="copyright">All Rights Reserved</span>
+            <strong class="px-1 sitename2">Ultra Deep Tech</strong>
           </p>
           <div class="credits">
-            Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+            <span data-i18n="designed_by">Designed by</span>
+            <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
           </div>
         </div>
       </footer>
@@ -525,6 +672,7 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/lang.js" defer></script>
 
     <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
         <i class="bi bi-whatsapp whatsapp-icon"></i>

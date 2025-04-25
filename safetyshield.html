@@ -38,571 +38,726 @@
 
 <body class="index-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+        <h1 class="sitename">Ultra Deep Tech</h1>
+      </a>
+  
+      <!-- Menú -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
+  
+          <!-- About Us -->
+          <li class="dropdown">
+            <a href="about.html" class="nav-link">
+              <i class="bi bi-info-circle-fill"></i>
+              <span data-i18n="about_us">About Us</span>
             </a>
+            <ul>
+              <li>
+                <a href="about.html#company-history" class="nav-link">
+                  <i class="bi bi-clock-history"></i>
+                  <span data-i18n="company_history">Company History</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html#team" class="nav-link">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="leadership_team">Leadership Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#youtube-videos" class="nav-link">
+                  <i class="bi bi-youtube"></i>
+                  <span data-i18n="youtube_channel">Youtube Channel</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html" class="nav-link">
+                  <i class="bi bi-pencil-fill"></i>
+                  <span data-i18n="blog_social">Blog &amp; Social Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Products & Solutions -->
+          <li class="dropdown">
+            <a href="productsdetails.html" class="nav-link">
+              <i class="bi bi-box-seam"></i>
+              <span data-i18n="products">Products</span>
+            </a>
+            <ul>
+              <li>
+                <a href="safetyshield.html" class="nav-link">
+                  <i class="bi bi-shield-fill"></i>
+                  <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-1" class="nav-link">
+                  <i class="bi bi-cpu-fill"></i>
+                  <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-2" class="nav-link">
+                  <i class="bi bi-shield-check"></i>
+                  <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-3" class="nav-link">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Services -->
+          <li class="dropdown">
+            <a href="service-details.html" class="nav-link">
+              <i class="bi bi-tools"></i>
+              <span data-i18n="services">Services</span>
+            </a>
+            <ul>
+              <li>
+                <a href="service-details.html?product=product-1" class="nav-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-2" class="nav-link">
+                  <i class="bi bi-diagram-3-fill"></i>
+                  <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-3" class="nav-link">
+                  <i class="bi bi-easel-fill"></i>
+                  <span data-i18n="training_education">Training &amp; Education</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Career -->
+          <li class="dropdown">
+            <a href="career.html" class="nav-link">
+              <i class="bi bi-briefcase-fill"></i>
+              <span data-i18n="career">Career</span>
+            </a>
+            <ul>
+              <li>
+                <a href="career.html#openings" class="nav-link">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="current_job_openings">Current Job Openings</span>
+                </a>
+              </li>
+              <li>
+                <a href="career.html#" class="nav-link">
+                  <i class="bi bi-stars"></i>
+                  <span data-i18n="core_values">Core Values</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Contact -->
+          <li class="dropdown">
+            <a href="contact.html" class="nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span data-i18n="contact_us">Contact Us</span>
+            </a>
+            <ul>
+              <li>
+                <a href="contact.html#faqs" class="nav-link">
+                  <i class="bi bi-question-circle-fill"></i>
+                  <span data-i18n="faqs">FAQ's</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#mapa" class="nav-link">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="office_locations">Office Locations</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#contact" class="nav-link">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span data-i18n="chat_with_us">Chat with Us</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Book a Call -->
+          <li>
+            <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+              <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+              <span class="book-call-hover"></span>
+            </a>
+          </li>
+          
+                <!-- Toggle de idioma -->
+                <li>
+                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                  </li>
+        </ul>
+      </nav>
+  
+      <!-- Toggle móvil -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
+    </div>
+</header>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                  <!-- About Us -->
-                  <li class="dropdown">
-                    <a href="about.html" class="nav-link">
-                      <i class="bi bi-info-circle-fill"></i>
-                      <span>About Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                      <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                      <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                      <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Products & Solutions -->
-                  <li class="dropdown">
-                    <a href="productsdetails.html" class="nav-link">
-                      <i class="bi bi-box-seam"></i>
-                      <span>Products</span>
-                    </a>
-                    <ul>
-                      <li><a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a></li>
-                      <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                      <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                      <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Services -->
-                  <li class="dropdown">
-                    <a href="service-details.html" class="nav-link">
-                      <i class="bi bi-tools"></i>
-                      <span>Services</span>
-                    </a>
-                    <ul>
-                      <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                      <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                      <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Career -->
-                  <li class="dropdown">
-                    <a href="career.html" class="nav-link">
-                      <i class="bi bi-briefcase-fill"></i>
-                      <span>Career</span>
-                    </a>
-                    <ul>
-                      <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                      <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Contact -->
-                  <li class="dropdown">
-                    <a href="contact.html" class="nav-link">
-                      <i class="bi bi-envelope-fill"></i>
-                      <span>Contact Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                      <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                      <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Book a Call -->
-                  <li>
-                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                      <span class="book-call-content"><span>Book a Call</span></span>
-                      <span class="book-call-hover"></span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              
-              
+<main class="main">
 
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6 order-lg-last hero-img" data-aos="zoom-out">
+          <img src="assets/img/image_dashboard.webp" alt="Safety Shield Ultra™ Dashboard" class="phone-1">
         </div>
-    </header>
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
+          <blockquote data-aos="fade-up" data-aos-delay="100">
+            <h2 data-i18n="hero_main_title">
+              Safety Shield Ultra™: Securing Your Conversational AI
+            </h2>
+            <p id="typewriter-description" data-i18n="hero_description">
+              Protect your AI conversations with comprehensive security monitoring. Safety Shield Ultra™ safeguards against prompt injection, data leaks, and unauthorized access in real-time.
+            </p>
+          </blockquote>
+          <div class="d-flex mt-4 justify-content-center justify-content-md-start">
+            <a href="#about" class="download-btn">
+              <i class="bi bi-shield-check"></i>
+              <span data-i18n="see_more_features">See more features</span>
+            </a>
+            <a href="#" id="seeInActionBtn" class="download-btn">
+              <i class="bi bi-play-circle"></i>
+              <span data-i18n="see_it_in_action">See It in Action</span>
+            </a>
+            <a href="#" id="requestDemoBtn" class="download-btn">
+              <i class="bi bi-rocket-takeoff"></i>
+              <span data-i18n="request_demo">Request a demo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Hero Section -->
 
-    <main class="main">
-
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-lg-last hero-img" data-aos="zoom-out">
-                        <img src="assets/img/image dashboard.webp" alt="Safety Shield Ultra™ Dashboard" class="phone-1">
-                    </div>
-                    <div class="col-lg-6 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
-                        <blockquote data-aos="fade-up" data-aos-delay="100">
-                            <h2>
-                                Safety Shield Ultra™: Securing Your Conversational AI </h2>
-                            <p id="typewriter-description">Protect your AI conversations with comprehensive security monitoring. Safety Shield Ultra™ safeguards against prompt injection, data leaks, and unauthorized access in real-time.</p>
-                        </blockquote>
-                        <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-                            <a href="#about" class="download-btn"><i class="bi bi-shield-check"></i> <span>See more features</span></a>
-                            <a href="#" id="seeInActionBtn" class="download-btn"><i class="bi bi-play-circle"></i> <span>See It in Action</span></a>
-                            <a href="#" id="requestDemoBtn" class="download-btn"><i class="bi bi-rocket-takeoff"></i> <span>Request a demo</span></a>
-                        </div>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="background-image"></div>
+    <div class="container about-content" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-xl-center gy-5">
+        <div class="col-lg-5 content">
+          <div class="image-container">
+            <img src="assets/img/notebookdash.webp" alt="" class="notebookdash">
+            <img src="assets/img/celudash.webp" alt="" class="celudash">
+          </div>
+          <h4 data-i18n="about_discover_title">Discover Safety Shield Ultra™</h4>
+          <h2 data-i18n="about_complete_protection_title">Complete Protection for Conversational AI Systems</h2>
+          <p data-i18n="about_description">
+            Safety Shield Ultra™ provides comprehensive security for your AI chatbots and virtual assistants. Monitor interactions, prevent unauthorized access, and ensure data privacy in real-time.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#featured" class="read-more">
+              <span data-i18n="see_more">See more</span><i class="bi bi-arrow-right"></i>
+            </a>
+            <a href="#" class="read-more request-demo-btn" id="aboutRequestDemoBtn">
+              <i class="bi bi-rocket-takeoff"></i>
+              <span data-i18n="request_demo">Request a demo</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row gy-4 icon-boxes">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-box">
+                <i class="bi bi-shield-lock"></i>
+                <h3 data-i18n="feature_prompt_injection_title">Prompt Injection Defense</h3>
+                <p data-i18n="feature_prompt_injection_desc">Prevents malicious prompts and unauthorized commands in real-time.</p>
+              </div>
             </div>
-        </section>
-        <!-- /Hero Section -->
-
-
-        <!-- About Section -->
-        <section id="about" class="about section">
-            <div class="background-image"></div>
-            <div class="container about-content" data-aos="fade-up" data-aos-delay="100">
-                <div class="row align-items-xl-center gy-5">
-                    <div class="col-lg-5 content">
-                        <div class="image-container">
-                            <img src="assets/img/notebookdash.webp" alt="" class="notebookdash">
-                            <img src="assets/img/celudash.webp" alt="" class="celudash">
-                        </div>
-                        <h4>Discover Safety Shield Ultra™</h4>
-                        <h2>Complete Protection for Conversational AI Systems</h2>
-                        <p>Safety Shield Ultra™ provides comprehensive security for your AI chatbots and virtual assistants. Monitor interactions, prevent unauthorized access, and ensure data privacy in real-time.</p>
-                        <div class="d-flex gap-3">
-                            <a href="#featured" class="read-more"><span>See more</span><i class="bi bi-arrow-right"></i></a>
-                            <a href="#" class="read-more request-demo-btn" id="aboutRequestDemoBtn">
-                                <i class="bi bi-rocket-takeoff"></i>
-                                <span>Request a demo</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row gy-4 icon-boxes">
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="icon-box">
-                                    <i class="bi bi-shield-lock"></i>
-                                    <h3>Prompt Injection Defense</h3>
-                                    <p>Prevents malicious prompts and unauthorized commands in real-time.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="icon-box">
-                                    <i class="bi bi-file-earmark-lock"></i>
-                                    <h3>Data Privacy Control</h3>
-                                    <p>Protects sensitive information and prevents unauthorized data exposure.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="icon-box">
-                                    <i class="bi bi-bell"></i>
-                                    <h3>Response Monitoring</h3>
-                                    <p>Analyzes AI responses for safety and compliance in real-time.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                                <div class="icon-box">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                    <h3>Security Analytics</h3>
-                                    <p>Tracks and visualizes security metrics across all AI conversations.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-file-earmark-lock"></i>
+                <h3 data-i18n="feature_data_privacy_title">Data Privacy Control</h3>
+                <p data-i18n="feature_data_privacy_desc">Protects sensitive information and prevents unauthorized data exposure.</p>
+              </div>
             </div>
-        </section>
-
-        <!-- Featured Section -->
-        <section id="featured" class="featured section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2 style="margin-bottom: 0px; padding-bottom: 0px; color: aliceblue;;">Secure Your AI Conversations
-                </h2>
-                <p style="color: rgba(233, 233, 233, 0.4);">Comprehensive protection for all your conversational AI applications.</p>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-bell"></i>
+                <h3 data-i18n="feature_response_monitoring_title">Response Monitoring</h3>
+                <p data-i18n="feature_response_monitoring_desc">Analyzes AI responses for safety and compliance in real-time.</p>
+              </div>
             </div>
-            <div class="container">
-                <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="img">
-                                <img src="assets/img/cards-4.png" alt="" class="img-fluid">
-                                <div class="icon"><i class="bi bi-shield-lock"></i></div>
-                            </div>
-                            <h2 class="title">Real-time Protection
-                            </h2>
-                            <p>
-                                Monitors and secures AI conversations instantly, blocking threats before they impact your system.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card">
-                            <div class="img">
-                                <img src="assets/img/cards-2.png" alt="" class="img-fluid">
-                                <div class="icon"><i class="bi bi-file-earmark-lock"></i></div>
-                            </div>
-                            <h2 class="title">Privacy Compliance
-                            </h2>
-                            <p>
-                                Ensures AI interactions comply with data protection regulations and privacy standards.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card">
-                            <div class="img">
-                                <img src="assets/img/cards-6.png" alt="" class="img-fluid">
-                                <div class="icon"><i class="bi bi-bell"></i></div>
-                            </div>
-                            <h2 class="title">Risk Prevention</h2>
-                            <p>
-                                Identifies and blocks potential security risks in AI conversations before they escalate.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-graph-up-arrow"></i>
+                <h3 data-i18n="feature_security_analytics_title">Security Analytics</h3>
+                <p data-i18n="feature_security_analytics_desc">Tracks and visualizes security metrics across all AI conversations.</p>
+              </div>
             </div>
-        </section>
-        <!-- /Featured Section -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- /About Section -->
 
-        <!-- Features Section -->
-        <section id="features" class="features section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Key Capabilities </h2>
-                <p>Comprehensive security features designed specifically for conversational AI systems.</p>
+  <!-- Featured Section -->
+  <section id="featured" class="featured section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-i18n="featured_title" style="margin-bottom: 0; padding-bottom: 0; color: aliceblue;">
+        Secure Your AI Conversations
+      </h2>
+      <p data-i18n="featured_subtitle" style="color: rgba(233, 233, 233, 0.4);">
+        Comprehensive protection for all your conversational AI applications.
+      </p>
+    </div>
+    <div class="container">
+      <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="img">
+              <img src="assets/img/cards-4.png" alt="" class="img-fluid">
+              <div class="icon"><i class="bi bi-shield-lock"></i></div>
             </div>
-            <div class="container">
-                <!-- Advanced Threat Detection -->
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-md-5 d-flex align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="100">
-                        <div class="icon-container">
-                            <i class="bi bi-shield-check"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Conversation Security
-                        </h3>
-                        <p class="fst-italic">
-                            Protect all AI interactions with advanced security monitoring.</p>
-                        <ul>
-                            <li><i class="bi bi-check"></i><span>Real-time prompt injection detection and prevention.</span></li>
-                            <li><i class="bi bi-check"></i><span>Automatic blocking of unauthorized access attempts.</span></li>
-                            <li><i class="bi bi-check"></i><span>Continuous monitoring of AI responses for safety.</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Intelligent Compliance Management -->
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-md-5 order-1 order-md-2 d-flex align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="200">
-                        <div class="icon-container">
-                            <i class="bi bi-clipboard-check"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Privacy Protection</h3>
-                        <p class="fst-italic">
-                            Ensure data privacy in all AI conversations.</p>
-                        <p>
-                            Protect sensitive information with automated PII detection, data masking, and privacy compliance monitoring.</p>
-                    </div>
-                </div>
-
-                <!-- Comprehensive Risk Assessment -->
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-md-5 d-flex align-items-center justify-content-center" data-aos="zoom-out">
-                        <div class="icon-container">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-7" data-aos="fade-up">
-                        <h3>Security Analytics
-                        </h3>
-                        <p>
-                            Comprehensive insights into your AI system's security status.</p>
-                        <ul>
-                            <li><i class="bi bi-check"></i><span>Detailed security metrics and threat analytics.</span></li>
-                            <li><i class="bi bi-check"></i><span>Risk assessment and trend analysis.</span></li>
-                            <li><i class="bi bi-check"></i><span>Custom security reporting and alerts.</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- User Behavior Analytics -->
-                <div class="row gy-4 align-items-center features-item">
-                    <div class="col-md-5 order-1 order-md-2 d-flex align-items-center justify-content-center" data-aos="zoom-out">
-                        <div class="icon-container">
-                            <i class="bi bi-people"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-                        <h3>Access Control</h3>
-                        <p class="fst-italic">
-                            Manage and monitor AI system access securely.</p>
-                        <p>
-                            Control who can access your AI systems with role-based permissions, authentication, and detailed access logs. </p>
-                    </div>
-                </div>
+            <h2 class="title" data-i18n="featured_card1_title">Real-time Protection</h2>
+            <p data-i18n="featured_card1_desc">
+              Monitors and secures AI conversations instantly, blocking threats before they impact your system.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <div class="img">
+              <img src="assets/img/cards-2.png" alt="" class="img-fluid">
+              <div class="icon"><i class="bi bi-file-earmark-lock"></i></div>
             </div>
-        </section>
-        <!-- /Features Section -->
+            <h2 class="title" data-i18n="featured_card2_title">Privacy Compliance</h2>
+            <p data-i18n="featured_card2_desc">
+              Ensures AI interactions comply with data protection regulations and privacy standards.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <div class="img">
+              <img src="assets/img/cards-6.png" alt="" class="img-fluid">
+              <div class="icon"><i class="bi bi-bell"></i></div>
+            </div>
+            <h2 class="title" data-i18n="featured_card3_title">Risk Prevention</h2>
+            <p data-i18n="featured_card3_desc">
+              Identifies and blocks potential security risks in AI conversations before they escalate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Featured Section -->
 
-        <section id="cta-features" class="cta-features-section">
-            <div class="cta-container">
-                <div class="cta-wrapper">
-                    <div class="cta-text">
-                        <h2 style="margin-bottom: 0px; padding-bottom: 0px; color: aliceblue;">Know all the features and see how it works</h2>
-                        <p style="color: rgba(233, 233, 233, 0.4); margin-bottom: 0;">Explore with us all the features</p>
-                    </div>
-                    <div class="cta-button">
-                        <a href="#" class="cta-demo-btn" id="ctaRequestDemo">
-                            <i class="bi bi-rocket-takeoff"></i>
-                            <span>Request a demo</span>
-                        </a>
-                    </div>
+  <!-- Features Section -->
+  <section id="features" class="features section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-i18n="features_section_title">Key Capabilities</h2>
+      <p data-i18n="features_section_subtitle">
+        Comprehensive security features designed specifically for conversational AI systems.
+      </p>
+    </div>
+    <div class="container">
+      <!-- Conversation Security -->
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 d-flex align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="100">
+          <div class="icon-container"><i class="bi bi-shield-check"></i></div>
+        </div>
+        <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+          <h3 data-i18n="conv_security_title">Conversation Security</h3>
+          <p class="fst-italic" data-i18n="conv_security_subtitle">
+            Protect all AI interactions with advanced security monitoring.
+          </p>
+          <ul>
+            <li data-i18n="conv_security_feat1"><i class="bi bi-check"></i> Real-time prompt injection detection and prevention.</li>
+            <li data-i18n="conv_security_feat2"><i class="bi bi-check"></i> Automatic blocking of unauthorized access attempts.</li>
+            <li data-i18n="conv_security_feat3"><i class="bi bi-check"></i> Continuous monitoring of AI responses for safety.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Privacy Protection -->
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 order-1 order-md-2 d-flex align-items-center justify-content-center" data-aos="zoom-out" data-aos-delay="200">
+          <div class="icon-container"><i class="bi bi-clipboard-check"></i></div>
+        </div>
+        <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+          <h3 data-i18n="feature_privacy_protection_title">Privacy Protection</h3>
+          <p class="fst-italic" data-i18n="feature_privacy_protection_subtitle">
+            Ensure data privacy in all AI conversations.
+          </p>
+          <p data-i18n="feature_privacy_protection_desc">
+            Protect sensitive information with automated PII detection, data masking, and privacy compliance monitoring.
+          </p>
+        </div>
+      </div>
+
+      <!-- Security Analytics -->
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 d-flex align-items-center justify-content-center" data-aos="zoom-out">
+          <div class="icon-container"><i class="bi bi-graph-up"></i></div>
+        </div>
+        <div class="col-md-7" data-aos="fade-up">
+          <h3 data-i18n="feature_security_analytics_title">Security Analytics</h3>
+          <p data-i18n="feature_security_analytics_desc">
+            Comprehensive insights into your AI system's security status.
+          </p>
+          <ul>
+            <li data-i18n="security_analytics_feat1"><i class="bi bi-check"></i> Detailed security metrics and threat analytics.</li>
+            <li data-i18n="security_analytics_feat2"><i class="bi bi-check"></i> Risk assessment and trend analysis.</li>
+            <li data-i18n="security_analytics_feat3"><i class="bi bi-check"></i> Custom security reporting and alerts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Access Control -->
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 order-1 order-md-2 d-flex align-items-center justify-content-center" data-aos="zoom-out">
+          <div class="icon-container"><i class="bi bi-people"></i></div>
+        </div>
+        <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+          <h3 data-i18n="feature_access_control_title">Access Control</h3>
+          <p class="fst-italic" data-i18n="feature_access_control_subtitle">
+            Manage and monitor AI system access securely.
+          </p>
+          <p data-i18n="feature_access_control_desc">
+            Control who can access your AI systems with role-based permissions, authentication, and detailed access logs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Features Section -->
+
+  <!-- CTA Features -->
+  <section id="cta-features" class="cta-features-section">
+    <div class="cta-container">
+      <div class="cta-wrapper">
+        <div class="cta-text">
+          <h2 data-i18n="cta_features_title" style="margin-bottom: 0; padding-bottom: 0; color: aliceblue;">
+            Know all the features and see how it works
+          </h2>
+          <p data-i18n="cta_features_subtitle" style="color: rgba(233, 233, 233, 0.4); margin-bottom: 0;">
+            Explore with us all the features
+          </p>
+        </div>
+        <div class="cta-button">
+          <a href="#" class="cta-demo-btn" id="ctaRequestDemo">
+            <i class="bi bi-rocket-takeoff"></i>
+            <span data-i18n="request_demo">Request a demo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /CTA Features Section -->
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-i18n="faq_section_title">Frequently Asked Questions</h2>
+      <p data-i18n="faq_section_subtitle">
+        Common questions about securing your conversational AI systems with Safety Shield Ultra™.
+      </p>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <span data-i18n="faq_q1">What is Safety Shield Ultra™?</span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a1">
+                  Safety Shield Ultra™ is a security platform specifically designed to protect conversational AI systems. It monitors AI interactions in real-time, prevents unauthorized access, and ensures data privacy across all AI conversations.
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="faq section">
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about securing your conversational AI systems with Safety Shield Ultra™.</p>
-            </div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                What is Safety Shield Ultra™?
-              </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Safety Shield Ultra™ is a security platform specifically designed to protect conversational AI systems. It monitors AI interactions in real-time, prevents unauthorized access, and ensures data privacy across all AI conversations.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                How does Safety Shield Ultra™ protect my AI systems?
-              </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our platform provides comprehensive protection through real-time prompt injection detection, PII data masking, response monitoring, and access control. It continuously analyzes AI conversations to prevent security breaches and ensure compliance.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Which types of AI systems can Safety Shield Ultra™ protect?
-              </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Safety Shield Ultra™ works with all major conversational AI platforms, including customer service chatbots, virtual assistants, and enterprise AI systems. Our solution scales from small chatbots to large-scale AI deployments.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                How does Safety Shield Ultra™ handle data privacy compliance?
-              </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        We automatically detect and mask sensitive information in AI conversations, ensure GDPR and other privacy regulation compliance, and provide detailed audit logs of all data handling practices.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Can Safety Shield Ultra™ integrate with existing AI platforms?
-              </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Yes, Safety Shield Ultra™ integrates seamlessly with major AI platforms and can be deployed as a security layer for your existing conversational AI systems without disrupting their functionality.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                How does prompt injection protection work?
-              </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our system analyzes every input in real-time to detect and block potentially harmful prompts that could manipulate your AI's behavior. This includes attempts to bypass security controls or extract sensitive information.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                What kind of support do you offer?
-              </button>
-                                </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        We provide 24/7 technical support, regular security updates, and expert guidance on AI security best practices. Our team helps you optimize your AI security settings and respond to any security concerns.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingEight">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                How does Safety Shield Ultra™ monitor AI responses?
-              </button>
-                                </h2>
-                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Our platform continuously analyzes AI outputs to ensure they meet safety and compliance standards, flagging potentially inappropriate or unsafe responses before they reach users.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingNine">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                How often is the security system updated?
-              </button>
-                                </h2>
-                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        We continuously update our security rules and detection patterns to protect against new types of AI attacks and vulnerabilities, ensuring your systems stay protected against emerging threats.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTen">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                Can I try Safety Shield Ultra™ before purchasing?
-              </button>
-                                </h2>
-                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body">
-                                        Yes, we offer a demo of Safety Shield Ultra™ protecting a test AI system. Contact our team to schedule a personalized demonstration of our security features.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span data-i18n="faq_q2">How does Safety Shield Ultra™ protect my AI systems?</span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a2">
+                  Our platform provides comprehensive protection through real-time prompt injection detection, PII data masking, response monitoring, and access control. It continuously analyzes AI conversations to prevent security breaches and ensure compliance.
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- /FAQ Section -->
 
-    </main>
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span data-i18n="faq_q3">Which types of AI systems can Safety Shield Ultra™ protect?</span>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a3">
+                  Safety Shield Ultra™ works with all major conversational AI platforms, including customer service chatbots, virtual assistants, and enterprise AI systems. Our solution scales from small chatbots to large-scale AI deployments.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <span data-i18n="faq_q4">How does Safety Shield Ultra™ handle data privacy compliance?</span>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a4">
+                  We automatically detect and mask sensitive information in AI conversations, ensure GDPR and other privacy regulation compliance, and provide detailed audit logs of all data handling practices.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <span data-i18n="faq_q5">Can Safety Shield Ultra™ integrate with existing AI platforms?</span>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a5">
+                  Yes, Safety Shield Ultra™ integrates seamlessly with major AI platforms and can be deployed as a security layer for your existing conversational AI systems without disrupting their functionality.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <span data-i18n="faq_q6">How does prompt injection protection work?</span>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a6">
+                  Our system analyzes every input in real-time to detect and block potentially harmful prompts that could manipulate your AI's behavior. This includes attempts to bypass security controls or extract sensitive information.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  <span data-i18n="faq_q7">What kind of support do you offer?</span>
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a7">
+                  We provide 24/7 technical support, regular security updates, and expert guidance on AI security best practices. Our team helps you optimize your AI security settings and respond to any security concerns.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <span data-i18n="faq_q8">How does Safety Shield Ultra™ monitor AI responses?</span>
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a8">
+                  Our platform continuously analyzes AI outputs to ensure they meet safety and compliance standards, flagging potentially inappropriate or unsafe responses before they reach users.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  <span data-i18n="faq_q9">How often is the security system updated?</span>
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a9">
+                  We continuously update our security rules and detection patterns to protect against new types of AI attacks and vulnerabilities, ensuring your systems stay protected against emerging threats.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  <span data-i18n="faq_q10">Can I try Safety Shield Ultra™ before purchasing?</span>
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="faq_a10">
+                  Yes, we offer a demo of Safety Shield Ultra™ protecting a test AI system. Contact our team to schedule a personalized demonstration of our security features.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /FAQ Section -->
+
+</main>
 
     <footer id="footer" class="footer">
-        <div class="footer-top">
-          <div class="container">
-            <!-- Se agrega justify-content-center a la fila -->
-            <div class="row gy-4 justify-content-center">
-              <!-- Company Info -->
-              <div class="col-lg-3 col-md-6 footer-about text-center">
-                <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
-                  <span class="sitename3">Ultra Deep Tech</span>
-                </a>
-                <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-      
-                <!-- Book a Call Button -->
-                <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
-                  <span class="book-call-content2">
-                    <span>Book a Call</span>
-                  </span>
-                  <span class="book-call-hover2"></span>
-                </a>
-              </div>
-      
-              <!-- Useful Links -->
-              <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="career.html">Careers</a></li>
-                  <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                  <li><a href="blog.html">Blog & Social Media</a></li>
-                  <li><a href="politics.html#terms">Terms of Service</a></li>
-                  <li><a href="politics.html#Privacy">Privacy Policy</a></li>
-                </ul>
-              </div>
-      
-              <!-- Products -->
-              <div class="col-lg-3 col-6 footer-links text-center">
-                <h4>Products</h4>
-                <ul>
-                  <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                  <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                  <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                  <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
-                </ul>
-              </div>
-      
-              <!-- Services -->
-              <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Services</h4>
-                <ul>
-                  <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                  <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                  <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
-                </ul>
-              </div>
-      
-              <!-- Contact Info -->
-              <div class="col-lg-2 col-md-6 footer-contact text-center">
-                <h4>Contact Us</h4>
-                <p>
-                  Corrientes 800<br>
-                  Ciudad Autónoma de Buenos Aires, CP1008<br>
-                  Argentina<br>
-                </p>
-                <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-      
-                <!-- Redes Sociales -->
-                <div class="social-links d-flex justify-content-center mt-3">
-                  <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
-                  <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                  <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
-                  <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
-                </div>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4 justify-content-center">
+    
+            <!-- Company Info -->
+            <div class="col-lg-3 col-md-6 footer-about text-center">
+              <a
+                href="index.html"
+                class="logo d-flex align-items-center justify-content-center mb-3"
+              >
+                <span class="sitename3">Ultra Deep Tech</span>
+              </a>
+              <p data-i18n="footer_about_text">
+                Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+              </p>
+              <a
+                href="https://calendly.com/avipil/30-min"
+                target="_blank"
+                class="book-call-btn2 mt-3 d-inline-block"
+              >
+                <span class="book-call-content2">
+                  <span data-i18n="book_a_call">Book a Call</span>
+                </span>
+                <span class="book-call-hover2"></span>
+              </a>
+            </div>
+    
+            <!-- Useful Links -->
+            <div class="col-lg-2 col-6 footer-links text-center">
+              <h4 data-i18n="useful_links">Useful Links</h4>
+              <ul>
+                <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+                <li><a href="career.html" data-i18n="career">Careers</a></li>
+                <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+                <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+                <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+                <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
+              </ul>
+            </div>
+    
+            <!-- Products -->
+            <div class="col-lg-3 col-6 footer-links text-center">
+              <h4 data-i18n="footer_products">Products</h4>
+              <ul>
+                <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+                <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+                <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+                <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
+              </ul>
+            </div>
+    
+            <!-- Services -->
+            <div class="col-lg-2 col-6 footer-links text-center">
+              <h4 data-i18n="footer_services">Services</h4>
+              <ul>
+                <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+                <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+                <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
+              </ul>
+            </div>
+    
+            <!-- Contact Info -->
+            <div class="col-lg-2 col-md-6 footer-contact text-center">
+              <h4 data-i18n="footer_contact">Contact Us</h4>
+              <p>
+                Corrientes 800<br>
+                Ciudad Autónoma de Buenos Aires, CP1008<br>
+                Argentina<br>
+              </p>
+              <p>
+                <strong data-i18n="footer_phone">Phone:</strong>
+                <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+              </p>
+              <p>
+                <strong data-i18n="footer_email">Email:</strong>
+                <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+              </p>
+              <div class="social-links d-flex justify-content-center mt-3">
+                <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
               </div>
             </div>
           </div>
         </div>
-      
-        <div class="container copyright text-center mt-4">
-          <p>
-            © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-            <span>All Rights Reserved</span>
-          </p>
-          <div class="credits">
-            Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
-          </div>
+      </div>
+    
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span data-i18n="copyright">All Rights Reserved</span>
+          <strong class="px-1 sitename2">Ultra Deep Tech</strong>
+        </p>
+        <div class="credits">
+          <span data-i18n="designed_by">Designed by</span>
+          <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
         </div>
-      </footer>
+      </div>
+    </footer>
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -622,6 +777,8 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js" defer></script>
+
 
     <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
         <i class="bi bi-whatsapp whatsapp-icon"></i>

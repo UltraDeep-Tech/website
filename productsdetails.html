@@ -47,216 +47,329 @@
 
 <body class="product-details-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+        <h1 class="sitename">Ultra Deep Tech</h1>
+      </a>
+  
+      <!-- Menú -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
+  
+          <!-- About Us -->
+          <li class="dropdown">
+            <a href="about.html" class="nav-link">
+              <i class="bi bi-info-circle-fill"></i>
+              <span data-i18n="about_us">About Us</span>
             </a>
+            <ul>
+              <li>
+                <a href="about.html#company-history" class="nav-link">
+                  <i class="bi bi-clock-history"></i>
+                  <span data-i18n="company_history">Company History</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html#team" class="nav-link">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="leadership_team">Leadership Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#youtube-videos" class="nav-link">
+                  <i class="bi bi-youtube"></i>
+                  <span data-i18n="youtube_channel">Youtube Channel</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html" class="nav-link">
+                  <i class="bi bi-pencil-fill"></i>
+                  <span data-i18n="blog_social">Blog &amp; Social Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Products & Solutions -->
+          <li class="dropdown">
+            <a href="productsdetails.html" class="nav-link">
+              <i class="bi bi-box-seam"></i>
+              <span data-i18n="products">Products</span>
+            </a>
+            <ul>
+              <li>
+                <a href="safetyshield.html" class="nav-link">
+                  <i class="bi bi-shield-fill"></i>
+                  <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-1" class="nav-link">
+                  <i class="bi bi-cpu-fill"></i>
+                  <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-2" class="nav-link">
+                  <i class="bi bi-shield-check"></i>
+                  <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-3" class="nav-link">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Services -->
+          <li class="dropdown">
+            <a href="service-details.html" class="nav-link">
+              <i class="bi bi-tools"></i>
+              <span data-i18n="services">Services</span>
+            </a>
+            <ul>
+              <li>
+                <a href="service-details.html?product=product-1" class="nav-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-2" class="nav-link">
+                  <i class="bi bi-diagram-3-fill"></i>
+                  <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-3" class="nav-link">
+                  <i class="bi bi-easel-fill"></i>
+                  <span data-i18n="training_education">Training &amp; Education</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Career -->
+          <li class="dropdown">
+            <a href="career.html" class="nav-link">
+              <i class="bi bi-briefcase-fill"></i>
+              <span data-i18n="career">Career</span>
+            </a>
+            <ul>
+              <li>
+                <a href="career.html#openings" class="nav-link">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="current_job_openings">Current Job Openings</span>
+                </a>
+              </li>
+              <li>
+                <a href="career.html#" class="nav-link">
+                  <i class="bi bi-stars"></i>
+                  <span data-i18n="core_values">Core Values</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Contact -->
+          <li class="dropdown">
+            <a href="contact.html" class="nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span data-i18n="contact_us">Contact Us</span>
+            </a>
+            <ul>
+              <li>
+                <a href="contact.html#faqs" class="nav-link">
+                  <i class="bi bi-question-circle-fill"></i>
+                  <span data-i18n="faqs">FAQ's</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#mapa" class="nav-link">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="office_locations">Office Locations</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#contact" class="nav-link">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span data-i18n="chat_with_us">Chat with Us</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Book a Call -->
+          <li>
+            <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+              <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+              <span class="book-call-hover"></span>
+            </a>
+          </li>
+          
+                <!-- Toggle de idioma -->
+                <li>
+                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                  </li>
+        </ul>
+      </nav>
+  
+      <!-- Toggle móvil -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
+    </div>
+</header>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                  <!-- About Us -->
-                  <li class="dropdown">
-                    <a href="about.html" class="nav-link">
-                      <i class="bi bi-info-circle-fill"></i>
-                      <span>About Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                      <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                      <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                      <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Products & Solutions -->
-                  <li class="dropdown">
-                    <a href="productsdetails.html" class="nav-link">
-                      <i class="bi bi-box-seam"></i>
-                      <span>Products</span>
-                    </a>
-                    <ul>
-                      <li><a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a></li>
-                      <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                      <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                      <li><a href="productsdetails.html?product=product-4" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Services -->
-                  <li class="dropdown">
-                    <a href="service-details.html" class="nav-link">
-                      <i class="bi bi-tools"></i>
-                      <span>Services</span>
-                    </a>
-                    <ul>
-                      <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                      <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                      <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Career -->
-                  <li class="dropdown">
-                    <a href="career.html" class="nav-link">
-                      <i class="bi bi-briefcase-fill"></i>
-                      <span>Career</span>
-                    </a>
-                    <ul>
-                      <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                      <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Contact -->
-                  <li class="dropdown">
-                    <a href="contact.html" class="nav-link">
-                      <i class="bi bi-envelope-fill"></i>
-                      <span>Contact Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                      <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                      <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Book a Call -->
-                  <li>
-                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                      <span class="book-call-content"><span>Book a Call</span></span>
-                      <span class="book-call-hover"></span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              
-              
+<main class="main">
 
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade" style="background-image: url(/assets/img/blog/blog-3.jpg);">
+    <div class="container">
+      <h1 data-i18n="product_details_title">Product Details</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li class="current" data-i18n="product_details_current">Product Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
 
+  <!-- Product Details Section -->
+  <section id="product-details" class="product-details section">
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-box">
+            <h4 data-i18n="products_list_title">Products List</h4>
+            <div class="product-list">
+              <a href="#product-1" id="product-1-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product1_title">Safety Shield Ultra™</span></a>
+              <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product2_title">Model Protection Suite</span></a>
+              <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product3_title">Enterprise Security</span></a>
+              <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product4_title">Performance Optimization</span></a>
+            </div>
+          </div>
+          <!-- End Products List -->
+
+          <div class="help-box d-flex flex-column justify-content-center align-items-center hide">
+            <i class="bi bi-headset help-icon"></i>
+            <h4 data-i18n="help_title">Have a Question?</h4>
+            <p class="d-flex align-items-center mt-2 mb-0">
+              <i class="bi bi-telephone me-2"></i>
+              <span>+54 9 11 5992 9083</span>
+            </p>
+            <p class="d-flex align-items-center mt-1 mb-0">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+            </p>
+          </div>
         </div>
-    </header>
 
-    <main class="main">
-
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade" style="background-image: url(/assets/img/blog/blog-3.jpg);">
-            <div class="container">
-                <h1>Product Details</h1>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current">Product Details</li>
-                    </ol>
-                </nav>
+        <div class="col-lg-8 ps-lg-5 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div id="product-content" class="service-box">
+            <h3 data-i18n="product1_default_title">Enterprise AI Security Solutions</h3>
+            <p>
+              <strong data-i18n="product1_default_core_label">Core Products:</strong><br><br>
+              • <span data-i18n="product1_title">Safety Shield Ultra™</span><br>
+              • <span data-i18n="product2_title">Model Protection Suite</span><br>
+              • <span data-i18n="product3_title">Enterprise Security</span><br>
+              • <span data-i18n="product4_title">Performance Optimization</span><br><br>
+              <strong data-i18n="product1_default_benefits_label">Benefits:</strong><br><br>
+              • <span data-i18n="product1_default_benefit1">AI Security</span><br>
+              • <span data-i18n="product1_default_benefit2">Compliance</span><br>
+              • <span data-i18n="product1_default_benefit3">Optimization</span><br>
+              • <span data-i18n="product1_default_benefit4">Risk Reduction</span>
+            </p>
+            <div style="margin-top: 30px; text-align: center; width: 100%;">
+              <a
+                href="https://calendly.com/avipil/30-min"
+                class="book-call-btn2"
+                target="_blank"
+                style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;"
+              >
+                <span class="book-call-content2">
+                  <span data-i18n="book_a_call">Book a Call</span>
+                </span>
+                <span class="book-call-hover2"></span>
+              </a>
             </div>
+          </div>
+
+          <img src="" alt="" class="img-fluid product-img" id="product-img">
         </div>
-        <!-- End Page Title -->
 
-        <!-- Product Details Section -->
-        <section id="product-details" class="product-details section">
+      </div>
+    </div>
+  </section>
+  <!-- /Product Details Section -->
 
-            <div class="container">
+  <!-- Industries Section -->
+  <section id="industries" class="industries section bg-light">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2 data-i18n="industries_title">Industries at Risk</h2>
+        <p data-i18n="industries_subtitle">Critical Statistics Across Key Sectors</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 gy-4">
 
-                <div class="row gy-5">
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-box">
-                            <h4>Products List</h4>
-                            <div class="product-list">
-                                <a href="#product-1" id="product-1-link" data-aos="product-1-link"><i class="bi bi-arrow-right-circle"></i> Safety Shield Ultra™<span></span></a>
-                                <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> Model Protection Suite<span></span></a>
-                                <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> Enterprise Security<span></span></a>
-                                <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> Performance Optimization<span></span></a>
-                            </div>
-                        </div>
-                        <!-- End Products List -->
-
-                        <div class="help-box d-flex flex-column justify-content-center align-items-center hide">
-                            <i class="bi bi-headset help-icon"></i>
-                            <h4>Have a Question?</h4>
-                            <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+54 9 11 5992 9083</span></p>
-                            <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8 ps-lg-5 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div id="product-content" class="service-box">
-                            <h3>Enterprise AI Security Solutions</h3><br><br>
-                            <p><b>Core Products:</b><br><br> • Safety Shield Ultra™<br> • Model Protection Suite<br> • Enterprise Security<br> • Performance Optimization<br><br>
-
-                                <b>Benefits:</b><br><br> • AI Security<br> • Compliance<br> • Optimization<br> • Risk Reduction</p>
-                                <div style="margin-top: 30px; text-align: center; width: 100%;">
-                                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                                        <span class="book-call-content2">
-                                            <span>Book a Call</span>
-                                        </span>
-                                        <span class="book-call-hover2"></span>
-                                    </a>
-                                </div>
-                                
-                        </div>
-                        
-
-                        <img src="" alt="" class="img-fluid product-img" id="product-img">
-
-                    </div>
-                </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 tech-card">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="industry1_title">Financial Services</h5>
+              <p class="card-text" data-i18n="industry1_stats">
+                • 78% of financial firms face AI security breaches<br>
+                • $2.5M average cost per breach<br>
+                • 45% of AI systems vulnerable to attacks<br>
+                • 60% compliance violations in AI systems
+              </p>
             </div>
-        </section>
-        <!-- /Product Details Section -->
+          </div>
+        </div>
 
-        <!-- Industries Section -->
-        <section id="industries" class="industries section bg-light">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h2>Industries at Risk</h2>
-                    <p>Critical Statistics Across Key Sectors</p>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 gy-4">
-
-                    <!-- Industry 1 -->
-                    <div class="col" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 tech-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Financial Services</h5>
-                                <p class="card-text">• 78% of financial firms face AI security breaches<br> • $2.5M average cost per breach<br> • 45% of AI systems vulnerable to attacks<br> • 60% compliance violations in AI systems</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Industry 1 -->
-
-                    <!-- Industry 2 -->
-                    <div class="col" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card h-100 tech-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Healthcare</h5>
-                                <p class="card-text">• 85% of healthcare AI systems exposed<br> • $1.2M average breach cost<br> • 70% patient data at risk<br> • 50% HIPAA violations in AI</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Industry 2 -->
-
-                    <!-- Industry 3 -->
-                    <div class="col" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card h-100 tech-card">
-                            <div class="card-body">
-                                <h5 class="card-title">E-commerce</h5>
-                                <p class="card-text">• 92% of e-commerce AI systems attacked<br> • $3.8M average fraud loss<br> • 65% customer data exposed<br> • 55% revenue loss from breaches</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Industry 3 -->
-
-                </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 tech-card">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="industry2_title">Healthcare</h5>
+              <p class="card-text" data-i18n="industry2_stats">
+                • 85% of healthcare AI systems exposed<br>
+                • $1.2M average breach cost<br>
+                • 70% patient data at risk<br>
+                • 50% HIPAA violations in AI
+              </p>
             </div>
-        </section>
-        <!-- End Industries Section -->
+          </div>
+        </div>
 
-    </main>
+        <div class="col" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 tech-card">
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="industry3_title">E-commerce</h5>
+              <p class="card-text" data-i18n="industry3_stats">
+                • 92% of e-commerce AI systems attacked<br>
+                • $3.8M average fraud loss<br>
+                • 65% customer data exposed<br>
+                • 55% revenue loss from breaches
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Industries Section -->
+
+</main>
 
 
 
@@ -264,19 +377,26 @@
     <footer id="footer" class="footer">
       <div class="footer-top">
         <div class="container">
-          <!-- Se agrega justify-content-center a la fila -->
           <div class="row gy-4 justify-content-center">
+    
             <!-- Company Info -->
             <div class="col-lg-3 col-md-6 footer-about text-center">
-              <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
+              <a
+                href="index.html"
+                class="logo d-flex align-items-center justify-content-center mb-3"
+              >
                 <span class="sitename3">Ultra Deep Tech</span>
               </a>
-              <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-    
-              <!-- Book a Call Button -->
-              <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
+              <p data-i18n="footer_about_text">
+                Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+              </p>
+              <a
+                href="https://calendly.com/avipil/30-min"
+                target="_blank"
+                class="book-call-btn2 mt-3 d-inline-block"
+              >
                 <span class="book-call-content2">
-                  <span>Book a Call</span>
+                  <span data-i18n="book_a_call">Book a Call</span>
                 </span>
                 <span class="book-call-hover2"></span>
               </a>
@@ -284,50 +404,54 @@
     
             <!-- Useful Links -->
             <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Useful Links</h4>
+              <h4 data-i18n="useful_links">Useful Links</h4>
               <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="career.html">Careers</a></li>
-                <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                <li><a href="blog.html">Blog & Social Media</a></li>
-                <li><a href="politics.html#terms">Terms of Service</a></li>
-                <li><a href="politics.html#Privacy">Privacy Policy</a></li>
+                <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+                <li><a href="career.html" data-i18n="career">Careers</a></li>
+                <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+                <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+                <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+                <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
               </ul>
             </div>
     
             <!-- Products -->
             <div class="col-lg-3 col-6 footer-links text-center">
-              <h4>Products</h4>
+              <h4 data-i18n="footer_products">Products</h4>
               <ul>
-                <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
+                <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+                <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+                <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+                <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
               </ul>
             </div>
     
             <!-- Services -->
             <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Services</h4>
+              <h4 data-i18n="footer_services">Services</h4>
               <ul>
-                <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
+                <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+                <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+                <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
               </ul>
             </div>
     
             <!-- Contact Info -->
             <div class="col-lg-2 col-md-6 footer-contact text-center">
-              <h4>Contact Us</h4>
+              <h4 data-i18n="footer_contact">Contact Us</h4>
               <p>
                 Corrientes 800<br>
                 Ciudad Autónoma de Buenos Aires, CP1008<br>
                 Argentina<br>
               </p>
-              <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-              <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-    
-              <!-- Redes Sociales -->
+              <p>
+                <strong data-i18n="footer_phone">Phone:</strong>
+                <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+              </p>
+              <p>
+                <strong data-i18n="footer_email">Email:</strong>
+                <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+              </p>
               <div class="social-links d-flex justify-content-center mt-3">
                 <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -341,11 +465,12 @@
     
       <div class="container copyright text-center mt-4">
         <p>
-          © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-          <span>All Rights Reserved</span>
+          © <span data-i18n="copyright">All Rights Reserved</span>
+          <strong class="px-1 sitename2">Ultra Deep Tech</strong>
         </p>
         <div class="credits">
-          Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+          <span data-i18n="designed_by">Designed by</span>
+          <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
         </div>
       </div>
     </footer>
@@ -374,6 +499,8 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/lang.js" defer></script>
+
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
@@ -398,118 +525,104 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const productLinks = document.querySelectorAll('.product-list a');
-          const productContent = document.getElementById('product-content');
-          const productImg = document.getElementById('product-img');
-      
-          function loadProductContent(productId) {
-            if (productId === 'product-1') {
-              productContent.innerHTML = `
-                <h3>Safety Shield Ultra™</h3>
-                <p><strong>Next-gen defense for conversational AI systems.</strong><br>
-                Safety Shield Ultra™ is an intelligent, real-time security platform specifically engineered to protect virtual assistants and AI chatbots from adversarial attacks and malicious inputs. It continuously monitors AI interactions and instantly blocks suspicious behavior, ensuring privacy and compliance at every step.</p>
+      document.addEventListener('DOMContentLoaded', function () {
+        const lang = localStorage.getItem('site_lang') || 
+                     (['es','en'].includes(navigator.language.slice(0,2)) ? navigator.language.slice(0,2) : 'en');
+    
+        const productLinks   = document.querySelectorAll('.product-list a');
+        const productContent = document.getElementById('product-content');
+        const productImg     = document.getElementById('product-img');
+    
+        function bookCallButton() {
+          return `
+            <div style="margin-top:30px;text-align:center;width:100%;">
+              <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" 
+                 style="display:inline-block;max-width:100%;padding:14px 32px;font-size:18px;">
+                <span class="book-call-content2">
+                  <span data-i18n="book_a_call">${translations[lang].book_a_call}</span>
+                </span>
+                <span class="book-call-hover2"></span>
+              </a>
+            </div>`;
+        }
+    
+        function loadProductContent(productId) {
+          let html = '';
+          switch(productId) {
+            case 'product-1':
+              html = `
+                <h3 data-i18n="product1_title">${translations[lang].product1_title}</h3>
+                <p><strong data-i18n="product1_title">${translations[lang].product1_title}</strong><br>
+                ${translations[lang].product1_desc}</p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> Real-time malicious prompt filtering</li>
-                  <li><i class="bi bi-check-circle"></i> Jailbreak & injection threat prevention</li>
-                  <li><i class="bi bi-check-circle"></i> Continuous anomaly monitoring</li>
-                  <li><i class="bi bi-check-circle"></i> Customizable security controls</li>
-                  <li><i class="bi bi-check-circle"></i> Automated compliance with GDPR, ISO</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_desc}</li>
                 </ul>
-                <div style="margin-top: 30px; text-align: center; width: 100%;">
-                  <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                    <span class="book-call-content2">
-                      <span>Book a Call</span>
-                    </span>
-                    <span class="book-call-hover2"></span>
-                  </a>
-                </div>`;
+                ${bookCallButton()}`;
               productImg.src = 'assets/img/safetyshield.jpg';
-            } else if (productId === 'product-2') {
-              productContent.innerHTML = `
-                <h3>Model Protection Suite</h3>
-                <p><strong>Shield your AI models without sacrificing transparency.</strong><br>
-                Designed for tech teams seeking to safeguard their models’ internal logic while preserving explainability and data confidentiality. The suite leverages cutting-edge anonymization, adversarial defense, and interpretability frameworks to maximize trust and performance.</p>
+              break;
+    
+            case 'product-2':
+              html = `
+                <h3 data-i18n="product2_title">${translations[lang].product2_title}</h3>
+                <p><strong data-i18n="product2_title">${translations[lang].product2_title}</strong><br>
+                ${translations[lang].product2_desc}</p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> Explainability through advanced XAI tools</li>
-                  <li><i class="bi bi-check-circle"></i> Robust data anonymization pipelines</li>
-                  <li><i class="bi bi-check-circle"></i> Adversarial attack prevention</li>
-                  <li><i class="bi bi-check-circle"></i> Full-stack AI security benchmarking</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_desc}</li>
                 </ul>
-                <div style="margin-top: 30px; text-align: center; width: 100%;">
-                  <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                    <span class="book-call-content2">
-                      <span>Book a Call</span>
-                    </span>
-                    <span class="book-call-hover2"></span>
-                  </a>
-                </div>`;
+                ${bookCallButton()}`;
               productImg.src = 'assets/img/model-protection.jpg';
-            } else if (productId === 'product-3') {
-              productContent.innerHTML = `
-                <h3>Enterprise Security</h3>
-                <p><strong>Enterprise-grade protection for high-stakes AI environments.</strong><br>
-                Tailored for large-scale deployments in regulated industries, this solution helps organizations enforce security policies, perform risk assessments, and rapidly respond to threats using AI-driven insights. Ideal for financial institutions, government, and critical infrastructure.</p>
+              break;
+    
+            case 'product-3':
+              html = `
+                <h3 data-i18n="product3_title">${translations[lang].product3_title}</h3>
+                <p><strong data-i18n="product3_title">${translations[lang].product3_title}</strong><br>
+                ${translations[lang].product3_desc}</p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> AI-specific risk evaluations</li>
-                  <li><i class="bi bi-check-circle"></i> Integration with GRC frameworks</li>
-                  <li><i class="bi bi-check-circle"></i> Real-time security monitoring</li>
-                  <li><i class="bi bi-check-circle"></i> Automated incident response with generative AI</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_desc}</li>
                 </ul>
-                <div style="margin-top: 30px; text-align: center; width: 100%;">
-                  <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                    <span class="book-call-content2">
-                      <span>Book a Call</span>
-                    </span>
-                    <span class="book-call-hover2"></span>
-                  </a>
-                </div>`;
+                ${bookCallButton()}`;
               productImg.src = 'assets/img/enterprise-security.jpg';
-            } else if (productId === 'product-4') {
-              productContent.innerHTML = `
-                <h3>Performance Optimization</h3>
-                <p><strong>Boost speed and cut costs—without compromising safety.</strong><br>
-                Performance Optimization delivers measurable gains in AI processing speed, cost-efficiency, and cloud scalability. Ideal for production-grade systems needing to scale intelligently while maintaining top-tier security.</p>
+              break;
+    
+            case 'product-4':
+              html = `
+                <h3 data-i18n="product4_title">${translations[lang].product4_title}</h3>
+                <p><strong data-i18n="product4_title">${translations[lang].product4_title}</strong><br>
+                ${translations[lang].product4_desc}</p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> Production-ready model compression</li>
-                  <li><i class="bi bi-check-circle"></i> Live performance and latency benchmarking</li>
-                  <li><i class="bi bi-check-circle"></i> Cloud resource optimization</li>
-                  <li><i class="bi bi-check-circle"></i> Intelligent cost-saving strategies</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_desc}</li>
                 </ul>
-                <div style="margin-top: 30px; text-align: center; width: 100%;">
-                  <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                    <span class="book-call-content2">
-                      <span>Book a Call</span>
-                    </span>
-                    <span class="book-call-hover2"></span>
-                  </a>
-                </div>`;
+                ${bookCallButton()}`;
               productImg.src = 'assets/img/performance-optimization.jpg';
-            }
+              break;
           }
-      
-          function checkUrlForProduct() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('product')) {
-              const productId = urlParams.get('product');
-              loadProductContent(productId);
-            }
+          productContent.innerHTML = html;
+          // Aplicamos traducciones a los nuevos nodos
+          setLanguage(lang);
+        }
+    
+        function checkUrlForProduct() {
+          const urlParams = new URLSearchParams(window.location.search);
+          if (urlParams.has('product')) {
+            loadProductContent(urlParams.get('product'));
           }
-      
-          productLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-              event.preventDefault();
-              const productId = this.getAttribute('id').replace('-link', '');
-              loadProductContent(productId);
-            });
+        }
+    
+        productLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const productId = this.id.replace('-link','');
+            loadProductContent(productId);
           });
-      
-          checkUrlForProduct();
         });
-      </script>
+    
+        checkUrlForProduct();
+      });
+    </script>
+    
       
-      
-        
+
         
 </body>
 

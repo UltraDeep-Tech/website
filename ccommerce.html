@@ -40,94 +40,182 @@
 
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+            <h1 class="sitename">Ultra Deep Tech</h1>
+          </a>
+      
+          <!-- Menú -->
+          <nav id="navmenu" class="navmenu">
+            <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
+      
+              <!-- About Us -->
+              <li class="dropdown">
+                <a href="about.html" class="nav-link">
+                  <i class="bi bi-info-circle-fill"></i>
+                  <span data-i18n="about_us">About Us</span>
+                </a>
                 <ul>
-                  <!-- About Us -->
-                  <li class="dropdown">
-                    <a href="about.html" class="nav-link">
-                      <i class="bi bi-info-circle-fill"></i>
-                      <span>About Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                      <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                      <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                      <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Products & Solutions -->
-                  <li class="dropdown">
-                    <a href="productsdetails.html" class="nav-link">
-                      <i class="bi bi-box-seam"></i>
-                      <span>Products</span>
-                    </a>
-                    <ul>
-                      <li><a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a></li>
-                      <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                      <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                      <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Services -->
-                  <li class="dropdown">
-                    <a href="service-details.html" class="nav-link">
-                      <i class="bi bi-tools"></i>
-                      <span>Services</span>
-                    </a>
-                    <ul>
-                      <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                      <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                      <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Career -->
-                  <li class="dropdown">
-                    <a href="career.html" class="nav-link">
-                      <i class="bi bi-briefcase-fill"></i>
-                      <span>Career</span>
-                    </a>
-                    <ul>
-                      <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                      <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Contact -->
-                  <li class="dropdown">
-                    <a href="contact.html" class="nav-link">
-                      <i class="bi bi-envelope-fill"></i>
-                      <span>Contact Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                      <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                      <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Book a Call -->
                   <li>
-                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                      <span class="book-call-content"><span>Book a Call</span></span>
-                      <span class="book-call-hover"></span>
+                    <a href="about.html#company-history" class="nav-link">
+                      <i class="bi bi-clock-history"></i>
+                      <span data-i18n="company_history">Company History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="about.html#team" class="nav-link">
+                      <i class="bi bi-people-fill"></i>
+                      <span data-i18n="leadership_team">Leadership Team</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index.html#youtube-videos" class="nav-link">
+                      <i class="bi bi-youtube"></i>
+                      <span data-i18n="youtube_channel">Youtube Channel</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/blog.html" class="nav-link">
+                      <i class="bi bi-pencil-fill"></i>
+                      <span data-i18n="blog_social">Blog &amp; Social Media</span>
                     </a>
                   </li>
                 </ul>
-              </nav>
+              </li>
+      
+              <!-- Products & Solutions -->
+              <li class="dropdown">
+                <a href="productsdetails.html" class="nav-link">
+                  <i class="bi bi-box-seam"></i>
+                  <span data-i18n="products">Products</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="safetyshield.html" class="nav-link">
+                      <i class="bi bi-shield-fill"></i>
+                      <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-1" class="nav-link">
+                      <i class="bi bi-cpu-fill"></i>
+                      <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-2" class="nav-link">
+                      <i class="bi bi-shield-check"></i>
+                      <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="productsdetails.html?product=product-3" class="nav-link">
+                      <i class="bi bi-graph-up-arrow"></i>
+                      <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Services -->
+              <li class="dropdown">
+                <a href="service-details.html" class="nav-link">
+                  <i class="bi bi-tools"></i>
+                  <span data-i18n="services">Services</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="service-details.html?product=product-1" class="nav-link">
+                      <i class="bi bi-gear-fill"></i>
+                      <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-2" class="nav-link">
+                      <i class="bi bi-diagram-3-fill"></i>
+                      <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="service-details.html?product=product-3" class="nav-link">
+                      <i class="bi bi-easel-fill"></i>
+                      <span data-i18n="training_education">Training &amp; Education</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Career -->
+              <li class="dropdown">
+                <a href="career.html" class="nav-link">
+                  <i class="bi bi-briefcase-fill"></i>
+                  <span data-i18n="career">Career</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="career.html#openings" class="nav-link">
+                      <i class="bi bi-person-fill"></i>
+                      <span data-i18n="current_job_openings">Current Job Openings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="career.html#" class="nav-link">
+                      <i class="bi bi-stars"></i>
+                      <span data-i18n="core_values">Core Values</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Contact -->
+              <li class="dropdown">
+                <a href="contact.html" class="nav-link">
+                  <i class="bi bi-envelope-fill"></i>
+                  <span data-i18n="contact_us">Contact Us</span>
+                </a>
+                <ul>
+                  <li>
+                    <a href="contact.html#faqs" class="nav-link">
+                      <i class="bi bi-question-circle-fill"></i>
+                      <span data-i18n="faqs">FAQ's</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#mapa" class="nav-link">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span data-i18n="office_locations">Office Locations</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contact.html#contact" class="nav-link">
+                      <i class="bi bi-chat-dots-fill"></i>
+                      <span data-i18n="chat_with_us">Chat with Us</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+      
+              <!-- Book a Call -->
+              <li>
+                <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+                  <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+                  <span class="book-call-hover"></span>
+                </a>
+              </li>
               
-              
-
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-
+                    <!-- Toggle de idioma -->
+                    <li>
+                        <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                      </li>
+            </ul>
+          </nav>
+      
+          <!-- Toggle móvil -->
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      
         </div>
     </header>
 
@@ -503,19 +591,26 @@
     <footer id="footer" class="footer">
         <div class="footer-top">
           <div class="container">
-            <!-- Se agrega justify-content-center a la fila -->
             <div class="row gy-4 justify-content-center">
+      
               <!-- Company Info -->
               <div class="col-lg-3 col-md-6 footer-about text-center">
-                <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
+                <a
+                  href="index.html"
+                  class="logo d-flex align-items-center justify-content-center mb-3"
+                >
                   <span class="sitename3">Ultra Deep Tech</span>
                 </a>
-                <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-      
-                <!-- Book a Call Button -->
-                <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
+                <p data-i18n="footer_about_text">
+                  Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+                </p>
+                <a
+                  href="https://calendly.com/avipil/30-min"
+                  target="_blank"
+                  class="book-call-btn2 mt-3 d-inline-block"
+                >
                   <span class="book-call-content2">
-                    <span>Book a Call</span>
+                    <span data-i18n="book_a_call">Book a Call</span>
                   </span>
                   <span class="book-call-hover2"></span>
                 </a>
@@ -523,50 +618,54 @@
       
               <!-- Useful Links -->
               <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Useful Links</h4>
+                <h4 data-i18n="useful_links">Useful Links</h4>
                 <ul>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="career.html">Careers</a></li>
-                  <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                  <li><a href="blog.html">Blog & Social Media</a></li>
-                  <li><a href="politics.html#terms">Terms of Service</a></li>
-                  <li><a href="politics.html#Privacy">Privacy Policy</a></li>
+                  <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+                  <li><a href="career.html" data-i18n="career">Careers</a></li>
+                  <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+                  <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+                  <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+                  <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
                 </ul>
               </div>
       
               <!-- Products -->
               <div class="col-lg-3 col-6 footer-links text-center">
-                <h4>Products</h4>
+                <h4 data-i18n="footer_products">Products</h4>
                 <ul>
-                  <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                  <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                  <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                  <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
+                  <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+                  <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+                  <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+                  <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
                 </ul>
               </div>
       
               <!-- Services -->
               <div class="col-lg-2 col-6 footer-links text-center">
-                <h4>Services</h4>
+                <h4 data-i18n="footer_services">Services</h4>
                 <ul>
-                  <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                  <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                  <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
+                  <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+                  <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+                  <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
                 </ul>
               </div>
       
               <!-- Contact Info -->
               <div class="col-lg-2 col-md-6 footer-contact text-center">
-                <h4>Contact Us</h4>
+                <h4 data-i18n="footer_contact">Contact Us</h4>
                 <p>
                   Corrientes 800<br>
                   Ciudad Autónoma de Buenos Aires, CP1008<br>
                   Argentina<br>
                 </p>
-                <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-                <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-      
-                <!-- Redes Sociales -->
+                <p>
+                  <strong data-i18n="footer_phone">Phone:</strong>
+                  <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+                </p>
+                <p>
+                  <strong data-i18n="footer_email">Email:</strong>
+                  <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+                </p>
                 <div class="social-links d-flex justify-content-center mt-3">
                   <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
                   <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -580,11 +679,12 @@
       
         <div class="container copyright text-center mt-4">
           <p>
-            © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-            <span>All Rights Reserved</span>
+            © <span data-i18n="copyright">All Rights Reserved</span>
+            <strong class="px-1 sitename2">Ultra Deep Tech</strong>
           </p>
           <div class="credits">
-            Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+            <span data-i18n="designed_by">Designed by</span>
+            <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
           </div>
         </div>
       </footer>

@@ -45,348 +45,397 @@
 
 <body class="about-page">
 
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+        <h1 class="sitename">Ultra Deep Tech</h1>
+      </a>
+  
+      <!-- Menú -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
 
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
-                <h1 class="sitename">Ultra Deep Tech</h1>
+  
+          <!-- About Us -->
+          <li class="dropdown">
+            <a href="about.html" class="nav-link">
+              <i class="bi bi-info-circle-fill"></i>
+              <span data-i18n="about_us">About Us</span>
             </a>
+            <ul>
+              <li>
+                <a href="about.html#company-history" class="nav-link">
+                  <i class="bi bi-clock-history"></i>
+                  <span data-i18n="company_history">Company History</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html#team" class="nav-link">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="leadership_team">Leadership Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#youtube-videos" class="nav-link">
+                  <i class="bi bi-youtube"></i>
+                  <span data-i18n="youtube_channel">Youtube Channel</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html" class="nav-link">
+                  <i class="bi bi-pencil-fill"></i>
+                  <span data-i18n="blog_social">Blog &amp; Social Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Products & Solutions -->
+          <li class="dropdown">
+            <a href="productsdetails.html" class="nav-link">
+              <i class="bi bi-box-seam"></i>
+              <span data-i18n="products">Products</span>
+            </a>
+            <ul>
+              <li>
+                <a href="safetyshield.html" class="nav-link">
+                  <i class="bi bi-shield-fill"></i>
+                  <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-1" class="nav-link">
+                  <i class="bi bi-cpu-fill"></i>
+                  <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-2" class="nav-link">
+                  <i class="bi bi-shield-check"></i>
+                  <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-3" class="nav-link">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Services -->
+          <li class="dropdown">
+            <a href="service-details.html" class="nav-link">
+              <i class="bi bi-tools"></i>
+              <span data-i18n="services">Services</span>
+            </a>
+            <ul>
+              <li>
+                <a href="service-details.html?product=product-1" class="nav-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-2" class="nav-link">
+                  <i class="bi bi-diagram-3-fill"></i>
+                  <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-3" class="nav-link">
+                  <i class="bi bi-easel-fill"></i>
+                  <span data-i18n="training_education">Training &amp; Education</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Career -->
+          <li class="dropdown">
+            <a href="career.html" class="nav-link">
+              <i class="bi bi-briefcase-fill"></i>
+              <span data-i18n="career">Career</span>
+            </a>
+            <ul>
+              <li>
+                <a href="career.html#openings" class="nav-link">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="current_job_openings">Current Job Openings</span>
+                </a>
+              </li>
+              <li>
+                <a href="career.html#" class="nav-link">
+                  <i class="bi bi-stars"></i>
+                  <span data-i18n="core_values">Core Values</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Contact -->
+          <li class="dropdown">
+            <a href="contact.html" class="nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span data-i18n="contact_us">Contact Us</span>
+            </a>
+            <ul>
+              <li>
+                <a href="contact.html#faqs" class="nav-link">
+                  <i class="bi bi-question-circle-fill"></i>
+                  <span data-i18n="faqs">FAQ's</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#mapa" class="nav-link">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="office_locations">Office Locations</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#contact" class="nav-link">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span data-i18n="chat_with_us">Chat with Us</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Book a Call -->
+          <li>
+            <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+              <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+              <span class="book-call-hover"></span>
+            </a>
+          </li>
+          
+                <!-- Toggle de idioma -->
+                <li>
+                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                  </li>
+        </ul>
+      </nav>
+  
+      <!-- Toggle móvil -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
+    </div>
+</header>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                  <!-- About Us -->
-                  <li class="dropdown">
-                    <a href="about.html" class="nav-link">
-                      <i class="bi bi-info-circle-fill"></i>
-                      <span>About Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="about.html#company-history" class="nav-link"><i class="bi bi-clock-history"></i><span>Company History</span></a></li>
-                      <li><a href="about.html#team" class="nav-link"><i class="bi bi-people-fill"></i><span>Leadership Team</span></a></li>
-                      <li><a href="index.html#youtube-videos" class="nav-link"><i class="bi bi-youtube"></i><span>Youtube Channel</span></a></li>
-                      <li><a href="/blog.html" class="nav-link"><i class="bi bi-pencil-fill"></i><span>Blog & Social Media</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Products & Solutions -->
-                  <li class="dropdown">
-                    <a href="productsdetails.html" class="nav-link">
-                      <i class="bi bi-box-seam"></i>
-                      <span>Products</span>
-                    </a>
-                    <ul>
-                      <li><a href="safetyshield.html" class="nav-link"><img src="/assets/img/favicon_copia.webp" class="logo-header"><span>Safety Shield Ultra™</span></a></li>
-                      <li><a href="productsdetails.html?product=product-1" class="nav-link"><i class="bi bi-cpu-fill"></i><span>AI Model Protection Suite</span></a></li>
-                      <li><a href="productsdetails.html?product=product-2" class="nav-link"><i class="bi bi-shield-check"></i><span>Enterprise AI Security</span></a></li>
-                      <li><a href="productsdetails.html?product=product-3" class="nav-link"><i class="bi bi-graph-up-arrow"></i><span>AI Performance Optimization</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Services -->
-                  <li class="dropdown">
-                    <a href="service-details.html" class="nav-link">
-                      <i class="bi bi-tools"></i>
-                      <span>Services</span>
-                    </a>
-                    <ul>
-                      <li><a href="service-details.html?product=product-1" class="nav-link"><i class="bi bi-gear-fill"></i><span>AI Security Assessment & Strategy</span></a></li>
-                      <li><a href="service-details.html?product=product-2" class="nav-link"><i class="bi bi-diagram-3-fill"></i><span>Implementation & Architecture</span></a></li>
-                      <li><a href="service-details.html#product=product-3" class="nav-link"><i class="bi bi-easel-fill"></i><span>Training & Education</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Career -->
-                  <li class="dropdown">
-                    <a href="career.html" class="nav-link">
-                      <i class="bi bi-briefcase-fill"></i>
-                      <span>Career</span>
-                    </a>
-                    <ul>
-                      <li><a href="career.html#openings" class="nav-link"><i class="bi bi-person-fill"></i><span>Current Job Openings</span></a></li>
-                      <li><a href="career.html#" class="nav-link"><i class="bi bi-stars"></i><span>Core Values</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Contact -->
-                  <li class="dropdown">
-                    <a href="contact.html" class="nav-link">
-                      <i class="bi bi-envelope-fill"></i>
-                      <span>Contact Us</span>
-                    </a>
-                    <ul>
-                      <li><a href="contact.html#faqs" class="nav-link"><i class="bi bi-question-circle-fill"></i><span>FAQ's</span></a></li>
-                      <li><a href="contact.html#mapa" class="nav-link"><i class="bi bi-geo-alt-fill"></i><span>Office Locations</span></a></li>
-                      <li><a href="contact.html#contact" class="nav-link"><i class="bi bi-chat-dots-fill"></i><span>Chat with Us</span></a></li>
-                    </ul>
-                  </li>
-              
-                  <!-- Book a Call -->
-                  <li>
-                    <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
-                      <span class="book-call-content"><span>Book a Call</span></span>
-                      <span class="book-call-hover"></span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              
-              
+<main class="main">
 
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  <!-- Page Title -->
+  <div class="page-title" data-aos="fade" style="background-image: url(assets/img/4\ \(1\).png);">
+    <div class="container">
+      <h1 data-i18n="about_page_title">About</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li class="current" data-i18n="about_page_current">About</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
 
+  <!-- Company History Section -->
+  <section id="company-history" class="about section">
+    <div class="container">
+      <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6">
+          <img src="assets/img/about-page-title-bg.jpg" class="img-fluid historia" alt="">
         </div>
-    </header>
-
-    <main class="main">
-
-        <!-- Page Title -->
-        <div class="page-title" data-aos="fade" style="background-image: url(assets/img/4\ \(1\).png);">
-            <div class="container">
-                <h1>About</h1>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current">About</li>
-                    </ol>
-                </nav>
-            </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="content">
+            <h3 data-i18n="company_history_title">Company History</h3>
+            <p data-i18n="company_history_p1">
+              Ultra Deep Tech was founded in 2023 by security professionals and AI specialists with 15+ years of combined experience in enterprise AI. Our founders witnessed the security gaps as organizations adopted AI without adequate protection. Drawing from backgrounds securing critical systems at Fortune 500 companies and addressing vulnerabilities in early machine learning implementations, we established Ultra Deep Tech to secure AI across enterprise environments.
+            </p>
+            <p data-i18n="company_history_p2">
+              Our leadership team has navigated AI security challenges since the early deep learning boom, giving us insight into current and emerging threats. We leverage this technical knowledge to address the full spectrum of AI vulnerabilities—from model poisoning to prompt injection to data exfiltration—with the urgency modern enterprises require.
+            </p>
+          </div>
         </div>
-        <!-- End Page Title -->
+      </div>
+    </div>
+  </section>
+  <!-- /Company History Section -->
 
-        <!-- Company History Section -->
-        <section id="company-history" class="about section">
-            <div class="container">
-                <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-6">
-                        <img src="assets/img/about-page-title-bg.jpg" class="img-fluid historia" alt="">
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="content">
-                            <h3>Company History</h3>
-                            <p>
-                                Ultra Deep Tech was founded in 2023 by security professionals and AI specialists with 15+ years of combined experience in enterprise AI. Our founders witnessed the security gaps as organizations adopted AI without adequate protection. Drawing from backgrounds
-                                securing critical systems at Fortune 500 companies and addressing vulnerabilities in early machine learning implementations, we established Ultra Deep Tech to secure AI across enterprise environments. </p>
-                            <p>Our leadership team has navigated AI security challenges since the early deep learning boom, giving us insight into current and emerging threats. We leverage this technical knowledge to address the full spectrum of AI vulnerabilities—from
-                                model poisoning to prompt injection to data exfiltration—with the urgency modern enterprises require. </p>
-                        </div>
-                    </div>
-                </div>
+  <!-- Brands Section -->
+  <div class="container">
+    <div class="section-title">
+      <h2 class="mt-5 mb-4 text-center brands" data-i18n="brands_title">Brands that trust us</h2>
+    </div>
+    <div class="clients-container">
+      <div class="clients-wrapper">
+        <div class="clients-container">
+          <div class="clients-wrapper">
+              <img src="assets/img/Piere.svg" alt="Piere" class="clients">
+              <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients">
+              <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients">
+              <img src="assets/img/ailert.png" alt="Ailert" class="clients">
+              <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients">
+              <img src="assets/img/wakapi.png" alt="Wakapi" class="clients">
+
+              <!-- Duplicamos los logos para crear el efecto de carrusel continuo -->
+              <img src="assets/img/Piere.svg" alt="Piere" class="clients">
+              <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients">
+              <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients">
+              <img src="assets/img/ailert.png" alt="Ailert" class="clients">
+              <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients">
+              <img src="assets/img/wakapi.png" alt="Wakapi" class="clients">
             </div>
-        </section>
-        <!-- /Company History Section -->
+          </div>
+        </div>
+    </div>
 
-        <!-- Values and Ethics Section -->
-        <!-- <section id="values-ethics" class="about section">
-            <div class="container">
-                <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="content">
-                            <h3>Values and Ethics</h3>
-                            <p>
-                                At Ultra Deep Tech, we are committed to upholding the highest standards of ethics and integrity. Our core values—innovation, customer-centricity, transparency, and societal impact—guide us in every endeavor. </p>
-                            <ul>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Innovation: We constantly strive to push the boundaries of technology, pioneering new solutions that lead the industry forward.</span></li>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Customer-Centricity: Our clients' needs are at the forefront of everything we do, ensuring we deliver tailored solutions and exceptional service.
-                </span></li>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Transparency: We maintain openness and honesty in all interactions, fostering trust with our clients, partners, and stakeholders.
-                </span></li>
-                                <li><i class="bi bi-check-circle-fill"></i> <span>Societal Impact: Beyond business success, we aim to make a positive contribution to society through our innovative technologies.
-                </span></li>
-                            </ul>
-                            <p>
-                                At Ultra Deep Tech, we are committed to upholding the highest standards of ethics and integrity. Our core values—innovation, customer-centricity, transparency, and societal impact—guide us in every endeavor. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- /Values and Ethics Section -->
-
-
-        <div class="container">
+    <!-- Team Section -->
+    <section id="team" class="team section">
+      <div class="container">
+        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
             <div class="section-title">
-
-                <h2 class="mt-5 mb-4 text-center brands">Brands that trust us</h2>
-                <!-- <p class="justify-content-center text-center">At Ultra Deep Tech, we are proud to be a trusted partner for leading brands across industries. These visionary companies rely on our innovative solutions and expertise to drive their technological advancements and achieve their goals.</p> -->
-
+              <h2 data-i18n="leadership_team_title">Leadership Team</h2>
             </div>
-            <div class="clients-container">
-                <div class="clients-wrapper">
-                    <img src="assets/img/Piere.svg" alt="Piere" class="clients">
-                    <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients">
-                    <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients">
-                    <img src="assets/img/ailert.png" alt="Ailert" class="clients">
-                    <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients">
-                    <img src="assets/img/wakapi.png" alt="Wakapi" class="clients">
+          </div>
+        </div>
+      </div>
 
-                    <!-- Duplicamos los logos para crear el efecto de carrusel continuo -->
-                    <img src="assets/img/Piere.svg" alt="Piere" class="clients">
-                    <img src="assets/img/motorola solutions.jpg" alt="Motorola Solutions" class="clients">
-                    <img src="assets/img/wiselayer.png" alt="wiselayer" class="clients">
-                    <img src="assets/img/ailert.png" alt="Ailert" class="clients">
-                    <img src="assets/img/the fitting room.png" alt="The fitting room" class="clients">
-                    <img src="assets/img/wakapi.png" alt="Wakapi" class="clients">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Member Avi -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/Avi Pilcer.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/avipil/"><i class="bi bi-linkedin"></i></a>
                 </div>
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="avi_pilcer_name">Avi Pilcer</h4>
+                <p data-i18n="avi_pilcer_role">CEO and Chief Scientist</p>
+                <span data-i18n="avi_pilcer_bio">AI expert, ex-Israeli intelligence. Drives advancements in AI and cybersecurity.</span>
+              </div>
             </div>
-
-
-            <!-- Team Section -->
-            <section id="team" class="team section">
-
-                <!-- Section Title -->
-                <div class="container">
-                    <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <h2>Leadership Team</h2>
-                                <!-- <p>Meet the visionary leaders guiding Ultra Deep Tech.</p> -->
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <!-- Member Guido -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/Guido Galicer.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/guido-galicer/"><i class="bi bi-linkedin"></i></a>
                 </div>
-                <!-- /Section Title -->
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="guido_galicer_name">Guido Galicer</h4>
+                <p data-i18n="guido_galicer_role">Product / Strategy</p>
+                <span data-i18n="guido_galicer_bio">Founder of Habla Agency. Proven track record in marketing companies to multi-million dollar valuations. Strategist with strong education and global perspective.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Member Karla -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/Karla Lemoine.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/karla-lemoine-2393a433/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="karla_lemoine_name">Karla Lemoine</h4>
+                <p data-i18n="karla_lemoine_role">Legal and Operations Lead</p>
+                <span data-i18n="karla_lemoine_bio">Law and HR expert. Ensures regulatory compliance and operational efficiency. Strong communicator.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Member Sasha -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/Sasha Daich.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/sasha-daich/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="sasha_daich_name">Sasha Daich</h4>
+                <p data-i18n="sasha_daich_role">VP Business Development</p>
+                <span data-i18n="sasha_daich_bio">7.18× revenue generation in 2.5 years at Forter, now at a valuation of $3.3 B. Expert in strategic growth and market expansion.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Member Maximilian -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/maxi acri.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/maximilianoeacri/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="maximilian_acri_name">Maximilian Acri</h4>
+                <p data-i18n="maximilian_acri_role">Tech Lead</p>
+                <span data-i18n="maximilian_acri_bio">Technology expert. Developed numerous applications and platforms serving millions daily. Leads with technical mastery.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Member Luciano -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/luciano camano.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/luciano-camano-0996822b4/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4 data-i18n="luciano_camano_name">Luciano Camano</h4>
+                <p data-i18n="luciano_camano_role">Strategic Partnerships Manager</p>
+                <span data-i18n="luciano_camano_bio">Brings extensive expertise in enterprise AI security solutions, forging high-impact relationships with industry leaders in highly regulated organizations.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Team Section -->
 
-                <!-- Team Members -->
-                <section id="team" class="team section">
+  </div>
 
-                    <div class="container">
+</main>
 
-                        <div class="row gy-4">
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/Avi Pilcer.png" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/avipil/"><i class="bi bi-linkedin"></i></a> </div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Avi Pilcer</h4>
-                                        <p>CEO and Chief Scientist</p>
-                                        <span>AI expert, ex-Israeli intelligence. Drives advancements in AI and cybersecurity.                  </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-
-
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/Guido Galicer.jpg" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/guido-galicer/"><i class="bi bi-linkedin"></i></a></div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Guido Galicer</h4>
-                                        <p>Product / Strategy</p>
-                                        <span>Founder of Habla Agency. Proven track record in marketing companies to multi-million dollar valuations. Strategist with strong education and global perspective.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/Karla Lemoine.jpeg" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/karla-lemoine-2393a433/"><i class="bi bi-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Karla Lemoine</h4>
-                                        <p> Legal and operations Lead</p>
-                                        <span>Law and HR expert. Ensures regulatory compliance and operational efficiency. Strong communicator.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/Sasha Daich.jpeg" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/sasha-daich/"><i class="bi bi-linkedin"></i></a> </div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Sasha Daich</h4>
-                                        <p>VP business development</p>
-                                        <span>7.18X revenue generation in 2.5 years at Forter, now at a valuation of $3.3B. Expert in strategic growth and market expansion.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/maxi acri.png" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/maximilianoeacri/"><i class="bi bi-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Maximilian Acri</h4>
-                                        <p>Tech Lead</p>
-                                        <span>Technology expert. Developed numerous applications and platforms serving millions daily. Leads with technical mastery.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-
-                            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                                <div class="team-member">
-                                    <div class="member-img">
-                                        <img src="assets/img/team/luciano camano.png" class="img-fluid" alt="">
-                                        <div class="social">
-                                            <a href="https://www.linkedin.com/in/luciano-camano-0996822b4/"><i class="bi bi-linkedin"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="member-info">
-                                        <h4>Luciano Camano</h4>
-                                        <p>Strategic Partnerships Manager</p>
-                                        <span>Brings extensive expertise in enterprise AI security solutions, forging high-impact relationships with industry leaders in highly regulated organizations.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Team Member -->
-                        </div>
-
-                    </div>
-
-                </section>
-                <!-- /Team Section -->
-
-
-            </section>
-            <!-- /Team Section -->
-
-    </main>
     <!-- End #main -->
     <footer id="footer" class="footer">
       <div class="footer-top">
         <div class="container">
-          <!-- Se agrega justify-content-center a la fila -->
           <div class="row gy-4 justify-content-center">
+    
             <!-- Company Info -->
             <div class="col-lg-3 col-md-6 footer-about text-center">
-              <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
+              <a
+                href="index.html"
+                class="logo d-flex align-items-center justify-content-center mb-3"
+              >
                 <span class="sitename3">Ultra Deep Tech</span>
               </a>
-              <p>Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.</p>
-    
-              <!-- Book a Call Button -->
-              <a href="https://calendly.com/avipil/30-min" target="_blank" class="book-call-btn2 mt-3 d-inline-block">
+              <p data-i18n="footer_about_text">
+                Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+              </p>
+              <a
+                href="https://calendly.com/avipil/30-min"
+                target="_blank"
+                class="book-call-btn2 mt-3 d-inline-block"
+              >
                 <span class="book-call-content2">
-                  <span>Book a Call</span>
+                  <span data-i18n="book_a_call">Book a Call</span>
                 </span>
                 <span class="book-call-hover2"></span>
               </a>
@@ -394,50 +443,54 @@
     
             <!-- Useful Links -->
             <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Useful Links</h4>
+              <h4 data-i18n="useful_links">Useful Links</h4>
               <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="career.html">Careers</a></li>
-                <li><a href="index.html#youtube-videos">YouTube Channel</a></li>
-                <li><a href="blog.html">Blog & Social Media</a></li>
-                <li><a href="politics.html#terms">Terms of Service</a></li>
-                <li><a href="politics.html#Privacy">Privacy Policy</a></li>
+                <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+                <li><a href="career.html" data-i18n="career">Careers</a></li>
+                <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+                <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+                <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+                <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
               </ul>
             </div>
     
             <!-- Products -->
             <div class="col-lg-3 col-6 footer-links text-center">
-              <h4>Products</h4>
+              <h4 data-i18n="footer_products">Products</h4>
               <ul>
-                <li><a href="safetyshield.html">Safety Shield Ultra™</a></li>
-                <li><a href="productsdetails.html?product=product-1">AI Model Protection Suite</a></li>
-                <li><a href="productsdetails.html?product=product-2">Enterprise AI Security</a></li>
-                <li><a href="productsdetails.html?product=product-3">AI Performance Optimization</a></li>
+                <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+                <li><a href="productsdetails.html?product=product-1" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+                <li><a href="productsdetails.html?product=product-2" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+                <li><a href="productsdetails.html?product=product-3" data-i18n="performance_optimization">AI Performance Optimization</a></li>
               </ul>
             </div>
     
             <!-- Services -->
             <div class="col-lg-2 col-6 footer-links text-center">
-              <h4>Services</h4>
+              <h4 data-i18n="footer_services">Services</h4>
               <ul>
-                <li><a href="service-details.html?service=1">AI Security Assessment &amp; Strategy</a></li>
-                <li><a href="service-details.html?service=2">Implementation &amp; Architecture</a></li>
-                <li><a href="service-details.html?service=3">Training &amp; Education</a></li>
+                <li><a href="service-details.html?service=1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+                <li><a href="service-details.html?service=2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+                <li><a href="service-details.html?service=3" data-i18n="training_education">Training &amp; Education</a></li>
               </ul>
             </div>
     
             <!-- Contact Info -->
             <div class="col-lg-2 col-md-6 footer-contact text-center">
-              <h4>Contact Us</h4>
+              <h4 data-i18n="footer_contact">Contact Us</h4>
               <p>
                 Corrientes 800<br>
                 Ciudad Autónoma de Buenos Aires, CP1008<br>
                 Argentina<br>
               </p>
-              <p><strong>Phone:</strong> <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 76455965</a></p>
-              <p><strong>Email:</strong> <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a></p>
-    
-              <!-- Redes Sociales -->
+              <p>
+                <strong data-i18n="footer_phone">Phone:</strong>
+                <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+              </p>
+              <p>
+                <strong data-i18n="footer_email">Email:</strong>
+                <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+              </p>
               <div class="social-links d-flex justify-content-center mt-3">
                 <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -451,11 +504,12 @@
     
       <div class="container copyright text-center mt-4">
         <p>
-          © <span>Copyright</span> <strong class="px-1 sitename2">Ultra Deep Tech</strong>
-          <span>All Rights Reserved</span>
+          © <span data-i18n="copyright">All Rights Reserved</span>
+          <strong class="px-1 sitename2">Ultra Deep Tech</strong>
         </p>
         <div class="credits">
-          Designed by <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+          <span data-i18n="designed_by">Designed by</span>
+          <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
         </div>
       </div>
     </footer>
@@ -466,11 +520,7 @@
         <button id="deny-cookies">Deny</button>
     </div>
 
-
-
-
-
-
+    
 
     <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -487,6 +537,8 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/lang.js" defer></script>
+
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
