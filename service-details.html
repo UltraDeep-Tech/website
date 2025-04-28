@@ -40,7 +40,26 @@
 
         gtag('config', 'G-LD1QMH1MRS');
     </script>
-
+<style>  
+  /* Language toggle button – minimal & subtle */
+  #lang-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+    font-size: 0.9rem;
+    margin-left: 35px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  #lang-toggle:hover,
+  #lang-toggle:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+      </style>
 </head>
 
 <body class="product-details-page">
@@ -502,96 +521,105 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const productLinks = document.querySelectorAll('.product-list a');
-        const productContent = document.getElementById('product-content');
-        const productImg = document.getElementById('product-img');
-    
-        function loadProductContent(productId) {
-          if (productId === 'product-1') {
-            productContent.innerHTML = `
-              <h3 data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</h3>
-              <p data-i18n="ai_assessment_desc">Security evaluation and strategic planning for AI systems. Our team conducts assessments and develops security strategies.</p>
-              <ul style="list-style: none; padding-left: 0; text-align: center;">
-                <li data-i18n="assessment_feature1">Vulnerability Assessment</li>
-                <li data-i18n="assessment_feature2">Security Analysis</li>
-                <li data-i18n="assessment_feature3">Compliance Management</li>
-                <li data-i18n="assessment_feature4">Executive Consulting</li>
-              </ul>
-              <div style="margin-top: 30px; text-align: center; width: 100%;">
-                <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                  <span class="book-call-content2">
-                    <span data-i18n="book_a_call">Book a Call</span>
-                  </span>
-                  <span class="book-call-hover2"></span>
-                </a>
-              </div>
-            `;
-            productImg.src = 'assets/img/blog/blog-1.jpg';
-          } else if (productId === 'product-2') {
-            productContent.innerHTML = `
-              <h3 data-i18n="implementation">Implementation &amp; Architecture</h3>
-              <p data-i18n="implementation_desc">Design and implementation of secure AI architectures. We ensure your infrastructure is built and maintained securely.</p>
-              <ul style="list-style: none; padding-left: 0; text-align: center;">
-                <li data-i18n="impl_feature1">Security Architecture</li>
-                <li data-i18n="impl_feature2">Controls Deployment</li>
-                <li data-i18n="impl_feature3">Integration Planning</li>
-                <li data-i18n="impl_feature4">Access Management</li>
-                <li data-i18n="impl_feature5">Security Monitoring</li>
-                <li data-i18n="impl_feature6">Incident Response</li>
-                <li data-i18n="impl_feature7">Performance Analytics</li>
-              </ul>
-              <div style="margin-top: 30px; text-align: center; width: 100%;">
-                <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                  <span class="book-call-content2">
-                    <span data-i18n="book_a_call">Book a Call</span>
-                  </span>
-                  <span class="book-call-hover2"></span>
-                </a>
-              </div>
-            `;
-            productImg.src = 'assets/img/blog/blog-3.jpg';
-          } else if (productId === 'product-3') {
-            productContent.innerHTML = `
-              <h3 data-i18n="training_education">Training &amp; Education</h3>
-              <p data-i18n="training_education_desc">Training programs to build your team's AI security expertise, from basics to advanced practices.</p>
-              <ul style="list-style: none; padding-left: 0; text-align: center;">
-                <li data-i18n="train_feature1">Custom Training</li>
-                <li data-i18n="train_feature2">Hands-on Workshops</li>
-                <li data-i18n="train_feature3">Security Best Practices</li>
-                <li data-i18n="train_feature4">Team Certification</li>
-              </ul>
-              <div style="margin-top: 30px; text-align: center; width: 100%;">
-                <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" style="display: inline-block; max-width: 100%; padding: 14px 32px; font-size: 18px;">
-                  <span class="book-call-content2">
-                    <span data-i18n="book_a_call">Book a Call</span>
-                  </span>
-                  <span class="book-call-hover2"></span>
-                </a>
-              </div>
-            `;
-            productImg.src = 'assets/img/GenAI Safety.jpg';
-          }
+        const lang = localStorage.getItem('site_lang') ||
+          (['es','en'].includes(navigator.language.slice(0,2)) ? navigator.language.slice(0,2) : 'en');
+      
+        const serviceLinks   = document.querySelectorAll('.product-list a');
+        const serviceContent = document.getElementById('product-content');
+        const serviceImg     = document.getElementById('product-img');
+      
+        function bookCallButton() {
+          return `
+            <div style="margin-top:30px;text-align:center;width:100%;">
+              <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank"
+                 style="display:inline-block;max-width:100%;padding:14px 32px;font-size:18px;">
+                <span class="book-call-content2">
+                  <span data-i18n="book_a_call">${translations[lang].book_a_call}</span>
+                </span>
+                <span class="book-call-hover2"></span>
+              </a>
+            </div>`;
         }
-    
-        function checkUrlForProduct() {
+      
+        function loadServiceContent(serviceId) {
+          let html = '';
+          let imgSrc = '';
+      
+          switch (serviceId) {
+            case 'product-1': // AI Security Assessment
+              html = `
+                <h3 data-i18n="ai_assessment">${translations[lang].ai_assessment}</h3>
+                <p data-i18n="ai_assessment_desc">${translations[lang].ai_assessment_desc}</p>
+                <ul style="list-style:none;padding:0;text-align:center;">
+                  <li data-i18n="service1_feat1">${translations[lang].service1_feat1}</li>
+                  <li data-i18n="service1_feat2">${translations[lang].service1_feat2}</li>
+                  <li data-i18n="service1_feat3">${translations[lang].service1_feat3}</li>
+                  <li data-i18n="service1_feat4">${translations[lang].service1_feat4}</li>
+                </ul>
+                ${bookCallButton()}`;
+              imgSrc = 'assets/img/blog/blog-1.jpg';
+              break;
+      
+            case 'product-2': // Implementation & Architecture
+              html = `
+                <h3 data-i18n="implementation">${translations[lang].implementation}</h3>
+                <p data-i18n="implementation_desc">${translations[lang].implementation_desc}</p>
+                <ul style="list-style:none;padding:0;text-align:center;">
+                  <li data-i18n="service2_feat1">${translations[lang].service2_feat1}</li>
+                  <li data-i18n="service2_feat2">${translations[lang].service2_feat2}</li>
+                  <li data-i18n="service2_feat3">${translations[lang].service2_feat3}</li>
+                  <li data-i18n="service2_feat4">${translations[lang].service2_feat4}</li>
+                  <li data-i18n="service2_feat5">${translations[lang].service2_feat5}</li>
+                  <li data-i18n="service2_feat6">${translations[lang].service2_feat6}</li>
+                  <li data-i18n="service2_feat7">${translations[lang].service2_feat7}</li>
+                </ul>
+                ${bookCallButton()}`;
+              imgSrc = 'assets/img/blog/blog-3.jpg';
+              break;
+      
+            case 'product-3': // Training & Education
+              html = `
+                <h3 data-i18n="training_education">${translations[lang].training_education}</h3>
+                <p data-i18n="training_education_desc">${translations[lang].training_education_desc}</p>
+                <ul style="list-style:none;padding:0;text-align:center;">
+                  <li data-i18n="service3_feat1">${translations[lang].service3_feat1}</li>
+                  <li data-i18n="service3_feat2">${translations[lang].service3_feat2}</li>
+                  <li data-i18n="service3_feat3">${translations[lang].service3_feat3}</li>
+                  <li data-i18n="service3_feat4">${translations[lang].service3_feat4}</li>
+                </ul>
+                ${bookCallButton()}`;
+              imgSrc = 'assets/img/GenAI Safety.jpg';
+              break;
+      
+            default:
+              html = `<p>${translations[lang].product_details_placeholder}</p>`;
+              imgSrc = '';
+          }
+      
+          serviceContent.innerHTML = html;
+          serviceImg.src = imgSrc;
+          setLanguage(lang);
+        }
+      
+        function checkUrlForService() {
           const urlParams = new URLSearchParams(window.location.search);
           if (urlParams.has('product')) {
-            const productId = urlParams.get('product');
-            loadProductContent(productId);
+            loadServiceContent(urlParams.get('product'));
           }
         }
-    
-        productLinks.forEach(link => {
-          link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const productId = this.getAttribute('id').replace('-link', '');
-            loadProductContent(productId);
+      
+        serviceLinks.forEach(link => {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = this.id.replace('-link','');
+            loadServiceContent(id);
           });
         });
-    
-        checkUrlForProduct();
+      
+        checkUrlForService();
       });
-    </script>
+      </script>
+      
     
     
 

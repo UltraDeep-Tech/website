@@ -3146,13 +3146,13 @@ section .row {
 
 /* Language toggle button – minimal & subtle */
 #lang-toggle {
-  width:70px;
   background: none;
   border: none;
   color: var(--nav-color);
   font-family: var(--nav-font);
   font-size: 0.9rem;
   margin-left: 35px;
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
   transition: color 0.3s ease;
 }

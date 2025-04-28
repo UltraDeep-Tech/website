@@ -40,9 +40,26 @@
 
         gtag('config', 'G-LD1QMH1MRS');
     </script>
-<style>
-
-</style>
+<style>  
+  /* Language toggle button – minimal & subtle */
+  #lang-toggle {
+    background: none;
+    border: none;
+    color: var(--nav-color);
+    font-family: var(--nav-font);
+    font-size: 0.9rem;
+    margin-left: 35px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  #lang-toggle:hover,
+  #lang-toggle:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+      </style>
 </head>
 
 <body class="product-details-page">
@@ -237,7 +254,7 @@
       <nav class="breadcrumbs">
         <ol>
           <li><a href="index.html" data-i18n="home">Home</a></li>
-          <li class="current" data-i18n="product_details_current">Product Details</li>
+          <li class="current" data-i18n="product_details_title">Product Details</li>
         </ol>
       </nav>
     </div>
@@ -526,8 +543,8 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const lang = localStorage.getItem('site_lang') || 
-                     (['es','en'].includes(navigator.language.slice(0,2)) ? navigator.language.slice(0,2) : 'en');
+        const lang = localStorage.getItem('site_lang') ||
+          (['es','en'].includes(navigator.language.slice(0,2)) ? navigator.language.slice(0,2) : 'en');
     
         const productLinks   = document.querySelectorAll('.product-list a');
         const productContent = document.getElementById('product-content');
@@ -536,7 +553,7 @@
         function bookCallButton() {
           return `
             <div style="margin-top:30px;text-align:center;width:100%;">
-              <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank" 
+              <a href="https://calendly.com/avipil/30-min" class="book-call-btn2" target="_blank"
                  style="display:inline-block;max-width:100%;padding:14px 32px;font-size:18px;">
                 <span class="book-call-content2">
                   <span data-i18n="book_a_call">${translations[lang].book_a_call}</span>
@@ -548,57 +565,82 @@
     
         function loadProductContent(productId) {
           let html = '';
-          switch(productId) {
+          switch (productId) {
             case 'product-1':
               html = `
-                <h3 data-i18n="product1_title">${translations[lang].product1_title}</h3>
-                <p><strong data-i18n="product1_title">${translations[lang].product1_title}</strong><br>
-                ${translations[lang].product1_desc}</p>
+                <h3 data-i18n="product1_content_title">${translations[lang].product1_content_title}</h3>
+                <p>
+                  <strong data-i18n="product1_highlight">${translations[lang].product1_highlight}</strong><br>
+                  ${translations[lang].product1_content_desc}
+                </p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_desc}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_feat1}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_feat2}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_feat3}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_feat4}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product1_feat5}</li>
                 </ul>
                 ${bookCallButton()}`;
-              productImg.src = 'assets/img/safetyshield.jpg';
+              productImg.src = 'assets/img/safetyshield.png';
               break;
     
             case 'product-2':
               html = `
-                <h3 data-i18n="product2_title">${translations[lang].product2_title}</h3>
-                <p><strong data-i18n="product2_title">${translations[lang].product2_title}</strong><br>
-                ${translations[lang].product2_desc}</p>
+                <h3 data-i18n="product2_content_title">${translations[lang].product2_content_title}</h3>
+                <p>
+                  <strong data-i18n="product2_highlight">${translations[lang].product2_highlight}</strong><br>
+                  ${translations[lang].product2_content_desc}
+                </p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_desc}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_feat1}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_feat2}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_feat3}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product2_feat4}</li>
                 </ul>
                 ${bookCallButton()}`;
-              productImg.src = 'assets/img/model-protection.jpg';
+              productImg.src = 'assets/img/model-protection.png';
               break;
     
             case 'product-3':
               html = `
-                <h3 data-i18n="product3_title">${translations[lang].product3_title}</h3>
-                <p><strong data-i18n="product3_title">${translations[lang].product3_title}</strong><br>
-                ${translations[lang].product3_desc}</p>
+                <h3 data-i18n="product3_content_title">${translations[lang].product3_content_title}</h3>
+                <p>
+                  <strong data-i18n="product3_highlight">${translations[lang].product3_highlight}</strong><br>
+                  ${translations[lang].product3_content_desc}
+                </p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_desc}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_feat1}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_feat2}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_feat3}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product3_feat4}</li>
                 </ul>
                 ${bookCallButton()}`;
-              productImg.src = 'assets/img/enterprise-security.jpg';
+              productImg.src = 'assets/img/enterprise-security.png';
               break;
     
             case 'product-4':
               html = `
-                <h3 data-i18n="product4_title">${translations[lang].product4_title}</h3>
-                <p><strong data-i18n="product4_title">${translations[lang].product4_title}</strong><br>
-                ${translations[lang].product4_desc}</p>
+                <h3 data-i18n="product4_content_title">${translations[lang].product4_content_title}</h3>
+                <p>
+                  <strong data-i18n="product4_highlight">${translations[lang].product4_highlight}</strong><br>
+                  ${translations[lang].product4_content_desc}
+                </p>
                 <ul>
-                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_desc}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_feat1}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_feat2}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_feat3}</li>
+                  <li><i class="bi bi-check-circle"></i> ${translations[lang].product4_feat4}</li>
                 </ul>
                 ${bookCallButton()}`;
-              productImg.src = 'assets/img/performance-optimization.jpg';
+              productImg.src = 'assets/img/performance-optimization.png';
               break;
+    
+            default:
+              html = `<p>${translations[lang].product_details_placeholder}</p>`;
+              productImg.src = '';
           }
+    
           productContent.innerHTML = html;
-          // Aplicamos traducciones a los nuevos nodos
           setLanguage(lang);
         }
     
@@ -620,6 +662,7 @@
         checkUrlForProduct();
       });
     </script>
+    
     
       
 
