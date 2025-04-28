@@ -139,7 +139,7 @@ const translations = {
     product1_feat3:          "Continuous anomaly monitoring",
     product1_feat4:          "Customizable security controls",
     product1_feat5:          "Automated compliance with GDPR, ISO",
-
+    product1_default_core_label: "Core Solutions:",
     product2_content_title:  "Model Protection Suite",
     product2_content_desc:   "Designed for tech teams seeking to safeguard their models’ internal logic while preserving explainability and data confidentiality. The suite leverages cutting-edge anonymization, adversarial defense, and interpretability frameworks to maximize trust and performance.",
     product2_feat1:          "Explainability through advanced XAI tools",
@@ -520,6 +520,7 @@ product4_feat1:          "Compresión de modelos lista para producción",
 product4_feat2:          "Benchmarking en vivo de rendimiento y latencia",
 product4_feat3:          "Optimización de recursos en la nube",
 product4_feat4:          "Estrategias inteligentes de ahorro de costes",
+product1_default_core_label: "Soluciones Principales:",
 
 product1_highlight: "Defensa de próxima generación para sistemas de IA conversacional.",
 product2_highlight: "Protege tus modelos de IA sin sacrificar la transparencia.",
@@ -934,7 +935,7 @@ feature_response_monitoring_title: "Monitoreo de respuestas",
 feature_response_monitoring_desc:  "Analiza las respuestas de IA para seguridad y cumplimiento en tiempo real.",
 feature_security_analytics_title:   "Analítica de seguridad",
 feature_security_analytics_desc:    "Monitorea y visualiza métricas de seguridad en todas las conversaciones de IA.",
-product1_default_title:  "Productos de IA para Gobiernos y Empresas"
+product1_default_title:  "Soluciones de IA para Gobiernos y Empresas"
 }
 };
 
