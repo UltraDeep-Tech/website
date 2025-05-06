@@ -170,178 +170,278 @@ const translations = {
     industry2_stats:         "• 85% of healthcare AI systems exposed\n• $1.2 M average breach cost\n• 70% patient data at risk\n• 50% HIPAA violations in AI",
     industry3_title:         "E-commerce",
     industry3_stats:         "• 92% of e-commerce AI systems attacked\n• $3.8 M average fraud loss\n• 65% customer data exposed\n• 55% revenue loss from breaches",
-    // ——— En tu objeto translations.en —————————————————————
-visit_our_blog:           "Visit Our Blog",
-see_all_videos:           "See All Videos",
-terms_of_service:         "Terms of Service",
-privacy_policy:           "Privacy Policy",
+    visit_our_blog:           "Visit Our Blog",
+    see_all_videos:           "See All Videos",
+    terms_of_service:         "Terms of Service",
+    privacy_policy:           "Privacy Policy",
 
-services_details_title:   "Services Details",
-services_details_current: "Services Details",
-services_list_title:      "Service List",
-help_title:               "Have a Question?",
-help_box_phone:           "+54 9 11 5992 9083",
-help_box_email:           "contact@ultradeeptech.com",
-services_default_title:   "Government & Enterprise AI Security Services",
-core_services_label:      "Core Services:",
-coverage_label:           "Coverage:",
-coverage1:                "Security Assessment",
-coverage2:                "Architecture Design",
-coverage3:                "Compliance Management",
-coverage4:                "Monitoring & Support",
-coverage5:                "Incident Response",
+    services_details_title:   "Services Details",
+    services_details_current: "Services Details",
+    services_list_title:      "Service List",
+    help_title:               "Have a Question?",
+    help_box_phone:           "+54 9 11 5992 9083",
+    help_box_email:           "contact@ultradeeptech.com",
+    services_default_title:   "Government & Enterprise AI Security Services",
+    core_services_label:      "Core Services:",
+    coverage_label:           "Coverage:",
+    coverage1:                "Security Assessment",
+    coverage2:                "Architecture Design",
+    coverage3:                "Compliance Management",
+    coverage4:                "Monitoring & Support",
+    coverage5:                "Incident Response",
 
-service1_feat1:           "Vulnerability Assessment",
-service1_feat2:           "Security Analysis",
-service1_feat3:           "Compliance Management",
-service1_feat4:           "Executive Consulting",
+    service1_feat1:           "Vulnerability Assessment",
+    service1_feat2:           "Security Analysis",
+    service1_feat3:           "Compliance Management",
+    service1_feat4:           "Executive Consulting",
 
-service2_feat1:           "Security Architecture",
-service2_feat2:           "Controls Deployment",
-service2_feat3:           "Integration Planning",
-service2_feat4:           "Access Management",
-service2_feat5:           "Security Monitoring",
-service2_feat6:           "Incident Response",
-service2_feat7:           "Performance Analytics",
+    service2_feat1:           "Security Architecture",
+    service2_feat2:           "Controls Deployment",
+    service2_feat3:           "Integration Planning",
+    service2_feat4:           "Access Management",
+    service2_feat5:           "Security Monitoring",
+    service2_feat6:           "Incident Response",
+    service2_feat7:           "Performance Analytics",
 
-service3_feat1:           "Custom Training",
-service3_feat2:           "Hands-on Workshops",
-service3_feat3:           "Security Best Practices",
-service3_feat4:           "Team Certification",
-// ——— Dentro de translations.en —————————————————————
-contact_page_title:        "Contact",
-breadcrumbs_home:          "Home",
-breadcrumbs_current:       "Contact",
+    service3_feat1:           "Custom Training",
+    service3_feat2:           "Hands-on Workshops",
+    service3_feat3:           "Security Best Practices",
+    service3_feat4:           "Team Certification",
+    contact_page_title:        "Contact",
+    breadcrumbs_home:          "Home",
+    breadcrumbs_current:       "Contact",
 
-faq_section_title:         "FAQ's",
-faq_q1:                    "What is Ultra Deep Tech's core focus?",
-faq_a1:                    "Ultra Deep Tech provides AI security solutions and services. Our platform, Safety Shield Ultra™, delivers real-time protection for AI conversations, models, and infrastructure, ensuring your systems remain secure and compliant. We also offer AI consulting and implementation services to help businesses deploy secure AI solutions across all environments.",
+    faq_section_title:         "FAQ's",
+    faq_q1:                    "What is Ultra Deep Tech's core focus?",
+    faq_a1:                    "Ultra Deep Tech provides AI security solutions and services. Our platform, Safety Shield Ultra™, delivers real-time protection for AI conversations, models, and infrastructure, ensuring your systems remain secure and compliant. We also offer AI consulting and implementation services to help businesses deploy secure AI solutions across all environments.",
 
-faq_q2:                    "What specific security services do you provide?",
-faq_a2_intro:              "Our security services cover the complete AI protection lifecycle:",
-faq_a2_li1:                "AI security monitoring and protection",
-faq_a2_li2:                "Model security assessment",
-faq_a2_li3:                "AI governance and compliance",
-faq_a2_li4:                "Data protection",
-faq_a2_li5:                "Infrastructure security",
-faq_a2_li6:                "Security training",
-faq_a2_li7:                "AI consulting and implementation",
+    faq_q2:                    "What specific security services do you provide?",
+    faq_a2_intro:              "Our security services cover the complete AI protection lifecycle:",
+    faq_a2_li1:                "AI security monitoring and protection",
+    faq_a2_li2:                "Model security assessment",
+    faq_a2_li3:                "AI governance and compliance",
+    faq_a2_li4:                "Data protection",
+    faq_a2_li5:                "Infrastructure security",
+    faq_a2_li6:                "Security training",
+    faq_a2_li7:                "AI consulting and implementation",
 
-faq_q3:                    "How does your security approach differ from traditional security providers?",
-faq_a3_intro:              "Our approach is specifically designed for AI systems:",
-faq_a3_li1:                "AI-first security architecture",
-faq_a3_li2:                "Real-time AI monitoring",
-faq_a3_li3:                "AI-specific threat protection",
-faq_a3_li4:                "Automated security controls",
-faq_a3_li5:                "Continuous AI threat adaptation",
-faq_a3_li6:                "AI compliance coverage",
+    faq_q3:                    "How does your security approach differ from traditional security providers?",
+    faq_a3_intro:              "Our approach is specifically designed for AI systems:",
+    faq_a3_li1:                "AI-first security architecture",
+    faq_a3_li2:                "Real-time AI monitoring",
+    faq_a3_li3:                "AI-specific threat protection",
+    faq_a3_li4:                "Automated security controls",
+    faq_a3_li5:                "Continuous AI threat adaptation",
+    faq_a3_li6:                "AI compliance coverage",
 
-faq_q4:                    "What security standards and compliance do you support?",
-faq_a4_intro:              "Our solutions align with key security standards:",
-faq_a4_li1:                "ISO 27001 for information security",
-faq_a4_li2:                "GDPR and data privacy regulations",
-faq_a4_li3:                "NIST AI Risk Management Framework",
-faq_a4_li4:                "Industry-specific compliance requirements",
-faq_a4_li5:                "AI-specific security guidelines",
-faq_a4_li6:                "Cloud security standards",
-faq_a4_tail:               "We ensure your AI systems meet all relevant security and compliance requirements.",
+    faq_q4:                    "What security standards and compliance do you support?",
+    faq_a4_intro:              "Our solutions align with key security standards:",
+    faq_a4_li1:                "ISO 27001 for information security",
+    faq_a4_li2:                "GDPR and data privacy regulations",
+    faq_a4_li3:                "NIST AI Risk Management Framework",
+    faq_a4_li4:                "Industry-specific compliance requirements",
+    faq_a4_li5:                "AI-specific security guidelines",
+    faq_a4_li6:                "Cloud security standards",
+    faq_a4_tail:               "We ensure your AI systems meet all relevant security and compliance requirements.",
 
-faq_q5:                    "How does Safety Shield Ultra™ handle incidents?",
-faq_a5_intro:              "Safety Shield Ultra™ provides automated incident response:",
-faq_a5_ol1:                "Continuous AI monitoring",
-faq_a5_ol2:                "Automated alerts",
-faq_a5_ol3:                "Real-time analysis",
-faq_a5_ol4:                "Automated containment",
-faq_a5_ol5:                "Incident logging",
-faq_a5_ol6:                "Security updates",
+    faq_q5:                    "How does Safety Shield Ultra™ handle incidents?",
+    faq_a5_intro:              "Safety Shield Ultra™ provides automated incident response:",
+    faq_a5_ol1:                "Continuous AI monitoring",
+    faq_a5_ol2:                "Automated alerts",
+    faq_a5_ol3:                "Real-time analysis",
+    faq_a5_ol4:                "Automated containment",
+    faq_a5_ol5:                "Incident logging",
+    faq_a5_ol6:                "Security updates",
 
-faq_q6:                    "What makes your solutions scalable?",
-faq_a6_intro:              "Our architecture supports enterprise deployment:",
-faq_a6_li1:                "Cloud-native controls",
-faq_a6_li2:                "Automated scaling",
-faq_a6_li3:                "Centralized management",
-faq_a6_li4:                "Multi-environment support",
-faq_a6_li5:                "API integration",
-faq_a6_li6:                "Flexible deployment",
-faq_a6_tail:               "We ensure your security grows with your AI infrastructure.",
+    faq_q6:                    "What makes your solutions scalable?",
+    faq_a6_intro:              "Our architecture supports enterprise deployment:",
+    faq_a6_li1:                "Cloud-native controls",
+    faq_a6_li2:                "Automated scaling",
+    faq_a6_li3:                "Centralized management",
+    faq_a6_li4:                "Multi-environment support",
+    faq_a6_li5:                "API integration",
+    faq_a6_li6:                "Flexible deployment",
+    faq_a6_tail:               "We ensure your security grows with your AI infrastructure.",
 
-faq_q7:                    "How do you maintain security?",
-faq_a7_intro:              "We maintain security through:",
-faq_a7_li1:                "Regular assessments",
-faq_a7_li2:                "Threat updates",
-faq_a7_li3:                "Patch management",
-faq_a7_li4:                "Performance optimization",
-faq_a7_li5:                "Security training updates",
-faq_a7_li6:                "Compliance monitoring",
-faq_a7_tail:               "Our security evolves with emerging threats and new AI technologies.",
+    faq_q7:                    "How do you maintain security?",
+    faq_a7_intro:              "We maintain security through:",
+    faq_a7_li1:                "Regular assessments",
+    faq_a7_li2:                "Threat updates",
+    faq_a7_li3:                "Patch management",
+    faq_a7_li4:                "Performance optimization",
+    faq_a7_li5:                "Security training updates",
+    faq_a7_li6:                "Compliance monitoring",
+    faq_a7_tail:               "Our security evolves with emerging threats and new AI technologies.",
 
-contact_address_title:     "Address",
-contact_address_text:      "Corrientes 800, Ciudad Autónoma de Buenos Aires",
-contact_call_title:        "Call or Text Us",
-contact_call_number:       "+54 (9) 11 7645-5965",
-contact_email_title:       "Email Us",
-contact_email:             "contact@ultradeeptech.com",
+    contact_address_title:     "Address",
+    contact_address_text:      "Corrientes 800, Ciudad Autónoma de Buenos Aires",
+    contact_call_title:        "Call or Text Us",
+    contact_call_number:       "+54 (9) 11 7645-5965",
+    contact_email_title:       "Email Us",
+    contact_email:             "contact@ultradeeptech.com",
 
-form_name_placeholder:     "Your Name",
-form_email_placeholder:    "Your Email",
-form_subject_placeholder:  "Subject",
-form_message_placeholder:  "Message",
-form_send_button:          "Send Message",
-form_loading:              "Loading...",
-form_error_message:        "There was an error sending your message.",
-form_sent_message:         "Your message has been sent. Thank you!",
-career_page_title:       "Career",
-breadcrumbs_home:        "Home",
-breadcrumbs_current:     "Career",
+    form_name_placeholder:     "Your Name",
+    form_email_placeholder:    "Your Email",
+    form_subject_placeholder:  "Subject",
+    form_message_placeholder:  "Message",
+    form_send_button:          "Send Message",
+    form_loading:              "Loading...",
+    form_error_message:        "There was an error sending your message.",
+    form_sent_message:         "Your message has been sent. Thank you!",
+    career_page_title:       "Career",
+    breadcrumbs_home:        "Home",
+    breadcrumbs_current:     "Career",
 
-career_openings_title:   "Current Job Openings",
-career_openings_cta:     "See all our offers in LinkedIn",
-career_openings_desc:    "Discover top job opportunities on our LinkedIn! Follow us here for daily updates and exclusive openings.",
-career_openings_link:    "See in Linked In",
+    career_openings_title:   "Current Job Openings",
+    career_openings_cta:     "See all our offers in LinkedIn",
+    career_openings_desc:    "Discover top job opportunities on our LinkedIn! Follow us here for daily updates and exclusive openings.",
+    career_openings_link:    "See in Linked In",
 
-// Core Recruiting Values
-values_title:            "Core Recruiting Values",
-values_subtitle:         "Guiding principles that drive our recruiting decisions.",
+    // Core Recruiting Values
+    values_title:            "Core Recruiting Values",
+    values_subtitle:         "Guiding principles that drive our recruiting decisions.",
 
-// Each core value
-value_excellence_title:  "Excellence",
-value_excellence_desc:   "Strive for the highest standards in all tasks.",
-value_passion_title:     "Passion",
-value_passion_desc:      "Work with enthusiasm and dedication.",
-value_cutting_edge_title:"Avant-garde and Cutting Edge",
-value_cutting_edge_desc: "Embrace innovative and forward-thinking approaches.",
-value_hard_working_title:"Hard-Working",
-value_hard_working_desc: "Put in the effort to achieve exceptional results.",
-value_result_oriented_title: "Result-Oriented",
-value_result_oriented_desc:  "Focus on achieving measurable outcomes.",
-value_overcoming_title:  "Overcoming Expectations",
-value_overcoming_desc:   "Go beyond the anticipated results.",
-value_world_change_title:"Changing the World",
-value_world_change_desc: "Contribute to meaningful and impactful projects.",
-value_ownership_title:   "Agency and Ownership",
-value_ownership_desc:    "Take initiative and responsibility for your work.",
-value_integrity_title:   "Transparent Communication and Integrity",
-value_integrity_desc:    "Communicate openly and act with honesty.",
-value_organization_title:"Good Organization",
-value_organization_desc: "Maintain a structured and efficient work environment.",
-value_can_do_title:      "Can-Do Attitude",
-value_can_do_desc:       "Approach challenges with optimism and determination.",
-blog_social_page_title:  "Blog & Social Media",
-blog_social_page_current:"Blog & Social Media",
-cta_linkedin:            "Check Our Recent Posts",
-cta_instagram:           "Check Our Instagram",
-// Highlights dinámicos (inglés)
-product1_highlight: "Next-gen defense for conversational AI systems.",
-product2_highlight: "Shield your AI models without sacrificing transparency.",
-product3_highlight: "Enterprise-grade protection for high-stakes AI environments.",
-product4_highlight: "Boost speed and cut costs—without compromising safety.",
-current_job_openings:"Current Job Openings",
-core_values:"Core Values",
-faqs:"FAQ's",
-office_locations:"Office Locations",
-chat_with_us:"Chat with us"
+    // Each core value
+    value_excellence_title:  "Excellence",
+    value_excellence_desc:   "Strive for the highest standards in all tasks.",
+    value_passion_title:     "Passion",
+    value_passion_desc:      "Work with enthusiasm and dedication.",
+    value_cutting_edge_title:"Avant-garde and Cutting Edge",
+    value_cutting_edge_desc: "Embrace innovative and forward-thinking approaches.",
+    value_hard_working_title:"Hard-Working",
+    value_hard_working_desc: "Put in the effort to achieve exceptional results.",
+    value_result_oriented_title: "Result-Oriented",
+    value_result_oriented_desc:  "Focus on achieving measurable outcomes.",
+    value_overcoming_title:  "Overcoming Expectations",
+    value_overcoming_desc:   "Go beyond the anticipated results.",
+    value_world_change_title:"Changing the World",
+    value_world_change_desc: "Contribute to meaningful and impactful projects.",
+    value_ownership_title:   "Agency and Ownership",
+    value_ownership_desc:    "Take initiative and responsibility for your work.",
+    value_integrity_title:   "Transparent Communication and Integrity",
+    value_integrity_desc:    "Communicate openly and act with honesty.",
+    value_organization_title:"Good Organization",
+    value_organization_desc: "Maintain a structured and efficient work environment.",
+    value_can_do_title:      "Can-Do Attitude",
+    value_can_do_desc:       "Approach challenges with optimism and determination.",
+    blog_social_page_title:  "Blog & Social Media",
+    blog_social_page_current:"Blog & Social Media",
+    cta_linkedin:            "Check Our Recent Posts",
+    cta_instagram:           "Check Our Instagram",
+    // Highlights dinámicos (inglés)
+    product1_highlight: "Next-gen defense for conversational AI systems.",
+    product2_highlight: "Shield your AI models without sacrificing transparency.",
+    product3_highlight: "Enterprise-grade protection for high-stakes AI environments.",
+    product4_highlight: "Boost speed and cut costs—without compromising safety.",
+    current_job_openings:"Current Job Openings",
+    core_values:"Core Values",
+    faqs:"FAQ's",
+    office_locations:"Office Locations",
+    chat_with_us:"Chat with us",
+  // “Por Qué Elegirnos” Section
+  why_title:            "Why Choose Us?",
+  why_desc:             "Discover how Ultra Deep Tech can elevate your team’s security and ensure your organization’s success.",
+  why_experts_title:    "Recognized Experts",
+  why_experts_desc:     "We have certified professionals with extensive AI and cybersecurity experience ready to guide your team.",
+  why_solutions_title:  "Tailored Solutions",
+  why_solutions_desc:   "We design training plans customized to your organization’s needs and objectives.",
+  why_impact_title:     "Tangible Impact",
+  why_impact_desc:      "Our programs improve your team’s ability to prevent risks and optimize security processes.",
+  why_cta_text:         "Ready to strengthen your team? ",
+  why_cta_contact:      "Contact Us",
+  why_cta_button:       "Get in Touch",
+
+  // “Certificaciones que obtendrás” Section
+  certs_obtendras_title: "Certifications You’ll Earn",
+  certs_obtendras_desc:  "Graduates like Diego, Valentina, and Martín are already applying their skills at leading organizations.",
+  cert_obt1:             "AISP – AI Security Professional",
+  cert_obt2:             "CAISE – Certified AI Security Expert",
+  cert_obt3:             "AIGP – AI Governance Professional",
+
+  // Testimonials Section
+  testimonials_title:         "Testimonials",
+  testimonials_desc:          "What our graduates say after certifying with Ultra Deep Tech",
+  testimonials_pablo_text:    "“Ultra Deep Tech’s AISP certification elevated my professional profile in the public sector.”",
+  testimonials_valentina_text:"“Thanks to CAISE training, I now lead AI audits with full confidence and rigor.”",
+  testimonials_camila_text: "The AISP certification gave me practical tools to enhance the security of our AI systems.",
+  // Footer disclaimer
+  disclaimer_text: "The logos shown on this site reflect alignment with international standards, pending alliance applications, or in-house certifications legally issued by our institution. We claim no official accreditation unless expressly stated.",
+
+    // Hero / Banner
+    hero_title1:        "AI Security Training for Governments and Enterprises",
+    hero_subtitle1:     "Equip your team with courses designed to ensure compliance, privacy, and resilience against AI threats.",
+    hero_cta:           "See More",
+  
+    // About
+    about_video_link:   "Watch Video",
+    about_heading:      "Certified AI Security Training",
+    about_description:  "At Ultra Deep Tech we combine expertise, professional certifications, and strategic alliances to deliver elite AI security training:",
+  
+    // Certificados
+    certs_aisp_title:   "AISP, CAISE, and AIGP Certifications",
+    certs_aisp_desc:    "In-house diplomas validating advanced competencies in threat detection, governance, and AI protection.",
+    certs_isc_title:    "Alliances with ISC², EC-Council, CESSI, and Fintech",
+    certs_isc_desc:     "Official training backed by leaders in cybersecurity and financial technology.",
+    certs_iso_title:    "Alignment with ISO, NIST, UNESCO, and OECD",
+    certs_iso_desc:     "Programs designed according to international AI security and ethics standards.",
+    certs_methodology_title: "Practical and Customized Methodology",
+    certs_methodology_desc:  "Exercises and case studies tailored to your organization’s challenges to ensure real-world results.",
+  
+
+    // Cert Section
+    cert_section_title: "Train your team with our Certifications",
+    cert1_name:         "AI Security Professional",
+    cert1_desc:         "With the AISP certification, your company will demonstrate to clients, investors, and auditors that you have a team capable of anticipating and neutralizing AI-based cyber threats, strengthening institutional trust and ensuring operational continuity.",
+    cert1_code:         "AISP-80012-ARG",
+    cert2_name:         "AI Security Expert",
+    cert2_desc:         "The CAISE program trains your leaders in advanced AI defense and auditing techniques, providing a strategic edge in high-complexity bids and projects, and ensuring the highest regulatory compliance.",
+    cert2_code:         "CAISE-50045-ARG",
+    cert3_name:         "AI Governance Professional",
+    cert3_desc:         "AIGP trains your senior management in designing and implementing AI governance, setting policies and metrics to ensure transparency, accountability, and alignment with international standards—crucial for corporate reputation.",
+    cert3_code:         "AIGP-61008-ARG",
+  
+    // Stats
+    stats_courses:      "Courses Delivered",
+    stats_participants: "Participants Trained",
+    stats_hours:        "Training Hours",
+    stats_certificates: "Certificates Issued",
+  
+    // CTA
+    cta_title:          "Don’t Wait Any Longer",
+    cta_desc:           "Take the next step to protect and certify your team in AI security.\nBoost your customers’ confidence and strengthen your corporate reputation!",
+    cta_button:         "Get Certified Now",
+  
+    // Alliances
+    alliances_title:    "Alliances & Memberships",
+    alliances_desc:     "We combine our Active Member status and ongoing applications to endorse and provide training with these institutions:",
+    alliance_isc:       "ISC²",
+    alliance_isc_desc:  "Applying to offer the official CISSP and CCSP courses endorsed by ISC² to train your teams at the highest level of security.",
+    alliance_ec:        "EC-Council",
+    alliance_ec_desc:   "Applying to deliver the CEH and CND programs with official EC-Council certification, ensuring practical experience and recognized accreditation.",
+    alliance_cessi:     "CESSI",
+    alliance_cessi_desc:"Active member of CESSI, the Chamber of Software and IT Services Companies, which endorses our workshops and seminars.",
+    alliance_fintech:   "Argentine Fintech Chamber",
+    alliance_fintech_desc:"Member of the Argentine Fintech Chamber, providing essential support for our financial AI security training.",
+  
+    // Alignment
+    alignment_title:     "International Guidelines",
+    alignment_desc:      "Our certifications are developed following industry best practices and global standards.",
+    alignment_iso:       "ISO/IEC 27001",
+    alignment_iso_desc:  "We follow the information security controls and processes defined by ISO/IEC 27001.",
+    alignment_nist:      "NIST AI Risk Management Framework",
+    alignment_nist_desc: "We align with the NIST AI Risk Management Framework to ensure integrity and reliability.",
+    alignment_unesco:    "UNESCO AI Ethics",
+    alignment_unesco_desc:"We adopt UNESCO’s AI Ethics recommendations to promote responsible use of technology.",
+    alignment_oecd:      "OECD AI Principles",
+    alignment_oecd_desc: "We incorporate the OECD AI Principles to ensure transparency, fairness, and safety.",
+    cursos:"Courses"
+
+
+
+
   },
   es: {
+
     about_us:               "Sobre Nosotros",
     products:               "Productos",
     services:               "Servicios",
@@ -935,7 +1035,108 @@ feature_response_monitoring_title: "Monitoreo de respuestas",
 feature_response_monitoring_desc:  "Analiza las respuestas de IA para seguridad y cumplimiento en tiempo real.",
 feature_security_analytics_title:   "Analítica de seguridad",
 feature_security_analytics_desc:    "Monitorea y visualiza métricas de seguridad en todas las conversaciones de IA.",
-product1_default_title:  "Soluciones de IA para Gobiernos y Empresas"
+product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
+// … dentro de translations.es
+  // Sección “Por Qué Elegirnos”
+  why_title:            "¿Por Qué Elegirnos?",
+  why_desc:             "Descubre cómo Ultra Deep Tech puede elevar la seguridad de tu equipo y asegurar el éxito de tu organización.",
+  why_experts_title:    "Expertos Reconocidos",
+  why_experts_desc:     "Contamos con profesionales certificados y con amplia experiencia en IA y ciberseguridad, listos para guiar a tu equipo.",
+  why_solutions_title:  "Soluciones a Medida",
+  why_solutions_desc:   "Diseñamos planes de formación personalizados según las necesidades y objetivos de tu organización.",
+  why_impact_title:     "Impacto Tangible",
+  why_impact_desc:      "Nuestros programas mejoran la capacidad de tu equipo para prevenir riesgos y optimizar procesos de seguridad.",
+  why_cta_text:         "¿Listo para fortalecer a tu equipo? ",
+  why_cta_contact:      "Contáctanos",
+  why_cta_button:       "Comunícate Ahora",
+
+  // Sección “Certificaciones que obtendrás”
+  certs_obtendras_title: "Certificaciones que obtendrás",
+  certs_obtendras_desc:  "Nuestros graduados como Diego, Valentina y Martín ya están implementando sus conocimientos en importantes organizaciones",
+  cert_obt1:             "AISP – AI Security Professional",
+  cert_obt2:             "CAISE – Certified AI Security Expert",
+  cert_obt3:             "AIGP – AI Governance Professional",
+
+  // Sección Testimonios
+  testimonials_title:         "Testimonios",
+  testimonials_desc:          "Lo que dicen nuestros graduados tras certificarse con Ultra Deep Tech",
+  testimonials_pablo_text:    "“La certificación AISP de Ultra Deep Tech elevó mi perfil profesional en el sector público.”",
+  testimonials_valentina_text:"“Gracias a la formación CAISE, ahora lidero auditorías de IA con total confianza y rigurosidad.”",
+  testimonials_camila_text: "La certificación AISP me proporcionó herramientas prácticas para mejorar la seguridad de nuestros sistemas de IA.",
+
+
+  // Disclaimer legal
+  disclaimer_text: "Los logotipos mostrados en este sitio reflejan alineación con normas internacionales, solicitudes de alianzas en proceso, o certificaciones propias emitidas legalmente por nuestra institución. No reclamamos acreditación oficial salvo que se indique expresamente.",
+    // Hero / Banner
+    hero_title1:        "Formación en Seguridad de IA para Gobiernos y Empresas",
+    hero_subtitle1:     "Capacite a su equipo con cursos diseñados para garantizar cumplimiento, privacidad y resiliencia frente a amenazas de IA.",
+    hero_cta:           "Ver Más",
+  
+    // About
+    about_video_link:   "Ver Video",
+    about_heading:      "Formación Certificada en Seguridad de IA",
+    about_description:  "En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:",
+  
+    // Certificados
+    certs_aisp_title:   "Certificaciones AISP, CAISE y AIGP",
+    certs_aisp_desc:    "Diplomas propios que avalan competencias avanzadas en detección de amenazas, gobierno y protección de IA.",
+    certs_isc_title:    "Alianzas con ISC², EC-Council, CESSI y Fintech",
+    certs_isc_desc:     "Formación oficial respaldada por líderes en ciberseguridad y tecnología financiera.",
+    certs_iso_title:    "Alineamiento con ISO, NIST, UNESCO y OCDE",
+    certs_iso_desc:     "Programas diseñados siguiendo estándares internacionales de seguridad y ética en IA.",
+    certs_methodology_title: "Metodología Práctica y Personalizada",
+    certs_methodology_desc:  "Ejercicios y casos de estudio adaptados a los retos de tu organización para garantizar resultados reales.",
+  
+
+  
+    // Cert Section
+    cert_section_title: "Forma a tu equipo con nuestras Certificaciones",
+    cert1_name:         "AI Security Professional",
+    cert1_desc:         "Con la certificación AISP, tu empresa demostrará a clientes, inversores y auditores que cuenta con un equipo capaz de anticipar y neutralizar ciberamenazas basadas en IA, fortaleciendo la confianza institucional y garantizando la continuidad operativa.",
+    cert1_code:         "AISP-80012-ARG",
+    cert2_name:         "AI Security Expert",
+    cert2_desc:         "El programa CAISE forma a tus líderes en técnicas avanzadas de defensa y auditoría de sistemas de IA, aportando un diferencial estratégico en licitaciones y proyectos de alta complejidad, y asegurando el cumplimiento normativo más exigente.",
+    cert2_code:         "CAISE-50045-ARG",
+    cert3_name:         "AI Governance Professional",
+    cert3_desc:         "AIGP capacita a tu alta gerencia en el diseño e implementación de gobernanza de IA, estableciendo políticas y métricas que aseguren transparencia, responsabilidad y alineación con estándares internacionales, clave para la reputación corporativa.",
+    cert3_code:         "AIGP-61008-ARG",
+  
+    // Stats
+    stats_courses:      "Cursos Impartidos",
+    stats_participants: "Participantes Capacitados",
+    stats_hours:        "Horas de Formación",
+    stats_certificates: "Certificados Emitidos",
+  
+    // CTA
+    cta_title:          "No esperes más",
+    cta_desc:           "Da el siguiente paso para proteger y certificar a tu equipo en seguridad de IA.\n¡Impulsa la confianza de tus clientes y fortalece tu reputación corporativa!",
+    cta_button:         "Certifícate Ahora",
+  
+    // Alliances
+    alliances_title:    "Alianzas y Membresías",
+    alliances_desc:     "Combinamos nuestro estatus de Miembros Activos y aplicaciones en curso para avalar y ofrecer formaciones con estas instituciones:",
+    alliance_isc:       "ISC²",
+    alliance_isc_desc:  "Aplicando para ofrecer los cursos oficiales CISSP y CCSP con aval de ISC² y formar a tus equipos al más alto nivel de seguridad.",
+    alliance_ec:        "EC-Council",
+    alliance_ec_desc:   "Aplicando para brindar los programas CEH y CND con certificación oficial EC-Council, garantizando experiencia práctica y acreditación reconocida.",
+    alliance_cessi:     "CESSI",
+    alliance_cessi_desc:"Miembro Activo de CESSI - Cámara de Empresas de Software y Servicios Informáticos, lo que avala nuestros workshops y seminarios.",
+    alliance_fintech:   "Fintech",
+    alliance_fintech_desc:"Miembro de la Cámara Argentina Fintech, respaldo esencial para nuestras formaciones en seguridad financiera de IA.",
+  
+    // Alignment
+    alignment_title:     "Lineamientos Internacionales",
+    alignment_desc:      "Nuestras certificaciones se desarrollan siguiendo las mejores prácticas y estándares globales de la industria.",
+    alignment_iso:       "ISO/IEC 27001",
+    alignment_iso_desc:  "Seguimos los controles y procesos de seguridad de la información definidos por ISO/IEC 27001.",
+    alignment_nist:      "NIST AI RMF",
+    alignment_nist_desc: "Nos alineamos con el Marco de Gestión de Riesgos de IA de NIST para garantizar integridad y confiabilidad.",
+    alignment_unesco:    "UNESCO AI Ethics",
+    alignment_unesco_desc:"Adoptamos las recomendaciones de Ética en IA de UNESCO para promover el uso responsable de la tecnología.",
+    alignment_oecd:      "OECD AI Principles",
+    alignment_oecd_desc: "Incorporamos los Principios de IA de la OCDE para garantizar transparencia, equidad y seguridad.",
+    cursos:"Cursos"
+  
 }
 };
 
@@ -1003,3 +1204,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.reload();
   });
 });
+
+
+function setLanguage(lang) {
+  // 1) textos normales
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // 2) placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+
+  localStorage.setItem('site_lang', lang);
+}

@@ -39,7 +39,7 @@
 <body class="index-page">
 
     <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
       
           <!-- Logo -->
           <a href="index.html" class="logo d-flex align-items-center">
@@ -172,6 +172,13 @@
       
               <!-- Contact -->
               <li class="dropdown">
+                <a href="cursos.html" class="nav-link">
+                  <i class="bi bi-book"></i>
+                  <span data-i18n="cursos">Courses</span>
+                </a>
+                  <li>
+              <!-- Contact -->
+              <li class="dropdown">
                 <a href="contact.html" class="nav-link">
                   <i class="bi bi-envelope-fill"></i>
                   <span data-i18n="contact_us">Contact Us</span>
@@ -221,509 +228,117 @@
 
     <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-    
-          <div class="container">
-            <div class="row gy-4">
-              <div class="col-lg-5 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
-                <img src="assets/img/aprendiendo.png" class="img-fluid animated" alt="">
-              </div>
-              <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
-                <h1 class="text-white">Formación en Seguridad de IA para Gobiernos y Empresas</h1>
-                <p class="text-white">Capacite a su equipo con cursos diseñados para garantizar cumplimiento, privacidad y resiliencia frente a amenazas de IA.</p>
-                <div class="d-flex">
-                  <a href="#about" class="btn-get-started">Ver Mas</a>
-
-                </div>
-              </div>
-            </div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
+          <img src="assets/img/aprendiendo.png" class="img-fluid animated" alt="" />
+        </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
+          <h1 data-i18n="hero_title1" class="text-white">Formación en Seguridad de IA para Gobiernos y Empresas</h1>
+          <p data-i18n="hero_subtitle1" class="text-white">Capacite a su equipo con cursos diseñados para garantizar cumplimiento, privacidad y resiliencia frente a amenazas de IA.</p>
+          <div class="d-flex">
+            <a data-i18n="hero_cta" href="#about" class="btn-get-started">Ver Más</a>
           </div>
-    
-        </section><!-- /Hero Section -->
-    
-<!-- ======= About / Capacitación Section Adaptada ======= -->
-<section id="about" class="about section light-background">
-  <div class="container">
-    <div class="row gy-4">
-
-      <!-- Imagen Ilustrativa -->
-      <div class="col-lg-6 position-relative align-self-start order-lg-last order-first"
-           data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/avipresent.gif"
-             class="img-fluid"
-             alt="Equipo recibiendo capacitación">
-        <a href="https://www.youtube.com/watch?v=RZz8YUaKqf8"
-           class="glightbox pulsating-play-btn"></a>
+        </div>
       </div>
-
-      <!-- Contenido Persuasivo -->
-      <div class="col-lg-6 content order-last order-lg-first"
-           data-aos="fade-up" data-aos-delay="100">
-        <h3>Formación Certificada en Seguridad de IA</h3>
-        <p>
-          En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas
-          para ofrecer una capacitación de élite en seguridad de inteligencia artificial:
-        </p>
-        <ul class="list-unstyled">
-          <li class="d-flex mb-4">
-            <i class="bi bi-award-fill fs-2 text-primary me-3"></i>
-            <div>
-              <h5>Certificaciones AISP, CAISE y AIGP</h5>
-              <p>Diplomas propios que avalan competencias avanzadas en detección de amenazas, gobierno y
-                protección de IA.</p>
-            </div>
-          </li>
-          <li class="d-flex mb-4">
-            <i class="bi bi-link-45deg fs-2 text-primary me-3"></i>
-            <div>
-              <h5>Alianzas con ISC², EC-Council, CESSI y Fintech</h5>
-              <p>Formación oficial respaldada por líderes en ciberseguridad y tecnología financiera.</p>
-            </div>
-          </li>
-          <li class="d-flex mb-4">
-            <i class="bi bi-shield-check fs-2 text-primary me-3"></i>
-            <div>
-              <h5>Alineamiento con ISO, NIST, UNESCO y OCDE</h5>
-              <p>Programas diseñados siguiendo estándares internacionales de seguridad y ética en IA.</p>
-            </div>
-          </li>
-          <li class="d-flex">
-            <i class="bi bi-gear-fill fs-2 text-primary me-3"></i>
-            <div>
-              <h5>Metodología Práctica y Personalizada</h5>
-              <p>Ejercicios y casos de estudio adaptados a los retos de tu organización para garantizar resultados reales.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
     </div>
-
-    <p class="mt-5 text-center">
-      Invierte en la seguridad de tu IA y obtén certificaciones que marcan la diferencia.
-      <a href="#certificaciones-obtendras" class="fw-bold">Descubre lo que puedes lograr</a>
-      y <a href="#contact" class="fw-bold">contáctanos</a> para diseñar el plan perfecto para tu equipo.
-    </p>
-  </div>
-</section>
-<!-- End About Section -->
+  </section>
 
 
-
-          <style>
-            .certificados {
-              background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
-              padding: 4rem 0;
-            }
-            .certificados .section-title h2 {
-              color: #0062c7;
-              font-size: 2.5rem;
-              font-weight: 700;
-            }
-            .certificados .section-title p {
-              color: #4b5563;
-              font-size: 1rem;
-              margin-bottom: 2rem;
-            }
-            .certificados .cert-card {
-              background: #ffffff;
-              border-radius: 0.75rem;
-              padding: 2.5rem;
-              text-align: center;
-              box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .certificados .cert-card:hover {
-              transform: translateY(-10px);
-              box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            }
-            .certificados .icon-wrapper {
-              width: 60px;
-              height: 60px;
-              background: #0062c7;
-              color: #ffffff;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 50%;
-              margin-bottom: 1rem;
-            }
-            .certificados .cert-card h3 {
-              font-size: 1.25rem;
-              margin-bottom: 0.75rem;
-              font-weight: 600;
-              color: #111827;
-            }
-            .certificados .cert-desc {
-              color: #6b7280;
-              font-size: 0.95rem;
-              line-height: 1.6;
-            }
-            </style>
-            
-            <!-- ======= Certificados de Clientes Section ======= -->
-            <section id="certificados" class="certificados section">
-              <div class="container">
-                <div class="section-title text-center" data-aos="fade-up">
-                  <h2>Forma a tu equipo con nuestros cursos</h2>
-                </div>
-                <div class="row g-4">
-                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cert-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-shield-check fs-4"></i>
-                      </div>
-                      <h3>AI Security Professional</h3>
-                      <p class="cert-desc">
-                        Con la certificación AISP, tu empresa demostrará a clientes, inversores y auditores que cuenta con un equipo capaz de anticipar y neutralizar ciberamenazas basadas en IA, fortaleciendo la confianza institucional y garantizando la continuidad operativa.
-                      </p>
-                      <p><small>AISP-80012-ARG</small></p>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cert-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-award-fill fs-4"></i>
-                      </div>
-                      <h3>AI Security Expert</h3>
-                      <p class="cert-desc">
-                        El programa CAISE forma a tus líderes en técnicas avanzadas de defensa y auditoría de sistemas de IA, aportando un diferencial estratégico en licitaciones y proyectos de alta complejidad, y asegurando el cumplimiento normativo más exigente.
-                      </p>
-                      <p><small>CAISE-50045-ARG</small></p>
-
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cert-card">
-                      <div class="icon-wrapper">
-                        <i class="bi bi-people-fill fs-4"></i>
-                      </div>
-                      <h3>AI Governance Professional</h3>
-                      <p class="cert-desc">
-                        AIGP capacita a tu alta gerencia en el diseño e implementación de gobernanza de IA, estableciendo políticas y métricas que aseguren transparencia, responsabilidad y alineación con estándares internacionales, clave para la reputación corporativa.
-                      </p>
-                      <p><small>AIGP-61008-ARG</small></p>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-<!-- Stats Section -->
-<section id="stats" class="stats section dark-background">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item">
-          <i class="bi bi-easel fs-1 text-primary"></i>
-          <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
-          <p><strong>Cursos Impartidos</strong></p>
-        </div>
-      </div><!-- End Stats Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item">
-          <i class="bi bi-people fs-1 text-primary"></i>
-          <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
-          <p><strong>Participantes Capacitados</strong></p>
-        </div>
-      </div><!-- End Stats Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item">
-          <i class="bi bi-clock-history fs-1 text-primary"></i>
-          <span data-purecounter-start="0" data-purecounter-end="1750" data-purecounter-duration="1" class="purecounter"></span>
-          <p><strong>Horas de Formación</strong></p>
-        </div>
-      </div><!-- End Stats Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="stats-item">
-          <i class="bi bi-award fs-1 text-primary"></i>
-          <span data-purecounter-start="0" data-purecounter-end="416" data-purecounter-duration="1" class="purecounter"></span>
-          <p><strong>Certificados Emitidos</strong></p>
-        </div>
-      </div><!-- End Stats Item -->
-
-    </div>
-  </div>
-</section><!-- End Stats Section -->
-
-<style>
-  #cta-bg {
-    background: url('assets/img/cta-bg.jpg') center center/cover no-repeat;
-    position: relative;
-    padding: 6rem 0;
-    color: #fff;
-  }
-  #cta-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-  }
-  #cta-bg .cta-content {
-    position: relative;
-    z-index: 1;
-  }
-  #cta-bg .btn-light {
-    background-color: #fff;
-    color: #0062c7;
-    border: none;
-  }
-</style>
-
-<section id="cta-bg" class="section text-center" data-aos="fade-up">
-  <div class="container cta-content">
-    <h2>No esperes más</h2>
-    <p class="cta-desc">
-      Da el siguiente paso para proteger y certificar a tu equipo en seguridad de IA. <br>¡Impulsa la confianza de tus clientes y fortalece tu reputación corporativa!
-    </p>
-    <a href="#contacto" class="btn btn-light btn-lg">Certifícate Ahora</a>
-  </div>
-</section>
-
-
-  
-  <style>
-    .alliances {
-      background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
-      padding: 4rem 0;
-    }
-    .alliances .section-title h2 {
-      color: #0062c7;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .alliances .section-title p {
-      color: #4b5563;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-    }
-    .alliance-card {
-      background: #fff;
-      border-radius: 0.75rem;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: 100%;
-    }
-    .alliance-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-    .alliance-logo {
-      max-width: 80px;
-      margin-bottom: 1rem;
-    }
-    .alliance-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-      color: #111827;
-    }
-    .alliance-card p {
-      color: #6b7280;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-    </style>
-    
-    <!-- ======= Alianzas y Membresías Section Actualizada ======= -->
-    <section id="alliances" class="alliances section">
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
       <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-          <h2>Alianzas y Membresías</h2>
-          <p>Combinamos nuestro estatus de Miembros Activos y aplicaciones en curso para avalar y ofrecer formaciones con estas instituciones:</p>
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/avipresent.gif" class="img-fluid" alt="Equipo recibiendo capacitación" />
+            <a  href="https://www.youtube.com/watch?v=RZz8YUaKqf8" class="glightbox pulsating-play-btn"></a>
+          </div>
+          <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
+            <h3 data-i18n="about_heading">Formación Certificada en Seguridad de IA</h3>
+            <p data-i18n="about_description">En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:</p>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-4">
+                <i class="bi bi-award-fill fs-2 text-primary me-3"></i>
+                <div>
+                  <h5 data-i18n="certs_aisp_title">Certificaciones AISP, CAISE y AIGP</h5>
+                  <p data-i18n="certs_aisp_desc">Diplomas propios que avalan competencias avanzadas en detección de amenazas, gobierno y protección de IA.</p>
+                </div>
+              </li>
+              <li class="d-flex mb-4">
+                <i class="bi bi-link-45deg fs-2 text-primary me-3"></i>
+                <div>
+                  <h5 data-i18n="certs_isc_title">Alianzas con ISC², EC-Council, CESSI y Fintech</h5>
+                  <p data-i18n="certs_isc_desc">Formación oficial respaldada por líderes en ciberseguridad y tecnología financiera.</p>
+                </div>
+              </li>
+              <li class="d-flex mb-4">
+                <i class="bi bi-shield-check fs-2 text-primary me-3"></i>
+                <div>
+                  <h5 data-i18n="certs_iso_title">Alineamiento con ISO, NIST, UNESCO y OCDE</h5>
+                  <p data-i18n="certs_iso_desc">Programas diseñados siguiendo estándares internacionales de seguridad y ética en IA.</p>
+                </div>
+              </li>
+              <li class="d-flex">
+                <i class="bi bi-gear-fill fs-2 text-primary me-3"></i>
+                <div>
+                  <h5 data-i18n="certs_methodology_title">Metodología Práctica y Personalizada</h5>
+                  <p data-i18n="certs_methodology_desc">Ejercicios y casos de estudio adaptados a los retos de tu organización para garantizar resultados reales.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="row g-4">
-    
-          <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="alliance-card">
-              <img src="assets/img/isc2.svg" alt="ISC²" class="alliance-logo">
-              <h3>ISC&#178;</h3>
-              <p>Aplicando para ofrecer los cursos oficiales CISSP y CCSP con aval de ISC² y formar a tus equipos al más alto nivel de seguridad.</p>
-            </div>
-          </div>
-    
-          <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="alliance-card">
-              <img src="assets/img/ec-council-white-logo.webp" alt="EC-Council" class="alliance-logo">
-              <h3>EC-Council</h3>
-              <p>Aplicando para brindar los programas CEH y CND con certificación oficial EC-Council, garantizando experiencia práctica y acreditación reconocida.</p>
-            </div>
-          </div>
-    
-          <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="alliance-card">
-              <img src="assets/img/cessi.png" alt="CESSI" class="alliance-logo">
-              <h3>CESSI</h3>
-              <p>Miembro Activo de CESSI - Cámara de Empresas de Software y Servicios Informáticos, lo que avala nuestros workshops y seminarios.</p>
-            </div>
-          </div>
-    
-          <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="alliance-card">
-              <img src="assets/img/fintech1.png" alt="Cámara Argentina Fintech" class="alliance-logo">
-              <h3>Fintech</h3>
-              <p>Miembro de la Cámara Argentina Fintech, respaldo esencial para nuestras formaciones en seguridad financiera de IA.</p>
-            </div>
-          </div>
-    
-        </div>
+
+        
       </div>
     </section>
-    <!-- End Alianzas y Membresías Section -->
-    
-    
-<!-- ======= Lineamientos y Alineamientos ======= -->
-<section id="alignment" class="alliances section">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <h2>Lineamientos Internacionales</h2>
-      <p>Nuestras certificaciones se desarrollan siguiendo las mejores prácticas y estándares globales de la industria.</p>
-    </div>
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="alliance-card">
-          <img src="assets/img/logos/iso27001.png" alt="ISO/IEC 27001" class="alliance-logo">
-          <h3>ISO/IEC 27001</h3>
-          <p>Seguimos los controles y procesos de seguridad de la información definidos por ISO/IEC 27001.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="alliance-card">
-          <img src="assets/img/logos/nist-ai.png" alt="NIST AI RMF" class="alliance-logo">
-          <h3>NIST AI RMF</h3>
-          <p>Nos alineamos con el Marco de Gestión de Riesgos de IA de NIST para garantizar integridad y confiabilidad.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="alliance-card">
-          <img src="assets/img/logos/unesco-ai.png" alt="UNESCO AI Ethics" class="alliance-logo">
-          <h3>UNESCO AI Ethics</h3>
-          <p>Adoptamos las recomendaciones de Ética en IA de UNESCO para promover el uso responsable de la tecnología.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="400">
-        <div class="alliance-card">
-          <img src="assets/img/logos/oecd-ai.png" alt="OECD AI Principles" class="alliance-logo">
-          <h3>OECD AI Principles</h3>
-          <p>Incorporamos los Principios de IA de la OCDE para garantizar transparencia, equidad y seguridad.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>  
-
-
-<!-- ======= Por Qué Elegirnos ======= -->
-<section id="why-us" class="alliances section">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <h2>¿Por Qué Elegirnos?</h2>
-      <p>Descubre cómo Ultra Deep Tech puede elevar la seguridad de tus equipos y asegurar el éxito de tu organización.</p>
-    </div>
-    <div class="row justify-content-center g-4">
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div class="alliance-card">
-          <div class="icon-wrapper">
-            <i class="bi bi-lightbulb-fill fs-3 text-primary"></i>
-          </div>
-          <h3>Expertos Reconocidos</h3>
-          <p>Contamos con profesionales certificados y con amplia experiencia en IA y ciberseguridad, listos para guiar a tu equipo.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div class="alliance-card">
-          <div class="icon-wrapper">
-            <i class="bi bi-gear-fill fs-3 text-primary"></i>
-          </div>
-          <h3>Soluciones a Medida</h3>
-          <p>Diseñamos planes de formación personalizados según las necesidades y objetivos de tu organización.</p>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div class="alliance-card">
-          <div class="icon-wrapper">
-            <i class="bi bi-people-fill fs-3 text-primary"></i>
-          </div>
-          <h3>Impacto Tangible</h3>
-          <p>Nuestros programas mejoran la capacidad de tu equipo para prevenir riesgos y optimizar procesos de seguridad.</p>
-        </div>
-      </div>
-
-      <div class="col-12 text-center mt-4" data-aos="fade-up" data-aos-delay="400">
-        <p class="cta-desc">
-          ¿Listo para fortalecer a tu equipo? <strong>Contáctanos</strong> y crearemos juntos el mejor plan de certificación para tu organización.
-        </p>
-        <a href="#contacto" class="btn btn-primary btn-lg">Comunícate Ahora</a>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ======= Certificaciones que obtendrás Section ======= -->
 <section id="certificaciones-obtendras" class="certificaciones-obtendras section light-background">
   <div class="container" data-aos="fade-up">
     <div class="section-title text-center">
-      <h2>Certificaciones que obtendrás</h2>
-      <p>Nuestros graduados como Diego, Valentina y Martín ya están implementando sus conocimientos en importantes organizaciones</p>
+      <h2 data-i18n="certs_obtendras_title">Certificaciones que obtendrás</h2>
+      <p data-i18n="certs_obtendras_desc">Nuestros graduados como Diego, Valentina y Martín ya están implementando sus conocimientos en importantes organizaciones</p>
     </div>
     <div class="row gy-4 justify-content-center">
 
       <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="cert-sample-container">
-          <img src="assets/img/certs/aisp-sample.png" alt="Ejemplo Certificado AISP" class="cert-sample img-fluid">
+          <img src="assets/img/certificates/cert-aisp.png" alt="Ejemplo Certificado AISP" class="cert-sample img-fluid">
           <span class="watermark">EJEMPLO</span>
         </div>
-        <h3 class="mt-3">AISP – AI Security Professional</h3>
+        <h3 data-i18n="cert_obt1" class="mt-3">AISP – AI Security Professional</h3>
       </div>
 
       <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
         <div class="cert-sample-container">
-          <img src="assets/img/certs/caise-sample.png" alt="Ejemplo Certificado CAISE" class="cert-sample img-fluid">
+          <img src="assets/img/certificates/cert-cais.png" alt="Ejemplo Certificado CAISE" class="cert-sample img-fluid">
           <span class="watermark">EJEMPLO</span>
         </div>
-        <h3 class="mt-3">CAISE – Certified AI Security Expert</h3>
+        <h3 data-i18n="cert_obt2" class="mt-3">CAISE – Certified AI Security Expert</h3>
       </div>
 
       <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300">
         <div class="cert-sample-container">
-          <img src="assets/img/certs/aigp-sample.png" alt="Ejemplo Certificado AIGP" class="cert-sample img-fluid">
+          <img src="assets/img/certificates/cert-aigp.png" alt="Ejemplo Certificado AIGP" class="cert-sample img-fluid">
           <span class="watermark">EJEMPLO</span>
         </div>
-        <h3 class="mt-3">AIGP – AI Governance Professional</h3>
+        <h3 data-i18n="cert_obt3" class="mt-3">AIGP – AI Governance Professional</h3>
       </div>
 
     </div>
   </div>
 </section>
 <!-- End Certificaciones que obtendrás Section -->
+
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials section light-background">
-  <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Testimonios</h2>
-    <p>Lo que dicen nuestros graduados tras certificarse con Ultra Deep Tech</p>
-  </div><!-- End Section Title -->
+    <h2 data-i18n="testimonials_title">Testimonios</h2>
+    <p data-i18n="testimonials_desc">Lo que dicen nuestros graduados tras certificarse con Ultra Deep Tech</p>
+  </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -748,15 +363,11 @@
           <div class="testimonial-item">
             <div class="row gy-4 justify-content-center align-items-center">
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/pablo-montero.jpg" class="img-fluid testimonial-img" alt="Pablo Montero">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid testimonial-img" alt="Pablo Montero">
               </div>
               <div class="col-lg-6">
                 <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    La certificación AISP de Ultra Deep Tech elevó mi perfil profesional en el sector público.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+                  <p data-i18n="testimonials_pablo_text"><i class="bi bi-quote quote-icon-left"></i>La certificación AISP de Ultra Deep Tech elevó mi perfil profesional en el sector público.<i class="bi bi-quote quote-icon-right"></i></p>
                   <h3>Pablo Montero</h3>
                   <h4>AISP-79954-ARG</h4>
                   <div class="stars">
@@ -775,15 +386,11 @@
           <div class="testimonial-item">
             <div class="row gy-4 justify-content-center align-items-center">
               <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/valentina-torres.jpg" class="img-fluid testimonial-img" alt="Valentina Torres">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="img-fluid testimonial-img" alt="Valentina Torres">
               </div>
               <div class="col-lg-6">
                 <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Gracias a la formación CAISE, ahora lidero auditorías de IA con total confianza y rigurosidad.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
+                  <p data-i18n="testimonials_valentina_text"><i class="bi bi-quote quote-icon-left"></i>Gracias a la formación CAISE, ahora lidero auditorías de IA con total confianza y rigurosidad.<i class="bi bi-quote quote-icon-right"></i></p>
                   <h3>Valentina Torres</h3>
                   <h4>CAISE-50045-ARG</h4>
                   <div class="stars">
@@ -795,181 +402,397 @@
               </div>
             </div>
           </div>
-        </div><!-- End slide 2 -->
+        </div>
 
-        <!-- Testimonio 3 -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center">
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/martin-acosta.jpg" class="img-fluid testimonial-img" alt="Martín Acosta">
-              </div>
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    El programa AIGP me permitió implementar políticas de gobernanza de IA efectivas en mi empresa.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Martín Acosta</h3>
-                  <h4>AIGP-61008-ARG</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- Testimonio 5 -->
+<div class="swiper-slide">
+  <div class="testimonial-item">
+    <div class="row gy-4 justify-content-center align-items-center">
+      <div class="col-lg-2 text-center">
+        <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid testimonial-img" alt="Camila García">
+      </div>
+      <div class="col-lg-6">
+        <div class="testimonial-content">
+          <p data-i18n="testimonials_camila_text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            La certificación AISP me proporcionó herramientas prácticas para mejorar la seguridad de nuestros sistemas de IA.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </p>
+          <h3>Camila Weng</h3>
+          <h4>AISP-80013-ARG</h4>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
           </div>
-        </div><!-- End slide 3 -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!-- Testimonio 4 -->
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row gy-4 justify-content-center align-items-center">
-              <div class="col-lg-2 text-center">
-                <img src="assets/img/testimonials/laura-rodriguez.jpg" class="img-fluid testimonial-img" alt="Laura Rodríguez">
-              </div>
-              <div class="col-lg-6">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    La calidad de los instructores y recursos de Ultra Deep Tech superó mis expectativas.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <h3>Laura Rodríguez</h3>
-                  <h4>Gerente de Seguridad</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End slide 4 -->
-
-      </div><!-- End swiper-wrapper -->
-
+      </div>
       <div class="swiper-pagination"></div>
-    </div><!-- End swiper -->
+    </div>
 
   </div>
-</section><!-- End Testimonials Section -->
+</section>
+
+  <!-- Certificados Section -->
+<section id="certificados" class="certificados section">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <h2 data-i18n="cert_section_title">Forma a tu equipo con nuestros cursos</h2>
+    </div>
+    <div class="row g-4">
+
+      <!-- Certificado 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card">
+          <div class="logo-wrapper">
+            <img src="assets/img/certificates/aisp.png" alt="AI Security Professional Logo">
+          </div>
+          <h3 data-i18n="cert1_name">AI Security Professional</h3>
+          <p data-i18n="cert1_desc">
+            Con la certificación AISP, tu empresa demostrará a clientes, inversores y auditores que cuenta con un equipo capaz de anticipar y neutralizar ciberamenazas basadas en IA, fortaleciendo la confianza institucional y garantizando la continuidad operativa.
+          </p>
+          <p><small data-i18n="cert1_code">AISP-80012-ARG</small></p>
+        </div>
+      </div>
+
+      <!-- Certificado 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card">
+          <div class="logo-wrapper">
+            <img src="assets/img/certificates/cais.png" alt="AI Security Expert Logo">
+          </div>
+          <h3 data-i18n="cert2_name">AI Security Expert</h3>
+          <p data-i18n="cert2_desc">
+            El programa CAISE forma a tus líderes en técnicas avanzadas de defensa y auditoría de sistemas de IA, aportando un diferencial estratégico en licitaciones y proyectos de alta complejidad, y asegurando el cumplimiento normativo más exigente.
+          </p>
+          <p><small data-i18n="cert2_code">CAISE-50045-ARG</small></p>
+        </div>
+      </div>
+
+      <!-- Certificado 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="cert-card">
+          <div class="logo-wrapper">
+            <img src="assets/img/certificates/aigp.png" alt="AI Governance Professional Logo">
+          </div>
+          <h3 data-i18n="cert3_name">AI Governance Professional</h3>
+          <p data-i18n="cert3_desc">
+            AIGP capacita a tu alta gerencia en el diseño e implementación de gobernanza de IA, estableciendo políticas y métricas que aseguren transparencia, responsabilidad y alineación con estándares internacionales, clave para la reputación corporativa.
+          </p>
+          <p><small data-i18n="cert3_code">AIGP-61008-ARG</small></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+
+<!-- Alliances Section -->
+<section id="alliances" class="alliances section">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <h2 data-i18n="alliances_title">Alianzas y Membresías</h2>
+      <p data-i18n="alliances_desc">
+        Combinamos nuestro estatus de Miembros Activos y aplicaciones en curso para avalar y ofrecer formaciones con estas instituciones:
+      </p>
+    </div>
+    <div class="row g-4">
+      
+      <!-- ISC² -->
+      <div class="col-md-3 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="alliance-card">
+          <img src="assets/img/isc2.svg" alt="ISC²" class="alliance-logo">
+          <h3 data-i18n="alliance_isc">ISC²</h3>
+          <p data-i18n="alliance_isc_desc">
+            Aplicando para ofrecer los cursos oficiales CISSP y CCSP con aval de ISC² y formar a tus equipos al más alto nivel de seguridad.
+          </p>
+        </div>
+      </div>
+      
+      <!-- EC-Council -->
+      <div class="col-md-3 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="alliance-card">
+          <img src="assets/img/ec-council-white-logo.webp" alt="EC-Council" class="alliance-logo">
+          <h3 data-i18n="alliance_ec">EC-Council</h3>
+          <p data-i18n="alliance_ec_desc">
+            Aplicando para brindar los programas CEH y CND con certificación oficial EC-Council, garantizando experiencia práctica y acreditación reconocida.
+          </p>
+        </div>
+      </div>
+      
+      <!-- CESSI -->
+      <div class="col-md-3 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="alliance-card">
+          <img src="assets/img/cessi.png" alt="CESSI" class="alliance-logo">
+          <h3 data-i18n="alliance_cessi">CESSI</h3>
+          <p data-i18n="alliance_cessi_desc">
+            Miembro Activo de CESSI – Cámara de Empresas de Software y Servicios Informáticos, lo que avala nuestros workshops y seminarios.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Fintech -->
+      <div class="col-md-3 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="alliance-card">
+          <img src="assets/img/fintech1.png" alt="Fintech" class="alliance-logo">
+          <h3 data-i18n="alliance_fintech">Fintech</h3>
+          <p data-i18n="alliance_fintech_desc">
+            Miembro de la Cámara Argentina Fintech, respaldo esencial para nuestras formaciones en seguridad financiera de IA.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- Stats Section -->
+  <section id="stats" class="stats section dark-background">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-easel fs-1 text-primary"></i>
+            <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong data-i18n="stats_courses">Cursos Impartidos</strong></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-people fs-1 text-primary"></i>
+            <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong data-i18n="stats_participants">Participantes Capacitados</strong></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-clock-history fs-1 text-primary"></i>
+            <span data-purecounter-start="0" data-purecounter-end="1750" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong data-i18n="stats_hours">Horas de Formación</strong></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-award fs-1 text-primary"></i>
+            <span data-purecounter-start="0" data-purecounter-end="416" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong data-i18n="stats_certificates">Certificados Emitidos</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Alignment Section -->
+  <section id="alignment" class="alliances section">
+    <div class="container">
+      <div class="section-title text-center" data-aos="fade-up">
+        <h2 data-i18n="alignment_title">Lineamientos Internacionales</h2>
+        <p data-i18n="alignment_desc">Nuestras certificaciones se desarrollan siguiendo las mejores prácticas y estándares globales de la industria.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="alliance-card">
+            <img src="assets/img/certificates/alliance/iso-removebg-preview.png" alt="ISO/IEC 27001" class="alliance-logo">
+            <h3 data-i18n="alignment_iso">ISO/IEC 27001</h3>
+            <p data-i18n="alignment_iso_desc">Seguimos los controles y procesos de seguridad de la información definidos por ISO/IEC 27001.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="alliance-card">
+            <img src="assets/img/certificates/alliance/nest.svg" alt="NIST AI RMF" class="alliance-logo">
+            <h3 data-i18n="alignment_nist">NIST AI RMF</h3>
+            <p data-i18n="alignment_nist_desc">Nos alineamos con el Marco de Gestión de Riesgos de IA de NIST para garantizar integridad y confiabilidad.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="alliance-card">
+            <img src="assets/img/certificates/alliance/unesco.svg" alt="UNESCO AI Ethics" class="alliance-logo">
+            <h3 data-i18n="alignment_unesco">UNESCO AI Ethics</h3>
+            <p data-i18n="alignment_unesco_desc">Adoptamos las recomendaciones de Ética en IA de UNESCO para promover el uso responsable de la tecnología.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="alliance-card">
+            <img src="assets/img/certificates/alliance/oecd.svg" alt="OECD AI Principles" class="alliance-logo">
+            <h3 data-i18n="alignment_oecd">OECD AI Principles</h3>
+            <p data-i18n="alignment_oecd_desc">Incorporamos los Principios de IA de la OCDE para garantizar transparencia, equidad y seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
 
-<style>
-.cert-sample-container {
-  position: relative;
-  display: inline-block;
-}
-.cert-sample {
-  max-width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-}
-.watermark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg);
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.15);
-  pointer-events: none;
-  user-select: none;
-}
-</style>
+  <!-- CTA Section -->
+  <section id="cta-bg" class="section text-center" data-aos="fade-up">
+    <div class="container cta-content">
+      <h2 data-i18n="cta_title">No esperes más</h2>
+      <p data-i18n="cta_desc">Da el siguiente paso para proteger y certificar a tu equipo en seguridad de IA.<br>¡Impulsa la confianza de tus clientes y fortalece tu reputación corporativa!</p>
+      <a data-i18n="cta_button" href="#contacto" class="btn btn-light btn-lg">Certifícate Ahora</a>
+    </div>
+  </section>
+
+<!-- Why Us Section -->
+<section id="why-us" class="why-us section">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <h2 data-i18n="why_title">¿Por Qué Elegirnos?</h2>
+      <p data-i18n="why_desc">
+        Descubre cómo Ultra Deep Tech puede elevar la seguridad de tus equipos y asegurar el éxito de tu organización.
+      </p>
+    </div>
+    <div class="row justify-content-center g-4">
+
+      <!-- Tarjeta 1 -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-card">
+          <div class="icon-wrapper">
+            <i class="bi bi-lightbulb-fill fs-3"></i>
+          </div>
+          <h3 data-i18n="why_experts_title">Expertos Reconocidos</h3>
+          <p data-i18n="why_experts_desc">
+            Contamos con profesionales certificados y con amplia experiencia en IA y ciberseguridad, listos para guiar a tu equipo.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-card">
+          <div class="icon-wrapper">
+            <i class="bi bi-gear-fill fs-3"></i>
+          </div>
+          <h3 data-i18n="why_solutions_title">Soluciones a Medida</h3>
+          <p data-i18n="why_solutions_desc">
+            Diseñamos planes de formación personalizados según las necesidades y objetivos de tu organización.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card">
+          <div class="icon-wrapper">
+            <i class="bi bi-people-fill fs-3"></i>
+          </div>
+          <h3 data-i18n="why_impact_title">Impacto Tangible</h3>
+          <p data-i18n="why_impact_desc">
+            Nuestros programas mejoran la capacidad de tu equipo para prevenir riesgos y optimizar procesos de seguridad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Botón CTA como "Tarjeta 4" -->
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+        <a href="#contacto" class="why-cta">
+          <div class="icon-wrapper">
+            <i class="bi bi-send-fill fs-3"></i>
+          </div>
+          <h3 data-i18n="why_cta_button">Contáctanos</h3>
+          <p data-i18n="why_cta_text">¿Listo para fortalecer a tu equipo?</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
 <!-- ======= Disclaimer Legal (Footer) ======= -->
 <footer class="footer-disclaimer text-center py-4">
   <div class="container">
-    <small>
+    <small data-i18n="disclaimer_text">
       Los logotipos mostrados en este sitio reflejan alineación con normas internacionales, solicitudes de alianzas en proceso, o certificaciones propias emitidas legalmente por nuestra institución. No reclamamos acreditación oficial salvo que se indique expresamente.
     </small>
   </div>
 </footer>
 <!-- End Disclaimer Legal -->
 
+<section id="contact" class="contact section">
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
 
-    
-        <section id="contact" class="contact section">
-            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-              <div class="row gy-4">
-        
-                <div class="col-lg-5">
-                  <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-geo-alt flex-shrink-0"></i>
-                    <div>
-                      <h3 data-i18n="contact_address_title">Address</h3>
-                      <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
-                        <p data-i18n="contact_address_text">Corrientes 800, Ciudad Autonoma de Buenos Aires</p>
-                      </a>
-                    </div>
-                  </div>
-        
-                  <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bi bi-telephone flex-shrink-0"></i>
-                    <div>
-                      <h3 data-i18n="contact_call_title">Call or Text Us</h3>
-                      <p>
-                        <a href="https://wa.link/2ebre2">
-                          <span data-i18n="contact_call_number">+54 (9) 11 7645-5965</span>
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-        
-                  <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bi bi-envelope flex-shrink-0"></i>
-                    <div>
-                      <h3 data-i18n="contact_email_title">Email Us</h3>
-                      <p><span data-i18n="contact_email">contact@ultradeeptech.com</span></p>
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="col-lg-7">
-                  <form id="contactForm" action="/send_mail.php" method="post" class="php-email-form"
-                        data-aos="fade-up" data-aos-delay="500">
-                    <div class="row gy-4">
-                      <div class="col-md-6">
-                        <input type="text" name="name" class="form-control"
-                               placeholder="" data-i18n-placeholder="form_name_placeholder" required>
-                      </div>
-                      <div class="col-md-6">
-                        <input type="email" name="email" class="form-control"
-                               placeholder="" data-i18n-placeholder="form_email_placeholder" required>
-                      </div>
-                      <div class="col-md-12">
-                        <input type="text" name="subject" class="form-control"
-                               placeholder="" data-i18n-placeholder="form_subject_placeholder" required>
-                      </div>
-                      <div class="col-md-12">
-                        <textarea name="message" class="form-control" rows="6"
-                                  placeholder="" data-i18n-placeholder="form_message_placeholder" required></textarea>
-                      </div>
-                      <div class="col-md-12 text-center">
-                        <div class="loading" style="display: none;" data-i18n="form_loading">Loading...</div>
-                        <button type="submit" data-i18n="form_send_button">Send Message</button>
-                        <div class="error-message mt-4" style="display: none;" data-i18n="form_error_message">
-                          There was an error sending your message.
-                        </div>
-                        <div class="sent-message" style="display: none;" data-i18n="form_sent_message">
-                          Your message has been sent. Thank you!
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-        
+      <div class="col-lg-5">
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt flex-shrink-0"></i>
+          <div>
+            <h3 data-i18n="contact_address_title">Address</h3>
+            <a href="https://maps.app.goo.gl/7zrBWkn4vfhJcYh4A" target="_blank">
+              <p data-i18n="contact_address_text">Corrientes 800, Ciudad Autonoma de Buenos Aires</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone flex-shrink-0"></i>
+          <div>
+            <h3 data-i18n="contact_call_title">Call or Text Us</h3>
+            <p>
+              <a href="https://wa.link/2ebre2">
+                <span data-i18n="contact_call_number">+54 (9) 11 7645-5965</span>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope flex-shrink-0"></i>
+          <div>
+            <h3 data-i18n="contact_email_title">Email Us</h3>
+            <p><span data-i18n="contact_email">contact@ultradeeptech.com</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <form id="contactForm" action="/send_mail.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="" data-i18n-placeholder="form_name_placeholder" required>
+            </div>
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control" placeholder="" data-i18n-placeholder="form_email_placeholder" required>
+            </div>
+            <div class="col-md-12">
+              <input type="text" name="subject" class="form-control" placeholder="" data-i18n-placeholder="form_subject_placeholder" required>
+            </div>
+            <div class="col-md-12">
+              <textarea name="message" class="form-control" rows="6" placeholder="" data-i18n-placeholder="form_message_placeholder" required></textarea>
+            </div>
+            <div class="col-md-12 text-center">
+              <div class="loading" style="display: none;" data-i18n="form_loading">Loading...</div>
+              <button type="submit" data-i18n="form_send_button">Send Message</button>
+              <div class="error-message mt-4" style="display: none;" data-i18n="form_error_message">
+                There was an error sending your message.
+              </div>
+              <div class="sent-message" style="display: none;" data-i18n="form_sent_message">
+                Your message has been sent. Thank you!
               </div>
             </div>
-          </section>
-    
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       </main>
 
     <footer id="footer" class="footer">
@@ -1092,6 +915,7 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/lang.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/cursos.js"></script>
@@ -1154,6 +978,13 @@
             </form>
         </div>
     </div>
+
+    <!-- Añade esto justo antes del cierre de tu <body> -->
+<a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-float">
+  <i class="bi bi-whatsapp whatsapp-icon"></i>
+  <span class="whatsapp-tooltip">Charla con nosotros ahora</span>
+</a>
+
 </body>
 
 </html>
