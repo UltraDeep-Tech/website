@@ -366,6 +366,7 @@ const translations = {
   testimonials_camila_text: "The AISP certification gave me practical tools to enhance the security of our AI systems.",
   // Footer disclaimer
   disclaimer_text: "The logos shown on this site reflect alignment with international standards, pending alliance applications, or in-house certifications legally issued by our institution. We claim no official accreditation unless expressly stated.",
+  title_courses: "AI Security Courses – Government, Banks, and Businesses | Ultra-Deep Computing Technology",
 
     // Hero / Banner
     hero_title1:        "AI Security Training for Governments and Enterprises",
@@ -487,6 +488,7 @@ const translations = {
     product4_title:         "Optimización de Rendimiento IA",
     product4_desc:          "Mejora latencia, precisión y costes con herramientas de optimización.",
 
+    title_courses: "Cursos de Seguridad en IA – Gobierno, Bancos y Empresas | Ultra Deep Tech",
     services_section_title: "Servicios",
     services_section_sub:   "Protege y optimiza tu infraestructura IA con nuestros servicios de evaluación, implementación y capacitación.",
     ai_assessment_desc:     "Evaluaciones de seguridad y planificación estratégica para sistemas de IA. Nuestro equipo realiza auditorías y desarrolla estrategias de protección.",
