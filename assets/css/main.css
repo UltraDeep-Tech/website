@@ -2517,6 +2517,8 @@ section .row {
   object-fit: cover;
   filter: brightness(0.4);
   z-index: 0;
+  opacity: 0.5;
+
 }
 .cta-ai-bg {
   position: absolute;
@@ -2527,7 +2529,7 @@ section .row {
   object-fit: cover;
   filter: brightness(0.4);
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .cta-ai-title {

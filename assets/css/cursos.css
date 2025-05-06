@@ -1807,8 +1807,16 @@ section,
   color: var(--accent-color);
 }
 
+
+.navmenu .nav-link {
+  display: flex;
+  align-items: center;
+}
 .navmenu .nav-link i {
   margin-right: 8px;
+}
+.navmenu .nav-link span {
+  flex: 1;
 }
 
 /*--------------------------------------------------------------

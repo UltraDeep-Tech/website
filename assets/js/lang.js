@@ -440,7 +440,7 @@ const translations = {
 // cta
 certifications_cta_title:       "Certifications",
 certifications_cta_desc:        "Validate your skills with our industry-recognized certificates.",
-certifications_cta_button:      "Certificate Now!",
+certifications_cta_button:      "Get Certified Now",
 
 
   },
@@ -556,7 +556,7 @@ certifications_cta_button:      "Certificate Now!",
 //cta
 certifications_cta_title:       "Certificaciones",
 certifications_cta_desc:        "Valide sus habilidades con nuestros certificados reconocidos.",
-certifications_cta_button:      "¡Certifíquese ahora!",
+certifications_cta_button:      "Certifícate ahora",
 
     // Dynamic “Product Details” content
     product_details_title:  "Detalles del Producto",
