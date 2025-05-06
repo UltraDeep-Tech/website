@@ -435,9 +435,12 @@ const translations = {
     alignment_unesco_desc:"We adopt UNESCO’s AI Ethics recommendations to promote responsible use of technology.",
     alignment_oecd:      "OECD AI Principles",
     alignment_oecd_desc: "We incorporate the OECD AI Principles to ensure transparency, fairness, and safety.",
-    cursos:"Courses"
+    cursos:"Courses",
 
-
+// cta
+certifications_cta_title:       "Certifications",
+certifications_cta_desc:        "Validate your skills with our industry-recognized certificates.",
+certifications_cta_button:      "Certificate Now!",
 
 
   },
@@ -549,6 +552,11 @@ const translations = {
     luciano_camano_name:    "Luciano Camano",
     luciano_camano_role:    "Gerente de Alianzas Estratégicas",
     luciano_camano_bio:     "Aporta amplia experiencia en soluciones de seguridad de IA empresarial, forjando relaciones de alto impacto con líderes de industria en entornos altamente regulados.",
+
+//cta
+certifications_cta_title:       "Certificaciones",
+certifications_cta_desc:        "Valide sus habilidades con nuestros certificados reconocidos.",
+certifications_cta_button:      "¡Certifíquese ahora!",
 
     // Dynamic “Product Details” content
     product_details_title:  "Detalles del Producto",
