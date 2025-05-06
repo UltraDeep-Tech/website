@@ -1210,10 +1210,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3) Toggle idioma
   document.getElementById('lang-toggle')?.addEventListener('click', () => {
     const current = localStorage.getItem('site_lang') || initial;
-    const next    = current === 'en' ? 'es' : 'en';
-    setLanguage(next);
-    window.location.reload();
+    const next = current === 'en' ? 'es' : 'en';
+  
+    // Actualiza lang en localStorage
+    localStorage.setItem('site_lang', next);
+  
+    // Actualiza la URL con el nuevo idioma y recarga
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', next);
+    window.location.href = url.toString();
   });
+  
 });
 
 
@@ -1236,3 +1243,4 @@ function setLanguage(lang) {
 
   localStorage.setItem('site_lang', lang);
 }
+
