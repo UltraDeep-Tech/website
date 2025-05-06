@@ -34,7 +34,7 @@ const translations = {
     visit_our_blog:         "Visit Our Blog",
     see_all_videos:         "See All Videos",
     have_question:          "Have a Question? Write Us",
-
+    getCertifiedNow:"Get Certified Now",
     // Hero / Banner AI
     hero_title:             "We secure your AI",
     hero_subtitle:          "Protect Your AI\nFrom Modern Threats",
@@ -102,7 +102,7 @@ const translations = {
     leadership_team_title:  "Leadership Team",
     avi_pilcer_name:        "Avi Pilcer",
     avi_pilcer_role:        "CEO and Chief Scientist",
-    avi_pilcer_bio:         "AI expert, ex-Israeli intelligence. Drives advancements in AI and cybersecurity.",
+    avi_pilcer_bio:         "AI expert, former tech advisor to Israeli intelligence. 15+ years pioneering AI and cybersecurity. Former AI Director at Motorola Solutions. Serial entrepreneur.",
     guido_galicer_name:     "Guido Galicer",
     guido_galicer_role:     "Product / Strategy",
     guido_galicer_bio:      "Founder of Habla Agency. Proven track record in marketing companies to multi-million dollar valuations. Strategist with strong education and global perspective.",
@@ -470,6 +470,7 @@ const translations = {
     visit_our_blog:         "Visitar Nuestro Blog",
     see_all_videos:         "Ver Todos los Videos",
     have_question:          "¿Tienes una Pregunta? Escríbenos",
+    getCertifiedNow: "Certificate Ahora",
 
     hero_title:             "Aseguramos tu IA",
     hero_subtitle:          "Protege Tu IA\nDe Amenazas Modernas",
@@ -532,7 +533,7 @@ const translations = {
     leadership_team_title:  "Equipo Directivo",
     avi_pilcer_name:        "Avi Pilcer",
     avi_pilcer_role:        "CEO y Científico Jefe",
-    avi_pilcer_bio:         "Experto en IA, ex inteligencia israelí. Impulsa avances en IA y ciberseguridad.",
+    avi_pilcer_bio:         "Experto en IA, ex-asesor tecnológico para inteligencia israelí. 15+ años pionero en IA y ciberseguridad. Ex-Director de IA en Motorola Solutions. Emprendedor serial.",
     guido_galicer_name:     "Guido Galicer",
     guido_galicer_role:     "Product / Strategy",
     guido_galicer_bio:      "Fundador de Habla Agency. Historial probado de marketing de empresas hasta valoraciones multimillonarias. Estratega con fuerte formación y perspectiva global.",
