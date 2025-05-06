@@ -2688,6 +2688,9 @@ section,
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.certificaciones-obtendras h3{
+font-weight:600;
+}
 .cert-sample-container:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);

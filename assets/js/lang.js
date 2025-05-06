@@ -1055,9 +1055,9 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
   // Sección “Certificaciones que obtendrás”
   certs_obtendras_title: "Certificaciones que obtendrás",
   certs_obtendras_desc:  "Nuestros graduados como Diego, Valentina y Martín ya están implementando sus conocimientos en importantes organizaciones",
-  cert_obt1:             "AISP – AI Security Professional",
-  cert_obt2:             "CAISE – Certified AI Security Expert",
-  cert_obt3:             "AIGP – AI Governance Professional",
+  cert_obt1:             "AISP – Profesional en Seguridad de IA",
+  cert_obt2:             "CAISE – Experto en Seguridad de IA Certificado",
+  cert_obt3:             "AIGP – Profesional de gobernanza de IA",
 
   // Sección Testimonios
   testimonials_title:         "Testimonios",
