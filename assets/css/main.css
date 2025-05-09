@@ -2863,6 +2863,8 @@ section .row {
     padding: 10px 20px !important;
     font-size: 0.9em;
     border-radius: 12px;
+    width: fit-content;
+    margin-block: 10px;
   }
   .book-call-content {
     gap: 8px;
