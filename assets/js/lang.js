@@ -375,7 +375,7 @@ const translations = {
   
     // About
     about_video_link:   "Watch Video",
-    about_formationheader:      "Certified AI Security Training",
+    about_formationheader: "Certified AI Security Training",
     about_formation:  "At Ultra Deep Tech we combine expertise, professional certifications, and strategic alliances to deliver elite AI security training:",
   
     // Certificados
@@ -1088,8 +1088,8 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
   
     // About
     about_video_link:   "Ver Video",
-    about_heading:      "Formación Certificada en Seguridad de IA",
-    about_description:  "En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:",
+    about_formationheader:      "Formación Certificada en Seguridad de IA",
+    about_formation:  "En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:",
   
     // Certificados
     certs_aisp_title:   "Certificaciones AISP, CAISE y AIGP",
@@ -1154,8 +1154,7 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     cta_desc1: "Asegura el cumplimiento normativo, protege tus datos críticos y fortalece tu liderazgo tecnológico frente a amenazas avanzadas.",
     cta_button1: "Inscríbete Ahora",
 
-      about_formationheader:      "Formación Certificada en Seguridad de IA",
-      about_formation:  "En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:",
+
     
   
     
