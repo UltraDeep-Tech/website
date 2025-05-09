@@ -375,8 +375,8 @@ const translations = {
   
     // About
     about_video_link:   "Watch Video",
-    about_heading:      "Certified AI Security Training",
-    about_description:  "At Ultra Deep Tech we combine expertise, professional certifications, and strategic alliances to deliver elite AI security training:",
+    about_formationheader:      "Certified AI Security Training",
+    about_formation:  "At Ultra Deep Tech we combine expertise, professional certifications, and strategic alliances to deliver elite AI security training:",
   
     // Certificados
     certs_aisp_title:   "AISP, CAISE, and AIGP Certifications",
@@ -442,6 +442,9 @@ certifications_cta_title:       "Certifications",
 certifications_cta_desc:        "Validate your skills with our industry-recognized certificates.",
 certifications_cta_button:      "Get Certified Now",
 
+  cta_title1: "Boost Your Organization’s Security",
+  cta_desc1: "Empower your team with our certified AI Security courses, designed specifically for Governments, Banks, and Large Enterprises.",
+  cta_button1: "Enroll Now"
 
   },
   es: {
@@ -1146,8 +1149,14 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     alignment_unesco_desc:"Adoptamos las recomendaciones de Ética en IA de UNESCO para promover el uso responsable de la tecnología.",
     alignment_oecd:      "OECD AI Principles",
     alignment_oecd_desc: "Incorporamos los Principios de IA de la OCDE para garantizar transparencia, equidad y seguridad.",
-    cursos:"Cursos"
+    cursos:"Cursos",
+    cta_title1: "Impulsa la seguridad de tu organización",
+    cta_desc1: "Asegura el cumplimiento normativo, protege tus datos críticos y fortalece tu liderazgo tecnológico frente a amenazas avanzadas.",
+    cta_button1: "Inscríbete Ahora"
+
+    
   
+    
 }
 };
 

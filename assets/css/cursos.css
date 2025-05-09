@@ -2600,6 +2600,55 @@ section,
   background-color: #e6e6e6;
   transform: translateY(-2px);
 }
+/*--------------------------------------------------------------
+# CTA Section Background
+--------------------------------------------------------------*/
+#cta-bg1 {
+  position: relative;
+  padding: 6rem 1rem;
+  color: #fff;
+  /* Ajusta la ruta según la ubicación de tu CSS */
+  background: url('../img/working-6860520_1280.webp') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+#cta-bg1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+#cta-bg1 .cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#cta-bg1 h2 {
+  font-size: clamp(2rem,5vw,3rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+#cta-bg1 p {
+  font-size: clamp(1rem,2.5vw,1.25rem);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+#cta-bg1 .btn-light {
+  background-color: #fff;
+  color: #0062c7;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#cta-bg1 .btn-light:hover {
+  background-color: #e6e6e6;
+  transform: translateY(-2px);
+}
 
 
 /* Botón flotante de WhatsApp */
