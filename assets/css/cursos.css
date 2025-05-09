@@ -913,6 +913,7 @@ section,
 /*--------------------------------------------------------------
   Hero Section – Responsive con overlay y texto encima de la imagen
 --------------------------------------------------------------*/
+
 /* Contenedor principal */
 .hero {
   position: relative;
@@ -937,10 +938,10 @@ section,
   pointer-events: none;
 }
 
-/* Row interna, centrada y con ancho máximo */
+/* Contenedor interno */
 .hero .row {
   position: relative;
-  z-index: 2;  
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -950,21 +951,34 @@ section,
   margin: 0 auto;
 }
 
-/* Columnas 100% en vista móvil */
+/* Columnas 100% en móvil */
 .hero .hero-img,
 .hero .content {
   width: 100%;
 }
 
-/* Estilos del contenido de texto */
+/* Centrado de imagen en móvil */
+.hero .hero-img {
+  display: flex;
+  justify-content: center;
+}
+.hero .hero-img img {
+  max-width: 80%;
+  height: auto;
+  animation: up-down 2s ease-in-out infinite alternate-reverse;
+  z-index: 1;
+  position: relative;
+}
+
+/* Texto encima de la imagen */
 .hero .content {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
-  position: relative;
-  z-index: 3;
 }
 
 .hero h1 {
@@ -1032,31 +1046,20 @@ section,
   color: var(--contrast-color);
 }
 
-/* Imagen animada */
-.hero .hero-img img,
-.hero img.animated {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: clamp(200px, 50vw, 400px);
-  animation: up-down 2s ease-in-out infinite alternate-reverse;
-}
-
+/* Animación up-down */
 @keyframes up-down {
   0%   { transform: translateY(10px); }
   100% { transform: translateY(-10px); }
 }
 
-/* Punto de quiebre: tablets y pantallas pequeñas */
+/* Tablets y pantallas pequeñas */
 @media (min-width: 576px) {
   .hero {
     padding: clamp(3rem, 6vw, 10rem) 2rem;
   }
 }
 
-/* Punto de quiebre: pantallas medianas */
+/* Pantallas medianas en adelante */
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -1074,9 +1077,12 @@ section,
     text-align: left;
     padding-right: 2rem;
   }
+  .hero .hero-img {
+    justify-content: flex-end;
+  }
 }
 
-/* Punto de quiebre: pantallas grandes */
+/* Pantallas grandes */
 @media (min-width: 992px) {
   .hero {
     padding: clamp(5rem, 8vw, 14rem) 4rem;
@@ -1089,14 +1095,14 @@ section,
   }
 }
 
-/* Punto de quiebre: pantallas extra­-anchas */
+/* Pantallas extra-anchas */
 @media (min-width: 1200px) {
   .hero {
     padding: clamp(6rem, 9vw, 16rem) 6rem;
   }
 }
 
-/* Ajustes para móviles muy pequeños */
+/* Móviles muy pequeños */
 @media (max-width: 400px) {
   .hero {
     padding: clamp(1.5rem, 8vw, 4rem) 1rem;
