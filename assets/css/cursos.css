@@ -913,10 +913,11 @@ section,
 /*--------------------------------------------------------------
   Hero Section – Responsive con overlay y texto encima de la imagen
 --------------------------------------------------------------*/
+/* Contenedor principal */
 .hero {
   position: relative;
   width: 100%;
-  padding: 4rem 1rem;
+  padding: clamp(2rem, 5vw, 8rem) 1rem;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -936,40 +937,38 @@ section,
   pointer-events: none;
 }
 
-/* Contenedor interno */
+/* Row interna, centrada y con ancho máximo */
 .hero .row {
   position: relative;
-  z-index: 2;   /* todo dentro del row está por encima del overlay */
+  z-index: 2;  
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
-  width: 120%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Columnas 100% en móvil */
+/* Columnas 100% en vista móvil */
 .hero .hero-img,
 .hero .content {
   width: 100%;
 }
 
-/* Texto: encima de la imagen */
+/* Estilos del contenido de texto */
 .hero .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
-}
-
-/* Asegura que el texto quede por encima de la imagen animada */
-.hero .content {
   position: relative;
   z-index: 3;
 }
 
 .hero h1 {
-  margin: 0 0 1rem;
+  margin-bottom: 1rem;
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 700;
   line-height: 1.2;
@@ -977,7 +976,7 @@ section,
 }
 
 .hero p {
-  margin: 0 0 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: clamp(1rem, 3vw, 1.25rem);
   color: #fff;
   line-height: 1.4;
@@ -1037,7 +1036,7 @@ section,
 .hero .hero-img img,
 .hero img.animated {
   position: relative;
-  z-index: 1; /* por encima del overlay, pero debajo del texto */
+  z-index: 1;
   width: 100%;
   height: auto;
   display: block;
@@ -1045,17 +1044,23 @@ section,
   animation: up-down 2s ease-in-out infinite alternate-reverse;
 }
 
-/* Animación up-down */
 @keyframes up-down {
   0%   { transform: translateY(10px); }
   100% { transform: translateY(-10px); }
 }
 
-/* Desktop: lado a lado */
+/* Punto de quiebre: tablets y pantallas pequeñas */
+@media (min-width: 576px) {
+  .hero {
+    padding: clamp(3rem, 6vw, 10rem) 2rem;
+  }
+}
+
+/* Punto de quiebre: pantallas medianas */
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
-    padding: 6rem 2rem;
+    padding: clamp(4rem, 7vw, 12rem) 4rem;
   }
   .hero .row {
     flex-direction: row;
@@ -1071,23 +1076,30 @@ section,
   }
 }
 
-/* Extra-wide screens: más espacio */
-@media (min-width: 1200px) {
+/* Punto de quiebre: pantallas grandes */
+@media (min-width: 992px) {
   .hero {
-    padding: 8rem 4rem;
+    padding: clamp(5rem, 8vw, 14rem) 4rem;
   }
   .hero .content {
-    max-width: 50%;
+    max-width: 600px;
   }
   .hero .hero-img img {
     max-width: 600px;
   }
 }
 
-/* Muy pequeño: ajuste de tipografía */
+/* Punto de quiebre: pantallas extra­-anchas */
+@media (min-width: 1200px) {
+  .hero {
+    padding: clamp(6rem, 9vw, 16rem) 6rem;
+  }
+}
+
+/* Ajustes para móviles muy pequeños */
 @media (max-width: 400px) {
   .hero {
-    padding: 3rem 1rem;
+    padding: clamp(1.5rem, 8vw, 4rem) 1rem;
   }
   .hero h1 {
     font-size: 1.75rem;
