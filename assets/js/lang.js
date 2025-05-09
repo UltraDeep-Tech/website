@@ -1152,8 +1152,10 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     cursos:"Cursos",
     cta_title1: "Impulsa la seguridad de tu organización",
     cta_desc1: "Asegura el cumplimiento normativo, protege tus datos críticos y fortalece tu liderazgo tecnológico frente a amenazas avanzadas.",
-    cta_button1: "Inscríbete Ahora"
+    cta_button1: "Inscríbete Ahora",
 
+      about_formationheader:      "Formación Certificada en Seguridad de IA",
+      about_formation:  "En Ultra Deep Tech combinamos experiencia, certificaciones profesionales y alianzas estratégicas para ofrecer una capacitación de élite en seguridad de inteligencia artificial:",
     
   
     
