@@ -878,7 +878,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -2470,7 +2470,7 @@ section,
     margin-bottom: 2rem;
   }
   .certificados .cert-card {
-    background: #ffffff;
+    background: #f5f5f5cb;
     border-radius: 0.75rem;
     padding: 2.5rem;
     text-align: center;
@@ -2554,7 +2554,7 @@ section,
   position: absolute;
   inset: 0;
   box-shadow:
-    0 0 20px var(--accent-color),
+    0 0 20px #003c88,
     inset 0 0 10px var(--accent-color);
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -2706,6 +2706,7 @@ section,
 .whatsapp-float:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  color: #fff;
 }
 
 /* Tooltip */
@@ -2836,3 +2837,225 @@ font-weight:600;
     font-size: 2rem;
   }
 }
+
+/* Estilos para el modal/popup */
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #37517e 0%, #1e3c72 100%);
+            color: white;
+            border-bottom: none;
+            padding: 18px 25px;
+            position: relative;
+        }
+        
+        .modal-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #0054b3);
+        }
+        
+        .modal-title {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-close-white {
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .btn-close-white:hover {
+            opacity: 1;
+        }
+        
+        .modal-body {
+            padding: 25px 30px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        
+        .modal-footer {
+            background-color: #f9fafb;
+            border-top: 1px solid #eaedf0;
+            padding: 15px 25px;
+        }
+        
+        .modal-footer .btn-primary {
+            background: linear-gradient(135deg, #003c88 0%, #0054b3 100%);
+            border: none;
+            padding: 8px 20px;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .modal-footer .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .modal-footer .btn-secondary {
+            background-color: #f1f3f5;
+            border: none;
+            color: #495057;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .modal-footer .btn-secondary:hover {
+            background-color: #e9ecef;
+        }
+        
+        .course-details h4 {
+            color: #003c88;
+            font-size: 17px;
+            margin-top: 22px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .course-details h4::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 18px;
+            background: linear-gradient(180deg, #0054b3, #003c88);
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        
+        .course-details ul {
+            padding-left: 22px;
+            margin-bottom: 18px;
+            list-style-type: none;
+        }
+        
+        .course-details ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 8px;
+        }
+        
+        .course-details ul li::before {
+            content: '•';
+            color: #003c88;
+            font-size: 18px;
+            position: absolute;
+            left: -12px;
+            top: -2px;
+        }
+        
+        .format-box {
+            background-color: #f1f9fe;
+            border-left: 4px solid #0054b3;
+            padding: 15px 20px;
+            margin-bottom: 22px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+        
+        .benefits-section {
+            background: linear-gradient(135deg, #f0f7fb 0%, #e6f3fa 100%);
+            padding: 18px 22px;
+            border-radius: 8px;
+            margin-top: 28px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1edf7;
+        }
+        
+        .benefits-section h4 {
+            margin-top: 5px;
+        }
+        .btn-details {
+            background-color: #0054b3;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-details:hover {
+            background-color: #0054b3;
+            transform: translateY(-2px);
+            color:#fff;
+        }
+        
+        /* Estilos para el modal/popup */
+        .modal-content {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .modal-header {
+            background-color: #003c88;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            padding: 15px 20px;
+        }
+        
+        .modal-title {
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .modal-body {
+            padding: 25px;
+        }
+        
+        .modal-footer {
+            border-top: 1px solid #f8f9fa;
+            padding: 15px 20px;
+        }
+        
+        .course-details h4 {
+            color: #003c88;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .course-details ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .course-details ul li {
+            margin-bottom: 8px;
+        }
+        
+        .format-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0054b3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .benefits-section {
+            background-color: #f0f7fb;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 25px;
+        }
+        
+        .benefits-section h4 {
+            margin-top: 5px;
+        }
