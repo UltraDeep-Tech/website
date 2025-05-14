@@ -691,10 +691,11 @@
   color: #111;
   display: flex;
   justify-content: center;
-  align-items: center; /* centrado vertical */
-  height: 40px; /* altura fija más elegante */
+  align-items: center;
+  min-height: 40px;
   font-size: 0.9rem;
   font-weight: 500;
+  text-align: center;
   border-bottom: 2px solid #003cb3;
   position: fixed;
   width: 100%;
@@ -702,18 +703,21 @@
   z-index: 9999;
   transition: transform 0.4s ease;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  padding: 0 10px; /* un poco de espacio horizontal */
+  padding: 5px 20px;
+  line-height: 1.4;
+  flex-wrap: wrap;
 }
 
 .top-banner p {
   margin: 0;
-  text-align: center;
+  width: 100%;
 }
 
 .top-banner .banner-link {
   color: #1979d8;
   text-decoration: underline;
   margin-left: 8px;
+  white-space: nowrap;
 }
 
 body.banner-hidden .top-banner {
@@ -723,13 +727,32 @@ body.banner-hidden .top-banner {
 .header {
   position: fixed;
   width: 100%;
-  top: 40px; /* Altura del banner */
+  top: 40px;
   z-index: 997;
   transition: top 0.4s ease;
 }
 
 body.banner-hidden .header {
-  top: 0; /* Cuando el banner desaparece */
+  top: 0;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .top-banner {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    text-align: center;
+  }
+
+  .top-banner .banner-link {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .header {
+    top: 60px; /* Ajusta si el banner crece */
+  }
 }
 
 
