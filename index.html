@@ -685,6 +685,55 @@
   color: var(--accent-color);
   outline: none;
 }
+
+.top-banner {
+  background: #ffffff;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centrado vertical */
+  height: 40px; /* altura fija más elegante */
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 2px solid #003cb3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: transform 0.4s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 0 10px; /* un poco de espacio horizontal */
+}
+
+.top-banner p {
+  margin: 0;
+  text-align: center;
+}
+
+.top-banner .banner-link {
+  color: #1979d8;
+  text-decoration: underline;
+  margin-left: 8px;
+}
+
+body.banner-hidden .top-banner {
+  transform: translateY(-100%);
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 40px; /* Altura del banner */
+  z-index: 997;
+  transition: top 0.4s ease;
+}
+
+body.banner-hidden .header {
+  top: 0; /* Cuando el banner desaparece */
+}
+
+
+
     </style>
     
     
@@ -714,6 +763,18 @@
 
 
 <body class="index-page">
+<div id="top-banner" class="top-banner">
+  <p>
+    <span data-i18n="top_banner_text" class="fw-bold">
+      Limited Time Offer: 
+    </span>
+    <span data-i18n="top_banner_text1">
+    Enterprise AI Security Workshops - Reserve Your Spot Today!
+    </span>
+    <a href="cursos.html" class="banner-link" data-i18n="top_banner_link">Learn More →</a>
+  </p>
+</div>
+
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
@@ -1433,6 +1494,15 @@
             });
             youtubeLite.init();
         });
+    </script>
+    <script>
+    window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) {
+      document.body.classList.add('banner-hidden');
+    } else {
+      document.body.classList.remove('banner-hidden');
+    }
+  });
     </script>
 
     <div id="videoModal" class="modal">
