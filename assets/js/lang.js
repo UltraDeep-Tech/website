@@ -1256,7 +1256,7 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     CommonRequestInfo: "Solicitar información",
 
     // AISP
-    AISPmodalTitle: "Profesional en Seguridad en IA (AISP)",
+    AISPmodalTitle: "Profesional en Seguridad de IA (AISP)",
     AISPformatLabel: "Formato:",
     AISPformatValue: "Taller intensivo de 3 días (9:00-13:00 cada día)",
     AISPday1Title: "Día 1: Fundamentos de Seguridad en IA",
