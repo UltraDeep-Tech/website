@@ -538,8 +538,8 @@ certifications_cta_button:      "Get Certified Now",
     AIGPpersonalization: "Customization available for enterprise needs",
 
     whatsapp: "Talk with us",
-    top_banner_text: "Limited Time Offer:",
-    top_banner_text1: "Enterprise AI Security Workshops - Reserve Your Spot Today!",
+    top_banner_text: "Exclusive Offer:",
+    top_banner_text1: "AI Security Training for Businesses [Last Spots Available →]",
     top_banner_link: "Learn More →"
 
   },
@@ -1341,8 +1341,8 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     AIGPinclude4: "Soporte post-formación",
     AIGPpersonalization: "Personalización disponible para necesidades empresariales",
 
-    top_banner_text: 'Oferta por Tiempo Limitado: ',
-    top_banner_text1: 'Talleres de Seguridad de IA para Empresas - ¡Reserve su lugar hoy!',
+    top_banner_text: 'Oferta Exclusiva: ',
+    top_banner_text1: 'Capacitación en Seguridad IA para Empresas [¡Últimos Cupos! →]',
     top_banner_link: 'Más Información →'
     
   
