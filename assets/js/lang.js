@@ -541,7 +541,6 @@ certifications_cta_button:      "Get Certified Now",
     top_banner_text: "Exclusive Offer:",
     top_banner_text1: "AI Security Training for Businesses ",
     top_banner_link: "Last Spots Available →",
-    vermas: 'See More',
   },
   es: {
 
@@ -591,7 +590,7 @@ certifications_cta_button:      "Get Certified Now",
     product3_desc:          "Protección integral con cifrado, control de acceso y auditorías.",
     product4_title:         "Optimización de Rendimiento IA",
     product4_desc:          "Mejora latencia, precisión y costes con herramientas de optimización.",
-
+    vermas: "See More",
     title_courses: "Cursos de Seguridad en IA – Gobierno, Bancos y Empresas | Ultra Deep Tech",
     services_section_title: "Servicios",
     services_section_sub:   "Protege y optimiza tu infraestructura IA con nuestros servicios de evaluación, implementación y capacitación.",
@@ -1344,7 +1343,7 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
     top_banner_text: 'Oferta Exclusiva: ',
     top_banner_text1: 'Capacitación en Seguridad IA para Empresas ',
     top_banner_link: '¡Últimos Cupos! →',
-    vermas: 'Ver más',
+    vermas: "Ver más",
   
     
 }
