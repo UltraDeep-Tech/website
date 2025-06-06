@@ -540,8 +540,8 @@ certifications_cta_button:      "Get Certified Now",
     whatsapp: "Talk with us",
     top_banner_text: "Exclusive Offer:",
     top_banner_text1: "AI Security Training for Businesses ",
-    top_banner_link: "Last Spots Available →"
-
+    top_banner_link: "Last Spots Available →",
+    vermas: 'See More',
   },
   es: {
 
@@ -1343,8 +1343,8 @@ product1_default_title:  "Soluciones de IA para Gobiernos y Empresas",
 
     top_banner_text: 'Oferta Exclusiva: ',
     top_banner_text1: 'Capacitación en Seguridad IA para Empresas ',
-    top_banner_link: '¡Últimos Cupos! →'
-    
+    top_banner_link: '¡Últimos Cupos! →',
+    vermas: 'Ver más',
   
     
 }
