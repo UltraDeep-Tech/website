@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lucid - Decisiones Empresariales Objetivas | Elimina Sesgos Cognitivos</title>
+
+    <meta name="description" content="Toma decisiones más inteligentes con Lucid. Elimina automáticamente sesgos cognitivos, descubre puntos ciegos y mejora la calidad de tus decisiones estratégicas empresariales. Prueba gratis.">
+    <meta name="keywords" content="decisiones empresariales, sesgos cognitivos, análisis objetivo, toma de decisiones, liderazgo, consultoría, RRHH, legal">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZZJHHYCTR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MZZJHHYCTR');
+    </script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.webp" rel="icon">
+    <link href="assets/img/favicon.webp" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/lucidpage.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>  
+      /* Language toggle button – minimal & subtle */
+      #lang-toggle {
+        background: none;
+        border: none;
+        color: var(--nav-color);
+        font-family: var(--nav-font);
+        font-size: 0.9rem;
+        margin-left: 35px;
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      
+      #lang-toggle:hover,
+      #lang-toggle:focus {
+        color: var(--accent-color);
+        outline: none;
+      }
+    </style>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1167028835436926');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1167028835436926&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->  
+  
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/favicon.webp" alt="Ultra Deep Tech Logo" width="32" height="32" class="logo-img">
+        <h1 class="sitename">Ultra Deep Tech</h1>
+      </a>
+  
+      <!-- Menú -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+
+  
+          <!-- About Us -->
+          <li class="dropdown">
+            <a href="about.html" class="nav-link">
+              <i class="bi bi-info-circle-fill"></i>
+              <span data-i18n="about_us">About Us</span>
+            </a>
+            <ul>
+              <li>
+                <a href="about.html#company-history" class="nav-link">
+                  <i class="bi bi-clock-history"></i>
+                  <span data-i18n="company_history">Company History</span>
+                </a>
+              </li>
+              <li>
+                <a href="about.html#team" class="nav-link">
+                  <i class="bi bi-people-fill"></i>
+                  <span data-i18n="leadership_team">Leadership Team</span>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#youtube-videos" class="nav-link">
+                  <i class="bi bi-youtube"></i>
+                  <span data-i18n="youtube_channel">Youtube Channel</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog.html" class="nav-link">
+                  <i class="bi bi-pencil-fill"></i>
+                  <span data-i18n="blog_social">Blog &amp; Social Media</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Products & Solutions -->
+          <li class="dropdown">
+            <a href="productsdetails.html" class="nav-link">
+              <i class="bi bi-box-seam"></i>
+              <span data-i18n="products">Products</span>
+            </a>
+            <ul>
+              <li>
+                <a href="safetyshield.html" class="nav-link">
+                  <i class="bi bi-shield-fill"></i>
+                  <span data-i18n="safety_shield">Safety Shield Ultra™</span>
+                </a>
+              </li>
+              <li>
+                <a href="lucid.html" class="nav-link">
+                  <i class="bi bi-eye-fill"></i>
+                  <span data-i18n="lucid_platform">Lucid</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-2" class="nav-link">
+                  <i class="bi bi-cpu-fill"></i>
+                  <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-3" class="nav-link">
+                  <i class="bi bi-shield-check"></i>
+                  <span data-i18n="enterprise_security">Enterprise AI Security</span>
+                </a>
+              </li>
+              <li>
+                <a href="productsdetails.html?product=product-4" class="nav-link">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span data-i18n="performance_optimization">AI Performance Optimization</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Services -->
+          <li class="dropdown">
+            <a href="service-details.html" class="nav-link">
+              <i class="bi bi-tools"></i>
+              <span data-i18n="services">Services</span>
+            </a>
+            <ul>
+              <li>
+                <a href="cursos.html" class="nav-link">
+                  <i class="bi bi-easel-fill"></i>
+                  <span data-i18n="training_education">Training &amp; Education</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-1" class="nav-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</span>
+                </a>
+              </li>
+              <li>
+                <a href="service-details.html?product=product-2" class="nav-link">
+                  <i class="bi bi-hammer"></i>
+                  <span data-i18n="implementation">Implementation &amp; Architecture</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Career -->
+          <li class="dropdown">
+            <a href="career.html" class="nav-link">
+              <i class="bi bi-briefcase-fill"></i>
+              <span data-i18n="career">Career</span>
+            </a>
+            <ul>
+              <li>
+                <a href="career.html#openings" class="nav-link">
+                  <i class="bi bi-person-fill"></i>
+                  <span data-i18n="current_job_openings">Current Job Openings</span>
+                </a>
+              </li>
+              <li>
+                <a href="career.html#" class="nav-link">
+                  <i class="bi bi-stars"></i>
+                  <span data-i18n="core_values">Core Values</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+
+          <!-- Contact -->
+          <li class="dropdown">
+            <a href="contact.html" class="nav-link">
+              <i class="bi bi-envelope-fill"></i>
+              <span data-i18n="contact_us">Contact Us</span>
+            </a>
+            <ul>
+              <li>
+                <a href="contact.html#faqs" class="nav-link">
+                  <i class="bi bi-question-circle-fill"></i>
+                  <span data-i18n="faqs">FAQ's</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#mapa" class="nav-link">
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span data-i18n="office_locations">Office Locations</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html#contact" class="nav-link">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <span data-i18n="chat_with_us">Chat with Us</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+  
+          <!-- Book a Call -->
+          <li>
+            <a href="https://calendly.com/avipil/30-min" class="book-call-btn" target="_blank">
+              <span class="book-call-content" ><span data-i18n="book_a_call">Book a Call</span></span>
+              <span class="book-call-hover"></span>
+            </a>
+          </li>
+          
+                <!-- Toggle de idioma -->
+                <li>
+                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                  </li>
+        </ul>
+      </nav>
+  
+      <!-- Toggle móvil -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  
+    </div>
+</header>
+
+<main class="main">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="hero-background">
+      <img src="assets/img/dashboardlucid.png" alt="Lucid Dashboard" class="hero-bg-image">
+    </div>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
+          <blockquote data-aos="fade-up" data-aos-delay="100">
+            <h2 data-i18n="lucid_hero_title">
+              Toma Decisiones Más Inteligentes
+            </h2>
+            <p id="typewriter-description" data-i18n="lucid_hero_description">
+              Elimina automáticamente los sesgos cognitivos que comprometen la calidad de tus decisiones empresariales. <strong>95% de usuarios reportan decisiones más objetivas en menos de 2 minutos.</strong>
+            </p>
+            <div class="hero-badge">
+              <i class="bi bi-shield-check"></i>
+              <span data-i18n="lucid_hero_badge">Más de 200 empresas confían en Lucid</span>
+            </div>
+          </blockquote>
+          <div class="hero-buttons d-flex flex-column flex-md-row mt-4 justify-content-center justify-content-md-start gap-3">
+            <a href="https://lucidapp.io" target="_blank" class="download-btn primary-cta">
+              <i class="bi bi-rocket-takeoff"></i>
+              <span data-i18n="lucid_hero_primary_btn">Probar Lucid Gratis</span>
+            </a>
+            <a href="#benefits" class="download-btn secondary-cta">
+              <i class="bi bi-eye-fill"></i>
+              <span data-i18n="lucid_hero_secondary_btn">Ver Características</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out">
+          <img src="assets/img/lucidnotebook.png" alt="Lucid Dashboard" class="phone-1">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Hero Section -->
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="background-image"></div>
+    <div class="container about-content" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-xl-center gy-3">
+        <div class="col-lg-5 content">
+          <h4 data-i18n="lucid_about_discover_title">Descubre Lucid</h4>
+          <h2 data-i18n="lucid_about_protection_title">Análisis Objetivo para Decisiones Empresariales</h2>
+          <p data-i18n="lucid_about_description">
+            Lucid detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización. Transforma análisis subjetivos en decisiones objetivas.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#benefits" class="read-more">
+              <span data-i18n="see_more">Ver más</span><i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row gy-4 icon-boxes">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-box">
+                <i class="bi bi-funnel-fill"></i>
+                <h3 data-i18n="lucid_feature_instant_title">Análisis Instantáneo</h3>
+                <p data-i18n="lucid_feature_instant_desc">Procesa documentos complejos en menos de 2 minutos con precisión profesional.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-file-earmark-text"></i>
+                <h3 data-i18n="lucid_feature_reports_title">Reportes Profesionales</h3>
+                <p data-i18n="lucid_feature_reports_desc">Genera informes listos para uso corporativo y legal con recomendaciones claras.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-graph-up-arrow"></i>
+                <h3 data-i18n="lucid_feature_dashboard_title">Dashboard Avanzado</h3>
+                <p data-i18n="lucid_feature_dashboard_desc">Métricas en tiempo real y análisis de tendencias para seguimiento continuo.</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-shield-check"></i>
+                <h3 data-i18n="lucid_feature_compliance_title">Cumplimiento Regulatorio</h3>
+                <p data-i18n="lucid_feature_compliance_desc">Asegura transparencia y objetividad en documentos oficiales y legales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- /About Section -->
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="benefits-header text-center mb-5">
+            <h2 data-i18n="lucid_benefits_section_title">¿Por qué Elegir Lucid?</h2>
+            <p data-i18n="lucid_benefits_section_subtitle">Resultados medibles que transforman la forma en que tu empresa toma decisiones</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="bi bi-clock"></i>
+            </div>
+            <h3 data-i18n="lucid_benefit_1_title">40% Menos Tiempo</h3>
+            <p data-i18n="lucid_benefit_1_desc">En análisis de documentos empresariales. Procesa informes complejos en minutos, no horas.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3 data-i18n="lucid_benefit_2_title">95% Más Objetivos</h3>
+            <p data-i18n="lucid_benefit_2_desc">Decisiones basadas en datos reales. Elimina sesgos inconscientes y mejora la precisión.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="bi bi-currency-dollar"></i>
+            </div>
+            <h3 data-i18n="lucid_benefit_3_title">ROI Inmediato</h3>
+            <p data-i18n="lucid_benefit_3_desc">Reducción de riesgos desde el primer día. Ahorra costos evitando decisiones erróneas.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 data-i18n="lucid_benefit_4_title">Equipos Más Efectivos</h3>
+            <p data-i18n="lucid_benefit_4_desc">Mejora la calidad de decisiones colectivas. Alinea equipos con objetivos claros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Benefits Section -->
+
+
+  <!-- Features Section -->
+  <section id="features" class="features section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="features-header text-center mb-5">
+            <h2 data-i18n="lucid_features_section_title">Beneficios por Industria</h2>
+            <p data-i18n="lucid_features_section_subtitle">Soluciones especializadas para diferentes roles y departamentos empresariales</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3 data-i18n="lucid_feature_c_level_title">Para Ejecutivos C-Level</h3>
+            <p data-i18n="lucid_feature_c_level_desc">Reduce riesgos en decisiones estratégicas críticas. Elimina sesgos que pueden comprometer el futuro de tu empresa y toma decisiones basadas en datos objetivos.</p>
+            <div class="feature-benefits">
+              <span class="benefit-tag" data-i18n="lucid_feature_c_level_tag1">Decisiones Estratégicas</span>
+              <span class="benefit-tag" data-i18n="lucid_feature_c_level_tag2">Reducción de Riesgos</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-people"></i>
+            </div>
+            <h3 data-i18n="lucid_feature_hr_title">Para RRHH</h3>
+            <p data-i18n="lucid_feature_hr_desc">Elimina prejuicios en evaluaciones y contrataciones. Crea procesos más justos y transparentes que mejoran la calidad de tu equipo y la cultura organizacional.</p>
+            <div class="feature-benefits">
+              <span class="benefit-tag" data-i18n="lucid_feature_hr_tag1">Contrataciones Justas</span>
+              <span class="benefit-tag" data-i18n="lucid_feature_hr_tag2">Evaluaciones Objetivas</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-scale"></i>
+            </div>
+            <h3 data-i18n="lucid_feature_legal_title">Para Equipos Legales</h3>
+            <p data-i18n="lucid_feature_legal_desc">Fortalece contratos eliminando sesgos que debilitan casos. Mejora la calidad de tus documentos legales y aumenta las posibilidades de éxito en litigios.</p>
+            <div class="feature-benefits">
+              <span class="benefit-tag" data-i18n="lucid_feature_legal_tag1">Contratos Sólidos</span>
+              <span class="benefit-tag" data-i18n="lucid_feature_legal_tag2">Casos Más Fuertes</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h3 data-i18n="lucid_feature_consultants_title">Para Consultores</h3>
+            <p data-i18n="lucid_feature_consultants_desc">Ofrece análisis más objetivos diferenciándote de la competencia. Proporciona recomendaciones basadas en datos que generan mayor confianza en tus clientes.</p>
+            <div class="feature-benefits">
+              <span class="benefit-tag" data-i18n="lucid_feature_consultants_tag1">Análisis Objetivos</span>
+              <span class="benefit-tag" data-i18n="lucid_feature_consultants_tag2">Diferenciación</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-12" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-card result-card">
+            <div class="feature-icon">
+              <i class="bi bi-trophy"></i>
+            </div>
+            <h3 data-i18n="lucid_feature_result_title">El Resultado Final</h3>
+            <p data-i18n="lucid_feature_result_desc">Decisiones más inteligentes, equipos más efectivos y resultados empresariales superiores. Lucid transforma la forma en que tu organización toma decisiones críticas.</p>
+            <div class="result-grid">
+              <div class="result-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-i18n="lucid_feature_result_item1">Decisiones más objetivas y precisas</span>
+              </div>
+              <div class="result-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-i18n="lucid_feature_result_item2">Reducción significativa de riesgos</span>
+              </div>
+              <div class="result-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-i18n="lucid_feature_result_item3">Mayor confianza en procesos internos</span>
+              </div>
+              <div class="result-item">
+                <i class="bi bi-check-circle-fill"></i>
+                <span data-i18n="lucid_feature_result_item4">ROI medible desde el primer mes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Features Section -->
+
+
+  <!-- Final CTA Section -->
+  <section id="final-cta" class="final-cta-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="fade-up">
+          <div class="final-cta-content">
+            <h2 data-i18n="lucid_final_cta_title">¿Listo para Tomar Decisiones Más Inteligentes?</h2>
+            <p class="cta-subtitle" data-i18n="lucid_final_cta_subtitle">Únete a más de 200 empresas que ya han mejorado la calidad de sus decisiones con Lucid</p>
+            
+            <div class="cta-buttons">
+              <a href="https://lucidapp.io" target="_blank" class="btn-cta-primary">
+                <i class="bi bi-rocket-takeoff"></i>
+                <span data-i18n="lucid_final_cta_primary">Probar Lucid Gratis</span>
+              </a>
+
+            </div>
+            
+            <div class="cta-note">
+              <p><i class="bi bi-check-circle"></i> <span data-i18n="lucid_final_cta_note">Sin compromiso • Configuración en 5 minutos • Soporte 24/7</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Final CTA Section -->
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2 data-i18n="lucid_faq_section_title">Preguntas Frecuentes</h2>
+      <p data-i18n="lucid_faq_section_subtitle">Resolvemos las dudas más comunes sobre Lucid</p>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion" id="faqAccordion">
+
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <span data-i18n="lucid_faq_1_question">¿Cuál es el ROI esperado con Lucid?</span>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_1_answer">
+                  Nuestros clientes reportan un ROI promedio del 300% en el primer año. Esto se debe a la reducción de decisiones erróneas, ahorro de tiempo en revisiones y mejora en la calidad de los procesos. El ROI se hace evidente desde el primer mes de uso.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span data-i18n="lucid_faq_2_question">¿Cuánto tiempo toma implementar Lucid?</span>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_2_answer">
+                  La implementación es inmediata. Puedes comenzar a usar Lucid en menos de 5 minutos. No requiere instalación de software ni configuración compleja. Simplemente sube tu documento y obtén resultados instantáneos.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span data-i18n="lucid_faq_3_question">¿Es seguro usar Lucid con documentos confidenciales?</span>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_3_answer">
+                  Absolutamente. Lucid cumple con los más altos estándares de seguridad empresarial. Utilizamos encriptación de extremo a extremo, no almacenamos el contenido de tus documentos y cumplimos con GDPR, SOC 2 y otros estándares internacionales de seguridad.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <span data-i18n="lucid_faq_4_question">¿Puedo probar Lucid antes de comprarlo?</span>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_4_answer">
+                  Sí, ofrecemos una prueba gratuita de 30 días sin compromiso. Puedes analizar hasta 10 documentos y experimentar todos los beneficios de Lucid. No se requiere tarjeta de crédito para comenzar.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <span data-i18n="lucid_faq_5_question">¿Qué incluye el soporte técnico?</span>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_5_answer">
+                  Incluimos soporte por email para todos los planes, soporte prioritario para planes Professional y Enterprise, y soporte 24/7 para clientes Enterprise. También ofrecemos capacitación personalizada y consultoría para maximizar el valor de tu inversión.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <span data-i18n="lucid_faq_6_question">¿Hay descuentos para equipos grandes?</span>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body" data-i18n="lucid_faq_6_answer">
+                  Sí, ofrecemos descuentos especiales para equipos de más de 10 usuarios. Para equipos de 50+ usuarios, proporcionamos precios personalizados y planes Enterprise con características adicionales. Contacta a nuestro equipo de ventas para obtener una cotización personalizada.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /FAQ Section -->
+
+</main>
+
+<footer id="footer" class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4 justify-content-center">
+
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6 footer-about text-center">
+          <a
+            href="index.html"
+            class="logo d-flex align-items-center justify-content-center mb-3"
+          >
+            <span class="sitename3">Ultra Deep Tech</span>
+          </a>
+          <p data-i18n="footer_about_text">
+            Securing enterprise AI with measurable results. Schedule a demo to see your risk exposure.
+          </p>
+          <a
+            href="https://calendly.com/avipil/30-min"
+            target="_blank"
+            class="book-call-btn2 mt-3 d-inline-block"
+          >
+            <span class="book-call-content2">
+              <span data-i18n="book_a_call">Book a Call</span>
+            </span>
+            <span class="book-call-hover2"></span>
+          </a>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-6 footer-links text-center">
+          <h4 data-i18n="useful_links">Useful Links</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="about_us">About Us</a></li>
+            <li><a href="career.html" data-i18n="career">Careers</a></li>
+            <li><a href="index.html#youtube-videos" data-i18n="youtube_channel">YouTube Channel</a></li>
+            <li><a href="blog.html" data-i18n="blog_social">Blog &amp; Social Media</a></li>
+            <li><a href="politics.html#terms" data-i18n="terms_of_service">Terms of Service</a></li>
+            <li><a href="politics.html#Privacy" data-i18n="privacy_policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="col-lg-3 col-6 footer-links text-center">
+          <h4 data-i18n="footer_products">Products</h4>
+          <ul>
+            <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+            <li><a href="lucid.html" data-i18n="lucid_platform">Lucid</a></li>
+            <li><a href="productsdetails.html?product=product-2" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
+            <li><a href="productsdetails.html?product=product-3" data-i18n="enterprise_security">Enterprise AI Security</a></li>
+            <li><a href="productsdetails.html?product=product-4" data-i18n="performance_optimization">AI Performance Optimization</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-6 footer-links text-center">
+          <h4 data-i18n="footer_services">Services</h4>
+          <ul>
+            <li><a href="cursos.html" data-i18n="training_education">Training &amp; Education</a></li>
+            <li><a href="/service-details.html?product=product-1" data-i18n="ai_assessment">AI Security Assessment &amp; Strategy</a></li>
+            <li><a href="/service-details.html?product=product-2" data-i18n="implementation">Implementation &amp; Architecture</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-2 col-md-6 footer-contact text-center">
+          <h4 data-i18n="footer_contact">Contact Us</h4>
+          <p>
+            Corrientes 800<br>
+            Ciudad Autónoma de Buenos Aires, CP1008<br>
+            Argentina<br>
+          </p>
+          <p>
+            <strong data-i18n="footer_phone">Phone:</strong>
+            <a href="https://wa.link/2ebre2" target="_blank"><br>+54 (9) 11 7645 5965</a>
+          </p>
+          <p>
+            <strong data-i18n="footer_email">Email:</strong>
+            <a href="mailto:contact@ultradeeptech.com">contact@ultradeeptech.com</a>
+          </p>
+          <div class="social-links d-flex justify-content-center mt-3">
+            <a href="https://www.instagram.com/ultradeeptech/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ultra-deep-tech/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCivpA1Q4U8Y09Kvp1_j5QRg" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.tiktok.com/@ultradeeptech" target="_blank"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © <span data-i18n="copyright">All Rights Reserved</span>
+      <strong class="px-1 sitename2">Ultra Deep Tech</strong>
+    </p>
+    <div class="credits">
+      <span data-i18n="designed_by">Designed by</span>
+      <a href="https://www.linkedin.com/in/maximilianoeacri/" target="_blank">Maximiliano Acri</a>
+    </div>
+  </div>
+
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-button" id="whatsapp-button">
+  <i class="bi bi-whatsapp"></i>
+  <span class="whatsapp-tooltip" data-i18n="whatsapp_tooltip">¡Chatea con nosotros!</span>
+</a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  // Language toggle functionality is handled by lang.js
+
+  // Demo request buttons
+  document.querySelectorAll('[id*="requestDemo"], [id*="RequestDemo"]').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.open('https://calendly.com/avipil/30-min', '_blank');
+    });
+  });
+
+  // See in action button
+  const seeInActionBtn = document.getElementById('seeInActionBtn');
+  if (seeInActionBtn) {
+    seeInActionBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Add your video modal or redirect logic here
+      alert('Video demonstration coming soon!');
+    });
+  }
+
+  // WhatsApp button functionality
+  const whatsappButton = document.getElementById('whatsapp-button');
+  if (whatsappButton) {
+    // Create sound effects
+    function playClickSound() {
+      // Create a simple click sound using Web Audio API
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+      
+      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.1);
+    }
+    
+    function playHoverSound() {
+      // Create a subtle hover sound
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.05);
+      
+      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.05);
+    }
+    
+    // Add click sound
+    whatsappButton.addEventListener('click', function() {
+      playClickSound();
+      console.log('WhatsApp button clicked');
+    });
+    
+    // Add hover sound
+    whatsappButton.addEventListener('mouseenter', function() {
+      playHoverSound();
+    });
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        whatsappButton.style.opacity = '1';
+        whatsappButton.style.visibility = 'visible';
+      } else {
+        whatsappButton.style.opacity = '0.8';
+      }
+    });
+  }
+</script>
+
+</body>
+
+</html>

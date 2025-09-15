@@ -145,6 +145,12 @@
                 </a>
               </li>
               <li>
+                <a href="productsdetails.html?product=product-5" class="nav-link">
+                  <i class="bi bi-eye-fill"></i>
+                  <span data-i18n="lucid_platform">Lucid</span>
+                </a>
+              </li>
+              <li>
                 <a href="productsdetails.html?product=product-2" class="nav-link">
                   <i class="bi bi-cpu-fill"></i>
                   <span data-i18n="ai_model_suite">AI Model Protection Suite</span>
@@ -292,6 +298,7 @@
             <h4 data-i18n="products_list_title">Products List</h4>
             <div class="product-list">
               <a href="#product-1" id="product-1-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product1_title">Safety Shield Ultra™</span></a>
+              <a href="#product-5" id="product-5-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product5_title">Lucid</span></a>
               <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product2_title">Model Protection Suite</span></a>
               <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product3_title">Enterprise Security</span></a>
               <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product4_title">Performance Optimization</span></a>
@@ -458,6 +465,7 @@
           <h4 data-i18n="footer_products">Products</h4>
           <ul>
             <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
+            <li><a href="productsdetails.html?product=product-5" data-i18n="lucid_platform">Lucid</a></li>
             <li><a href="productsdetails.html?product=product-2" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
             <li><a href="productsdetails.html?product=product-3" data-i18n="enterprise_security">Enterprise AI Security</a></li>
             <li><a href="productsdetails.html?product=product-4" data-i18n="performance_optimization">AI Performance Optimization</a></li>
@@ -662,6 +670,45 @@
                 </ul>
                 ${bookCallButton()}`;
               productImg.src = 'assets/img/performance-optimization.png';
+              break;
+
+            case 'product-5':
+              html = `
+                <div class="lucid-hero">
+                  <div class="lucid-logo">
+                    <h1 class="lucid-title">Lucid</h1>
+                    <p class="lucid-tagline">Transforma tus Documentos en Decisiones Inteligentes</p>
+                  </div>
+                  <p class="lucid-subtitle">La plataforma líder en análisis de sesgos cognitivos para empresas que buscan la excelencia</p>
+                  <div class="lucid-cta">
+                    <a href="https://lucidapp.io" class="lucid-btn-primary" target="_blank">
+                      Probar Gratis por 30 Días
+                    </a>
+                    <a href="lucid.html" class="lucid-btn-primary">
+                      Ver Más
+                    </a>
+                  </div>
+                </div>
+
+                <div class="lucid-what-is">
+                  <h3 data-i18n="lucid_what_is_title">🎯 ¿Qué es Lucid y Cómo Te Ayuda?</h3>
+                  
+                  <div class="problem-section">
+                    <h4 data-i18n="lucid_problem_title">El Problema que Resuelve</h4>
+                    <p data-i18n="lucid_problem_desc">Lucid detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.</p>
+                  </div>
+
+                  
+
+                  
+                  <div class="importance-section">
+                    <h4 data-i18n="lucid_importance_title">¿Por qué es Importante?</h4>
+                    <p data-i18n="lucid_importance_desc">Las distorsiones en el análisis cuestan a las empresas millones en decisiones erróneas cada año. Lucid te da la ventaja de detectar estos problemas antes de que afecten tu negocio.</p>
+                  </div>
+                </div>
+
+                `;
+              productImg.src = 'assets/img/dashboardlucid.png';
               break;
     
             default:

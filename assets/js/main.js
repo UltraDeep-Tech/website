@@ -29,15 +29,33 @@
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
   /**
-   * Hide mobile nav on same-page/hash links
+   * Hide mobile nav on same-page/hash links and add smooth scroll
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
+    navmenu.addEventListener('click', (e) => {
+      // Cerrar menú móvil si está abierto
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
+      
+      // Smooth scroll para enlaces internos
+      const href = navmenu.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const headerHeight = document.querySelector('#header')?.offsetHeight || 80;
+          const targetPosition = targetElement.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
     });
-
   });
 
   /**
@@ -90,6 +108,41 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
+
+  /**
+   * Smooth scroll para todos los enlaces internos de la página
+   */
+  function initSmoothScroll() {
+    // Enlaces con href que empiecen con #
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          
+          const headerHeight = document.querySelector('#header')?.offsetHeight || 80;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20; // 20px extra de margen
+          
+          window.scrollTo({
+            top: Math.max(0, targetPosition),
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+
+  // Inicializar smooth scroll cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSmoothScroll);
+  } else {
+    initSmoothScroll();
+  }
 
   /**
    * Animation on scroll function and init
