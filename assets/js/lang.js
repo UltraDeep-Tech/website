@@ -61,6 +61,9 @@ const translations = {
     product5_desc:          "Transform your documents into intelligent decisions with advanced cognitive bias analysis.",
     
     // Lucid Section Translations
+    lucid_tagline:          "Transform your Documents into Intelligent Decisions",
+    lucid_subtitle:         "The leading platform in cognitive bias analysis for companies seeking excellence",
+    lucid_try_free:         "Try Free for 30 Days",
     lucid_what_is_title:    "🎯 What is Lucid and How Does It Help You?",
     lucid_problem_title:    "The Problem It Solves",
     lucid_problem_desc:     "Lucid detects subjective thinking patterns in business documents that can distort your organization's decision-making process.",
@@ -852,6 +855,9 @@ certifications_cta_button:      "Get Certified Now",
     product5_desc:          "Transforma tus documentos en decisiones inteligentes con análisis avanzado de sesgos cognitivos.",
     
     // Lucid Section Translations - Spanish
+    lucid_tagline:          "Transforma tus Documentos en Decisiones Inteligentes",
+    lucid_subtitle:         "La plataforma líder en análisis de sesgos cognitivos para empresas que buscan la excelencia",
+    lucid_try_free:         "Probar Gratis por 30 Días",
     lucid_what_is_title:    "🎯 ¿Qué es Lucid y Cómo Te Ayuda?",
     lucid_problem_title:    "El Problema que Resuelve",
     lucid_problem_desc:     "Lucid detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.",
