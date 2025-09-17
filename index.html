@@ -166,23 +166,72 @@
         
         .hero .btn-get-started {
             color: var(--contrast-color);
-            background: var(--accent-color);
+            background: linear-gradient(135deg, var(--accent-color), #1e4b7a);
             font-family: var(--heading-font);
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1.2px;
             display: inline-block;
-            padding: 12px 30px;
+            padding: 16px 36px;
             border-radius: 50px;
-            transition: background-color 0.5s;
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 5;
             position: relative;
-            margin-top: 15px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 25px rgba(25, 121, 216, 0.3);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .hero .btn-get-started::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
         }
         
         .hero .btn-get-started:hover {
-            background: #fff;
-            color: #26498a;
+            background: linear-gradient(135deg, #fff, #f0f8ff);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(25, 121, 216, 0.4);
+            border-color: var(--accent-color);
+        }
+        
+        .hero .btn-get-started:hover::before {
+            left: 100%;
+        }
+        
+        .hero .btn-get-started:active {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(25, 121, 216, 0.3);
+        }
+        
+        /* Animación de pulso sutil */
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 8px 25px rgba(25, 121, 216, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 25px rgba(25, 121, 216, 0.5), 0 0 20px rgba(25, 121, 216, 0.2);
+            }
+            100% {
+                box-shadow: 0 8px 25px rgba(25, 121, 216, 0.3);
+            }
+        }
+        
+        .hero .btn-get-started {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        .hero .btn-get-started:hover {
+            animation: none;
         }
         
         .hero .btn-watch-video {
@@ -215,8 +264,9 @@
                 font-size: clamp(18px, 7vw, 70px);
             }
             .hero .btn-get-started {
-                padding: 10px 25px;
-                font-size: 13px;
+                padding: 14px 30px;
+                font-size: 15px;
+                letter-spacing: 1px;
             }
             .hero .btn-watch-video {
                 font-size: 14px;
@@ -243,9 +293,9 @@
             }
             .hero .btn-get-started,
             .hero .btn-watch-video {
-                font-size: 12px;
-                padding: 8px 20px;
-                margin-top: 10px;
+                font-size: 13px;
+                padding: 12px 24px;
+                margin-top: 12px;
             }
         }
         
@@ -256,7 +306,8 @@
             }
             .hero .btn-get-started,
             .hero .btn-watch-video {
-                font-size: 13px;
+                font-size: 14px;
+                padding: 10px 20px;
             }
         }
         
@@ -276,9 +327,9 @@
             }
             .hero .btn-get-started,
             .hero .btn-watch-video {
-                font-size: 11px;
-                padding: 6px 15px;
-                margin-top: 8px;
+                font-size: 12px;
+                padding: 10px 18px;
+                margin-top: 10px;
             }
         }
         /* Para videos dentro de .hero, si los hubiera */
@@ -814,19 +865,21 @@ body.banner-hidden .header {
 
 
 <body class="index-page">
-<div id="top-banner" class="top-banner">
-  <p>
-    <span data-i18n="top_banner_text" class="fw-bold">
-      Limited Time Offer: 
-    </span>
-    <span data-i18n="top_banner_text1">
-    Enterprise AI Security Workshops - Reserve Your Spot Today!
-    </span>
-    <a href="cursos.html" class="banner-link" data-i18n="top_banner_link">Learn More →</a>
-  </p>
-</div>
+  <!-- Top Banner -->
+    <div id="top-banner" class="top-banner">
+      <p>
+        <span data-i18n="top_banner_text" class="fw-bold">
+          Limited Time Offer: 
+        </span>
+        <span data-i18n="top_banner_text1">
+        Enterprise AI Security Workshops - Reserve Your Spot Today!
+        </span>
+        <a href="cursos.html" class="banner-link" data-i18n="top_banner_link">Learn More →</a>
+      </p>
+    </div>
+    <!-- End Top Banner -->
 
-
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
   
@@ -1005,7 +1058,9 @@ body.banner-hidden .header {
           
                 <!-- Toggle de idioma -->
                 <li>
-                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                    <button id="lang-toggle" class="btn-lang" title="Cambiar idioma / Change language">
+                      <i class="bi bi-globe2"></i>
+                    </button>
                   </li>
         </ul>
       </nav>
@@ -1014,13 +1069,14 @@ body.banner-hidden .header {
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
   
     </div>
-</header>
+  </header>
+  <!-- End Header -->
 
 
     <main class="main">
         <!-- Hero Section -->
 <section id="hero" class="hero section">
-  <img src="/assets/img/ChatGPT-Image-1-abr-2025_-02_35_59.webp"
+  <img src="/assets/img/heroindex.webp"
        alt="Fondo de Ultra Deep Tech"
        loading="eager">
 
@@ -1071,12 +1127,12 @@ body.banner-hidden .header {
             </div>
         </div>
 
-        <section class="ai-banner-section position-relative overflow-hidden">
+        <section id="why-us" class="ai-banner-section position-relative overflow-hidden">
             <!-- Imagen de fondo -->
-            <img src="/assets/img/Demostracion-_7_(1).webp"
+            <img src="/assets/img/hero-bg.png"
                  alt="Background"
                  class="ai-banner-bg"
-                 loading="lazy"id="why-us">
+                 loading="lazy">
           
             <div class="container position-relative z-2">
               <div class="row align-items-center">
@@ -1127,79 +1183,100 @@ body.banner-hidden .header {
           </section>
           
 
-          <section class="products-section container px-4 py-5">
-            <div class="section-title text-center ">
-              <h2 class="gradient-title" data-i18n="products_section_title">Products</h2>
-              <p class="subtitle" data-i18n="products_section_sub">
-                Discover enterprise-grade AI tools crafted for security, scalability, and performance.
-              </p>
-            </div>
+          <section class="products-section particles-white-bg">
+            <div class="container px-4 py-5">
+              <div class="section-title text-center ">
+                <h2 class="gradient-title" data-i18n="products_section_title">Products</h2>
+                <p class="subtitle" data-i18n="products_section_sub">
+                  Discover enterprise-grade AI tools crafted for security, scalability, and performance.
+                </p>
+              </div>
+            
+              <!-- Primera fila - 3 tarjetas -->
+              <div class="row g-4 mb-4">
+                <!-- Tarjeta 1 - Safety Shield Ultra -->
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item h-100 d-flex flex-column">
+                    <div class="icon"><img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra™"></div>
+                    <div class="flex-grow-1 d-flex flex-column">
+                      <h4 class="title" data-i18n="product1_title">Safety Shield Ultra™</h4>
+                      <p class="description flex-grow-1" data-i18n="product1_desc">
+                        Real-time defense against prompt injection, leakage & model hijacking.
+                      </p>
+                      <a href="safetyshield.html" class="readmore mt-auto">
+                        <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tarjeta 2 - Lucid -->
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item h-100 d-flex flex-column">
+                    <div class="icon"><i class="bi bi-eye-fill"></i></div>
+                    <div class="flex-grow-1 d-flex flex-column">
+                      <h4 class="title" data-i18n="lucid_title">Lucid™</h4>
+                      <p class="description flex-grow-1" data-i18n="lucid_desc">
+                        Eliminate cognitive biases automatically and improve the quality of your business decisions.
+                      </p>
+                      <a href="lucid.html" class="readmore mt-auto">
+                        <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
           
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-              <!-- Tarjeta 1 -->
-              <div class="col h-100">
-                <div class="service-item h-100">
-                  <div class="icon"><img src="/assets/img/favicon_copia.webp" alt="Safety Shield Ultra™"></div>
-                  <div>
-                    <h4 class="title" data-i18n="product1_title">Safety Shield Ultra™</h4>
-                    <p class="description" data-i18n="product1_desc">
-                      Real-time defense against prompt injection, leakage & model hijacking.
-                    </p>
-                    <a href="safetyshield.html" class="readmore">
-                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
-                    </a>
+                <!-- Tarjeta 3 - AI Model Protection Suite -->
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item h-100 d-flex flex-column">
+                    <div class="icon"><i class="bi bi-cpu-fill"></i></div>
+                    <div class="flex-grow-1 d-flex flex-column">
+                      <h4 class="title" data-i18n="product2_title">AI Model Protection Suite</h4>
+                      <p class="description flex-grow-1" data-i18n="product2_desc">
+                        Prevent reverse engineering and misuse of your proprietary AI models.
+                      </p>
+                      <a href="productsdetails.html?product=product-2" class="readmore mt-auto">
+                        <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Segunda fila - 2 tarjetas centradas -->
+              <div class="row g-4 justify-content-center">
+                <!-- Tarjeta 4 - Enterprise AI Security -->
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item h-100 d-flex flex-column">
+                    <div class="icon"><i class="bi bi-shield-check"></i></div>
+                    <div class="flex-grow-1 d-flex flex-column">
+                      <h4 class="title" data-i18n="product3_title">Enterprise AI Security</h4>
+                      <p class="description flex-grow-1" data-i18n="product3_desc">
+                        Comprehensive protection with encryption, access control, and audits.
+                      </p>
+                      <a href="productsdetails.html?product=product-3" class="readmore mt-auto">
+                        <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
           
-              <!-- Tarjeta 2 -->
-              <div class="col h-100">
-                <div class="service-item h-100">
-                  <div class="icon"><i class="bi bi-cpu-fill"></i></div>
-                  <div>
-                    <h4 class="title" data-i18n="product2_title">AI Model Protection Suite</h4>
-                    <p class="description" data-i18n="product2_desc">
-                      Prevent reverse engineering and misuse of your proprietary AI models.
-                    </p>
-                    <a href="productsdetails.html?product=product-2" class="readmore">
-                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
-                    </a>
+                <!-- Tarjeta 5 - AI Performance Optimization -->
+                <div class="col-lg-4 col-md-6">
+                  <div class="service-item h-100 d-flex flex-column">
+                    <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <div class="flex-grow-1 d-flex flex-column">
+                      <h4 class="title" data-i18n="product4_title">AI Performance Optimization</h4>
+                      <p class="description flex-grow-1" data-i18n="product4_desc">
+                        Boost latency, accuracy & cost-efficiency with model optimization tools.
+                      </p>
+                      <a href="productsdetails.html?product=product-4" class="readmore mt-auto">
+                        <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-          
-              <!-- Tarjeta 3 -->
-              <div class="col h-100">
-                <div class="service-item h-100">
-                  <div class="icon"><i class="bi bi-shield-check"></i></div>
-                  <div>
-                    <h4 class="title" data-i18n="product3_title">Enterprise AI Security</h4>
-                    <p class="description" data-i18n="product3_desc">
-                      Comprehensive protection with encryption, access control, and audits.
-                    </p>
-                    <a href="productsdetails.html?product=product-3" class="readmore">
-                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-          
-              <!-- Tarjeta 4 -->
-              <div class="col h-100">
-                <div class="service-item h-100">
-                  <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-                  <div>
-                    <h4 class="title" data-i18n="product4_title">AI Performance Optimization</h4>
-                    <p class="description" data-i18n="product4_desc">
-                      Boost latency, accuracy & cost-efficiency with model optimization tools.
-                    </p>
-                    <a href="productsdetails.html?product=product-4" class="readmore">
-                      <span data-i18n="learn_more">Learn more</span> <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </section>
           
 
@@ -1237,8 +1314,8 @@ body.banner-hidden .header {
   </section>
   
   <!-- Services Grid Section -->
-  <section class="services-1-grid-section section py-5">
-    <div class="container">
+  <section class="services-1-grid-section section particles-white-bg">
+    <div class="container py-5">
       <div class="section-title text-center">
         <h2 class="gradient-title"
             data-i18n="services_section_title">
@@ -1253,7 +1330,7 @@ body.banner-hidden .header {
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <!-- Card 1 -->
         <div class="col">
-          <div class="services-1-card">
+          <div class="services-1-card tech-card">
             <div class="icon"><i class="bi bi-gear-fill"></i></div>
             <div>
               <h4 class="title"
@@ -1275,7 +1352,7 @@ body.banner-hidden .header {
   
         <!-- Card 2 -->
         <div class="col">
-          <div class="services-1-card">
+          <div class="services-1-card tech-card">
             <div class="icon"><i class="bi bi-diagram-3-fill"></i></div>
             <div>
               <h4 class="title"
@@ -1297,7 +1374,7 @@ body.banner-hidden .header {
   
         <!-- Card 3 -->
         <div class="col">
-          <div class="services-1-card">
+          <div class="services-1-card tech-card">
             <div class="icon"><i class="bi bi-shield-lock-fill"></i></div>
             <div>
               <h4 class="title"
@@ -1573,9 +1650,10 @@ body.banner-hidden .header {
         </div>
     </div>
 
-    <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
-        <i class="bi bi-whatsapp whatsapp-icon"></i>
-        <span class="tooltip-text">Have a Question? Write Us</span>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-button" id="whatsapp-button">
+      <i class="bi bi-whatsapp"></i>
+      <span class="whatsapp-tooltip" data-i18n="whatsapp_tooltip">¡Chatea con nosotros!</span>
     </a>
 </body>
 

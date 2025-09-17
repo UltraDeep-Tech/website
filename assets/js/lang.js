@@ -20,7 +20,7 @@ const translations = {
     ai_model_suite:         "AI Model Protection Suite",
     enterprise_security:    "Enterprise AI Security",
     performance_optimization: "AI Performance Optimization",
-    lucid_platform:         "Lucid",
+    lucid_platform:         "Lucid™",
 
     // Dropdown Services
     ai_assessment:          "AI Security Assessment & Strategy",
@@ -57,16 +57,20 @@ const translations = {
     product3_desc:          "Comprehensive protection with encryption, access control, and audits.",
     product4_title:         "AI Performance Optimization",
     product4_desc:          "Boost latency, accuracy & cost-efficiency with model optimization tools.",
-    product5_title:         "Lucid",
+    product5_title:         "Lucid™",
     product5_desc:          "Transform your documents into intelligent decisions with advanced cognitive bias analysis.",
+    
+    // Lucid specific translations
+    lucid_title:            "Lucid™",
+    lucid_desc:             "Eliminate cognitive biases automatically and improve the quality of your business decisions.",
     
     // Lucid Section Translations
     lucid_tagline:          "Transform your Documents into Intelligent Decisions",
     lucid_subtitle:         "The leading platform in cognitive bias analysis for companies seeking excellence",
     lucid_try_free:         "Try Free for 30 Days",
-    lucid_what_is_title:    "🎯 What is Lucid and How Does It Help You?",
+    lucid_what_is_title:    "What is Lucid and How Does It Help You?",
     lucid_problem_title:    "The Problem It Solves",
-    lucid_problem_desc:     "Lucid detects subjective thinking patterns in business documents that can distort your organization's decision-making process.",
+    lucid_problem_desc:     "Lucid™ detects subjective thinking patterns in business documents that can distort your organization's decision-making process.",
     lucid_detection_title:  "What Does It Detect Exactly?",
     lucid_detection_subtitle: "Critical Distortions in Analysis:",
     lucid_info_filters:     "Information filters - When only information that confirms previous ideas is considered",
@@ -102,8 +106,8 @@ const translations = {
     lucid_ensures_compliance: "✅ Ensures legal compliance",
     lucid_optimizes_processes: "✅ Optimizes internal processes",
     lucid_importance_title: "Why is it Important?",
-    lucid_importance_desc:  "Analysis distortions cost companies millions in wrong decisions every year. Lucid gives you the advantage of detecting these problems before they affect your business.",
-    lucid_summary:          "In summary: Lucid transforms subjective documents into objective analysis, helping you make smarter decisions and reduce business risks.",
+    lucid_importance_desc:  "Analysis distortions cost companies millions in wrong decisions every year. Lucid™ gives you the advantage of detecting these problems before they affect your business.",
+    lucid_summary:          "In summary: Lucid™ transforms subjective documents into objective analysis, helping you make smarter decisions and reduce business risks.",
 
     // Lucid Page Translations
     lucid_hero_title:       "Make Smarter Decisions",
@@ -821,6 +825,7 @@ certifications_cta_button:      "Get Certified Now",
     ai_model_suite:         "Suite de Protección de Modelos IA",
     enterprise_security:    "Seguridad IA Empresarial",
     performance_optimization: "Optimización de Rendimiento IA",
+    lucid_platform:         "Lucid™",
 
     ai_assessment:          "Evaluación & Estrategia de Seguridad IA",
     implementation:         "Implementación & Arquitectura",
@@ -851,16 +856,20 @@ certifications_cta_button:      "Get Certified Now",
     product3_desc:          "Protección integral con cifrado, control de acceso y auditorías.",
     product4_title:         "Optimización de Rendimiento IA",
     product4_desc:          "Mejora latencia, precisión y costes con herramientas de optimización.",
-    product5_title:         "Lucid",
+    product5_title:         "Lucid™",
     product5_desc:          "Transforma tus documentos en decisiones inteligentes con análisis avanzado de sesgos cognitivos.",
+    
+    // Lucid specific translations - Spanish
+    lucid_title:            "Lucid™",
+    lucid_desc:             "Elimina automáticamente sesgos cognitivos y mejora la calidad de tus decisiones empresariales.",
     
     // Lucid Section Translations - Spanish
     lucid_tagline:          "Transforma tus Documentos en Decisiones Inteligentes",
     lucid_subtitle:         "La plataforma líder en análisis de sesgos cognitivos para empresas que buscan la excelencia",
     lucid_try_free:         "Probar Gratis por 30 Días",
-    lucid_what_is_title:    "🎯 ¿Qué es Lucid y Cómo Te Ayuda?",
+    lucid_what_is_title:    "¿Qué es Lucid y Cómo Te Ayuda?",
     lucid_problem_title:    "El Problema que Resuelve",
-    lucid_problem_desc:     "Lucid detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.",
+    lucid_problem_desc:     "Lucid™ detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.",
     lucid_detection_title:  "¿Qué Detecta Exactamente?",
     lucid_detection_subtitle: "Distorsiones Críticas en el Análisis:",
     lucid_info_filters:     "Filtros de información - Cuando solo se considera lo que confirma ideas previas",
@@ -896,8 +905,8 @@ certifications_cta_button:      "Get Certified Now",
     lucid_ensures_compliance: "✅ Asegura cumplimiento legal",
     lucid_optimizes_processes: "✅ Optimiza procesos internos",
     lucid_importance_title: "¿Por Qué es Importante?",
-    lucid_importance_desc:  "Las distorsiones en el análisis cuestan a las empresas millones en decisiones erróneas cada año. Lucid te da la ventaja de detectar estos problemas antes de que afecten tu negocio.",
-    lucid_summary:          "En resumen: Lucid transforma documentos subjetivos en análisis objetivos, ayudándote a tomar decisiones más inteligentes y reducir riesgos empresariales.",
+    lucid_importance_desc:  "Las distorsiones en el análisis cuestan a las empresas millones en decisiones erróneas cada año. Lucid™ te da la ventaja de detectar estos problemas antes de que afecten tu negocio.",
+    lucid_summary:          "En resumen: Lucid™ transforma documentos subjetivos en análisis objetivos, ayudándote a tomar decisiones más inteligentes y reducir riesgos empresariales.",
 
     // Lucid Page Translations
     lucid_hero_title:       "Toma Decisiones Más Inteligentes",

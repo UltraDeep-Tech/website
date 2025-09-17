@@ -262,7 +262,9 @@
           
                 <!-- Toggle de idioma -->
                 <li>
-                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                    <button id="lang-toggle" class="btn-lang" title="Cambiar idioma / Change language">
+                      <i class="bi bi-globe2"></i>
+                    </button>
                   </li>
         </ul>
       </nav>
@@ -290,7 +292,7 @@
   <!-- End Page Title -->
 
   <!-- Current Job Openings Section -->
-  <section id="openings" class="services section">
+  <section id="openings" class="services section particles-white-bg">
     <div class="container section-title" data-aos="fade-up">
       <h2 data-i18n="career_openings_title">Current Job Openings</h2>
     </div>
@@ -317,7 +319,7 @@
   <!-- /Current Job Openings Section -->
 
   <!-- Core Recruiting Values Section -->
-  <section id="core-values" class="core-values section bg-light">
+  <section id="core-values" class="core-values section particles-white-bg">
     <div class="container">
       <div class="section-title" data-aos="fade-up">
         <h2 data-i18n="values_title">Core Recruiting Values</h2>
@@ -561,10 +563,10 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
-        <i class="bi bi-whatsapp whatsapp-icon"></i>
-        <span class="tooltip-text">Have a Question? Write Us</span>
-
+    <!-- WhatsApp Button -->
+    <a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-button" id="whatsapp-button">
+      <i class="bi bi-whatsapp"></i>
+      <span class="whatsapp-tooltip" data-i18n="whatsapp_tooltip">¡Chatea con nosotros!</span>
     </a>
 
 </body>

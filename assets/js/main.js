@@ -145,6 +145,67 @@
   }
 
   /**
+   * WhatsApp button functionality
+   */
+  const whatsappButton = document.getElementById('whatsapp-button');
+  if (whatsappButton) {
+    // Create sound effects
+    function playClickSound() {
+      // Create a simple click sound using Web Audio API
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.1);
+    }
+    
+    function playHoverSound() {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.05);
+    }
+    
+    // Add click sound
+    whatsappButton.addEventListener('click', function() {
+      playClickSound();
+      console.log('WhatsApp button clicked');
+    });
+    
+    // Add hover sound
+    whatsappButton.addEventListener('mouseenter', function() {
+      playHoverSound();
+    });
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        whatsappButton.style.opacity = '1';
+        whatsappButton.style.visibility = 'visible';
+      } else {
+        whatsappButton.style.opacity = '0.8';
+      }
+    });
+  }
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {

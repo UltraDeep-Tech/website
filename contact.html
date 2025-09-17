@@ -41,26 +41,6 @@
         gtag('config', 'G-MZZJHHYCTR');
     </script>
 
-<style>  
-  /* Language toggle button – minimal & subtle */
-  #lang-toggle {
-    background: none;
-    border: none;
-    color: var(--nav-color);
-    font-family: var(--nav-font);
-    font-size: 0.9rem;
-    margin-left: 35px;
-    padding: 0.25rem 0.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  #lang-toggle:hover,
-  #lang-toggle:focus {
-    color: var(--accent-color);
-    outline: none;
-  }
-      </style>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -264,7 +244,9 @@
           
                 <!-- Toggle de idioma -->
                 <li>
-                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                    <button id="lang-toggle" class="btn-lang" title="Cambiar idioma / Change language">
+                      <i class="bi bi-globe2"></i>
+                    </button>
                   </li>
         </ul>
       </nav>
@@ -292,7 +274,7 @@
         <!-- End Page Title -->
       
         <!-- FAQ Section -->
-        <section id="faq" class="faq section">
+        <section id="faq" class="faq section particles-white-bg">
           <div class="container" data-aos="fade-up">
       
             <div class="section-header">
@@ -508,7 +490,7 @@
         </div>
       
         <!-- Contact Section -->
-        <section id="contact" class="contact section">
+        <section id="contact" class="contact section particles-white-bg">
           <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
             <div class="row gy-4">
       
@@ -720,10 +702,10 @@
     <script src="assets/js/cookies.js"></script>
     <script src="assets/js/lang.js" defer></script>
 
-    <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
-        <i class="bi bi-whatsapp whatsapp-icon"></i>
-        <span class="tooltip-text">Have a Question? Write Us</span>
-
+    <!-- WhatsApp Button -->
+    <a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-button" id="whatsapp-button">
+      <i class="bi bi-whatsapp"></i>
+      <span class="whatsapp-tooltip" data-i18n="whatsapp_tooltip">¡Chatea con nosotros!</span>
     </a>
 
 

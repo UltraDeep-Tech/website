@@ -147,7 +147,7 @@
               <li>
                 <a href="lucid.html" class="nav-link">
                   <i class="bi bi-eye-fill"></i>
-                  <span data-i18n="lucid_platform">Lucid</span>
+                  <span data-i18n="lucid_platform">Lucid™</span>
                 </a>
               </li>
               <li>
@@ -261,7 +261,9 @@
           
                 <!-- Toggle de idioma -->
                 <li>
-                    <button id="lang-toggle" class="btn-lang">ES / EN</button>
+                    <button id="lang-toggle" class="btn-lang" title="Cambiar idioma / Change language">
+                      <i class="bi bi-globe2"></i>
+                    </button>
                   </li>
         </ul>
       </nav>
@@ -289,7 +291,7 @@
   <!-- End Page Title -->
 
   <!-- Product Details Section -->
-  <section id="product-details" class="product-details section">
+  <section id="product-details" class="product-details section particles-white-bg">
     <div class="container">
       <div class="row gy-5">
 
@@ -298,7 +300,7 @@
             <h4 data-i18n="products_list_title">Products List</h4>
             <div class="product-list">
               <a href="#product-1" id="product-1-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product1_title">Safety Shield Ultra™</span></a>
-              <a href="#product-5" id="product-5-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product5_title">Lucid</span></a>
+              <a href="#product-5" id="product-5-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product5_title">Lucid™</span></a>
               <a href="#product-2" id="product-2-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product2_title">Model Protection Suite</span></a>
               <a href="#product-3" id="product-3-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product3_title">Enterprise Security</span></a>
               <a href="#product-4" id="product-4-link"><i class="bi bi-arrow-right-circle"></i> <span data-i18n="product4_title">Performance Optimization</span></a>
@@ -359,7 +361,7 @@
   <!-- /Product Details Section -->
 
   <!-- Industries Section -->
-  <section id="industries" class="industries section bg-light">
+  <section id="industries" class="industries section particles-white-bg">
     <div class="container">
       <div class="section-header text-center" data-aos="fade-up" data-aos-delay="100">
         <h2 data-i18n="industries_title">Industries at Risk</h2>
@@ -465,7 +467,7 @@
           <h4 data-i18n="footer_products">Products</h4>
           <ul>
             <li><a href="safetyshield.html" data-i18n="safety_shield">Safety Shield Ultra™</a></li>
-            <li><a href="lucid.html" data-i18n="lucid_platform">Lucid</a></li>
+            <li><a href="lucid.html" data-i18n="lucid_platform">Lucid™</a></li>
             <li><a href="productsdetails.html?product=product-2" data-i18n="ai_model_suite">AI Model Protection Suite</a></li>
             <li><a href="productsdetails.html?product=product-3" data-i18n="enterprise_security">Enterprise AI Security</a></li>
             <li><a href="productsdetails.html?product=product-4" data-i18n="performance_optimization">AI Performance Optimization</a></li>
@@ -553,10 +555,10 @@
     <script src="assets/js/cookies.js"></script>
 
 
-    <a href="https://wa.link/2ebre2" class="whatsapp-float" target="_blank" data-aos="fade-up">
-        <i class="bi bi-whatsapp whatsapp-icon"></i>
-        <span class="tooltip-text">Have a Question? Write Us</span>
-
+    <!-- WhatsApp Button -->
+    <a href="https://wa.link/2ebre2" target="_blank" class="whatsapp-button" id="whatsapp-button">
+      <i class="bi bi-whatsapp"></i>
+      <span class="whatsapp-tooltip" data-i18n="whatsapp_tooltip">¡Chatea con nosotros!</span>
     </a>
 
 
@@ -676,7 +678,7 @@
               html = `
                 <div class="lucid-hero">
                   <div class="lucid-logo">
-                    <h1 class="lucid-title">Lucid</h1>
+                    <h1 class="lucid-title">Lucid™</h1>
                     <p class="lucid-tagline" data-i18n="lucid_tagline">Transforma tus Documentos en Decisiones Inteligentes</p>
                   </div>
                   <p class="lucid-subtitle" data-i18n="lucid_subtitle">La plataforma líder en análisis de sesgos cognitivos para empresas que buscan la excelencia</p>
@@ -691,11 +693,11 @@
                 </div>
 
                 <div class="lucid-what-is">
-                  <h3 data-i18n="lucid_what_is_title">🎯 ¿Qué es Lucid y Cómo Te Ayuda?</h3>
+                  <h3 data-i18n="lucid_what_is_title"> ¿Qué es Lucid y Cómo Te Ayuda?</h3>
                   
                   <div class="problem-section">
                     <h4 data-i18n="lucid_problem_title">El Problema que Resuelve</h4>
-                    <p data-i18n="lucid_problem_desc">Lucid detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.</p>
+                    <p data-i18n="lucid_problem_desc">Lucid™ detecta patrones de pensamiento subjetivos en documentos empresariales que pueden distorsionar la toma de decisiones de tu organización.</p>
                   </div>
 
                   
@@ -703,7 +705,7 @@
                   
                   <div class="importance-section">
                     <h4 data-i18n="lucid_importance_title">¿Por qué es Importante?</h4>
-                    <p data-i18n="lucid_importance_desc">Las distorsiones en el análisis cuestan a las empresas millones en decisiones erróneas cada año. Lucid te da la ventaja de detectar estos problemas antes de que afecten tu negocio.</p>
+                    <p data-i18n="lucid_importance_desc">Las distorsiones en el análisis cuestan a las empresas millones en decisiones erróneas cada año. Lucid™ te da la ventaja de detectar estos problemas antes de que afecten tu negocio.</p>
                   </div>
                 </div>
 

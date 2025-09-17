@@ -331,41 +331,62 @@ h1, h2, h3, h4, h5, h6 {
   }
   .navmenu .dropdown ul {
     margin: 0;
-    padding: 10px 0;
-    background:  #1979d8;
+    padding: 8px 0;
+    background: #1979d8;
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
-    top: 130%;
+    left: 0;
+    top: 100%;
     opacity: 0;
-    transition: opacity 0.3s, top 0.3s;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 99;
-    box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
-    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(25, 121, 216, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    min-width: 220px;
   }
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    min-width: 220px;
+    position: relative;
   }
   .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
+    padding: 12px 20px;
+    font-size: 14px;
     text-transform: none;
     color: var(--nav-dropdown-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 2px 8px;
+    position: relative;
+    overflow: hidden;
   }
   .navmenu .dropdown ul a i {
-    font-size: 12px;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
   }
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
-    background: #97add673;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+  }
+  .navmenu .dropdown ul a:hover i {
+    transform: scale(1.1);
   }
   .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
+    transform: translateY(0);
   }
   .navmenu .dropdown .dropdown ul {
     top: 0;
@@ -812,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: 12px;
+  bottom: 15px;
   z-index: 99999;
   background: linear-gradient(135deg, #0062c7 0%, #0054b3 100%);
   width: 50px;
@@ -927,7 +948,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 45px;
     height: 45px;
     right: 15px;
-    bottom: 12px;
+    bottom: 15px;
   }
   .scroll-top i {
     font-size: 22px;
@@ -947,6 +968,437 @@ h1, h2, h3, h4, h5, h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+}
+
+/* Enhanced White Background Effects */
+/* More visible gradient overlays for white backgrounds */
+.enhanced-white-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 30%, #f8fafc 70%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.enhanced-white-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(25, 121, 216, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(30, 75, 122, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 40% 40%, rgba(38, 73, 138, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 60% 70%, rgba(25, 121, 216, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.enhanced-white-bg > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* More visible pattern overlay */
+.pattern-white-bg {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f0f8ff 40%, #f8fafc 80%, #ffffff 100%),
+    radial-gradient(circle at 25% 25%, rgba(25, 121, 216, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 75% 75%, rgba(30, 75, 122, 0.06) 0%, transparent 60%);
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.pattern-white-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 35%, rgba(25, 121, 216, 0.06) 50%, transparent 65%),
+    linear-gradient(-45deg, transparent 35%, rgba(30, 75, 122, 0.04) 50%, transparent 65%),
+    linear-gradient(90deg, transparent 40%, rgba(38, 73, 138, 0.03) 50%, transparent 60%);
+  background-size: 80px 80px, 100px 100px, 120px 120px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pattern-white-bg > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* Glass morphism effect for cards */
+.glass-white-bg {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Animated gradient background */
+.animated-white-bg {
+  background: linear-gradient(-45deg, #ffffff, #f8fafc, #ffffff, #f0f8ff);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtle texture overlay */
+.texture-white-bg {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231979d8' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* More visible floating particles effect */
+.particles-white-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.particles-white-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(25, 121, 216, 0.15) 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, rgba(30, 75, 122, 0.12) 2px, transparent 2px),
+    radial-gradient(circle at 40% 60%, rgba(38, 73, 138, 0.10) 2px, transparent 2px),
+    radial-gradient(circle at 60% 30%, rgba(25, 121, 216, 0.08) 1px, transparent 1px);
+  background-size: 80px 80px, 100px 100px, 60px 60px, 120px 120px;
+  animation: float-particles 15s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particles-white-bg > * {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes float-particles {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* Tech Circuit Effect for Services - Performance Optimized */
+.tech-circuit-bg {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f0f8ff 20%, #e6f3ff 40%, #d1e7ff 60%, #f8fafc 80%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  /* Performance optimizations */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Circuit board pattern */
+.tech-circuit-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Horizontal circuit lines */
+    linear-gradient(90deg, transparent 48%, rgba(25, 121, 216, 0.1) 49%, rgba(25, 121, 216, 0.1) 51%, transparent 52%),
+    linear-gradient(90deg, transparent 78%, rgba(30, 75, 122, 0.08) 79%, rgba(30, 75, 122, 0.08) 81%, transparent 82%),
+    /* Vertical circuit lines */
+    linear-gradient(0deg, transparent 28%, rgba(38, 73, 138, 0.06) 29%, rgba(38, 73, 138, 0.06) 31%, transparent 32%),
+    linear-gradient(0deg, transparent 58%, rgba(25, 121, 216, 0.05) 59%, rgba(25, 121, 216, 0.05) 61%, transparent 62%),
+    /* Diagonal data streams */
+    linear-gradient(45deg, transparent 38%, rgba(25, 121, 216, 0.04) 39%, rgba(25, 121, 216, 0.04) 41%, transparent 42%),
+    linear-gradient(-45deg, transparent 68%, rgba(30, 75, 122, 0.03) 69%, rgba(30, 75, 122, 0.03) 71%, transparent 72%);
+  background-size: 200px 200px, 150px 150px, 180px 180px, 120px 120px, 160px 160px, 140px 140px;
+  animation: circuit-flow 20s linear infinite;
+  /* Performance optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Circuit nodes and connection points */
+.tech-circuit-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Circuit nodes */
+    radial-gradient(circle at 20% 20%, rgba(25, 121, 216, 0.15) 2px, transparent 2px),
+    radial-gradient(circle at 80% 30%, rgba(30, 75, 122, 0.12) 2px, transparent 2px),
+    radial-gradient(circle at 40% 60%, rgba(38, 73, 138, 0.10) 2px, transparent 2px),
+    radial-gradient(circle at 70% 80%, rgba(25, 121, 216, 0.08) 2px, transparent 2px),
+    radial-gradient(circle at 10% 70%, rgba(30, 75, 122, 0.06) 1px, transparent 1px),
+    radial-gradient(circle at 90% 10%, rgba(38, 73, 138, 0.05) 1px, transparent 1px);
+  background-size: 300px 300px, 250px 250px, 200px 200px, 180px 180px, 150px 150px, 120px 120px;
+  animation: circuit-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Data flow animation - Optimized for performance */
+@keyframes circuit-flow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(25px, 12px, 0);
+  }
+  50% {
+    transform: translate3d(50px, 25px, 0);
+  }
+  75% {
+    transform: translate3d(75px, 37px, 0);
+  }
+  100% {
+    transform: translate3d(100px, 50px, 0);
+  }
+}
+
+/* Circuit pulse animation */
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  75% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+.tech-circuit-bg > * {
+  position: relative;
+  z-index: 10;
+}
+
+/* Tech glitch effect for cards */
+.services-1-card.tech-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-1-card.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(25, 121, 216, 0.1), transparent);
+  animation: tech-scan 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.services-1-card.tech-card:hover::before {
+  animation: tech-scan-fast 1s ease-in-out infinite;
+}
+
+@keyframes tech-scan {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes tech-scan-fast {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Binary code effect */
+.tech-circuit-bg .binary-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(25, 121, 216, 0.02) 2px,
+      rgba(25, 121, 216, 0.02) 4px
+    );
+  animation: binary-fall 15s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes binary-fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Performance optimizations for mobile devices */
+@media (max-width: 768px) {
+  .tech-circuit-bg::before {
+    animation-duration: 30s; /* Slower on mobile */
+  }
+  
+  .tech-circuit-bg::after {
+    animation-duration: 12s; /* Slower on mobile */
+  }
+  
+  .binary-overlay {
+    animation-duration: 25s; /* Slower on mobile */
+  }
+  
+  .services-1-card.tech-card::before {
+    animation-duration: 5s; /* Slower on mobile */
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .tech-circuit-bg::before,
+  .tech-circuit-bg::after,
+  .binary-overlay,
+  .services-1-card.tech-card::before {
+    animation: none;
+  }
+  
+  .tech-circuit-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 50%, #ffffff 100%);
+  }
+}
+
+.wave-white-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(25, 121, 216, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(30, 75, 122, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(38, 73, 138, 0.06) 0%, transparent 60%);
+  animation: wave-motion 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-white-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(25, 121, 216, 0.05) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(30, 75, 122, 0.03) 50%, transparent 70%);
+  background-size: 100px 100px;
+  animation: wave-motion 12s ease-in-out infinite reverse;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wave-white-bg > * {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes wave-motion {
+  0%, 100% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px) scale(1.05);
+  }
+  50% {
+    transform: translateX(-5px) translateY(10px) scale(0.95);
+  }
+  75% {
+    transform: translateX(5px) translateY(-10px) scale(1.02);
+  }
+}
+
+/* Full-width section containers */
+.products-section,
+.services-1-grid-section {
+  position: relative;
+  width: 100%;
+}
+
+.products-section .container,
+.services-1-grid-section .container {
+  position: relative;
+  z-index: 10;
 }
 
 /* Global Page Titles & Breadcrumbs */
@@ -1106,8 +1558,9 @@ section .row {
 
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.9));
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: var(--heading-font);
   font-weight: 600;
   font-size: 14px;
@@ -1115,14 +1568,102 @@ section .row {
   display: inline-block;
   padding: 12px 30px;
   border-radius: 50px;
-  transition: background-color 0.5s;
+  transition: all 0.3s ease;
   z-index: 5;
   position: relative;
   margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(25, 121, 216, 0.2);
+  overflow: hidden;
+}
+
+/* Efecto de partículas para el botón */
+.hero .btn-get-started::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(25, 121, 216, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(25, 121, 216, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(25, 121, 216, 0.1) 0%, transparent 50%);
+  border-radius: 50px;
+  animation: particle-float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero .btn-get-started::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 40%),
+              radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.2) 0%, transparent 40%);
+  border-radius: 50px;
+  animation: particle-float 3s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-1px) scale(0.95);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-3px) scale(1.02);
+    opacity: 0.85;
+  }
 }
 .hero .btn-get-started:hover {
-  background: #fff;
-  color: #26498a;
+  background: linear-gradient(135deg, var(--accent-color), #1e4b7a);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 121, 216, 0.4);
+  border-color: var(--accent-color);
+}
+
+.hero .btn-get-started:hover::before {
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+  animation: particle-float-hover 2s ease-in-out infinite;
+}
+
+.hero .btn-get-started:hover::after {
+  background: radial-gradient(circle at 60% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+              radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 40%);
+  animation: particle-float-hover 1.5s ease-in-out infinite reverse;
+}
+
+@keyframes particle-float-hover {
+  0%, 100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-3px) scale(1.1) rotate(1deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-2px) scale(0.9) rotate(-1deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(-4px) scale(1.05) rotate(0.5deg);
+    opacity: 0.95;
+  }
 }
 .hero .btn-watch-video {
   font-size: 16px;
@@ -1160,6 +1701,32 @@ section .row {
 .why-us {
   background-color: #fff;
   background-size: cover;
+}
+
+.why-us.enhanced-white-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-us.enhanced-white-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(25, 121, 216, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(30, 75, 122, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(38, 73, 138, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.why-us.enhanced-white-bg > * {
+  position: relative;
+  z-index: 2;
 }
 .why-us h2 {
   color: #fff;
@@ -1386,6 +1953,34 @@ section .row {
 /* Product Section */
 .product {
   background: #fff;
+}
+
+.product.pattern-white-bg {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 100%),
+    radial-gradient(circle at 25% 25%, rgba(25, 121, 216, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(30, 75, 122, 0.03) 0%, transparent 50%);
+  position: relative;
+}
+
+.product.pattern-white-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 40%, rgba(25, 121, 216, 0.02) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(30, 75, 122, 0.01) 50%, transparent 60%);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.product.pattern-white-bg > * {
+  position: relative;
+  z-index: 2;
 }
 .product .product-item {
   position: relative;
@@ -2079,6 +2674,36 @@ section .row {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(25, 121, 216, 0.03) 0%, rgba(30, 75, 122, 0.02) 50%, rgba(38, 73, 138, 0.01) 100%),
+    radial-gradient(circle at 20% 20%, rgba(25, 121, 216, 0.02) 0%, transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+#faq .accordion-item:hover::before {
+  opacity: 1;
+}
+
+#faq .accordion-item > * {
+  position: relative;
+  z-index: 10;
+}
+
+#faq .accordion-item {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #faq .accordion-button {
@@ -2111,150 +2736,131 @@ section .row {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
+/*--------------------------------------------------------------
+# WhatsApp Button - Estandarizado
+---------------------------------------------------------------*/
+.whatsapp-button {
   position: fixed;
+  bottom: 70px;
+  right: 15px;
   width: 60px;
   height: 60px;
-  bottom: 60px;
-  right: 10px;
-  background: linear-gradient(120deg, #0062c7, #0054b3);
-  color: #fff;
+  background: #25d366;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: white;
   font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
   z-index: 1000;
+  animation: whatsappPulse 2s infinite;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(22, 55, 104, 0.2),
-              inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  isolation: isolate;
 }
-.whatsapp-float::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+
+.whatsapp-button:hover {
+  background: #128c7e;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
 }
-.whatsapp-float::after {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-  transform: scale(0);
-  opacity: 0;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.whatsapp-float:hover {
-  transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(145deg, #5e90da, #26498a);
-  box-shadow: 0 8px 25px rgba(22, 55, 104, 0.3),
-              0 4px 8px rgba(22, 55, 104, 0.2);
-  color: #fff;
-}
-.whatsapp-float:hover::before {
-  opacity: 1;
-}
-.whatsapp-float:active {
-  transform: scale(0.95);
-}
-.whatsapp-float:active::after {
-  transform: scale(1);
-  opacity: 1;
-  animation: ripple 0.6s ease-out;
-}
-.whatsapp-icon {
-  position: relative;
-  font-size: 26px;
+
+.whatsapp-button i {
   transition: transform 0.3s ease;
-  z-index: 1;
 }
-.whatsapp-float:hover .whatsapp-icon {
-  transform: scale(1.1) rotate(10deg);
+
+.whatsapp-button:hover i {
+  transform: scale(1.1);
 }
-/* Tooltip */
-.tooltip-text {
-  visibility: hidden;
-  background: linear-gradient(135deg, #043e94, #26498a);
-  color: #fff;
-  text-align: center;
-  padding: 10px 16px;
-  border-radius: 8px;
+
+.whatsapp-tooltip {
   position: absolute;
+  right: 70px;
   top: 50%;
-  right: calc(100% + 20px);
   transform: translateY(-50%);
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 15px rgba(4, 62, 148, 0.2);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
 }
-.tooltip-text::after {
+
+.whatsapp-tooltip::after {
   content: '';
   position: absolute;
-  right: 20px;
+  left: 100%;
   top: 50%;
   transform: translateY(-50%);
-  border-width: 8px 0 8px 8px;
-  border-style: solid;
-  border-color: transparent transparent transparent #043e94;
+  border: 6px solid transparent;
+  border-left-color: #333;
 }
-.whatsapp-float:hover .tooltip-text {
-  visibility: visible;
+
+.whatsapp-button:hover .whatsapp-tooltip {
   opacity: 1;
-  right: calc(100% + 15px);
+  visibility: visible;
+  right: 75px;
 }
-@keyframes pulse {
+
+@keyframes whatsappPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(22, 55, 104, 0.4);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   }
-  70% {
-    box-shadow: 0 0 0 15px rgba(22, 55, 104, 0);
+  50% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(22, 55, 104, 0);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   }
 }
-@keyframes ripple {
-  to {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
+
+/* Responsive WhatsApp Button */
 @media (max-width: 768px) {
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 58px;
-    right: 10px;
+  .whatsapp-button {
+    bottom: 65px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
     font-size: 24px;
   }
-  .whatsapp-icon {
+  
+  .whatsapp-tooltip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .whatsapp-button:hover .whatsapp-tooltip {
+    right: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    bottom: 60px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
     font-size: 22px;
   }
-  .tooltip-text {
+  
+  .whatsapp-tooltip {
     display: none;
   }
 }
+
+/* Accesibilidad: reduce animaciones si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-float,
-  .whatsapp-icon,
-  .tooltip-text {
+  .whatsapp-button,
+  .whatsapp-tooltip {
     transition: none;
     animation: none;
-  }
-  .whatsapp-float:hover {
-    transform: none;
   }
 }
 #faq .accordion-button:hover {
@@ -3113,6 +3719,41 @@ section .row {
   border-radius: 16px;
   padding: 24px;
   display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-1-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(25, 121, 216, 0.05) 0%, rgba(30, 75, 122, 0.03) 50%, rgba(38, 73, 138, 0.02) 100%),
+    radial-gradient(circle at 30% 30%, rgba(25, 121, 216, 0.04) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.services-1-card:hover::before {
+  opacity: 1;
+}
+
+.services-1-card > * {
+  position: relative;
+  z-index: 10;
+}
+
+.services-1-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.services-1-card {
   align-items: flex-start;
   gap: 20px;
   height: 100%;
@@ -3233,23 +3874,56 @@ section .row {
 }
 
 
-/* Language toggle button – minimal & subtle */
+/* Language toggle button – icon only */
 #lang-toggle {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--nav-color);
-  font-family: var(--nav-font);
-  font-size: 0.9rem;
-  margin-left: 35px;
-  padding: 0.25rem 0.5rem;
+  font-size: 16px;
+  margin-left: 25px;
+  padding: 8px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
 }
 
-#lang-toggle:hover,
-#lang-toggle:focus {
+#lang-toggle i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+#lang-toggle .lang-text {
+  display: none;
+}
+
+#lang-toggle:hover {
+  background: rgba(25, 121, 216, 0.2);
+  border-color: var(--accent-color);
   color: var(--accent-color);
+  transform: translateY(-1px) scale(1.1);
+  box-shadow: 0 4px 12px rgba(25, 121, 216, 0.3);
+}
+
+#lang-toggle:hover i {
+  transform: rotate(15deg);
+}
+
+#lang-toggle:focus {
   outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 121, 216, 0.3);
+}
+
+#lang-toggle:active {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 2px 8px rgba(25, 121, 216, 0.2);
 }
 
 /* ===== LUCID STYLES ===== */
@@ -3704,4 +4378,5 @@ section .row {
     padding: 0.6rem;
   }
 }
+
 
