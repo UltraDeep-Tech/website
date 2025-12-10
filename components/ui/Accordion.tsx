@@ -72,3 +72,5 @@ export function Accordion({ items, defaultOpen }: AccordionProps) {
   )
 }
 
+
+
