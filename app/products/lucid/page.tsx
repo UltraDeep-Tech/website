@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Eye, Brain, Target, TrendingUp, CheckCircle2, ArrowRight, Clock, DollarSign, Users, Trophy, Funnel } from 'lucide-react'
+import { Eye, Brain, Target, TrendingUp, CheckCircle2, ArrowRight, Clock, DollarSign, Users, Trophy, Filter, Shield, Lock } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
@@ -145,12 +145,12 @@ export default function LucidPage() {
             >
               {[
                 {
-                  icon: Funnel,
+                  icon: Filter,
                   title: 'Análisis Instantáneo',
                   description: 'Procesa documentos complejos en menos de 2 minutos con precisión profesional.',
                 },
                 {
-                  icon: FileLock,
+                  icon: Lock,
                   title: 'Reportes Profesionales',
                   description: 'Genera informes listos para uso corporativo y legal con recomendaciones claras.',
                 },

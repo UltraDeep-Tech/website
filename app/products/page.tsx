@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -37,7 +37,7 @@ interface ProductData {
   isLucid?: boolean
 }
 
-export default function ProductsPage() {
+function ProductsContent() {
   const { t, language } = useTranslation()
   const isSpanish = language === 'es'
   const searchParams = useSearchParams()
@@ -667,5 +667,20 @@ export default function ProductsPage() {
         </div>
       </section>
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-foreground/70">Cargando productos...</p>
+        </div>
+      </div>
+    }>
+      <ProductsContent />
+    </Suspense>
   )
 }

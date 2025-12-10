@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -37,7 +37,7 @@ interface ServiceData {
   buttonText?: string
 }
 
-export default function ServicesPage() {
+function ServicesContent() {
   const { t, language } = useTranslation()
   const isSpanish = language === 'es'
   const searchParams = useSearchParams()
@@ -619,5 +619,20 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
+  )
+}
+
+export default function ServicesPage() {
+  return (
+    <Suspense fallback={
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-foreground/70">Cargando servicios...</p>
+        </div>
+      </div>
+    }>
+      <ServicesContent />
+    </Suspense>
   )
 }

@@ -29,6 +29,10 @@ export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://ultradeeptech.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      'en': '/',
+      'es': '/?lang=es',
+    },
   },
   openGraph: {
     type: 'website',
@@ -53,13 +57,6 @@ export const defaultMetadata: Metadata = {
     description: 'Transform your business with AI. We build custom apps, automate processes, and provide strategic AI guidance.',
     creator: '@ultradeeptech',
     images: ['https://ultradeeptech.com/og-image.jpg'],
-  },
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/',
-      'es': '/?lang=es',
-    },
   },
   robots: {
     index: true,
