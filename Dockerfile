@@ -1,26 +1,54 @@
-# Usa una imagen base de PHP con FPM y Nginx
-FROM php:7.4-fpm
+# Dockerfile para Next.js en Cloud Run
+FROM node:18-alpine AS base
 
-# Instala extensiones necesarias
-RUN docker-php-ext-install mysqli
+# Instalar dependencias solo cuando sea necesario
+FROM base AS deps
+# Verificar https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
 
-# Instala Nginx
-RUN apt-get update && apt-get install -y nginx
+# Instalar dependencias basadas en el gestor de paquetes preferido
+COPY package.json package-lock.json* ./
+RUN npm ci
 
-# Copia tus archivos PHP y HTML al contenedor
-COPY . /var/www/html/
+# Reconstruir el código fuente solo cuando sea necesario
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-# Copiar el archivo de configuración de Nginx
-COPY default.conf /etc/nginx/sites-available/default
+# Generar las variables de entorno si es necesario
+# ENV NEXT_TELEMETRY_DISABLED 1
 
-# Configura el directorio de trabajo
-WORKDIR /var/www/html
+# Ejecutar setup-assets antes del build
+RUN npm run setup-assets
 
-# Da los permisos correctos
-RUN chmod -R 755 /var/www/html
+# Construir la aplicación
+RUN npm run build
 
-# Exponer el puerto 8080 para Nginx
+# Imagen de producción, copiar todos los archivos y ejecutar next
+FROM base AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copiar archivos necesarios
+COPY --from=builder /app/public ./public
+
+# Copiar el servidor standalone
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 8080
 
-# Iniciar PHP-FPM y Nginx
-CMD service nginx start && php-fpm -F
+ENV PORT 8080
+ENV HOSTNAME "0.0.0.0"
+
+# Next.js standalone crea un server.js en el directorio raíz
+CMD ["node", "server.js"]

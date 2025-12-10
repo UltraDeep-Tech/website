@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone', // Necesario para Docker/Cloud Run
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
