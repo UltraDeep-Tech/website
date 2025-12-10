@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
@@ -15,14 +15,125 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Debounce resize handler for better performance
+  const resizeTimeoutRef = useRef<NodeJS.Timeout>()
+  
+  useEffect(() => {
+    const handleResize = () => {
+      // Clear previous timeout
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current)
+      }
+      
+      // Debounce resize events
+      resizeTimeoutRef.current = setTimeout(() => {
+        const mobile = window.innerWidth < 1024 // lg breakpoint
+        setIsMobile(mobile)
+        // En mobile, siempre mantener isScrolled como false para que no cambie el estilo
+        if (mobile) {
+          setIsScrolled(false)
+        }
+      }, 150)
+    }
+    
+    // Initial check
+    const mobile = window.innerWidth < 1024
+    setIsMobile(mobile)
+    if (mobile) {
+      setIsScrolled(false)
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current)
+      }
+    }
+  }, [])
 
   useEffect(() => {
+    if (isMobile) {
+      // En mobile, no escuchar scroll para evitar cambios de color
+      setIsScrolled(false)
+      return
+    }
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
+    
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isMobile])
+
+  // Bloquear scroll del body cuando el menú móvil está abierto
+  const scrollPositionRef = useRef<number>(0)
+  
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // Guardar la posición actual del scroll
+      scrollPositionRef.current = window.scrollY
+      // Bloquear el scroll del body
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollPositionRef.current}px`
+      document.body.style.width = '100%'
+      document.body.style.overflow = 'hidden'
+      // Prevenir scroll en iOS
+      document.body.style.touchAction = 'none'
+    } else {
+      // Restaurar el scroll del body
+      const scrollY = scrollPositionRef.current
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+      document.body.style.touchAction = ''
+      if (scrollY !== undefined) {
+        window.scrollTo({ top: scrollY, behavior: 'instant' })
+      }
+    }
+    
+    return () => {
+      // Limpiar estilos al desmontar
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+      document.body.style.touchAction = ''
+    }
+  }, [isMobileMenuOpen])
+
+  // Cerrar menú al hacer click fuera
+  const menuRef = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      // También cerrar con tecla Escape
+      const handleEscape = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          setIsMobileMenuOpen(false)
+        }
+      }
+      document.addEventListener('keydown', handleEscape)
+      
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+        document.removeEventListener('keydown', handleEscape)
+      }
+    }
+  }, [isMobileMenuOpen])
 
   const navItems = [
     {
@@ -63,10 +174,13 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'glass-strong shadow-lg shadow-primary-500/10 [data-theme=\'light\']:shadow-slate-200/50'
-          : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50',
+        // En mobile siempre tiene fondo sólido sin efecto vidrio, en desktop solo cuando scrolleado
+        isMobile
+          ? 'bg-background/95 [data-theme=\'light\']:bg-white/95 shadow-lg border-b border-border/50'
+          : isScrolled
+          ? 'glass-strong shadow-lg shadow-primary-500/10 [data-theme=\'light\']:shadow-slate-200/50 transition-all duration-300'
+          : 'bg-transparent transition-all duration-300'
       )}
     >
       <nav className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -181,12 +295,18 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            ref={menuRef}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-strong border-t border-white/10"
+            className="lg:hidden glass-strong border-t border-white/10 overflow-y-auto overscroll-contain"
+            style={{ 
+              maxHeight: 'calc(100dvh - 4rem)', // Dynamic viewport height for mobile browsers
+              WebkitOverflowScrolling: 'touch',
+              touchAction: 'pan-y'
+            }}
           >
-            <div className="container mx-auto px-4 py-6 space-y-2">
+            <div className="container mx-auto px-4 py-6 space-y-2 pb-8">
               {navItems.map((item) => (
                 <div key={item.label}>
                   <Link

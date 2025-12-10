@@ -256,7 +256,7 @@ function ServicesContent() {
       </div>
 
       {/* Hero Section - Mejorado */}
-      <section className="relative py-12 sm:py-16 overflow-hidden">
+      <section className="relative py-8 sm:py-12 md:py-16 overflow-hidden">
         <BackgroundEffects variant="hero" intensity="medium" />
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-10"
@@ -272,18 +272,18 @@ function ServicesContent() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-              className="inline-block mb-6"
+              className="inline-block mb-4 sm:mb-6"
             >
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto shadow-lg">
-                <Sparkles className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mx-auto shadow-lg">
+                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
             </motion.div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-4 sm:mb-6 px-2">
               <span className="text-gradient">
                 {isSpanish ? 'Nuestros Servicios' : 'Our Services'}
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-foreground/80 max-w-2xl mx-auto [data-theme='light']:text-slate-700">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto [data-theme='light']:text-slate-700 px-4">
               {isSpanish 
                 ? 'Soluciones integrales de IA para transformar tu negocio. Desde consultoría estratégica hasta automatización de procesos, tenemos todo lo que necesitas.'
                 : 'Comprehensive AI solutions to transform your business. From strategic consulting to process automation, we have everything you need.'}
