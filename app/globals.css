@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  [data-theme="dark"] {
+    --background: 10 14 39; /* #0a0e27 */
+    --foreground: 248 250 252; /* #f8fafc */
+    
+    --card: 26 31 58; /* #1a1f3a */
+    --card-foreground: 248 250 252;
+    
+    --popover: 26 31 58;
+    --popover-foreground: 248 250 252;
+    
+    --primary: 99 102 241; /* #6366f1 */
+    --primary-foreground: 255 255 255;
+    
+    --secondary: 139 92 246; /* #8b5cf6 */
+    --secondary-foreground: 255 255 255;
+    
+    --muted: 30 41 59; /* #1e293b */
+    --muted-foreground: 148 163 184; /* #94a3b8 */
+    
+    --accent: 37 48 71; /* #252b47 */
+    --accent-foreground: 248 250 252;
+    
+    --destructive: 239 68 68; /* #ef4444 */
+    --destructive-foreground: 255 255 255;
+    
+    --warm: 245 158 11; /* #f59e0b - Ámbar para balance */
+    --warm-foreground: 255 255 255;
+    
+    --success: 16 185 129; /* #10b981 - Verde para éxito */
+    --success-foreground: 255 255 255;
+    
+    --border: 37 48 71;
+    --input: 37 48 71;
+    --ring: 99 102 241;
+    
+    --radius: 0.75rem;
+  }
+
+  [data-theme="light"] {
+    --background: 255 255 255; /* white */
+    --foreground: 15 23 42; /* #0f172a */
+    
+    --card: 248 250 252; /* #f8fafc */
+    --card-foreground: 15 23 42;
+    
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+    
+    --primary: 99 102 241; /* #6366f1 */
+    --primary-foreground: 255 255 255;
+    
+    --secondary: 139 92 246; /* #8b5cf6 */
+    --secondary-foreground: 255 255 255;
+    
+    --muted: 241 245 249; /* #f1f5f9 */
+    --muted-foreground: 100 116 139; /* #64748b */
+    
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
+    
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    
+    --warm: 245 158 11; /* #f59e0b - Ámbar para balance */
+    --warm-foreground: 15 23 42;
+    
+    --success: 16 185 129; /* #10b981 - Verde para éxito */
+    --success-foreground: 255 255 255;
+    
+    --border: 226 232 240; /* #e2e8f0 */
+    --input: 226 232 240;
+    --ring: 99 102 241;
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgb(37 48 71 / 0.2);
+  }
+  
+  body {
+    @apply font-sans antialiased;
+    min-height: 100vh;
+  }
+  
+  [data-theme="dark"] body,
+  body:not([data-theme="light"]) {
+    @apply bg-dark text-foreground;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #252b47 100%);
+  }
+  
+  [data-theme="light"] body {
+    @apply bg-white text-slate-900;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  }
+}
+
+@layer utilities {
+  [data-theme="dark"] .glass,
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  [data-theme="light"] .glass {
+    @apply bg-slate-900/5 backdrop-blur-md border border-slate-200 shadow-sm;
+  }
+  
+  [data-theme="dark"] .glass-strong,
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  [data-theme="light"] .glass-strong {
+    @apply bg-slate-900/10 backdrop-blur-lg border border-slate-300 shadow-md;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500;
+  }
+  
+  [data-theme="light"] .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-violet-600 to-pink-600;
+  }
+  
+  .gradient-border {
+    @apply relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-primary-500 to-accent-500 -z-10;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+  
+  /* Professional Background gradients */
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 40%, #1e2749 60%, #252b47 100%);
+    position: relative;
+  }
+  
+  .bg-gradient-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+    opacity: 0.5;
+  }
+  
+  [data-theme="light"] .bg-gradient-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 60%, #e2e8f0 100%);
+  }
+  
+  [data-theme="light"] .bg-gradient-hero::before {
+    background: 
+      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+  }
+  
+  /* Section backgrounds */
+  .bg-section-alt {
+    background: rgba(26, 31, 58, 0.3);
+  }
+  
+  [data-theme="light"] .bg-section-alt {
+    background: rgba(241, 245, 249, 0.8);
+  }
+  
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
+  
+  /* Section backgrounds */
+  [data-theme="dark"] .bg-section-alt {
+    @apply bg-dark-surface/30;
+  }
+  
+  [data-theme="light"] .bg-section-alt {
+    @apply bg-slate-100/80;
+  }
+  
+  /* Mejorar contraste de texto en modo claro - usar colores sólidos en lugar de opacidad */
+  [data-theme="light"] .text-foreground\/60,
+  [data-theme="light"] [class*="text-foreground/60"] {
+    color: rgb(51 65 85) !important; /* slate-700 - mejor contraste */
+  }
+  
+  [data-theme="light"] .text-foreground\/70,
+  [data-theme="light"] [class*="text-foreground/70"] {
+    color: rgb(30 41 59) !important; /* slate-800 - mejor contraste */
+  }
+  
+  [data-theme="light"] .text-foreground\/80,
+  [data-theme="light"] [class*="text-foreground/80"] {
+    color: rgb(15 23 42) !important; /* slate-900 - máximo contraste */
+  }
+  
+  [data-theme="light"] .text-foreground\/40,
+  [data-theme="light"] [class*="text-foreground/40"] {
+    color: rgb(71 85 105) !important; /* slate-600 - contraste mejorado */
+  }
+
+  /* Forzar contraste para text-foreground sin opacidad en modo claro */
+  [data-theme="light"] .text-foreground:not([class*="/"]):not([class*="text-gradient"]) {
+    color: rgb(15 23 42) !important; /* slate-900 - máximo contraste */
+  }
+  
+  [data-theme="light"] h1 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h1.text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h2 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h2.text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h3 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h3.text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h4 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h4.text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h5 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h5.text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h6 .text-foreground:not([class*="text-gradient"]),
+  [data-theme="light"] h6.text-foreground:not([class*="text-gradient"]) {
+    color: rgb(15 23 42) !important; /* slate-900 */
+  }
+  
+  /* Específico para el subtítulo del hero - máxima prioridad */
+  [data-theme="light"] h1 span.text-foreground:not([class*="text-gradient"]) {
+    color: rgb(15 23 42) !important; /* slate-900 */
+    font-weight: 700 !important;
+  }
+  
+  /* Override para motion.span dentro de h1 */
+  [data-theme="light"] h1 > span.text-foreground {
+    color: rgb(15 23 42) !important; /* slate-900 - máximo contraste */
+    font-weight: 700 !important;
+  }
+  
+  /* Mejorar visibilidad de bordes en modo claro */
+  [data-theme="light"] .border-white\/10,
+  [data-theme="light"] [class*="border-white/10"] {
+    border-color: rgb(226 232 240) !important; /* slate-200 */
+  }
+  
+  [data-theme="light"] .border-white\/20,
+  [data-theme="light"] [class*="border-white/20"] {
+    border-color: rgb(203 213 225) !important; /* slate-300 */
+  }
+  
+  /* Mejorar visibilidad de fondos glass en modo claro */
+  [data-theme="light"] .bg-white\/5,
+  [data-theme="light"] [class*="bg-white/5"] {
+    background-color: rgba(15, 23, 42, 0.03) !important;
+  }
+  
+  [data-theme="light"] .bg-white\/10,
+  [data-theme="light"] [class*="bg-white/10"] {
+    background-color: rgba(15, 23, 42, 0.05) !important;
+  }
+  
+  [data-theme="light"] .hover\:bg-white\/5:hover,
+  [data-theme="light"] [class*="hover:bg-white/5"]:hover {
+    background-color: rgba(15, 23, 42, 0.08) !important;
+  }
+  
+  /* Mejorar visibilidad de sombras en modo claro */
+  [data-theme="light"] .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  }
+  
+  [data-theme="light"] .shadow-primary-500\/10,
+  [data-theme="light"] [class*="shadow-primary-500/10"] {
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.15), 0 4px 6px -2px rgba(99, 102, 241, 0.1) !important;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: #1a1f3a;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  @apply rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f43f5e 100%);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary-500/30 text-foreground;
+}
+
