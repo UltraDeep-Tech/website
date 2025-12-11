@@ -38,7 +38,7 @@ export function Hero() {
   return (
     <section 
       ref={ref} 
-      className="relative h-screen min-h-[90vh] flex items-center justify-center overflow-hidden pt-0 sm:pt-12 md:pt-16 pb-4 sm:pb-8 md:pb-12"
+      className="relative h-screen min-h-[90vh] flex items-center justify-center overflow-hidden pt-0 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24 pb-4 sm:pb-8 md:pb-12"
       style={{ 
         minHeight: '100dvh', // Dynamic viewport height for mobile browsers
         paddingTop: 'env(safe-area-inset-top, 0)',
@@ -52,7 +52,7 @@ export function Hero() {
         style={{ opacity }}
         className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center justify-center"
       >
-        <div className="max-w-3xl mx-auto text-center w-full flex flex-col justify-center items-center space-y-4 sm:space-y-6">
+        <div className="max-w-3xl mx-auto text-center w-full flex flex-col items-center justify-center space-y-1.5 sm:space-y-2" style={{ minHeight: 'fit-content' }}>
           {/* Enhanced Badge with Animation */}
           <motion.div
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 30, scale: 0.9 }}
@@ -63,7 +63,7 @@ export function Hero() {
               stiffness: 100,
             }}
             whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
-            className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full glass backdrop-blur-xl text-xs mb-1 sm:mb-2 md:mb-3"
+            className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full glass backdrop-blur-xl text-xs mb-0"
           >
             <motion.span 
               className="w-2 h-2 bg-primary-500 [data-theme='light']:bg-primary-400 rounded-full"
@@ -113,7 +113,7 @@ export function Hero() {
                   },
                 },
               }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-2 sm:mb-3 md:mb-4 leading-[1.1] px-2 w-full"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-0.5 sm:mb-1 leading-tight px-2 w-full"
             >
             <motion.span 
               className="text-gradient inline-block"
@@ -158,7 +158,7 @@ export function Hero() {
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.3 }}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/90 [data-theme='light']:text-slate-800 mb-3 sm:mb-4 md:mb-5 max-w-3xl mx-auto leading-relaxed px-4 sm:px-5 font-medium w-full"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl mb-1.5 sm:mb-2 max-w-3xl mx-auto leading-snug px-4 sm:px-5 font-medium w-full hero-description-text"
           >
             {t('hero_description')}
           </motion.p>
@@ -168,7 +168,7 @@ export function Hero() {
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-5 px-4 w-full"
+            className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2 px-4 w-full"
           >
             {[
               isSpanish ? '✓ Protección en Tiempo Real' : '✓ Real-Time Protection',
@@ -180,7 +180,7 @@ export function Hero() {
                 initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={prefersReducedMotion ? {} : { delay: 0.6 + index * 0.1 }}
-                className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full glass text-sm sm:text-base font-semibold text-foreground/95 [data-theme='light']:text-slate-900 backdrop-blur-sm shadow-lg"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full glass text-sm sm:text-base font-semibold text-foreground/95 [data-theme='light']:!text-slate-900 [data-theme='light']:!font-bold backdrop-blur-sm shadow-lg hero-benefit-badge"
               >
                 {benefit}
               </motion.span>
@@ -192,7 +192,7 @@ export function Hero() {
             initial={prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={prefersReducedMotion ? {} : { duration: 0.6, delay: 0.4 }}
-            className="flex items-center justify-center px-4 w-full mt-2 sm:mt-3"
+            className="flex items-center justify-center px-4 w-full mt-0.5 sm:mt-1"
           >
             <motion.div
               whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
@@ -200,7 +200,7 @@ export function Hero() {
             >
               <Link
                 href="#products"
-                className="group relative w-full sm:w-auto px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-lg bg-gradient-cta text-white text-sm sm:text-base md:text-lg font-semibold overflow-hidden flex items-center justify-center gap-2"
+                className="group relative w-full sm:w-auto px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-lg bg-gradient-cta text-white text-sm sm:text-base md:text-lg font-semibold overflow-hidden flex items-center justify-center gap-2"
                 aria-label={t('hero_get_started')}
                 scroll={true}
               >

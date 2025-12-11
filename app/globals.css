@@ -110,7 +110,8 @@
   }
   
   [data-theme="light"] .glass {
-    @apply bg-slate-900/5 backdrop-blur-md border border-slate-200 shadow-sm;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%);
+    @apply backdrop-blur-md border border-indigo-200/30 shadow-sm;
   }
   
   [data-theme="dark"] .glass-strong,
@@ -119,7 +120,8 @@
   }
   
   [data-theme="light"] .glass-strong {
-    @apply bg-slate-900/10 backdrop-blur-lg border border-slate-300 shadow-md;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+    @apply backdrop-blur-lg border border-indigo-300/40 shadow-md;
   }
   
   .text-gradient {
@@ -158,13 +160,15 @@
   }
   
   [data-theme="light"] .bg-gradient-hero {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #f1f5f9 60%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 40%, #e8f0ff 60%, #e0ecff 100%);
   }
   
   [data-theme="light"] .bg-gradient-hero::before {
     background: 
-      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+    opacity: 0.6;
   }
   
   /* Section backgrounds */
@@ -189,25 +193,30 @@
     @apply bg-slate-100/80;
   }
   
-  /* Mejorar contraste de texto en modo claro - usar colores sólidos en lugar de opacidad */
-  [data-theme="light"] .text-foreground\/60,
-  [data-theme="light"] [class*="text-foreground/60"] {
-    color: rgb(51 65 85) !important; /* slate-700 - mejor contraste */
-  }
-  
-  [data-theme="light"] .text-foreground\/70,
-  [data-theme="light"] [class*="text-foreground/70"] {
-    color: rgb(30 41 59) !important; /* slate-800 - mejor contraste */
+  /* Mejorar legibilidad de textos con opacidad en modo claro - usar grises suaves */
+  [data-theme="light"] .text-foreground\/90,
+  [data-theme="light"] [class*="text-foreground/90"]:not([class*="text-slate"]):not([class*="text-gray"]) {
+    color: rgb(71 85 105) !important; /* slate-600 - gris legible */
   }
   
   [data-theme="light"] .text-foreground\/80,
-  [data-theme="light"] [class*="text-foreground/80"] {
-    color: rgb(15 23 42) !important; /* slate-900 - máximo contraste */
+  [data-theme="light"] [class*="text-foreground/80"]:not([class*="text-slate"]):not([class*="text-gray"]) {
+    color: rgb(71 85 105) !important; /* slate-600 - gris legible */
+  }
+  
+  [data-theme="light"] .text-foreground\/70,
+  [data-theme="light"] [class*="text-foreground/70"]:not([class*="text-slate"]):not([class*="text-gray"]) {
+    color: rgb(71 85 105) !important; /* slate-600 - gris legible */
+  }
+  
+  [data-theme="light"] .text-foreground\/60,
+  [data-theme="light"] [class*="text-foreground/60"]:not([class*="text-slate"]):not([class*="text-gray"]) {
+    color: rgb(100 116 139) !important; /* slate-500 - gris más suave */
   }
   
   [data-theme="light"] .text-foreground\/40,
   [data-theme="light"] [class*="text-foreground/40"] {
-    color: rgb(71 85 105) !important; /* slate-600 - contraste mejorado */
+    color: rgb(100 116 139) !important; /* slate-500 - gris más suave */
   }
 
   /* Forzar contraste para text-foreground sin opacidad en modo claro */
@@ -267,6 +276,37 @@
   [data-theme="light"] .hover\:bg-white\/5:hover,
   [data-theme="light"] [class*="hover:bg-white/5"]:hover {
     background-color: rgba(15, 23, 42, 0.08) !important;
+  }
+  
+  /* Texto de descripción del hero en modo claro - gris */
+  [data-theme="light"] .hero-description-text {
+    color: rgb(71 85 105) !important; /* slate-600 - gris legible */
+  }
+  
+  [data-theme="dark"] .hero-description-text,
+  .hero-description-text {
+    color: rgb(248 250 252 / 0.9); /* foreground/90 en modo oscuro */
+  }
+  
+  /* Badges de beneficios del hero - texto negro en modo claro (funciona en mobile y desktop) */
+  [data-theme="light"] .hero-benefit-badge,
+  [data-theme="light"] .hero-benefit-badge * {
+    color: rgb(15 23 42) !important; /* slate-900 - negro */
+    font-weight: 700 !important;
+  }
+  
+  [data-theme="dark"] .hero-benefit-badge,
+  [data-theme="dark"] .hero-benefit-badge *,
+  .hero-benefit-badge {
+    color: rgb(248 250 252 / 0.95) !important; /* foreground/95 en modo oscuro */
+  }
+  
+  /* Asegurar que funcione en todos los tamaños de pantalla */
+  @media (max-width: 640px) {
+    [data-theme="light"] .hero-benefit-badge {
+      color: rgb(15 23 42) !important;
+      font-weight: 700 !important;
+    }
   }
   
   /* Mejorar visibilidad de sombras en modo claro */

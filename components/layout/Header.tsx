@@ -16,6 +16,7 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark')
 
   // Debounce resize handler for better performance
   const resizeTimeoutRef = useRef<NodeJS.Timeout>()
@@ -43,6 +44,9 @@ export function Header() {
     setIsMobile(mobile)
     if (mobile) {
       setIsScrolled(false)
+    } else {
+      // En desktop, verificar si ya hay scroll al cargar
+      setIsScrolled(window.scrollY > 20)
     }
     
     window.addEventListener('resize', handleResize)
@@ -70,6 +74,45 @@ export function Header() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [isMobile])
+
+  // Detectar cambios de tema
+  useEffect(() => {
+    const updateTheme = () => {
+      const theme = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' || 'dark'
+      setCurrentTheme(theme)
+    }
+    
+    // Verificar tema inicial
+    updateTheme()
+    
+    // Observar cambios en el atributo data-theme
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+          updateTheme()
+        }
+      })
+    })
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    })
+    
+    // También escuchar cambios en localStorage (por si cambia desde otro componente)
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === 'theme') {
+        updateTheme()
+      }
+    }
+    
+    window.addEventListener('storage', handleStorageChange)
+    
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('storage', handleStorageChange)
+    }
+  }, [])
 
   // Bloquear scroll del body cuando el menú móvil está abierto
   const scrollPositionRef = useRef<number>(0)
@@ -171,13 +214,16 @@ export function Header() {
 
   return (
     <motion.header
+      key={currentTheme} // Forzar re-render cuando cambie el tema
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
         'fixed top-0 left-0 right-0 z-50',
         // En mobile siempre tiene fondo sólido sin efecto vidrio, en desktop solo cuando scrolleado
         isMobile
-          ? 'bg-background/95 [data-theme=\'light\']:bg-white/95 shadow-lg border-b border-border/50'
+          ? currentTheme === 'light'
+            ? 'bg-white/95 shadow-lg border-b border-slate-200/50'
+            : 'bg-background/95 shadow-lg border-b border-border/50'
           : isScrolled
           ? 'glass-strong shadow-lg shadow-primary-500/10 [data-theme=\'light\']:shadow-slate-200/50 transition-all duration-300'
           : 'bg-transparent transition-all duration-300'
@@ -299,7 +345,12 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-strong border-t border-white/10 overflow-y-auto overscroll-contain"
+            className={cn(
+              'lg:hidden border-t overflow-y-auto overscroll-contain',
+              currentTheme === 'light'
+                ? 'bg-white/95 border-slate-200/50 shadow-lg'
+                : 'glass-strong border-white/10'
+            )}
             style={{ 
               maxHeight: 'calc(100dvh - 4rem)', // Dynamic viewport height for mobile browsers
               WebkitOverflowScrolling: 'touch',
