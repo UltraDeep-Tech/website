@@ -335,7 +335,7 @@ export function BackgroundEffects({ variant = 'section', intensity = 'medium' }:
             return (
               <motion.div
                 key={i}
-                className="absolute rounded-full"
+                className="absolute rounded-full [data-theme='light']:opacity-100"
                 style={{
                   width: Math.random() * 3 + 1.5,
                   height: Math.random() * 3 + 1.5,
@@ -344,7 +344,6 @@ export function BackgroundEffects({ variant = 'section', intensity = 'medium' }:
                   top: `${Math.random() * 100}%`,
                   boxShadow: `0 0 ${Math.random() * 4 + 2}px rgba(${randomColor}, 0.3)`,
                 }}
-                className="[data-theme='light']:opacity-100"
                 animate={{
                   y: [0, Math.random() * -80 - 40, 0],
                   x: [0, Math.random() * 40 - 20, 0],
